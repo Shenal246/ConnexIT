@@ -1,5 +1,5 @@
 import React from 'react';
-import headlogo from '../../images/about-page-img2-min.png'
+import headlogo from '../../images/about-page-img2-min.png';
 import arrowleft from '../../images/icons8-triangle-64.png'
 import './About.css';
 import "slick-carousel/slick/slick.css";
@@ -136,8 +136,7 @@ const About = () => {
                             <div className='col-md-6'>
                             <div className='story bdround bdround2'>
                                     <h1 className='topic'>Our Mission</h1>
-                                    <p><br/>"Our mission is to deliver high-quality IT products and solutions by leveraging our extensive network of partners and channels. We are committed to providing exceptional service, innovative marketing, and dedicated support to ensure the success of our partners and the satisfaction of our customers. Together, we strive to build a technologically advanced future and achieve sustained growth."
-</p>
+                                    <p><br/>"Our mission is to deliver high-quality IT products and solutions by leveraging our extensive network of partners and channels. We are committed to providing exceptional service, innovative marketing, and dedicated support to ensure the success of our partners and the satisfaction of our customers. Together, we strive to build a technologically advanced future and achieve sustained growth."</p>
                                 </div>
                             </div>
                         </div>
@@ -145,8 +144,6 @@ const About = () => {
                     </div>
                 </div>
             </section>
-
-
 
             <section id='t2'>
                 <div className='slider'>

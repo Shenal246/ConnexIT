@@ -125,7 +125,7 @@ function Navbar() {
                       <li><a href="#"><img src={aus} alt=" Flag" className='flag' /> Australia</a></li>
                       <li><a href="#"><img src={ban} alt=" Flag" className='flag' /> Bangladesh</a></li>
                       <li><a href="#"><img src={bru} alt=" Flag" className='flag' />Brunei</a></li>
-                      <li><a href="#"><img src={cam} alt=" Flag" className='flag' />Cambodia</a></li>                  
+                      <li><a href="/KH"><img src={cam} alt=" Flag" className='flag' />Cambodia</a></li>
                       <li><a href="#"><img src={ind} alt=" Flag" className='flag' />India</a></li>
                       <li><a href="#"><img src={laos} alt=" Flag" className='flag' />Laos</a></li>
                       <li><a href="#"><img src={mld} alt=" Flag" className='flag' />Maldives</a></li>
@@ -133,7 +133,7 @@ function Navbar() {
                       <li><a href="#"><img src={mrt} alt=" Flag" className='flag' />Mauritius</a></li>
                       <li><a href="#"><img src={sin} alt=" Flag" className='flag' /> Singapore</a></li>
                       <li><a href="#"><img src={tnz} alt=" Flag" className='flag' />Tanzania</a></li>
-                      <li><a href="#"><img src={tld} alt=" Flag" className='flag' />Thailand</a></li>
+                      <li><a href="/TH"><img src={tld} alt=" Flag" className='flag' />Thailand</a></li>
                       <li><a href="#"><img src={wor} alt=" Flag" className='flag' />UAE</a></li>
                     </div>
                   </ul>

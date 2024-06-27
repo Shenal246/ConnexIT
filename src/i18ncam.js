@@ -204,7 +204,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 }
             },
         },
-        fr: {
+        kh: {
             translation: {
                 herosect: {
                     greet1: "អ្នកចែកចាយបច្ចេកវិទ្យានាំមុខ",
@@ -402,4 +402,6 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
             },
         }
     }
-})
+});
+
+export default i18n;

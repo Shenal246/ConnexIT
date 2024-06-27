@@ -1,13 +1,13 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './Contact.css';
-import cambo from '../../../images/map/cambo.png';
+import mapThl from '../../../images/map/thailand.png';
 import { useTranslation } from 'react-i18next';
-import Swal from 'sweetalert2';
-import CamNavbar from '../Navbar/Navbar';
-import CamChat from '../ChatBot/Chat';
-import CamFooter from '../Footer/Footer';
+import Swal from 'sweetalert2'
+import ThaiNavbar from '../Navbar/Navbar';
+import ThaiChat from '../Navbar/Navbar';
+import ThaiFooter from '../Footer/Footer';
 import connections from '../../../config';
 
 const Contact = () => {
@@ -32,7 +32,7 @@ const Contact = () => {
             value4: values[3],
             value5: values[4],
             value6: values[5],
-            value7: 3,
+            value7: 2,
             value8: 1,
             key: "FKoaDwCi7C"
         };
@@ -62,15 +62,16 @@ const Contact = () => {
 
     const { t } = useTranslation();
     const { cont1, cont2, cont3, cont4, cont5, cont6, cont7,
-        cont8, cont9, cont10, cont11, cont12, cont13, cont14, cont15, cont16,
+        cont8, cont9, cont10 , cont11, cont12, cont13, cont14, cont15, cont16,
         cont17, cont18, cont19, cont20, cont21, cont22, cont23, cont24, cont25,
         cont26, cont27, cont28, cont29, cont30
-    } = t('contsec', { returnObjects: true });
-
+        } = t('contsec', { returnObjects: true });
+        
     return (
         <>
-        <CamNavbar/>
-        <CamChat/>
+        <ThaiNavbar/>
+        <ThaiChat/>
+        
         <div className="container">
             <div className='row'>
                 <div className="row gy-3 text mb-4" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
@@ -84,7 +85,7 @@ const Contact = () => {
                     <h1 className='h1'>{cont2}<br /> {cont3}</h1>
                     <h2 className='h2'>{cont4}<br /> {cont5} <br />{cont6} <br /> {cont7}</h2>
                 </div>
-                <div className="col-md inputField" data-aos="fade-down" dat a-aos-duration="1000" data-aos-delay="50">
+                <div className="col-md inputField" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                     <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-floating col-md-mb-2">
                             <div className="row mt-4 mb-2">
@@ -130,10 +131,10 @@ const Contact = () => {
                                             required: true,
                                             pattern: {
                                                 value: /^[0-9]+$/,
-                                                message: { cont15 },
+                                                message: cont15,
                                             },
                                             validate: {
-                                                length: (value) => value.length === 10 || { cont15 },
+                                                length: (value) => value.length === 10 || cont15,
                                             },
                                         })}
                                     />
@@ -152,7 +153,7 @@ const Contact = () => {
                                     required: true,
                                     pattern: {
                                         value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                                        message: { cont17 },
+                                        message: cont17,
                                     },
                                 })}
                             />
@@ -166,7 +167,7 @@ const Contact = () => {
                                 id="floatingTextarea2"
                                 {...register('comments', { required: true })}
                             ></textarea>
-                            {errors.comments && <span className="text-danger"> {cont18}</span>}
+                            {errors.comments && <span className="text-danger">{cont18}</span>}
                         </div>
 
                         <div className="form-check formcheck">
@@ -179,7 +180,7 @@ const Contact = () => {
                             <label className="form-check-label tikBox" htmlFor="flexCheckDefault">
                                 {cont19}
                             </label>
-                            {errors.acceptTerms && <span className="text-danger"> {cont20}</span>}
+                            {errors.acceptTerms && <span className="text-danger">{cont20}</span>}
                         </div>
 
                         <div className="row mt-4 btnContainer">
@@ -199,26 +200,26 @@ const Contact = () => {
                     <h1 className='countryName address3'>{cont23}</h1>
                     <h3>{cont24}</h3>
                     <p className='txt1'><i className="fas fa-map-marker-alt img3"></i>
-                        {cont25}<br />
+                    {cont25}<br />
                         <span className='address'>{cont26}</span><br />
                         <span className='address'>{cont27}</span><br />
                         <span className='address'>{cont28}</span>
                     </p>
-                    <button
-                        className="neon-button"
-                        onClick={() => window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15636.537063489868!2d104.91642621180816!3d11.54222489236825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310956d2a2d70f1d%3A0xea84a6a9241db2f6!2sMorgan%20Tower!5e0!3m2!1sen!2slk!4v1718103352142!5m2!1sen!2slk')}
+                    <button 
+                        className="neon-button" 
+                        onClick={() => window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.0918992814586!2d100.57137787589524!3d13.773331296793016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f1e570cdf27%3A0xa3b67073f54a5f10!2sPNP%20International%20Legal%20Co.%2C%20Ltd.!5e0!3m2!1sen!2slk!4v1718093144399!5m2!1sen!2slk')}
                     >
                         {cont29}
                     </button>
                     <hr className='line'></hr><hr className='line'></hr>
                 </div>
                 <div className="col-md-6">
-                    <img src={cambo} className='cambo' />
-
+                    <img src={mapThl} className='mapThl' />
                 </div>
             </div>
         </div>
-<CamFooter/>
+        
+        <ThaiFooter/>
         </>
     );
 }

@@ -24,11 +24,10 @@ function Chat() {
       value1: name,
       value2: problem,
       value3: tpno,
-      value4: 3,
+      value4: 2,
       value5: 1,
       key: "FKoaDwCi7C"
     };
-
 
     await axios.post(serverlink, value3)
       .then((response) => {
@@ -72,43 +71,43 @@ function Chat() {
   return (
     <div ref={chatBotRef} className="chat-container" style={{ '--floating-button-image': `url(${images[currentImageIndex]})` }}>
       <ChatBot
-          steps={[
-              {
-                  id: '1',
-                  message: 'Hi! I am here to help you. Can I know your name?',
-                  trigger: '2',
-              },
-              {
-                  id: '2',
-                  user: true,
-                  trigger: '3',
-              },
-              {
-                  id: '3',
-                  message: 'Hi {previousValue}, How Can I help you?',
-                  trigger: '4',
-              },
-              {
-                  id: '4',
-                  user: true,
-                  trigger: '5',
-              },
-              {
-                  id: '5',
-                  message: 'Sure. Can I have your phone number?',
-                  trigger: '6',
-              },
-              {
-                  id: '6',
-                  user: true,
-                  trigger: '7',
-              },
-              {
-                  id: '7',
-                  message: 'Thank you! One of our staff will call you shortly.',
-                  end: true,
-              },
-          ]}
+        steps={[
+          {
+            id: '1',
+            message: ques1,
+            trigger: '2',
+          },
+          {
+            id: '2',
+            user: true,
+            trigger: '3',
+          },
+          {
+            id: '3',
+            message: ques2,
+            trigger: '4',
+          },
+          {
+            id: '4',
+            user: true,
+            trigger: '5',
+          },
+          {
+            id: '5',
+            message: ques3,
+            trigger: '6',
+          },
+          {
+            id: '6',
+            user: true,
+            trigger: '7',
+          },
+          {
+            id: '7',
+            message: ques4,
+            end: true,
+          },
+        ]}
         floating={true}
         handleEnd={handleEnd}
         className="custom-chatbot"

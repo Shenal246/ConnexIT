@@ -41,23 +41,24 @@ import KHServer from "./Cambodia/Components/Solutions/solutionVendors/ServerBack
 import KHMicrosoft from "./Cambodia/Components/Solutions/solutionVendors/Microsoft/Microsoft";
 import KHSingleVendor from "./Cambodia/Components/SingleVendor/SingleVendor";
 
-// import THHome from "./Thailand/Home/Home";
-// import THAbout from "./Thailand/About/About";
-// import THEvents from "./Thailand/Events&News/Events";
-// import THUpcomingEvents from "./Thailand/Events&News/UpcomingNews/UpcomingNews";
-// import THBlog from "./Thailand/Blog/Blog";
-// import THContactUs from "./Thailand/ContactUs/Contact";
-// import THSolutions from "./Thailand/Solutions/Solutions";
-// import THPortal from "./Thailand/Portal/Portal";
-// import THCyberSecurity from "./Thailand/Solutions/solutionVendors/CyberSecurity/CyberSecurity";
-// import THAuthentication from "./Thailand/Solutions/solutionVendors/Authentication/Authentication";
-// import THSecurityManagement from "./Thailand/Solutions/solutionVendors/Security/Security";
-// import THInternetSecurity from "./Thailand/Solutions/solutionVendors/Perimia/Perimia";
-// import THEndpointSecurity from "./Thailand/Solutions/solutionVendors/Endpoint/Endpoin";
-// import THNetworking from "./Thailand/Solutions/solutionVendors/Networking/Networking";
-// import THInfrastructure from "./Thailand/Solutions/solutionVendors/Infrastructure/InfrastructureMonitoring";
-// import THServer from "./Thailand/Solutions/solutionVendors/ServerBackup/ServerBackup";
-// import THSingleVendor from "./Thailand/SingleVendor/SingleVendor";
+import THHome from "./Thailand/Components/Home/Home";
+import THAbout from "./Thailand/Components/About/About";
+import THEvents from "./Thailand/Components/Events&News/Events";
+import THUpcomingEvents from "./Thailand/Components/Events&News/UpcomingNews/UpcomingNews";
+import THBlog from "./Thailand/Components/Blog/Blog";
+import THContactUs from "./Thailand/Components/ContactUs/Contact";
+import THSolutions from "./Thailand/Components/Solutions/Solutions";
+import THPortal from "./Thailand/Components/Portal/Portal";
+import THCyberSecurity from "./Thailand/Components/Solutions/solutionVendors/CyberSecurity/CyberSecurity";
+import THAuthentication from "./Thailand/Components/Solutions/solutionVendors/Authentication/Authentication";
+import THSecurityManagement from "./Thailand/Components/Solutions/solutionVendors/Security/Security";
+import THInternetSecurity from "./Thailand/Components/Solutions/solutionVendors/Perimia/Perimia";
+import THEndpointSecurity from "./Thailand/Components/Solutions/solutionVendors/Endpoint/Endpoin";
+import THNetworking from "./Thailand/Components/Solutions/solutionVendors/Networking/Networking";
+import THInfrastructure from "./Thailand/Components/Solutions/solutionVendors/Infrastructure/InfrastructureMonitoring";
+import THServer from "./Thailand/Components/Solutions/solutionVendors/ServerBackup/ServerBackup";
+import THSingleVendor from "./Thailand/Components/SingleVendor/SingleVendor";
+
 
 
 function App() {
@@ -98,34 +99,6 @@ function App() {
                     <Route path="/SL/Solutions/Security/:vendorName" element={<SLSingleVendor />} />
                     <Route path="/SL/Solutions/ServerBackup/:vendorName" element={<SLSingleVendor />} />
 
-                {/*    Thailand*/}
-
-                    {/*<Route path="/TH" exact Component={THHome}></Route>*/}
-                    {/*<Route path="/TH/About" exact Component={THAbout}></Route>*/}
-                    {/*<Route path="/TH/Events&News" exact element={<THEvents />}></Route>*/}
-                    {/*<Route path="/TH/UpcomingNews" exact element={<THUpcomingEvents />}></Route>*/}
-                    {/*<Route path="/TH/Blog" exact element={<THBlog />}></Route>*/}
-                    {/*<Route path="/TH/ContactUs" exact Component={THContactUs}></Route>*/}
-                    {/*<Route path="/TH/Solutions" exact Component={THSolutions}></Route>*/}
-                    {/*<Route path="/TH/Portal" exact Component={THPortal}></Route>*/}
-
-                    {/*<Route path="/TH/Solutions/CyberSecurity" element={<THCyberSecurity />} />*/}
-                    {/*<Route path="/TH/Solutions/Authentication" element={<THAuthentication />} />*/}
-                    {/*<Route path="/TH/Solutions/SecurityManagement" element={<THSecurityManagement />} />*/}
-                    {/*<Route path="/TH/Solutions/InternetSecurity" element={<THInternetSecurity />} />*/}
-                    {/*<Route path="/TH/Solutions/EndpointSecurity" element={<THEndpointSecurity />} />*/}
-                    {/*<Route path="/TH/Solutions/Networking" element={<THNetworking />} />*/}
-                    {/*<Route path="/TH/Solutions/Infrastructure" element={<THInfrastructure />} />*/}
-                    {/*<Route path="/TH/Solutions/Server" element={<THServer />} />*/}
-                    {/*<Route path="/TH/Solutions/Authentication/:vendorName" element={<THSingleVendor />} />*/}
-                    {/*<Route path="/TH/Solutions/CyberSecurity/:vendorName" element={<THSingleVendor />} />*/}
-                    {/*<Route path="/TH/Solutions/Endpoin/:vendorName" element={<THSingleVendor />} />*/}
-                    {/*<Route path="/TH/Solutions/InfrastructureMonitoring/:vendorName" element={<THSingleVendor />} />*/}
-                    {/*<Route path="/TH/Solutions/Networking/:vendorName" element={<THSingleVendor />} />*/}
-                    {/*<Route path="/TH/Solutions/Perimia/:vendorName" element={<THSingleVendor />} />*/}
-                    {/*<Route path="/TH/Solutions/Security/:vendorName" element={<THSingleVendor />} />*/}
-                    {/*<Route path="/TH/Solutions/ServerBackup/:vendorName" element={<THSingleVendor />} />*/}
-
                 {/*    Cambodia*/}
                     <Route path="/KH" exact Component={KHHome}></Route>
                     <Route path="/KH/About" exact Component={KHAbout}></Route>
@@ -153,6 +126,33 @@ function App() {
                     <Route path="/KH/Solutions/Perimia/:vendorName" element={<KHSingleVendor />} />
                     <Route path="/KH/Solutions/Security/:vendorName" element={<KHSingleVendor />} />
                     <Route path="/KH/Solutions/ServerBackup/:vendorName" element={<KHSingleVendor />} />
+
+                {/*    Thailand*/}
+                    <Route path="/TH" exact Component={THHome}></Route>
+                    <Route path="/TH/About" exact Component={THAbout}></Route>
+                    <Route path="/TH/Events&News" exact element={<THEvents />}></Route>
+                    <Route path="/TH/UpcomingNews" exact element={<THUpcomingEvents />}></Route>
+                    <Route path="/TH/Blog" exact element={<THBlog />}></Route>
+                    <Route path="/TH/ContactUs" exact Component={THContactUs}></Route>
+                    <Route path="/TH/Solutions" exact Component={THSolutions}></Route>
+                    <Route path="/TH/Portal" exact Component={THPortal}></Route>
+
+                    <Route path="/TH/Solutions/CyberSecurity" element={<THCyberSecurity />} />
+                    <Route path="/TH/Solutions/Authentication" element={<THAuthentication />} />
+                    <Route path="/TH/Solutions/SecurityManagement" element={<THSecurityManagement />} />
+                    <Route path="/TH/Solutions/InternetSecurity" element={<THInternetSecurity />} />
+                    <Route path="/TH/Solutions/EndpointSecurity" element={<THEndpointSecurity />} />
+                    <Route path="/TH/Solutions/Networking" element={<THNetworking />} />
+                    <Route path="/TH/Solutions/Infrastructure" element={<THInfrastructure />} />
+                    <Route path="/TH/Solutions/Server" element={<THServer />} />
+                    <Route path="/TH/Solutions/Authentication/:vendorName" element={<THSingleVendor />} />
+                    <Route path="/TH/Solutions/CyberSecurity/:vendorName" element={<THSingleVendor />} />
+                    <Route path="/TH/Solutions/Endpoin/:vendorName" element={<THSingleVendor />} />
+                    <Route path="/TH/Solutions/InfrastructureMonitoring/:vendorName" element={<THSingleVendor />} />
+                    <Route path="/TH/Solutions/Networking/:vendorName" element={<THSingleVendor />} />
+                    <Route path="/TH/Solutions/Perimia/:vendorName" element={<THSingleVendor />} />
+                    <Route path="/TH/Solutions/Security/:vendorName" element={<THSingleVendor />} />
+                    <Route path="/TH/Solutions/ServerBackup/:vendorName" element={<THSingleVendor />} />
                 </Routes>
 
             </>

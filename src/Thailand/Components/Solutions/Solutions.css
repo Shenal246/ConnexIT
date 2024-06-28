@@ -10,17 +10,12 @@
 
 .rowmargin {
   height: 85%;
-  padding-bottom: 7%;
+  padding-bottom: 5%;
   padding-top: 3%;
 }
 
 .cardSize {
-  height: 65px;
-  padding: 0% !important;
-}
-
-.cardSize1{
-  height: 70px;
+  height: 100px;
 }
 
 .crd {
@@ -37,6 +32,9 @@
   opacity:calc(1);
 }
 
+.datacenter{
+  height: 206px;
+}
 
 
 #topic {
@@ -46,9 +44,6 @@
   opacity: 0.9;
 }
 
-.endpoint{
-  height: 265px;
-}
 
 
 /* Styles for devices with a max-width of 425px */
@@ -111,16 +106,6 @@
   font-size: 20px;
   font: bold;
   font-weight: 600;
-  padding: 0 !important;
-  
-
-}
-
-.txts1{
-  font-size: 20px;
-  font: bold;
-  font-weight: 600;
-  padding: 0 !important;
 }
 
 
@@ -161,47 +146,5 @@
   
   .datacenter {
     height: 130px !important;
-  }
-}
-
-
-@media  (min-width: 700px) {
-  
-  .rowmargin {
-    margin-bottom: -80px;
-  }
-}
-
-.heroSolution{
-  margin-bottom: 150px;
-}
-
-
-.solImageHight{
-  height: 265px !important;
-}
-
-
-
-/* Styles for devices with a max-width of 1024px */
-@media (max-width: 1024px) {
-  .crd {
-    padding-bottom: 6%;
-  }
-
-  .datacenter {
-    height: 147px;
-  }
-
-  .card-img-top.endpoint {
-    height: 240px; /* Adjust this height as needed */
-  }
-
-  .solImageHight{
-    height: 240px !important;
-  }
-
-  .rowmargin {
-    margin-bottom: -70px;
   }
 }

@@ -40,8 +40,8 @@ function CyberSecurity() {
     };
 
     const { t } = useTranslation();
-    const { cy1, cy2
-        } = t('cybersec', { returnObjects: true });
+    const { Thaicy1, Thaicy2
+        } = t('Thaicybersec', { returnObjects: true });
         
     return (
         <>
@@ -52,7 +52,7 @@ function CyberSecurity() {
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{cy1}</p></div>
+                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Thaicy1}</p></div>
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ function CyberSecurity() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{cy2}</p>
+                                    <p>{Thaicy2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>

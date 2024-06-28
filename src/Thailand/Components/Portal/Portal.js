@@ -8,15 +8,15 @@ import ThaiFooter from '../Footer/Footer';
 const Portal = () => {
 
     const { t } = useTranslation();
-    const { ptl1, ptl2
-        } = t('portalsec', { returnObjects: true });
+    const { Thaiptl1, Thaiptl2
+        } = t('Thaiportalsec', { returnObjects: true });
 
     return (
         <>
         <ThaiNavbar/>
         <ThaiChat/>
             <div className='portal'>
-                <p><span className='one'>{ptl1}</span><span className='two'> {ptl2}</span> </p>
+                <p><span className='one'>{Thaiptl1}</span><span className='two'> {Thaiptl2}</span> </p>
             </div>
         <ThaiFooter/>
         </>

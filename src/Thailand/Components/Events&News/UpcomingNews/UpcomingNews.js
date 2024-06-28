@@ -42,9 +42,9 @@ const UpcomingNews = () => {
 
     
     const { t } = useTranslation();
-    const { upevnt1, upevnt2, upevnt3, upevnt4, upevnt5
+    const { Thaiupevnt1, Thaiupevnt2, Thaiupevnt3, Thaiupevnt4, Thaiupevnt5
         
-        } = t('upEventSec', { returnObjects: true });
+        } = t('ThaiupEventSec', { returnObjects: true });
 
     return (
         <>
@@ -54,7 +54,7 @@ const UpcomingNews = () => {
             <div className='row'>
                 <div className="row text">
                     <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                    <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='UpcomingNewsText'>{upevnt1} <br /> {upevnt2}</p></div>
+                    <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='UpcomingNewsText'>{Thaiupevnt1} <br /> {Thaiupevnt2}</p></div>
                     <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                 </div>
             </div>
@@ -74,7 +74,7 @@ const UpcomingNews = () => {
                                         />
                                     </>
                                 ) : (
-                                    <p>{upevnt3}</p>
+                                    <p>{Thaiupevnt3}</p>
                                 )}
                                 <div className="centered">
                                     <Link to="#" className="fa-solid fa-play playicon"></Link>
@@ -95,7 +95,7 @@ const UpcomingNews = () => {
                 <div className="modal-dialog modal-dialog-centered modal-xl">
                     <div className="modal-upevntent modalClr">
                         <div className="modal-header">
-                            <button type="button" className="btn-close close" data-bs-dismiss="modal" aria-label={upevnt4}></button>
+                            <button type="button" className="btn-close close" data-bs-dismiss="modal" aria-label={Thaiupevnt4}></button>
                         </div>
                         <div className="modal-body">
                             {currentVideoLink && (

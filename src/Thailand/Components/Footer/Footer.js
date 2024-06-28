@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
     const { t } = useTranslation();
-  const { footHeadTopic, headLine1, headLine2, headLine3,headLine4, footConTopic, conLine1,
-    conLine2, conLine3, conLine4, conLine5, resTopic, res1, res2, res3
-    } = t('footersec', { returnObjects: true });
+  const { ThaifootHeadTopic, ThaiheadLine1, ThaiheadLine2, ThaiheadLine3,ThaiheadLine4, ThaifootConTopic, ThaiconLine1,
+    ThaiconLine2, ThaiconLine3, ThaiconLine4, ThaiconLine5, ThairesTopic, Thaires1, Thaires2, Thaires3
+    } = t('Thaifootersec', { returnObjects: true });
 
 
     return (
@@ -16,35 +16,35 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-lg-4  ft-1">
-                            <h3>{footHeadTopic}</h3>
+                            <h3>{ThaifootHeadTopic}</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img" ></i>
-                            {headLine1}<br />
-                                <span>{headLine2}</span><br />
-                                <span> {headLine3}</span> <br />
-                                <i className="fas fa-phone-volume callIcon1" ></i>{headLine4}
+                            {ThaiheadLine1}<br />
+                                <span>{ThaiheadLine2}</span><br />
+                                <span> {ThaiheadLine3}</span> <br />
+                                <i className="fas fa-phone-volume callIcon1" ></i>{ThaiheadLine4}
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-1 address2">
-                            <h3>{footConTopic}</h3>
+                            <h3>{ThaifootConTopic}</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img2" ></i>
-                            {conLine1}<br />
-                                <span>{conLine2}</span><br />
-                                <span> {conLine3}</span> <br />
-                                <span>{conLine4}</span><br />
-                                <i className="fas fa-phone-volume callIcon2" ></i>{conLine5}
+                            {ThaiconLine1}<br />
+                                <span>{ThaiconLine2}</span><br />
+                                <span> {ThaiconLine3}</span> <br />
+                                <span>{ThaiconLine4}</span><br />
+                                <i className="fas fa-phone-volume callIcon2" ></i>{ThaiconLine5}
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-2 resources">
-                            <h3>{resTopic}</h3>
+                            <h3>{ThairesTopic}</h3>
                             <ul>
                                 <li className="nav-item">
-                                    <a className="" href="/Events&News">{res1}</a>
+                                    <a className="" href="/Events&News">{Thaires1}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="/FAQs">{res2}</a>
+                                    <a className="" href="/FAQs">{Thaires2}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="/">{res3}</a>
+                                    <a className="" href="/">{Thaires3}</a>
                                 </li>
 
                             </ul>

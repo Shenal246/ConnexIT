@@ -65,8 +65,8 @@ function Chat() {
   }, [images.length]);
 
   const { t } = useTranslation();
-  const { ques1, ques2, ques3, ques4
-  } = t('chatsec', { returnObjects: true });
+  const { Thaiques1, Thaiques2, Thaiques3, Thaiques4
+  } = t('Thaichatsec', { returnObjects: true });
 
   return (
     <div ref={chatBotRef} className="chat-container" style={{ '--floating-button-image': `url(${images[currentImageIndex]})` }}>
@@ -74,7 +74,7 @@ function Chat() {
         steps={[
           {
             id: '1',
-            message: ques1,
+            message: 'Hi! I am here to help you. Can I know your name?',
             trigger: '2',
           },
           {
@@ -84,7 +84,7 @@ function Chat() {
           },
           {
             id: '3',
-            message: ques2,
+            message: 'Hi {previousValue}, How Can I help you?',
             trigger: '4',
           },
           {
@@ -94,7 +94,7 @@ function Chat() {
           },
           {
             id: '5',
-            message: ques3,
+            message: 'Sure. Can I have your phone number?',
             trigger: '6',
           },
           {
@@ -104,7 +104,7 @@ function Chat() {
           },
           {
             id: '7',
-            message: ques4,
+            message: 'Thank you! One of our staff will call you shortly.',
             end: true,
           },
         ]}

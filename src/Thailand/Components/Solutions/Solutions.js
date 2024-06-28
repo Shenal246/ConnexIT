@@ -34,7 +34,7 @@ function Solutions() {
           </div>
           <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin">
             <div className="col">
-              <NavLink to="/TH/Solutions/Perimia" activeClassName='active-link'>
+              <NavLink to="/TH/Solutions/InternetSecurity" activeClassName='active-link'>
                 <div className="card crd">
                   <img src={Perimie} className="card-img-top" alt="Perimeter and Internal Security" />
                   <div className="card-body cardSize">

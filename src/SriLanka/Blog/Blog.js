@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import './Blog.css'; // Import your CSS file
 import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap components
 import blog from '../../images/Blogs/blogging-services.jpg';
+import SLFooter from "../Footer/Footer";
+import SLNavbar from "../Navbar/Navbar";
+import SLChat from "../ChatBot/Chat";
 
 const Blog = () => {
     const [lgShow, setLgShow] = useState(false);
@@ -9,6 +12,9 @@ const Blog = () => {
 
 
     return (
+        <>
+        <SLNavbar/>
+        <SLChat/>
         <section>
             <div className="container">
                 <div className='row '>
@@ -56,6 +62,9 @@ const Blog = () => {
                 <Modal.Body> Lorem ipsum sdjvcaevhue  u hohv 0f b  j veodejobvej0dvf of0jg nrojv ojvewrjvde fbvojco jjowjpvwdjvbvjovn jrbvoj onbovr 4job kdnrlh rpc fno vpb fnk mnpkv knnnnnnnnnnnnnnnnn n nnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnn nnnnnnnnnnnnnn nnnnnnnnnnnnnnnnn  </Modal.Body>
             </Modal>
         </section>
+        
+        <SLFooter/>
+        </>
     );
 }
 

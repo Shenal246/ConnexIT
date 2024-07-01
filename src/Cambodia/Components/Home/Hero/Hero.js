@@ -35,7 +35,7 @@ function HeroSection() {
 
   const { t } = useTranslation();
 
-  const { greet1, greet2first, greet2mid, greet2last, greet3, contact, wtvideo } = t('herosect', { returnObjects: true });
+  const { greet1, greet2first, greet2mid1, greet2mid2, greet2last, greet3, contact, wtvideo } = t('herosect', { returnObjects: true });
 
   return (
     <section id="hero" className="section hero">
@@ -43,7 +43,7 @@ function HeroSection() {
         <div className="row gy-4">
           <div className="col-lg-8 order-2 order-lg-1 d-flex flex-column justify-content-center cont" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
             <h3 className='settop'>{greet1}</h3>
-            <h1>{greet2first}<span className='Connexcon'>{greet2mid}</span>{greet2last}</h1>
+            <h1>{greet2first}<span className='Connexcon'>{greet2mid1}</span><span className='Connexnex'>{greet2mid2}</span> {greet2last}</h1>
             <p>{greet3}</p>
 
             <div className="row gy-4">

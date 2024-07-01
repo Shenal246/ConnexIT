@@ -30,7 +30,7 @@ const Footer = () => {
                             <h3>Resources</h3>
                             <ul className='nav-item1'>
                                 <li className="nav-item">
-                                    <a className="" href="/Events&News">Events & News</a>
+                                    <a className="" href="/SL/Events&News">Events & News</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="" href="#">FAQs</a>

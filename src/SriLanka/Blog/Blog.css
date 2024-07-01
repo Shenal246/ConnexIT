@@ -34,3 +34,10 @@ color: rgb(34, 205, 205) !important;
 .headingrow{
     padding-bottom: 14px;
 }
+
+.buttnRow{
+    /* margin-top: 70px !important; */
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    text-align: justify;
+}

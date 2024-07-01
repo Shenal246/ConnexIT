@@ -36,6 +36,18 @@
     padding-bottom: 14px;
 }
 
-.btnroww {
-    margin-top: 50px !important;
+.buttnRow{
+    /* margin-top: 70px !important; */
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    text-align: justify;
+}
+
+.upcomingDis{
+    padding: 50px;
+    font-size: larger;
+}
+
+.form-group{
+    margin-top: 10px    ;
 }

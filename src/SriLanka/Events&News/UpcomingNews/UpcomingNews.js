@@ -2,17 +2,20 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './UpcomingNews.css';
 import axios from "axios";
-import connections from '../../../config';
 import SLNavbar from "../../Navbar/Navbar";
 import SLChat from "../../ChatBot/Chat";
 import SLFooter from "../../Footer/Footer";
 import blog from '../../../images/Blogs/event.jpg';
+import Swal from 'sweetalert2';
+import connections from '../../../config';
 
 import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap components
 
 const UpcomingNews = () => {
-    // const videoRef = useRef(null); // Create a ref for the video element
-    // const [newsData, setNewsData] = useState([]);
+    const videoRef = useRef(null); // Create a ref for the video element
+    const [newsData, setNewsData] = useState([]);
+    const [sLUpEv, setSLUpEv] = useState([]);
+    const [currentUpcoming, setcurrentUpcoming] = useState(null);
     // const [currentVideoLink, setCurrentVideoLink] = useState(null);
 
     // const serverlink = connections.serverLink;
@@ -28,21 +31,21 @@ const UpcomingNews = () => {
     //     setCurrentVideoLink(nlink);
     // };
 
-    // useEffect(() => {
-    //     const values = {
-    //         query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=1 AND status=1 AND cnt=1;",
-    //         key: "Cr6re8VRBm"
-    //     };
+    useEffect(() => {
 
-    //     axios.post(serverlink, values).then((response) => {
-    //         setNewsData(response.data);
-    //     }).catch((err) => {
-    //         console.log(err);
-    //     });
+        axios.post(slupevserverlink).then((response) => {
+            setSLUpEv(response.data);
+        }).catch((err) => {
+            console.log(err);
+        });
 
-    // }, []);
+        console.log(sLUpEv);;
+
+    }, []);
+
     const [lgShow, setLgShow] = useState(false);
     const [formData, setFormData] = useState({
+        title: '',
         name: '',
         designation: '',
         company: '',
@@ -55,10 +58,28 @@ const UpcomingNews = () => {
     const handleChange = (e) => {
         const { id, value } = e.target;
         setFormData({ ...formData, [id]: value });
+        console.log(formData);
     };
+
+
+////
+    const value33 = {
+        query: "",
+        value1: formData[0],
+        value2: formData[1],
+        value3: formData[2],
+        value4: formData[3],
+        value5: formData[4],
+        value6: formData[5],
+        value6: formData[6],
+        value7: 1
+        // key: "FKoaDwCi7C"
+    };
+/////
 
     const validate = () => {
         let errors = {};
+        if (!formData.title) errors.title = 'Title is required';
         if (!formData.name) errors.name = 'Name is required';
         if (!formData.designation) errors.designation = 'Designation is required';
         if (!formData.company) errors.company = 'Company name is required';
@@ -75,14 +96,35 @@ const UpcomingNews = () => {
         if (!formData.location) errors.location = 'Location is required';
         return errors;
     };
-    
 
-    const handleSubmit = (e) => {
+    const serverlink = connections.serverLinkInsert;
+    const slupevserverlink = connections.slupcoming;
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const validationErrors = validate();
         setErrors(validationErrors);
         if (Object.keys(validationErrors).length === 0) {
-            // Submit the form
+            try {
+                const response = await axios.post(serverlink, formData);
+                if (response.status === 200) {
+                    Swal.fire({
+                        // position: "top-end",
+                        icon: "success",
+                        title: "Successfully Submitted",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    // reset();
+                    setLgShow(false);
+
+                } else {
+                    alert('Failed to submit the form.');
+                }
+            } catch (error) {
+                console.error('Error submitting the form', error);
+                alert('An error occurred while submitting the form.');
+            }
             console.log('Form submitted', formData);
             setLgShow(false);
         }
@@ -102,32 +144,36 @@ const UpcomingNews = () => {
                 </div>
 
                 <div className='row '>
-                    <div className="col">
-                        <div className="card mb-3 cards2">
-                            <div className="row g-0">
-                                <div className="col-md-4">
-                                    <img src={blog} className="img-fluid rounded-start blogimg" alt="..." />
-                                </div>
-                                <div className="col-md-8">
-                                    <div className="card-body">
-                                        <div className='row'>
-                                            <h3 className="card-title">Why SMBs Can Finally Breathe Easy: Palo Alto Networks NGFWs Now Within Reach</h3>
-                                        </div>
-                                        <br />
-                                        <div className='row buttnRow'>
-                                            <div className='col-md-4 '>
-                                                <h5>Date   :  49.75.8278 </h5>
-                                                <h5>Mode :  Physical </h5>
+                    {sLUpEv && sLUpEv.map((slup, ind) => (
+                        <div className="col" >
+                            <div className="card mb-3 cards2" key={ind}>
+                                <div className="row g-0">
+                                    <div className="col-md-4">
+                                        <img src={`data:image/jpeg;base64,${slup.image_data}`} className="img-fluid rounded-start blogimg" alt="..." />
+                                    </div>
+                                    <div className="col-md-8">
+                                        <div className="card-body">
+                                            <div className='row'>
+                                                <h3 className="card-title">{slup.title}</h3>
                                             </div>
-                                            <div className='col-md-8'>
-                                                <button className="btn btn-info read-more" onClick={() => setLgShow(true)}>Register </button>
+                                            <br />
+                                            <div className='row buttnRow'>
+                                                <div className='col-md-4 '>
+                                                    <h5>Date :  {slup.date} </h5>
+                                                    <h5>Time :  {slup.time} </h5>
+                                                    <h5>Mode :  {slup.mode} </h5>
+                                                </div>
+                                                <div className='col-md-8'>
+                                                    <button className="btn btn-info read-more" onClick={() => { setLgShow(true); setcurrentUpcoming(slup); }}>Register </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+
+                    ))}
                 </div>
 
                 <Modal
@@ -140,22 +186,45 @@ const UpcomingNews = () => {
                 >
                     <Modal.Header closeButton>
                         <Modal.Title id="example-modal-sizes-title-lg">
-                           Event Register Form
+                            Event Register
                         </Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-6" style={{ backgroundColor: '#f8f9fa', borderRight: '1px solid #dee2e6' }}>
-                                    <p className='upcomingDis'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                    <h4 className='upheading'>{currentUpcoming && currentUpcoming.title}</h4>
+                                    <p className='upcomingDis'>{currentUpcoming && currentUpcoming.description}</p>
+                                    <h6>Date :  {currentUpcoming && currentUpcoming.date} </h6>
+                                    <h6>Time :  {currentUpcoming && currentUpcoming.time} </h6>
+                                    <h6>Mode :  {currentUpcoming && currentUpcoming.mode} </h6>
                                 </div>
                                 <div className="col-md-6">
                                     <form onSubmit={handleSubmit}>
-                                        <div className="form-group">
-                                            <label htmlFor="name">Name</label>
-                                            <input type="text" className={`form-control ${errors.name ? 'is-invalid' : ''}`} id="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" />
-                                            {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+                                        <div className='row'>
+                                            <div className="col-md-2 form-group">
+                                                <label htmlFor="title">Title</label>
+                                                <select
+                                                    className={`form-control ${errors.title ? 'is-invalid' : ''}`}
+                                                    id="title"
+                                                    value={formData.title}
+                                                    onChange={handleChange}
+                                                >
+                                                    <option value="" disabled selected>Select Title</option>
+                                                    <option value="Mr.">Mr.</option>
+                                                    <option value="Mrs.">Mrs.</option>
+                                                    <option value="Miss">Miss</option>
+                                                </select>
+                                                {errors.title && <div className="invalid-feedback">{errors.title}</div>}
+                                            </div>
+
+                                            <div className="col-md-10 form-group">
+                                                <label htmlFor="name">Name</label>
+                                                <input type="text" className={`form-control ${errors.name ? 'is-invalid' : ''}`} id="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" />
+                                                {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+                                            </div>
                                         </div>
+
                                         <div className="form-group">
                                             <label htmlFor="designation">Designation</label>
                                             <input type="text" className={`form-control ${errors.designation ? 'is-invalid' : ''}`} id="designation" value={formData.designation} onChange={handleChange} placeholder="Enter your designation" />
@@ -190,7 +259,7 @@ const UpcomingNews = () => {
                         </div>
                     </Modal.Body>
                 </Modal>
-            </div>
+            </div >
             <SLFooter />
         </>
     );

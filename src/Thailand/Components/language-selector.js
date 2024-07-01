@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './language-selector.css';
 
 const languages = [
-    { code: 'enThai', lang: 'English', flag: '🌍' },
+    { code: 'en', lang: 'English', flag: '🌍' },
     { code: 'frThai', lang: 'Thai', flag: '🌍' },
 ];
 

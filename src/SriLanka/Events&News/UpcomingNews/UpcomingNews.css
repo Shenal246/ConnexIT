@@ -21,6 +21,32 @@
     }
 }
 
+#UpcomingNewsText {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    opacity: 0.9;
+}
+
+@media (max-width: 425px) {
+    #UpcomingNewsText {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 375px) {
+    #UpcomingNewsText {
+        font-size: 15px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #UpcomingNewsText {
+        font-size: 21px !important;
+    }
+}
+
+
 .read-more {
     position: absolute;
     bottom: 10px;

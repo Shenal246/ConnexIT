@@ -7,6 +7,7 @@ import CamChat from "../../ChatBot/Chat";
 import CamFooter from "../../Footer/Footer";
 import Swal from 'sweetalert2';
 import connections from '../../../../config';
+import { useTranslation } from 'react-i18next';
 
 import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap components
 
@@ -138,6 +139,10 @@ const UpcomingNews = () => {
         }
     };
 
+    const { t } = useTranslation();
+    const { upevnt1, upevnt2
+    } = t('upEventSec', { returnObjects: true });
+
     return (
         <>
             <CamNavbar />
@@ -146,7 +151,7 @@ const UpcomingNews = () => {
                 <div className='row'>
                     <div className="row text">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='UpcomingNewsText'>Upcoming <br /> Events & News</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='UpcomingNewsText'> {upevnt1} <br /> {upevnt2} </p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>

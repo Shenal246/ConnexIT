@@ -68,6 +68,7 @@ function Chat() {
 
     return () => clearInterval(interval); // Cleanup the interval on component unmount
   }, [images]);
+  
 
   return (
     <div ref={chatBotRef} className="chat-container" style={{ '--floating-button-image': `url(${images[currentImageIndex]})` }}>

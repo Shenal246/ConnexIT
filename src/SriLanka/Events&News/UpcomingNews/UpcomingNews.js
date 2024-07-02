@@ -5,7 +5,6 @@ import axios from "axios";
 import SLNavbar from "../../Navbar/Navbar";
 import SLChat from "../../ChatBot/Chat";
 import SLFooter from "../../Footer/Footer";
-import blog from '../../../images/Blogs/event.jpg';
 import Swal from 'sweetalert2';
 import connections from '../../../config';
 
@@ -16,6 +15,7 @@ const UpcomingNews = () => {
     const [newsData, setNewsData] = useState([]);
     const [sLUpEv, setSLUpEv] = useState([]);
     const [currentUpcoming, setcurrentUpcoming] = useState(null);
+
     // const [currentVideoLink, setCurrentVideoLink] = useState(null);
 
     // const serverlink = connections.serverLink;
@@ -61,22 +61,6 @@ const UpcomingNews = () => {
         console.log(formData);
     };
 
-
-////
-    const value33 = {
-        query: "",
-        value1: formData[0],
-        value2: formData[1],
-        value3: formData[2],
-        value4: formData[3],
-        value5: formData[4],
-        value6: formData[5],
-        value6: formData[6],
-        value7: 1
-        // key: "FKoaDwCi7C"
-    };
-/////
-
     const validate = () => {
         let errors = {};
         if (!formData.title) errors.title = 'Title is required';
@@ -97,7 +81,7 @@ const UpcomingNews = () => {
         return errors;
     };
 
-    const serverlink = connections.serverLinkInsert;
+    const serverlink1234 = connections.slupreg;
     const slupevserverlink = connections.slupcoming;
 
     const handleSubmit = async (e) => {
@@ -106,8 +90,26 @@ const UpcomingNews = () => {
         setErrors(validationErrors);
         if (Object.keys(validationErrors).length === 0) {
             try {
-                const response = await axios.post(serverlink, formData);
-                if (response.status === 200) {
+                const value33 = {
+                    query: "",
+                    value1: currentUpcoming && currentUpcoming.id,
+                    value2: formData.title,
+                    value3: formData.name,
+                    value4: formData.designation,
+                    value5: formData.company,
+                    value6: formData.email,
+                    value7: formData.contact,
+                    value8: formData.location,
+                    value9: 1,
+                    value10: 1,
+                    key: "FKoaDwCi7C"
+                };
+
+                console.log(value33);
+                const response123 = await axios.post(serverlink1234, value33);
+                // const response123 = null;
+                console.log(response123);
+                if (response123.status === 200) {
                     Swal.fire({
                         // position: "top-end",
                         icon: "success",
@@ -115,7 +117,15 @@ const UpcomingNews = () => {
                         showConfirmButton: false,
                         timer: 1500
                     });
-                    // reset();
+                    setFormData({
+                        title: '',
+                        name: '',
+                        designation: '',
+                        company: '',
+                        email: '',
+                        contact: '',
+                        location: ''
+                    });
                     setLgShow(false);
 
                 } else {
@@ -125,8 +135,7 @@ const UpcomingNews = () => {
                 console.error('Error submitting the form', error);
                 alert('An error occurred while submitting the form.');
             }
-            console.log('Form submitted', formData);
-            setLgShow(false);
+            // setLgShow(false);
         }
     };
 
@@ -194,13 +203,13 @@ const UpcomingNews = () => {
                             <div className="row">
                                 <div className="col-md-6" style={{ backgroundColor: '#f8f9fa', borderRight: '1px solid #dee2e6' }}>
                                     <h4 className='upheading'>{currentUpcoming && currentUpcoming.title}</h4>
-                                    <p className='upcomingDis'>{currentUpcoming && currentUpcoming.description}</p>
                                     <h6>Date :  {currentUpcoming && currentUpcoming.date} </h6>
                                     <h6>Time :  {currentUpcoming && currentUpcoming.time} </h6>
                                     <h6>Mode :  {currentUpcoming && currentUpcoming.mode} </h6>
+                                    <p className='upcomingDis'>{currentUpcoming && currentUpcoming.description}</p>
                                 </div>
                                 <div className="col-md-6">
-                                    <form onSubmit={handleSubmit}>
+                                    <form onSubmit={handleSubmit} id='upcomingregform'>
                                         <div className='row'>
                                             <div className="col-md-2 form-group">
                                                 <label htmlFor="title">Title</label>

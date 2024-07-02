@@ -154,7 +154,7 @@ const UpcomingNews = () => {
 
                 <div className='row '>
                     {sLUpEv && sLUpEv.map((slup, ind) => (
-                        <div className="col" >
+                        <div className="row" >
                             <div className="card mb-3 cards2" key={ind}>
                                 <div className="row g-0">
                                     <div className="col-md-4">
@@ -163,7 +163,7 @@ const UpcomingNews = () => {
                                     <div className="col-md-8">
                                         <div className="card-body">
                                             <div className='row'>
-                                                <h3 className="card-title crdtit">{slup.title}</h3>
+                                                <h3 className="card-title " >{slup.title}</h3>
                                             </div>
                                             <br />
                                             <div className='row buttnRow'>

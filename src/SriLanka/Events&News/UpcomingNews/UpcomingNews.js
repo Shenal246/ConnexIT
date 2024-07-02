@@ -163,7 +163,7 @@ const UpcomingNews = () => {
                                     <div className="col-md-8">
                                         <div className="card-body">
                                             <div className='row'>
-                                                <h3 className="card-title">{slup.title}</h3>
+                                                <h3 className="card-title crdtit">{slup.title}</h3>
                                             </div>
                                             <br />
                                             <div className='row buttnRow'>

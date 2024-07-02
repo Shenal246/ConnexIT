@@ -1,7 +1,7 @@
 .blogimg {
     padding: 4px;
     border-radius: 20px;
-
+    width: 300px;
 }
 
 .cards2 {
@@ -9,8 +9,8 @@
     color: white !important;
 }
 
-.card-title {
-    color: rgb(34, 205, 205) !important;
+.crdtit {
+    color: rgb(230, 174, 21) !important;
 }
 
 .modal {
@@ -36,23 +36,23 @@
     padding-bottom: 14px;
 }
 
-.buttnRow{
+.buttnRow {
     /* margin-top: 70px !important; */
     white-space: pre-wrap !important;
     word-wrap: break-word !important;
     text-align: justify;
 }
 
-.upcomingDis{
+.upcomingDis {
     padding: 50px;
     font-size: larger;
 }
 
-.form-group{
-    margin-top: 10px    ;
+.form-group {
+    margin-top: 10px;
 }
 
-.upheading{
+.upheading {
     text-align: center;
     padding-top: 10px;
 }

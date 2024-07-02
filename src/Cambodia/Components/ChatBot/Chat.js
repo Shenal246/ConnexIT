@@ -10,7 +10,7 @@ function Chat() {
   const [responses, setResponses] = useState([]);
   const chatBotRef = useRef(null);
 
-    const serverlink = connections.serverLinkInsert;
+  const chatinsert = connections.slchatinsert;
 
   const handleEnd = async ({ values }) => {
     console.log(values);
@@ -18,19 +18,21 @@ function Chat() {
     const name = values[0];
     const problem = values[1];
     const tpno = values[2];
+    const currentDateTime = new Date().toUTCString(); // Get current date and time in ISO format
 
     const value3 = {
-      query: "INSERT INTO chat(name, problem, tpno,countryid,statusid) VALUES (?,?,?,?,?)",
+      query: "INSERT INTO chat(name, problem, tpno,countryid,statusid,time) VALUES (?,?,?,?,?,?)",
       value1: name,
       value2: problem,
       value3: tpno,
       value4: 3,
       value5: 1,
+      value6: currentDateTime,
       key: "FKoaDwCi7C"
     };
 
 
-    await axios.post(serverlink, value3)
+    await axios.post(chatinsert, value3)
       .then((response) => {
         // Handle response if needed
       })
@@ -72,43 +74,43 @@ function Chat() {
   return (
     <div ref={chatBotRef} className="chat-container" style={{ '--floating-button-image': `url(${images[currentImageIndex]})` }}>
       <ChatBot
-          steps={[
-              {
-                  id: '1',
-                  message: 'Hi! I am here to help you. Can I know your name?',
-                  trigger: '2',
-              },
-              {
-                  id: '2',
-                  user: true,
-                  trigger: '3',
-              },
-              {
-                  id: '3',
-                  message: 'Hi {previousValue}, How Can I help you?',
-                  trigger: '4',
-              },
-              {
-                  id: '4',
-                  user: true,
-                  trigger: '5',
-              },
-              {
-                  id: '5',
-                  message: 'Sure. Can I have your phone number?',
-                  trigger: '6',
-              },
-              {
-                  id: '6',
-                  user: true,
-                  trigger: '7',
-              },
-              {
-                  id: '7',
-                  message: 'Thank you! One of our staff will call you shortly.',
-                  end: true,
-              },
-          ]}
+        steps={[
+          {
+            id: '1',
+            message: 'Hi! I am here to help you. Can I know your name?',
+            trigger: '2',
+          },
+          {
+            id: '2',
+            user: true,
+            trigger: '3',
+          },
+          {
+            id: '3',
+            message: 'Hi {previousValue}, How Can I help you?',
+            trigger: '4',
+          },
+          {
+            id: '4',
+            user: true,
+            trigger: '5',
+          },
+          {
+            id: '5',
+            message: 'Sure. Can I have your phone number?',
+            trigger: '6',
+          },
+          {
+            id: '6',
+            user: true,
+            trigger: '7',
+          },
+          {
+            id: '7',
+            message: 'Thank you! One of our staff will call you shortly.',
+            end: true,
+          },
+        ]}
         floating={true}
         handleEnd={handleEnd}
         className="custom-chatbot"

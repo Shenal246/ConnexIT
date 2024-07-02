@@ -10,7 +10,7 @@ function Chat() {
   const [responses, setResponses] = useState([]);
   const chatBotRef = useRef(null);
 
-    const serverlink = connections.serverLinkInsert;
+  const chatinsert = connections.slchatinsert;
 
   const handleEnd = async ({ values }) => {
     console.log(values);
@@ -18,18 +18,20 @@ function Chat() {
     const name = values[0];
     const problem = values[1];
     const tpno = values[2];
+    const currentDateTime = new Date().toUTCString(); // Get current date and time in ISO format
 
     const value3 = {
-      query: "INSERT INTO chat(name, problem, tpno,countryid,statusid) VALUES (?,?,?,?,?)",
+      query: "INSERT INTO chat(name, problem, tpno,countryid,statusid,time) VALUES (?,?,?,?,?,?)",
       value1: name,
       value2: problem,
       value3: tpno,
       value4: 2,
       value5: 1,
+      value6: currentDateTime,
       key: "FKoaDwCi7C"
     };
 
-    await axios.post(serverlink, value3)
+    await axios.post(chatinsert, value3)
       .then((response) => {
         // Handle response if needed
       })

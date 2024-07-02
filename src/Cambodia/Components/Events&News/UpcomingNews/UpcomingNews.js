@@ -2,122 +2,274 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './UpcomingNews.css';
 import axios from "axios";
+import CamNavbar from "../../Navbar/Navbar";
+import CamChat from "../../ChatBot/Chat";
+import CamFooter from "../../Footer/Footer";
+import Swal from 'sweetalert2';
 import connections from '../../../../config';
-import { useTranslation } from 'react-i18next';
-import CamNavbar from '../../Navbar/Navbar';
-import CamChat from '../../ChatBot/Chat';
-import CamFooter from '../../Footer/Footer';
+
+import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap components
 
 const UpcomingNews = () => {
     const videoRef = useRef(null); // Create a ref for the video element
     const [newsData, setNewsData] = useState([]);
-    const [currentVideoLink, setCurrentVideoLink] = useState(null);
+    const [sLUpEv, setSLUpEv] = useState([]);
+    const [currentUpcoming, setcurrentUpcoming] = useState(null);
 
-    const serverlink = connections.serverLink;
+    // const [currentVideoLink, setCurrentVideoLink] = useState(null);
 
-    const handleCloseModal = () => {
-        if (videoRef.current) {
-            videoRef.current.pause(); // Pause the video
-        }
-        setCurrentVideoLink(null);
-    };
+    // const serverlink = connections.serverLink;
 
-    const handleCardClick = (nlink) => {
-        setCurrentVideoLink(nlink);
-    };
+    // const handleCloseModal = () => {
+    //     if (videoRef.current) {
+    //         videoRef.current.pause(); // Pause the video
+    //     }
+    //     setCurrentVideoLink(null);
+    // };
+
+    // const handleCardClick = (nlink) => {
+    //     setCurrentVideoLink(nlink);
+    // };
 
     useEffect(() => {
-        const values = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=1 AND status=1 AND cnt=3;",
-            key: "Cr6re8VRBm"
-        };
 
-        axios.post(serverlink, values).then((response) => {
-            setNewsData(response.data);
+        axios.post(camupevserverlink).then((response) => {
+            setSLUpEv(response.data);
         }).catch((err) => {
             console.log(err);
         });
 
+        console.log(sLUpEv);;
+
     }, []);
 
-    
-    const { t } = useTranslation();
-    const { upevnt1, upevnt2, upevnt3, upevnt4, upevnt5
-        
-        } = t('upEventSec', { returnObjects: true });
+    const [lgShow, setLgShow] = useState(false);
+    const [formData, setFormData] = useState({
+        title: '',
+        name: '',
+        designation: '',
+        company: '',
+        email: '',
+        contact: '',
+        location: ''
+    });
+    const [errors, setErrors] = useState({});
+
+    const handleChange = (e) => {
+        const { id, value } = e.target;
+        setFormData({ ...formData, [id]: value });
+        console.log(formData);
+    };
+
+    const validate = () => {
+        let errors = {};
+        if (!formData.title) errors.title = 'Title is required';
+        if (!formData.name) errors.name = 'Name is required';
+        if (!formData.designation) errors.designation = 'Designation is required';
+        if (!formData.company) errors.company = 'Company name is required';
+        if (!formData.email) {
+            errors.email = 'Email is required';
+        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+            errors.email = 'Email is invalid';
+        }
+        if (!formData.contact) {
+            errors.contact = 'Contact number is required';
+        } else if (!/^\d{10}$/.test(formData.contact)) {
+            errors.contact = 'Contact number must be 10 digits';
+        }
+        if (!formData.location) errors.location = 'Location is required';
+        return errors;
+    };
+
+    const serverlink1234 = connections.slupreg;
+    const camupevserverlink = connections.camupcoming;
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const validationErrors = validate();
+        setErrors(validationErrors);
+        if (Object.keys(validationErrors).length === 0) {
+            try {
+                const value33 = {
+                    query: "",
+                    value1: currentUpcoming && currentUpcoming.id,
+                    value2: formData.title,
+                    value3: formData.name,
+                    value4: formData.designation,
+                    value5: formData.company,
+                    value6: formData.email,
+                    value7: formData.contact,
+                    value8: formData.location,
+                    value9: 3,
+                    key: "FKoaDwCi7C"
+                };
+
+                console.log(value33);
+                const response123 = await axios.post(serverlink1234, value33);
+                // const response123 = null;
+                console.log(response123);
+                if (response123.status === 200) {
+                    Swal.fire({
+                        // position: "top-end",
+                        icon: "success",
+                        title: "Successfully Submitted",
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                    setFormData({
+                        title: '',
+                        name: '',
+                        designation: '',
+                        company: '',
+                        email: '',
+                        contact: '',
+                        location: ''
+                    });
+                    setLgShow(false);
+
+                } else {
+                    alert('Failed to submit the form.');
+                }
+            } catch (error) {
+                console.error('Error submitting the form', error);
+                alert('An error occurred while submitting the form.');
+            }
+            // setLgShow(false);
+        }
+    };
 
     return (
         <>
-        <CamNavbar/>
-        <CamChat/>
-        <div className="upevntainer">
-        <div className='row'>
-            <div className="row text">
-                <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='UpcomingNewsText'>{upevnt1} <br /> {upevnt2}</p></div>
-                <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-            </div>
-        </div>
+            <CamNavbar />
+            <CamChat />
+            <div className="container">
+                <div className='row'>
+                    <div className="row text">
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='UpcomingNewsText'>Upcoming <br /> Events & News</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
+                    </div>
+                </div>
 
-        <div className="row cards">
-            {newsData.map((news, index) => (
-                <div className="col-lg-4" key={index}>
-                    <div className="card mb-3 card1 text-light position-relative crd rounded-5" data-bs-toggle="modal" data-bs-target="#videoModal" onClick={() => handleCardClick(news.link)}>
-                        <div className="position-relative">
-                            {news.image_data ? (
-                                <>
-                                    <img
-                                        src={`data:image/jpeg;base64,${news.image_data}`}
-                                        alt={news.title}
-                                        className="card-img-top image rounded-top-5 opacity-75" style={{ width: '100%', height: 'auto' }}
-
-                                    />
-                                </>
-                            ) : (
-                                <p>{upevnt3}</p>
-                            )}
-                            <div className="centered">
-                                <Link to="#" className="fa-solid fa-play playicon"></Link>
+                <div className='row '>
+                    {sLUpEv && sLUpEv.map((slup, ind) => (
+                        <div className="row" >
+                            <div className="card mb-3 cards2" key={ind}>
+                                <div className="row g-0">
+                                    <div className="col-md-4">
+                                        <img src={`data:image/jpeg;base64,${slup.image_data}`} className="img-fluid rounded-start blogimg" alt="..." />
+                                    </div>
+                                    <div className="col-md-8">
+                                        <div className="card-body">
+                                            <div className='row'>
+                                                <h3 className="card-title " >{slup.title}</h3>
+                                            </div>
+                                            <br />
+                                            <div className='row buttnRow'>
+                                                <div className='col-md-4 '>
+                                                    <h5>Date :  {slup.date} </h5>
+                                                    <h5>Time :  {slup.time} </h5>
+                                                    <h5>Mode :  {slup.mode} </h5>
+                                                </div>
+                                                <div className='col-md-8'>
+                                                    <button className="btn btn-info read-more" onClick={() => { setLgShow(true); setcurrentUpcoming(slup); }}>Register </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div className="card-body card1 rounded-top-1 rounded-bottom-5">
+
+                    ))}
+                </div>
+
+                <Modal
+                    size="xl"
+                    show={lgShow}
+                    backdrop="static"
+                    onHide={() => setLgShow(false)}
+                    aria-labelledby="example-modal-sizes-title-lg"
+                    className='modal'
+                >
+                    <Modal.Header closeButton>
+                        <Modal.Title id="example-modal-sizes-title-lg">
+                            Event Register
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <div className="container">
                             <div className="row">
-                                <h5 className="card-title small-title">{news.title}</h5>
+                                <div className="col-md-6" style={{ backgroundColor: '#f8f9fa', borderRight: '1px solid #dee2e6' }}>
+                                    <h4 className='upheading'>{currentUpcoming && currentUpcoming.title}</h4>
+                                    <h6>Date :  {currentUpcoming && currentUpcoming.date} </h6>
+                                    <h6>Time :  {currentUpcoming && currentUpcoming.time} </h6>
+                                    <h6>Mode :  {currentUpcoming && currentUpcoming.mode} </h6>
+                                    <p className='upcomingDis'>{currentUpcoming && currentUpcoming.description}</p>
+                                </div>
+                                <div className="col-md-6">
+                                    <form onSubmit={handleSubmit} id='upcomingregform'>
+                                        <div className='row'>
+                                            <div className="col-md-2 form-group">
+                                                <label htmlFor="title">Title</label>
+                                                <select
+                                                    className={`form-control ${errors.title ? 'is-invalid' : ''}`}
+                                                    id="title"
+                                                    value={formData.title}
+                                                    onChange={handleChange}
+                                                >
+                                                    <option value="" disabled selected>Select Title</option>
+                                                    <option value="Mr.">Mr.</option>
+                                                    <option value="Mrs.">Mrs.</option>
+                                                    <option value="Miss">Miss</option>
+                                                </select>
+                                                {errors.title && <div className="invalid-feedback">{errors.title}</div>}
+                                            </div>
+
+                                            <div className="col-md-10 form-group">
+                                                <label htmlFor="name">Name</label>
+                                                <input type="text" className={`form-control ${errors.name ? 'is-invalid' : ''}`} id="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" />
+                                                {errors.name && <div className="invalid-feedback">{errors.name}</div>}
+                                            </div>
+                                        </div>
+
+                                        <div className="form-group">
+                                            <label htmlFor="designation">Designation</label>
+                                            <input type="text" className={`form-control ${errors.designation ? 'is-invalid' : ''}`} id="designation" value={formData.designation} onChange={handleChange} placeholder="Enter your designation" />
+                                            {errors.designation && <div className="invalid-feedback">{errors.designation}</div>}
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="company">Company Name</label>
+                                            <input type="text" className={`form-control ${errors.company ? 'is-invalid' : ''}`} id="company" value={formData.company} onChange={handleChange} placeholder="Enter your company name" />
+                                            {errors.company && <div className="invalid-feedback">{errors.company}</div>}
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="email">Email</label>
+                                            <input type="email" className={`form-control ${errors.email ? 'is-invalid' : ''}`} id="email" value={formData.email} onChange={handleChange} placeholder="Enter your email" />
+                                            {errors.email && <div className="invalid-feedback">{errors.email}</div>}
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="contact">Contact Number</label>
+                                            <input type="text" className={`form-control ${errors.contact ? 'is-invalid' : ''}`} id="contact" value={formData.contact} onChange={handleChange} placeholder="Enter your contact number" />
+                                            {errors.contact && <div className="invalid-feedback">{errors.contact}</div>}
+                                        </div>
+                                        <div className="form-group">
+                                            <label htmlFor="location">Location</label>
+                                            <input type="text" className={`form-control ${errors.location ? 'is-invalid' : ''}`} id="location" value={formData.location} onChange={handleChange} placeholder="Enter your location" />
+                                            {errors.location && <div className="invalid-feedback">{errors.location}</div>}
+                                        </div>
+                                        <Button className="form-group" variant="primary" type="submit">
+                                            Submit
+                                        </Button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            ))}
-        </div>
-
-        {/* Modal */}
-        <div className="modal fade" id="videoModal" tabIndex="-1" aria-labelledby="videoModalLabel" aria-hidden="true" onClick={handleCloseModal}>
-            <div className="modal-dialog modal-dialog-centered modal-xl">
-                <div className="modal-upevntent modalClr">
-                    <div className="modal-header">
-                        <button type="button" className="btn-close close" data-bs-dismiss="modal" aria-label={upevnt4}></button>
-                    </div>
-                    <div className="modal-body">
-                        {currentVideoLink && (
-                            <iframe
-                                width="1100"
-                                height="500"
-                                src={currentVideoLink}
-                                title="Video Player"
-                                frameBorder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerPolicy="strict-origin-when-cross-origin"
-                                allowFullScreen
-                            ></iframe>
-                        )}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <CamFooter/>
-    </>
+                    </Modal.Body>
+                </Modal>
+            </div >
+            <CamFooter />
+        </>
     );
 }
 

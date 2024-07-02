@@ -101,7 +101,6 @@ const UpcomingNews = () => {
                     value7: formData.contact,
                     value8: formData.location,
                     value9: 1,
-                    value10: 1,
                     key: "FKoaDwCi7C"
                 };
 

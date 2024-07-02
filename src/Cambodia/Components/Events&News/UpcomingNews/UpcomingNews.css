@@ -1,133 +1,55 @@
-.cards {
-    padding-top: 2%;
-
+.blogimg {
+    padding: 4px;
+    border-radius: 20px;
+    width: 300px;
 }
 
-/* Add this style to your UpcomingNews.css file */
-.red-background {
-    background-color: red;
+.cards2 {
+    background-color: rgba(201, 209, 216, 0.384) !important;
+    color: white !important;
 }
 
-.crd {
 
-    margin-top: 7px;
+.modal {
+    padding-top: 100px;
 }
 
-.card1 {
-    background-color: #01066B;
-    padding: 2px;
-
+@media(max-width: 675px) {
+    .cards {
+        margin: 10px;
+        /* Add margin to cards for better spacing */
+    }
 }
 
-.textclr {
-    color: white;
-}
-
-.small-title {
-    font-size: 16px;
-    /* Adjust font size as needed */
-    line-height: 1.2;
-    /* Adjust line height as needed */
-}
-
-.card-img-top {
-    border-radius: 5px;
-    /* Optional: Added border radius to the image */
-}
-
-.playicon {
-    font-size: xx-large;
-    padding: 15px;
-    color: #01066B !important;
-
-
-}
-
-.playicon:hover {
-    font-size: xx-large;
-    padding: 15px;
-    color: #ffffff !important;
-}
-
-.centered {
-    background-color: white;
-    /* padding: 15px; */
-    border-radius: 15px;
-    align-items: center;
-}
-
-.centered:hover {
-    background-color: #01066B;
-    /* padding: 15px; */
-    border-radius: 15px;
-    align-items: center;
-}
-
-.fa-play.bttn {
-    font-size: 2.3rem;
-}
-
-/* UpcomingNews.css */
-
-.crd {
-    overflow: hidden;
-}
-
-.centered {
+.read-more {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
+    bottom: 10px;
+    right: 20px;
+    width: 140px !important;
+    border: 120px;
 }
 
-.fa-play {
-    color: white;
-    text-decoration: none;
+.headingrow {
+    padding-bottom: 14px;
 }
 
-#UpcomingNewsText {
+.buttnRow {
+    /* margin-top: 70px !important; */
+    white-space: pre-wrap !important;
+    word-wrap: break-word !important;
+    text-align: justify;
+}
+
+.upcomingDis {
+    padding: 50px;
+    font-size: larger;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.upheading {
     text-align: center;
-    font-size: 40px;
-    color: white;
-    opacity: 0.9;
-}
-
-.text {
-    padding-top: 2%;
-}
-
-.modalClr {
-    background-color: #2b2d6366 !important;
-}
-
-.close {
-    background-color: #ffffff !important;
-}
-
-@media (max-width: 425px) {
-    #UpcomingNewsText {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 375px) {
-    #UpcomingNewsText {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    #UpcomingNewsText {
-        font-size: 21px;
-    }
-
-    .subTopin {
-        font-size: 10px;
-    }
-}
-
-.subTopin {
-    font-size: 30px;
-    color: rgb(158, 165, 226);
+    padding-top: 10px;
 }

@@ -4,7 +4,8 @@ const config = {
     slupcoming: 'http://api.connexlk.biz:3001/slupev',
     camupcoming: 'http://api.connexlk.biz:3001/camupev',
     thaiupcoming: 'http://api.connexlk.biz:3001/taiupev',
-    slupreg: 'http://api.connexlk.biz:3001/upcomreg'
+    slupreg: 'http://api.connexlk.biz:3001/upcomreg',
+    slchatinsert: 'http://api.connexlk.biz:3001/newchat',
 };
 
 export default config;

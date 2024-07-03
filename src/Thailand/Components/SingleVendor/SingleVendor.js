@@ -4,6 +4,7 @@ import './SVendor.css';
 import ThaiNavbar from '../Navbar/Navbar';
 import ThaiChat from '../ChatBot/Chat';
 import ThaiFooter from '../Footer/Footer';
+import { NavLink } from "react-router-dom";
 
 const SingleVendor = () => {
     const location = useLocation();
@@ -39,7 +40,7 @@ const SingleVendor = () => {
                     <div className='bton'>
                         <a href={vend.wlink} target='_blank' rel='noopener noreferrer'>
                             <button className='websiteButton'>More</button>
-                            <button className='websiteButton'>Inquiry</button>
+                            <NavLink to ='/KH/ContactUs'><button className='websiteButton'> Inquiry</button></NavLink>
                         </a>
                     </div>
                 </div>

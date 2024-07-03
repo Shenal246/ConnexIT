@@ -4,6 +4,7 @@ import './SVendor.css';
 import SLNavbar from "../Navbar/Navbar";
 import SLChat from "../ChatBot/Chat";
 import SLFooter from "../Footer/Footer";
+import { NavLink } from "react-router-dom";
 
 const SingleVendor = () => {
     const location = useLocation();
@@ -39,7 +40,7 @@ const SingleVendor = () => {
                         <div className='bton'>
                             <a href={vend.wlink} target='_blank' rel='noopener noreferrer'>
                                 <button className='websiteButton1'>More </button>
-                                <button className='websiteButton1'>Inquiry</button>
+                                <NavLink to ='/KH/ContactUs'><button className='websiteButton'> Inquiry</button></NavLink>
                             </a>
                         </div>
                     </div>

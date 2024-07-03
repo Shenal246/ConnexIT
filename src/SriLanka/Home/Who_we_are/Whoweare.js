@@ -162,7 +162,7 @@ function WhoweareSection() {
           </div>
         </Modal.Body>
         <Modal.Footer className='model-footer'>
-          <NavLink to="/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
+          <NavLink to="/SL/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
             Contact Us
           </Button></NavLink>
         </Modal.Footer>
@@ -194,7 +194,7 @@ function WhoweareSection() {
           </div>
         </Modal.Body>
         <Modal.Footer className='model-footer'>
-          <NavLink to="/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
+          <NavLink to="/SL/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
             Contact Us
           </Button></NavLink>
         </Modal.Footer>
@@ -231,7 +231,7 @@ function WhoweareSection() {
           </div>
         </Modal.Body>
         <Modal.Footer className='model-footer'>
-          <NavLink to="/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
+          <NavLink to="/SL/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
             Contact Us
           </Button></NavLink>
         </Modal.Footer>
@@ -266,7 +266,7 @@ function WhoweareSection() {
           </div>
         </Modal.Body>
         <Modal.Footer className='model-footer'>
-          <NavLink to="/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
+          <NavLink to="/SL/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
             Contact Us
           </Button></NavLink>
         </Modal.Footer>

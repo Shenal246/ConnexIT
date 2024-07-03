@@ -96,7 +96,7 @@ h3 {
     color: rgba(var(--accent-color-rgb), 0.85);
 }
 
-.hero .animated {
+.hero .animated89 {
     animation: up-down 2s ease-in-out infinite alternate-reverse both;
     width: 85% !important;
 }
@@ -135,9 +135,10 @@ h3 {
         height: 250px !important;
     }
 
-    .hero .animated {
+    .hero .animated89 {
         animation: up-down 2s ease-in-out infinite alternate-reverse both;
         width: 75% !important;
+        margin-bottom: 70px;
     }
 }
 

@@ -86,7 +86,7 @@ const Latest = () => {
     }, []);
 
     const { t } = useTranslation();
-  const { lattopic } = t('latestsec', { returnObjects: true });
+    const { lattopic } = t('latestsec', { returnObjects: true });
 
     return (
         <section >
@@ -220,7 +220,6 @@ const Latest = () => {
                             <NavLink to="/KH/Events&News"><Button variant="" className='iconsss' style={{ backgroundColor: '#01066B' }}>
                                 <BsArrowRight size={30} />
                             </Button></NavLink>
-
                         </div>
                     </div>
 

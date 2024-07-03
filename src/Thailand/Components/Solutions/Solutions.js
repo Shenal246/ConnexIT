@@ -32,7 +32,7 @@ function Solutions() {
               <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
             </div>
           </div>
-          <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin">
+          <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin1234">
             <div className="col">
               <NavLink to="/TH/Solutions/InternetSecurity" activeClassName='active-link'>
                 <div className="card crd">
@@ -65,7 +65,7 @@ function Solutions() {
             </div>
           </div>
 
-          <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin">
+          <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin1234">
             <div className="col">
               <NavLink to="/TH/Solutions/SecurityManagement" activeClassName='active-link'>
                 <div className="card crd">
@@ -98,7 +98,7 @@ function Solutions() {
             </div>
           </div>
 
-          <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin">
+          <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin1234">
             <NavLink to="/TH/Solutions/Infrastructure" activeClassName='active-link'>
               <div className="card crd">
                 <img src={endpoint} className="card-img-top endpoint" alt="Data Center Infrastructure and Infrastructure Monitoring" />

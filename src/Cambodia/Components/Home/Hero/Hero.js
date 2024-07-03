@@ -59,7 +59,7 @@ function HeroSection() {
             </div>
           </div>
           <div className="col-lg-4 order-1 order-lg-2 heroroe" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-            <img src={Logo} className="img-fluid animated heroimg" alt="Hero" />
+            <img src={Logo} className="img-fluid animated89 heroimg89" alt="Hero" />
           </div>
           <div className="col-lg-6 order-1 order-lg-2 space"></div>
         </div>

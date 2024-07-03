@@ -29,7 +29,7 @@ function Solutions() {
           </div>
         </div>
 
-        <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin">
+        <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin1234">
           <div className="col">
             <NavLink to="/SL/Solutions/Perimia" activeClassName='active-link'>
               <div className="card crd">
@@ -62,7 +62,7 @@ function Solutions() {
           </div>
         </div>
 
-        <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin">
+        <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin1234">
           <div className="col">
             <NavLink to="/SL/Solutions/SecurityManagement" activeClassName='active-link'>
               <div className="card crd">
@@ -95,7 +95,7 @@ function Solutions() {
           </div>
         </div>
 
-        <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin">
+        <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin1234">
           <NavLink to="/SL/Solutions/Infrastructure" activeClassName='active-link'>
             <div className="card crd">
               <img src={endpoint} className="card-img-top endpoint" alt="Data Center Infrastructure and Infrastructure Monitoring" />

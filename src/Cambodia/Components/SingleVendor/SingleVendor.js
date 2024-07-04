@@ -5,11 +5,15 @@ import CamNavbar from '../Navbar/Navbar';
 import CamChat from '../ChatBot/Chat';
 import CamFooter from '../Footer/Footer';
 import { NavLink } from "react-router-dom";
+import DOMPurify from 'dompurify';
 
 const SingleVendor = () => {
     const location = useLocation();
     const { vend } = location.state;
 
+    const htmlContent = vend.des;
+    // Sanitize HTML content
+    const sanitizedHtml = DOMPurify.sanitize(htmlContent);
 
     return (
         <>
@@ -30,7 +34,7 @@ const SingleVendor = () => {
                         <div className='col-1'></div>
                         <div className='col-10'>
                             <div className='contentVendor1'>
-                                {vend.des}
+                                <div className='svendordescription' dangerouslySetInnerHTML={{ __html: sanitizedHtml }} />
                             </div>
                         </div>
                         <div className='col-1'></div>

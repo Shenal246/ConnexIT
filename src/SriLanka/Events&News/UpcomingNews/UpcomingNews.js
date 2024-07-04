@@ -51,7 +51,9 @@ const UpcomingNews = () => {
         company: '',
         email: '',
         contact: '',
-        location: ''
+        province: '',
+        city: ''
+
     });
     const [errors, setErrors] = useState({});
 
@@ -77,7 +79,8 @@ const UpcomingNews = () => {
         } else if (!/^\d{10}$/.test(formData.contact)) {
             errors.contact = 'Contact number must be 10 digits';
         }
-        if (!formData.location) errors.location = 'Location is required';
+        if (!formData.city) errors.city = 'City is required';
+        if (!formData.province) errors.province = 'Province is required';
         return errors;
     };
 
@@ -99,8 +102,9 @@ const UpcomingNews = () => {
                     value5: formData.company,
                     value6: formData.email,
                     value7: formData.contact,
-                    value8: formData.location,
-                    value9: 1,
+                    value8: formData.province,
+                    value9: formData.city,
+                    value10: 1,
                     key: "FKoaDwCi7C"
                 };
 
@@ -123,7 +127,8 @@ const UpcomingNews = () => {
                         company: '',
                         email: '',
                         contact: '',
-                        location: ''
+                        province: '',
+                        city: ''
                     });
                     setLgShow(false);
 
@@ -170,6 +175,7 @@ const UpcomingNews = () => {
                                                     <h5>Date :  {slup.date} </h5>
                                                     <h5>Time :  {slup.time} </h5>
                                                     <h5>Mode :  {slup.mode} </h5>
+                                                    <h5>Seat Count :  {slup.seat} </h5>
                                                 </div>
                                                 <div className='col-md-8'>
                                                     <button className="btn btn-info read-more" onClick={() => { setLgShow(true); setcurrentUpcoming(slup); }}>Register </button>
@@ -205,6 +211,7 @@ const UpcomingNews = () => {
                                     <h6>Date :  {currentUpcoming && currentUpcoming.date} </h6>
                                     <h6>Time :  {currentUpcoming && currentUpcoming.time} </h6>
                                     <h6>Mode :  {currentUpcoming && currentUpcoming.mode} </h6>
+                                    <h6>Seat Count :   {currentUpcoming && currentUpcoming.seat} </h6>
                                     <p className='upcomingDis'>{currentUpcoming && currentUpcoming.description}</p>
                                 </div>
                                 <div className="col-md-6">
@@ -253,11 +260,40 @@ const UpcomingNews = () => {
                                             <input type="text" className={`form-control ${errors.contact ? 'is-invalid' : ''}`} id="contact" value={formData.contact} onChange={handleChange} placeholder="Enter your contact number" />
                                             {errors.contact && <div className="invalid-feedback">{errors.contact}</div>}
                                         </div>
-                                        <div className="form-group">
-                                            <label htmlFor="location">Location</label>
-                                            <input type="text" className={`form-control ${errors.location ? 'is-invalid' : ''}`} id="location" value={formData.location} onChange={handleChange} placeholder="Enter your location" />
-                                            {errors.location && <div className="invalid-feedback">{errors.location}</div>}
+
+
+                                        <div className='row locationSelect'>
+                                            <div className="form-group col-md-5">
+                                                <label htmlFor="province">Province</label>
+                                                <select
+                                                    className={`form-control ${errors.province ? 'is-invalid' : ''}`}
+                                                    id="province"
+                                                    value={formData.province}
+                                                    onChange={handleChange}
+                                                >
+                                                    <option value="" disabled selected>Select Province</option>
+                                                    <option value="Province1">Western </option>
+                                                    <option value="Province2">Southern</option>
+                                                    <option value="Province3">Central</option>
+                                                    <option value="Province4">Eastern</option>
+                                                    <option value="Province5">North Central</option>
+                                                    <option value="Province6">Northern</option>
+                                                    <option value="Province7">North Western</option>
+                                                    <option value="Province8">Sabaragamuwa	</option>
+                                                    <option value="Province9">Uva</option>
+                                                </select>
+                                                {errors.province && <div className="invalid-feedback">{errors.province}</div>}
+                                            </div>
+
+                                            <div className="col-md-7 form-group">
+                                                <label htmlFor="city">City</label>
+                                                <input type="text" className={`form-control ${errors.city ? 'is-invalid' : ''}`} id="city" value={formData.city} onChange={handleChange} placeholder="Enter your city" />
+                                                {errors.city && <div className="invalid-feedback">{errors.city}</div>}
+                                            </div>
                                         </div>
+
+
+
                                         <Button className="form-group" variant="primary" type="submit">
                                             Submit
                                         </Button>

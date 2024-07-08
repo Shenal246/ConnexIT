@@ -2,9 +2,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './UpcomingNews.css';
 import axios from "axios";
-import CamNavbar from "../../Navbar/Navbar";
-import CamChat from "../../ChatBot/Chat";
-import CamFooter from "../../Footer/Footer";
+import ThaiNavbar from '../../Navbar/Navbar';
+import ThaiChat from '../../ChatBot/Chat';
+import ThaiFooter from '../../Footer/Footer';
 import Swal from 'sweetalert2';
 import connections from '../../../../config';
 import { useTranslation } from 'react-i18next';
@@ -13,28 +13,12 @@ import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap compo
 
 const UpcomingNews = () => {
     const videoRef = useRef(null); // Create a ref for the video element
-    const [newsData, setNewsData] = useState([]);
     const [sLUpEv, setSLUpEv] = useState([]);
     const [currentUpcoming, setcurrentUpcoming] = useState(null);
 
-    // const [currentVideoLink, setCurrentVideoLink] = useState(null);
-
-    // const serverlink = connections.serverLink;
-
-    // const handleCloseModal = () => {
-    //     if (videoRef.current) {
-    //         videoRef.current.pause(); // Pause the video
-    //     }
-    //     setCurrentVideoLink(null);
-    // };
-
-    // const handleCardClick = (nlink) => {
-    //     setCurrentVideoLink(nlink);
-    // };
-
     useEffect(() => {
 
-        axios.post(thaiupevserverlink).then((response) => {
+        axios.post(slupevserverlink).then((response) => {
             setSLUpEv(response.data);
         }).catch((err) => {
             console.log(err);
@@ -52,7 +36,9 @@ const UpcomingNews = () => {
         company: '',
         email: '',
         contact: '',
-        location: ''
+        province: '',
+        city: ''
+
     });
     const [errors, setErrors] = useState({});
 
@@ -78,12 +64,15 @@ const UpcomingNews = () => {
         } else if (!/^\d{10}$/.test(formData.contact)) {
             errors.contact = 'Contact number must be 10 digits';
         }
-        if (!formData.location) errors.location = 'Location is required';
+        if (!formData.city) errors.city = 'City is required';
+        if (!formData.province) errors.province = 'Province is required';
         return errors;
     };
 
     const serverlink1234 = connections.slupreg;
-    const thaiupevserverlink = connections.thaiupcoming;
+    const slupevserverlink = connections.thaiupcoming;
+    const slseatupdate = connections.slseatUpdate;
+    const slupseatcount = connections.slupcomingseat;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -100,37 +89,131 @@ const UpcomingNews = () => {
                     value5: formData.company,
                     value6: formData.email,
                     value7: formData.contact,
-                    value8: formData.location,
-                    value9: 2,
+                    value8: formData.province,
+                    value9: formData.city,
+                    value10: 2,
                     key: "FKoaDwCi7C"
                 };
 
-                console.log(value33);
-                const response123 = await axios.post(serverlink1234, value33);
-                // const response123 = null;
-                console.log(response123);
-                if (response123.status === 200) {
-                    Swal.fire({
-                        // position: "top-end",
-                        icon: "success",
-                        title: "Successfully Submitted",
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                    setFormData({
-                        title: '',
-                        name: '',
-                        designation: '',
-                        company: '',
-                        email: '',
-                        contact: '',
-                        location: ''
-                    });
-                    setLgShow(false);
+                const seatCount = {
+                    id: currentUpcoming && currentUpcoming.id,
+                };
 
+                const responseSeat = await axios.post(slupseatcount, seatCount);
+                // console.log(responseSeat.data[0].seats);
+
+                const intresponseSeat = parseInt(responseSeat.data[0].seats);
+
+                // alert(intresponseSeat);
+
+                if (!isNaN(intresponseSeat)) {
+                    if (intresponseSeat > 0) {
+                        // alert("Seat count is ok");
+                        // Submit the Form
+
+                        console.log(value33);
+                        const response123 = await axios.post(serverlink1234, value33);
+                        // const response123 = null;
+                        console.log(response123);
+                        if (response123.status === 200) {
+
+                            const newSeatCount = intresponseSeat - 1;
+
+                            const seatCount1234 = {
+                                query: "",
+                                value1: newSeatCount,
+                                value2: currentUpcoming && currentUpcoming.id,
+                                key: "FKoaDwCi7C"
+                            };
+
+                            const response123456 = await axios.post(slseatupdate, seatCount1234);
+
+                            if (response123456.status === 200) {
+                                Swal.fire({
+                                    // position: "top-end",
+                                    icon: "success",
+                                    title: "Successfully Submitted",
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+                                setFormData({
+                                    title: '',
+                                    name: '',
+                                    designation: '',
+                                    company: '',
+                                    email: '',
+                                    contact: '',
+                                    province: '',
+                                    city: ''
+                                });
+                                setLgShow(false);
+                                setcurrentUpcoming(null);
+                                window.location.reload();
+                            } else {
+                                alert(' Error reducing the seat count');
+                            }
+
+
+                        } else {
+                            alert('Failed to submit the form.');
+                        }
+                    } else {
+                        Swal.fire({
+                            // position: "top-end",
+                            icon: "error",
+                            title: "All the Seats are Full",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        setFormData({
+                            title: '',
+                            name: '',
+                            designation: '',
+                            company: '',
+                            email: '',
+                            contact: '',
+                            province: '',
+                            city: ''
+                        });
+                        setLgShow(false);
+                        setcurrentUpcoming(null);
+                    }
                 } else {
-                    alert('Failed to submit the form.');
+                    // If it is online seat count is unlimited. So run this code
+                    console.log("Seat Count is not a number section", value33);
+                    const response123 = await axios.post(serverlink1234, value33);
+                    // const response123 = null;
+                    console.log(response123);
+                    if (response123.status === 200) {
+                        Swal.fire({
+                            // position: "top-end",
+                            icon: "success",
+                            title: "Successfully Submitted",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        setFormData({
+                            title: '',
+                            name: '',
+                            designation: '',
+                            company: '',
+                            email: '',
+                            contact: '',
+                            province: '',
+                            city: ''
+                        });
+                        setLgShow(false);
+                        setcurrentUpcoming(null);
+                    } else {
+                        alert('Failed to submit the form.');
+                    }
                 }
+
+                if (responseSeat) {
+
+                }
+
+
             } catch (error) {
                 console.error('Error submitting the form', error);
                 alert('An error occurred while submitting the form.');
@@ -145,8 +228,8 @@ const UpcomingNews = () => {
 
     return (
         <>
-            <CamNavbar />
-            <CamChat />
+            <ThaiNavbar/>
+            <ThaiChat/>
             <div className="container">
                 <div className='row'>
                     <div className="row text">
@@ -171,12 +254,13 @@ const UpcomingNews = () => {
                                             </div>
                                             <br />
                                             <div className='row buttnRow'>
-                                                <div className='col-md-4 '>
+                                                <div className='col-md-5 '>
                                                     <h5>Date :  {slup.date} </h5>
                                                     <h5>Time :  {slup.time} </h5>
                                                     <h5>Mode :  {slup.mode} </h5>
+                                                    <h5>Remaining Seats: {slup.seats} </h5>
                                                 </div>
-                                                <div className='col-md-8'>
+                                                <div className='col-md-7'>
                                                     <button className="btn btn-info read-more" onClick={() => { setLgShow(true); setcurrentUpcoming(slup); }}>Register </button>
                                                 </div>
                                             </div>
@@ -210,6 +294,7 @@ const UpcomingNews = () => {
                                     <h6>Date :  {currentUpcoming && currentUpcoming.date} </h6>
                                     <h6>Time :  {currentUpcoming && currentUpcoming.time} </h6>
                                     <h6>Mode :  {currentUpcoming && currentUpcoming.mode} </h6>
+                                    <h6>Remaining Seats:   {currentUpcoming && currentUpcoming.seats} </h6>
                                     <p className='upcomingDis'>{currentUpcoming && currentUpcoming.description}</p>
                                 </div>
                                 <div className="col-md-6">
@@ -258,11 +343,38 @@ const UpcomingNews = () => {
                                             <input type="text" className={`form-control ${errors.contact ? 'is-invalid' : ''}`} id="contact" value={formData.contact} onChange={handleChange} placeholder="Enter your contact number" />
                                             {errors.contact && <div className="invalid-feedback">{errors.contact}</div>}
                                         </div>
-                                        <div className="form-group">
-                                            <label htmlFor="location">Location</label>
-                                            <input type="text" className={`form-control ${errors.location ? 'is-invalid' : ''}`} id="location" value={formData.location} onChange={handleChange} placeholder="Enter your location" />
-                                            {errors.location && <div className="invalid-feedback">{errors.location}</div>}
+
+
+                                        <div className='row locationSelect'>
+                                            <div className="form-group col-md-5">
+                                                <label htmlFor="province">Province</label>
+                                                <select
+                                                    className={`form-control ${errors.province ? 'is-invalid' : ''}`}
+                                                    id="province"
+                                                    value={formData.province}
+                                                    onChange={handleChange}
+                                                >
+                                                    <option value="" disabled selected>Select Province</option>
+                                                    <option value="Western">Western </option>
+                                                    <option value="Southern">Southern</option>
+                                                    <option value="Central">Central</option>
+                                                    <option value="Eastern">Eastern</option>
+                                                    <option value="North Central">North Central</option>
+                                                    <option value="Northern">Northern</option>
+                                                    <option value="North Western">North Western</option>
+                                                    <option value="Sabaragamuwa">Sabaragamuwa	</option>
+                                                    <option value="Uva">Uva</option>
+                                                </select>
+                                                {errors.province && <div className="invalid-feedback">{errors.province}</div>}
+                                            </div>
+
+                                            <div className="col-md-7 form-group">
+                                                <label htmlFor="city">City</label>
+                                                <input type="text" className={`form-control ${errors.city ? 'is-invalid' : ''}`} id="city" value={formData.city} onChange={handleChange} placeholder="Enter your city" />
+                                                {errors.city && <div className="invalid-feedback">{errors.city}</div>}
+                                            </div>
                                         </div>
+
                                         <Button className="form-group" variant="primary" type="submit">
                                             Submit
                                         </Button>
@@ -273,7 +385,7 @@ const UpcomingNews = () => {
                     </Modal.Body>
                 </Modal>
             </div >
-            <CamFooter />
+            <ThaiFooter/>
         </>
     );
 }

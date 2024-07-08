@@ -12,24 +12,8 @@ import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap compo
 
 const UpcomingNews = () => {
     const videoRef = useRef(null); // Create a ref for the video element
-    const [newsData, setNewsData] = useState([]);
     const [sLUpEv, setSLUpEv] = useState([]);
     const [currentUpcoming, setcurrentUpcoming] = useState(null);
-
-    // const [currentVideoLink, setCurrentVideoLink] = useState(null);
-
-    // const serverlink = connections.serverLink;
-
-    // const handleCloseModal = () => {
-    //     if (videoRef.current) {
-    //         videoRef.current.pause(); // Pause the video
-    //     }
-    //     setCurrentVideoLink(null);
-    // };
-
-    // const handleCardClick = (nlink) => {
-    //     setCurrentVideoLink(nlink);
-    // };
 
     useEffect(() => {
 
@@ -86,6 +70,8 @@ const UpcomingNews = () => {
 
     const serverlink1234 = connections.slupreg;
     const slupevserverlink = connections.slupcoming;
+    const slseatupdate = connections.slseatUpdate;
+    const slupseatcount = connections.slupcomingseat;
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -108,33 +94,125 @@ const UpcomingNews = () => {
                     key: "FKoaDwCi7C"
                 };
 
-                console.log(value33);
-                const response123 = await axios.post(serverlink1234, value33);
-                // const response123 = null;
-                console.log(response123);
-                if (response123.status === 200) {
-                    Swal.fire({
-                        // position: "top-end",
-                        icon: "success",
-                        title: "Successfully Submitted",
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-                    setFormData({
-                        title: '',
-                        name: '',
-                        designation: '',
-                        company: '',
-                        email: '',
-                        contact: '',
-                        province: '',
-                        city: ''
-                    });
-                    setLgShow(false);
+                const seatCount = {
+                    id: currentUpcoming && currentUpcoming.id,
+                };
 
+                const responseSeat = await axios.post(slupseatcount, seatCount);
+                // console.log(responseSeat.data[0].seats);
+
+                const intresponseSeat = parseInt(responseSeat.data[0].seats);
+
+                // alert(intresponseSeat);
+
+                if (!isNaN(intresponseSeat)) {
+                    if (intresponseSeat > 0) {
+                        // alert("Seat count is ok");
+                        // Submit the Form
+
+                        console.log(value33);
+                        const response123 = await axios.post(serverlink1234, value33);
+                        // const response123 = null;
+                        console.log(response123);
+                        if (response123.status === 200) {
+
+                            const newSeatCount = intresponseSeat - 1;
+
+                            const seatCount1234 = {
+                                query: "",
+                                value1: newSeatCount,
+                                value2: currentUpcoming && currentUpcoming.id,
+                                key: "FKoaDwCi7C"
+                            };
+
+                            const response123456 = await axios.post(slseatupdate, seatCount1234);
+
+                            if (response123456.status === 200) {
+                                Swal.fire({
+                                    // position: "top-end",
+                                    icon: "success",
+                                    title: "Successfully Submitted",
+                                    showConfirmButton: false,
+                                    timer: 1500
+                                });
+                                setFormData({
+                                    title: '',
+                                    name: '',
+                                    designation: '',
+                                    company: '',
+                                    email: '',
+                                    contact: '',
+                                    province: '',
+                                    city: ''
+                                });
+                                setLgShow(false);
+                                setcurrentUpcoming(null);
+                                window.location.reload();
+                            } else {
+                                alert(' Error reducing the seat count');
+                            }
+
+
+                        } else {
+                            alert('Failed to submit the form.');
+                        }
+                    } else {
+                        Swal.fire({
+                            // position: "top-end",
+                            icon: "error",
+                            title: "No Seats are currently available",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        setFormData({
+                            title: '',
+                            name: '',
+                            designation: '',
+                            company: '',
+                            email: '',
+                            contact: '',
+                            province: '',
+                            city: ''
+                        });
+                        setLgShow(false);
+                        setcurrentUpcoming(null);
+                    }
                 } else {
-                    alert('Failed to submit the form.');
+                    // If it is online seat count is unlimited. So run this code
+                    console.log("Seat Count is not a number section", value33);
+                    const response123 = await axios.post(serverlink1234, value33);
+                    // const response123 = null;
+                    console.log(response123);
+                    if (response123.status === 200) {
+                        Swal.fire({
+                            // position: "top-end",
+                            icon: "success",
+                            title: "Successfully Submitted",
+                            showConfirmButton: false,
+                            timer: 1500
+                        });
+                        setFormData({
+                            title: '',
+                            name: '',
+                            designation: '',
+                            company: '',
+                            email: '',
+                            contact: '',
+                            province: '',
+                            city: ''
+                        });
+                        setLgShow(false);
+                        setcurrentUpcoming(null);
+                    } else {
+                        alert('Failed to submit the form.');
+                    }
                 }
+
+                if (responseSeat) {
+
+                }
+
+
             } catch (error) {
                 console.error('Error submitting the form', error);
                 alert('An error occurred while submitting the form.');
@@ -171,13 +249,13 @@ const UpcomingNews = () => {
                                             </div>
                                             <br />
                                             <div className='row buttnRow'>
-                                                <div className='col-md-4 '>
+                                                <div className='col-md-5 '>
                                                     <h5>Date :  {slup.date} </h5>
                                                     <h5>Time :  {slup.time} </h5>
                                                     <h5>Mode :  {slup.mode} </h5>
-                                                    <h5>Seat Count :  {slup.seat} </h5>
+                                                    <h5>Remaining Seats: {slup.seats} </h5>
                                                 </div>
-                                                <div className='col-md-8'>
+                                                <div className='col-md-7'>
                                                     <button className="btn btn-info read-more" onClick={() => { setLgShow(true); setcurrentUpcoming(slup); }}>Register </button>
                                                 </div>
                                             </div>
@@ -211,7 +289,7 @@ const UpcomingNews = () => {
                                     <h6>Date :  {currentUpcoming && currentUpcoming.date} </h6>
                                     <h6>Time :  {currentUpcoming && currentUpcoming.time} </h6>
                                     <h6>Mode :  {currentUpcoming && currentUpcoming.mode} </h6>
-                                    <h6>Seat Count :   {currentUpcoming && currentUpcoming.seat} </h6>
+                                    <h6>Remaining Seats:   {currentUpcoming && currentUpcoming.seats} </h6>
                                     <p className='upcomingDis'>{currentUpcoming && currentUpcoming.description}</p>
                                 </div>
                                 <div className="col-md-6">
@@ -272,15 +350,15 @@ const UpcomingNews = () => {
                                                     onChange={handleChange}
                                                 >
                                                     <option value="" disabled selected>Select Province</option>
-                                                    <option value="Province1">Western </option>
-                                                    <option value="Province2">Southern</option>
-                                                    <option value="Province3">Central</option>
-                                                    <option value="Province4">Eastern</option>
-                                                    <option value="Province5">North Central</option>
-                                                    <option value="Province6">Northern</option>
-                                                    <option value="Province7">North Western</option>
-                                                    <option value="Province8">Sabaragamuwa	</option>
-                                                    <option value="Province9">Uva</option>
+                                                    <option value="Western">Western </option>
+                                                    <option value="Southern">Southern</option>
+                                                    <option value="Central">Central</option>
+                                                    <option value="Eastern">Eastern</option>
+                                                    <option value="North Central">North Central</option>
+                                                    <option value="Northern">Northern</option>
+                                                    <option value="North Western">North Western</option>
+                                                    <option value="Sabaragamuwa">Sabaragamuwa	</option>
+                                                    <option value="Uva">Uva</option>
                                                 </select>
                                                 {errors.province && <div className="invalid-feedback">{errors.province}</div>}
                                             </div>

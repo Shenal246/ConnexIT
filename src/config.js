@@ -6,6 +6,8 @@ const config = {
     thaiupcoming: 'http://api.connexlk.biz:3001/taiupev',
     slupreg: 'http://api.connexlk.biz:3001/upcomreg',
     slchatinsert: 'http://api.connexlk.biz:3001/newchat',
+    slseatUpdate: 'http://api.connexlk.biz:3001/seatupdate',
+    slupcomingseat: 'http://api.connexlk.biz:3001/slupevst'
 };
 
 export default config;

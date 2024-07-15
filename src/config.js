@@ -1,13 +1,13 @@
 const config = {
-    serverLink: 'http://api.connexlk.biz:3001/search',
-    serverLinkInsert: 'http://api.connexlk.biz:3001/insert',
-    slupcoming: 'http://api.connexlk.biz:3001/slupev',
-    camupcoming: 'http://api.connexlk.biz:3001/camupev',
-    thaiupcoming: 'http://api.connexlk.biz:3001/taiupev',
-    slupreg: 'http://api.connexlk.biz:3001/upcomreg',
-    slchatinsert: 'http://api.connexlk.biz:3001/newchat',
-    slseatUpdate: 'http://api.connexlk.biz:3001/seatupdate',
-    slupcomingseat: 'http://api.connexlk.biz:3001/slupevst'
+    serverLink: 'https://api.connexit.biz/search',
+    serverLinkInsert: 'https://api.connexit.biz/insert',
+    slupcoming: 'https://api.connexit.biz/slupev',
+    camupcoming: 'https://api.connexit.biz/camupev',
+    thaiupcoming: 'https://api.connexit.biz/taiupev',
+    slupreg: 'https://api.connexit.biz/upcomreg',
+    slchatinsert: 'https://api.connexit.biz/newchat',
+    slseatUpdate: 'https://api.connexit.biz/seatupdate',
+    slupcomingseat: 'https://api.connexit.biz/slupevst'
 };
 
 export default config;

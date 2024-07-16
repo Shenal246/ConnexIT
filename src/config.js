@@ -7,7 +7,8 @@ const config = {
     slupreg: 'https://api.connexit.biz/upcomreg',
     slchatinsert: 'https://api.connexit.biz/newchat',
     slseatUpdate: 'https://api.connexit.biz/seatupdate',
-    slupcomingseat: 'https://api.connexit.biz/slupevst'
+    slupcomingseat: 'https://api.connexit.biz/slupevst',
+    slvendorfetch: 'https://api.connexit.biz/logoforcnt1'
 };
 
 export default config;

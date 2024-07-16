@@ -11,22 +11,19 @@ import { useTranslation } from 'react-i18next';
 import './Vendors.css';
 
 // Import your image files
-import ven1 from '../../../../images/vendorLogos/1.png';
-import ven2 from '../../../../images/vendorLogos/2.png';
-import ven3 from '../../../../images/vendorLogos/3.png';
-import ven4 from '../../../../images/vendorLogos/4.png';
-import ven5 from '../../../../images/vendorLogos/5.png';
-import ven6 from '../../../../images/vendorLogos/6.png';
-import ven7 from '../../../../images/vendorLogos/7.png';
-import ven8 from '../../../../images/vendorLogos/8.png';
-import ven9 from '../../../../images/vendorLogos/9.png';
-import ven10 from '../../../../images/vendorLogos/10.png';
-import ven11 from '../../../../images/vendorLogos/11.png';
-import ven13 from '../../../../images/vendorLogos/13.webp';
-import ven14 from '../../../../images/vendorLogos/14.png';
+import ven2 from '../../../../images/ThaiVendors/2.png';
+import ven3 from '../../../../images/ThaiVendors/3.png';
+import ven4 from '../../../../images/ThaiVendors/4.png';
+import ven5 from '../../../../images/ThaiVendors/5.png';
+import ven6 from '../../../../images/ThaiVendors/6.png';
+import ven7 from '../../../../images/ThaiVendors/7.png';
+import ven8 from '../../../../images/ThaiVendors/8.png';
+import ven9 from '../../../../images/ThaiVendors/9.png';
+import ven11 from '../../../../images/ThaiVendors/11.png';
+import ven12 from '../../../../images/ThaiVendors/12.jpg';
 // Add import statements for all your images here...
 
-const imagePaths = [ven1, ven2, ven3, ven4, ven5, ven6, ven7, ven8, ven9, ven10, ven11, ven13, ven14]; // Add all your image paths to this array
+const imagePaths = [ven2, ven3, ven4, ven5, ven6, ven7, ven8, ven9, ven11, ven12]; // Add all your image paths to this array
 
 const Vendors = () => {
   const { t } = useTranslation();

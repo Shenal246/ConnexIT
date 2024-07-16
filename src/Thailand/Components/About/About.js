@@ -1,5 +1,5 @@
 import React from 'react';
-import headlogo from '../../../images/about-page-img2.png'
+import headlogo from '../../../images/ThaiGroup/ThailandGroup.jpg'
 import arrowleft from '../../../images/icons8-triangle-64.png'
 import './About.css';
 import "slick-carousel/slick/slick.css";
@@ -41,7 +41,7 @@ const About = () => {
     const { t } = useTranslation();
 
     const { ThaiourSTopic, ThaiourSText, ThaiourVTopic, ThaiourVText, ThaiourMTopic, ThaiourMText, ThaisureshName, ThaisureshText, ThaishamalName, ThaishamalText, ThaidilshanName, ThaidilshanText, ThairohanName, ThairohanText, ThairajivName,
-        ThairajivText, ThaipatricName, ThaipatricText, ThaierangaName, ThaierangaText, ThaijananiName, ThaijananiText, ThairomeshName, ThairomeshText
+        ThairajivText, ThaipatricName, ThaipatricText, ThaierangaName, ThaierangaText, ThaijananiName, ThaijananiText, ThairomeshName, ThairomeshText, ThaiKiththiName, ThaiKiththiText
     } = t('Thaiourstory', { returnObjects: true });
 
 
@@ -99,6 +99,12 @@ const About = () => {
             img: '/quots/romesh.jpg',
             quote: ThairomeshText,
             post: 'Director',
+        },
+        {
+            name: ThaiKiththiName,
+            img: '/quots/Kiththi.jpg',
+            quote: ThaiKiththiText,
+            post: 'Director of Connex Thailand',
         }
 
     ];
@@ -116,8 +122,8 @@ const About = () => {
 
     return (
         <>
-           <ThaiNavbar/>
-           <ThaiChat/>
+            <ThaiNavbar />
+            <ThaiChat />
             <section id='t1'>
                 <div class="container classss">
                     <div className='center' data-aos="fade-up" data-aos-delay="200">
@@ -214,7 +220,7 @@ const About = () => {
                     <div className="col-2" ></div>
                 </div>
             </div>
-        <ThaiFooter/>
+            <ThaiFooter />
         </>);
 
 

@@ -71,7 +71,7 @@ const About = () => {
             name: 'Patric Yogarathnam',
             img: '/quots/Patrick_yogarathnam.jpg',
             quote: '"Connecting with our global customers requires understanding diverse needs and delivering exceptional service."',
-            post: 'CIR',
+            post: 'CIRO',
         },
         {
             name: 'Eranga Wickramasinghe',

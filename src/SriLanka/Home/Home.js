@@ -13,15 +13,14 @@ import React from "react";
 function Home() {
   return (
     <>
-        <SLNavbar />
-        <SLChat />
+      <SLNavbar />
+      <SLChat />
 
       <HeroSection />
       <WhoweareSection />
-      {/* <Test/> */}
       <Vendors />
-      <Latest/>
-        <SLFooter />
+      <Latest />
+      <SLFooter />
     </>
   );
 }

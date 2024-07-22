@@ -9,6 +9,7 @@ import connections from '../../config';
 import SLNavbar from "../Navbar/Navbar";
 import SLChat from "../ChatBot/Chat";
 import SLFooter from "../Footer/Footer";
+import NewBtn from '../NewButton/NewBtn';
 
 const Contact = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -69,6 +70,7 @@ const Contact = () => {
         <>
             <SLNavbar />
             <SLChat />
+            <NewBtn/>
             <div className="container">
                 <div className='row'>
                     <div className="row gy-3 text mb-4" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">

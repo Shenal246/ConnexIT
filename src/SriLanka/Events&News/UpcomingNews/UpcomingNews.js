@@ -99,7 +99,7 @@ const UpcomingNews = () => {
                 };
 
                 const responseSeat = await axios.post(slupseatcount, seatCount);
-                // console.log(responseSeat.data[0].seats);
+                // console.log("Seats COunt-----------", responseSeat.data[0].seats);
 
                 const intresponseSeat = parseInt(responseSeat.data[0].seats);
 
@@ -110,22 +110,28 @@ const UpcomingNews = () => {
                         // alert("Seat count is ok");
                         // Submit the Form
 
-                        console.log(value33);
+                        // console.log(value33);
+                        // console.log(intresponseSeat);
                         const response123 = await axios.post(serverlink1234, value33);
                         // const response123 = null;
-                        console.log(response123);
+                        // console.log(response123);
                         if (response123.status === 200) {
+                            // if (true) {
 
                             const newSeatCount = intresponseSeat - 1;
+                            const StringnewSeatCount = newSeatCount.toString();
+                            // console.log("New Seat Count",StringnewSeatCount);
 
                             const seatCount1234 = {
                                 query: "",
-                                value1: newSeatCount,
+                                value1: StringnewSeatCount,
                                 value2: currentUpcoming && currentUpcoming.id,
                                 key: "FKoaDwCi7C"
                             };
 
                             const response123456 = await axios.post(slseatupdate, seatCount1234);
+                            // const response123456 = null;
+                            // console.log("Sending data",seatCount1234);
 
                             if (response123456.status === 200) {
                                 Swal.fire({

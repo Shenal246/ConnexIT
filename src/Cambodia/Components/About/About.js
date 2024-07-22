@@ -80,7 +80,7 @@ const About = () => {
             name: patricName,
             img: '/quots/Patrick_yogarathnam.jpg',
             quote: patricText,
-            post: 'CIR',
+            post: 'CIRO',
         },
         {
             name: erangaName,

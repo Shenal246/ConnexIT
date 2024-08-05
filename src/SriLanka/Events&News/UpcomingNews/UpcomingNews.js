@@ -7,6 +7,7 @@ import SLChat from "../../ChatBot/Chat";
 import SLFooter from "../../Footer/Footer";
 import Swal from 'sweetalert2';
 import connections from '../../../config';
+import microsoft from '../../../images/techImages/microsoft-2.jpg'
 
 import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap components
 
@@ -239,6 +240,36 @@ const UpcomingNews = () => {
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
+
+                {/* microsoft even card */}
+                <div className='row microsoftcard'>
+                    <div className="card mb-3 cards2">
+                        <div className="row g-0">
+                            <div className="col-md-4">
+                                <img src={microsoft} className="img-fluid  blogimg mcroimg" alt="Microsoft Event" />
+                            </div>
+                            <div className="col-md-8">
+                                <div className="card-body">
+                                    <div className='row'>
+                                        <h3 className="card-title ">Microsoft Event</h3>
+                                    </div>
+                                    <br />
+                                    <div className='row buttnRow'>
+                                        <div className='col-md-5 '>
+                                            
+                                            <h5>Mode : Physical</h5>
+                                            
+                                        </div>
+                                        <div className='col-md-7'>
+                                            <button className="btn btn-info read-more" onClick={() => { setLgShow(true); setcurrentUpcoming({ title: 'Microsoft Event', date: '2024-08-15', time: '10:00 AM', mode: 'Online', seats: 'Unlimited', description: 'Join us for an exclusive Microsoft event where we will unveil the latest innovations and updates.' }); }}>Register</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {/*end of the microsoft even card */}
 
                 <div className='row '>
                     {sLUpEv && sLUpEv.map((slup, ind) => (

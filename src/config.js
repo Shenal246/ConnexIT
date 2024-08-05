@@ -8,7 +8,8 @@ const config = {
     slchatinsert: 'https://api.connexit.biz/newchat',
     slseatUpdate: 'https://api.connexit.biz/seatupdate',
     slupcomingseat: 'https://api.connexit.biz/slupevst',
-    slvendorfetch: 'https://api.connexit.biz/logoforcnt1'
+    slvendorfetch: 'https://api.connexit.biz/logoforcnt1',
+    camBlog: 'https://api.connexit.biz/camblog'
 };
 
 export default config;

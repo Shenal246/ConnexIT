@@ -124,26 +124,27 @@ const Latest = () => {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
 
                     {/* First image of the Second column */}
-                    <div className="col-md-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                    <div className="col-md-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                         <div className='row'>
                             <div className="mb-2">
-                                <div className="cardContainer2 card" data-bs-toggle="modal" data-bs-target="#videoModal3" onClick={() => handleCardClick(latestTwo.link)}>
+
+                                {/* Card1 */}
+                                <div className="cardContainer1 card" data-bs-toggle="modal" data-bs-target="#videoModal3" onClick={() => handleCardClick(latestTwo.link)}>
                                     {latestTwo && latestTwo.image_data ? (
                                         <>
                                             <img
                                                 src={`data:image/jpeg;base64,${latestTwo && latestTwo.image_data}`}
                                                 alt={latestTwo.title}
-                                                className='image2'
+                                                className='image1'
 
                                             />
                                         </>
                                     ) : (
-                                        <p className='AltText'>No News Available</p>
+                                        <p>No Image Available</p>
                                     )}
 
                                     <div className="card-body cardBody">
@@ -153,69 +154,15 @@ const Latest = () => {
                                         </div>
                                     </div>
                                 </div>
+
                             </div>
                         </div>
 
-                        <div className="mb-2">
-                            <div className='row'>
-                                <div className="col-md-6">
-                                    {/* First image of the Second column second row */}
-                                    <div className="mb-2">
-                                        <div className="cardContainer2 card" data-bs-toggle="modal" data-bs-target="#videoModal3" onClick={() => handleCardClick(latestThree.link)}>
-                                            {latestThree && latestThree.image_data ? (
-                                                <>
-                                                    <img
-                                                        src={`data:image/jpeg;base64,${latestThree && latestThree.image_data}`}
-                                                        alt={latestThree.title}
-                                                        className='image2'
-
-                                                    />
-                                                </>
-                                            ) : (
-                                                <p className='AltText'>No Image Available</p>
-                                            )}
-
-                                            <div className="card-body cardBody2">
-
-                                                <div className="row">
-                                                    <h5 className="card-title">{latestThree && latestThree.title}</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    {/* Second image of the Second column second row */}
-                                    <div className="mb-2">
-                                        <div className="cardContainer2 card" data-bs-toggle="modal" data-bs-target="#videoModal3" onClick={() => handleCardClick(latestFour.link)}>
-                                            {latestFour && latestFour.image_data ? (
-                                                <>
-                                                    <img
-                                                        src={`data:image/jpeg;base64,${latestFour && latestFour.image_data}`}
-                                                        alt={latestFour.title}
-                                                        className='image2'
-
-                                                    />
-                                                </>
-                                            ) : (
-                                                <p className='AltText'>No Image Available</p>
-                                            )}
-
-                                            <div className="card-body cardBody2">
-
-                                                <div className="row">
-                                                    <h5 className="card-title">{latestFour && latestFour.title}</h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
+
                     {/* See more button */}
-                    <div className="col-md-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
+                    <div className="row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                         <div className="navigation">
                             <NavLink to="/KH/Events&News"><Button variant="" className='iconsss' style={{ backgroundColor: '#01066B' }}>
                                 <BsArrowRight size={30} />

@@ -22,7 +22,7 @@
         font-size: 21px;
     }
 
-    .iframenews{
+    .iframenews {
         height: 260px !important;
     }
 }
@@ -80,7 +80,7 @@
     margin-bottom: 1%;
     border-radius: 15px;
     height: 96%;
-    text-align: center;
+    text-align: right !important;
 }
 
 .backgrnd {
@@ -103,7 +103,6 @@
     transition: 1s;
 }
 
-.AltText{
+.AltText {
     color: aliceblue;
 }
-

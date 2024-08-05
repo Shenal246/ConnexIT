@@ -137,7 +137,7 @@ function Navbar() {
                   <ul className='container1'>
                     <div class="scrollable-menu flagName">
                       
-                      <li><a href="#"><img src={aus} alt=" Flag" className='flag' /> Australia</a></li>
+                      <li><a href="/AU"><img src={aus} alt=" Flag" className='flag' /> Australia</a></li>
                       <li><a href="#"><img src={ban} alt=" Flag" className='flag' /> Bangladesh</a></li>
                       <li><a href="#"><img src={bru} alt=" Flag" className='flag' />Brunei</a></li>
                       {/* <li><a href="#"><img src={cam} alt=" Flag" className='flag' />Cambodia</a></li>                   */}

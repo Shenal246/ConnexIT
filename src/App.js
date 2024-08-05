@@ -59,6 +59,26 @@ import THInfrastructure from "./Thailand/Components/Solutions/solutionVendors/In
 import THServer from "./Thailand/Components/Solutions/solutionVendors/ServerBackup/ServerBackup";
 import THSingleVendor from "./Thailand/Components/SingleVendor/SingleVendor";
 
+import AUHome from "./Australia/Home/Home";
+import AUAbout from "./Australia/About/About";
+import AUEvents from "./Australia/Events&News/Events";
+import AUUpcomingEvents from "./Australia/Events&News/UpcomingNews/UpcomingNews";
+import AUBlog from "./Australia/Blog/Blog";
+import AUContactUs from "./Australia/ContactUs/Contact";
+import AUSolutions from "./Australia/Solutions/Solutions";
+import AUPortal from "./Australia/Portal/Portal";
+import AUCyberSecurity from "./Australia/Solutions/solutionVendors/CyberSecurity/CyberSecurity";
+import AUAuthentication from "./Australia/Solutions/solutionVendors/Authentication/Authentication";
+import AUSecurityManagement from "./Australia/Solutions/solutionVendors/Security/Security";
+import AUPerimia from "./Australia/Solutions/solutionVendors/Perimia/Perimia";
+import AUEndpointSecurity from "./Australia/Solutions/solutionVendors/Endpoint/Endpoin";
+import AUNetworking from "./Australia/Solutions/solutionVendors/Networking/Networking";
+import AUInfrastructure from "./Australia/Solutions/solutionVendors/Infrastructure/InfrastructureMonitoring";
+import AUServer from "./Australia/Solutions/solutionVendors/ServerBackup/ServerBackup";
+import AUMicrosoft from "./Australia/Solutions/solutionVendors/Microsoft/Microsoft";
+import AUFAQs from "./Australia/FAQs/FAQs";
+import AUSingleVendor from "./Australia/SingleVendor/SingleVendor";
+
 
 
 function App() {
@@ -153,6 +173,36 @@ function App() {
                     <Route path="/TH/Solutions/Perimia/:vendorName" element={<THSingleVendor />} />
                     <Route path="/TH/Solutions/Security/:vendorName" element={<THSingleVendor />} />
                     <Route path="/TH/Solutions/ServerBackup/:vendorName" element={<THSingleVendor />} />
+
+                    {/*Australia*/}
+                    
+                    <Route path="/AU" exact element={<AUHome />} />
+                    <Route path="/AU/About" exact element={<AUAbout />} />
+                    <Route path="/AU/Events&News" exact element={<AUEvents />} />
+                    <Route path="/AU/UpcomingNews" exact element={<AUUpcomingEvents />} />
+                    <Route path="/AU/Blog" exact element={<AUBlog />} />
+                    <Route path="/AU/ContactUs" exact element={<AUContactUs />} />
+                    <Route path="/AU/Solutions" exact element={<AUSolutions />} />
+                    <Route path="/AU/Portal" exact element={<AUPortal />} />
+
+                    <Route path="/AU/Solutions/CyberSecurity" element={<AUCyberSecurity />} />
+                    <Route path="/AU/Solutions/Authentication" element={<AUAuthentication />} />
+                    <Route path="/AU/Solutions/SecurityManagement" element={<AUSecurityManagement />} />
+                    <Route path="/AU/Solutions/Perimia" element={<AUPerimia />} />
+                    <Route path="/AU/Solutions/EndpointSecurity" element={<AUEndpointSecurity />} />
+                    <Route path="/AU/Solutions/Networking" element={<AUNetworking />} />
+                    <Route path="/AU/Solutions/Infrastructure" element={<AUInfrastructure />} />
+                    <Route path="/AU/Solutions/Server" element={<AUServer />} />
+                    <Route path="/AU/Solutions/Microsoft" element={<AUMicrosoft />} />
+                    <Route path="/AU/FAQs" element={<AUFAQs />} />
+                    <Route path="/AU/Solutions/Authentication/:vendorName" element={<AUSingleVendor />} />
+                    <Route path="/AU/Solutions/CyberSecurity/:vendorName" element={<AUSingleVendor />} />
+                    <Route path="/AU/Solutions/Endpoin/:vendorName" element={<AUSingleVendor />} />
+                    <Route path="/AU/Solutions/InfrastructureMonitoring/:vendorName" element={<AUSingleVendor />} />
+                    <Route path="/AU/Solutions/Networking/:vendorName" element={<AUSingleVendor />} />
+                    <Route path="/AU/Solutions/Perimia/:vendorName" element={<AUSingleVendor />} />
+                    <Route path="/AU/Solutions/Security/:vendorName" element={<AUSingleVendor />} />
+                    <Route path="/AU/Solutions/ServerBackup/:vendorName" element={<AUSingleVendor />} />
                 </Routes>
 
             </>

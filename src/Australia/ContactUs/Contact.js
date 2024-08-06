@@ -9,7 +9,7 @@ import connections from '../../config';
 import AUNavbar from "../Navbar/Navbar";
 import AUChat from "../ChatBot/Chat";
 import SLFooter from "../Footer/Footer";
-import NewBtn from '../NewButton/NewBtn';
+// import NewBtn from '../NewButton/NewBtn';
 
 const Contact = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm();
@@ -35,7 +35,7 @@ const Contact = () => {
             value4: values[3],
             value5: values[4],
             value6: values[5],
-            value7: 1,
+            value7: 4,
             value8: 1,
             key: "FKoaDwCi7C"
         };

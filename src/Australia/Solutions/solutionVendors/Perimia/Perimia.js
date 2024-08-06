@@ -20,7 +20,7 @@ function Perimia() {
 
     useEffect(() => {
         const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Perimeter_and_internal_security FROM Vendor WHERE Perimeter_and_internal_security='true' AND status=1 AND cnt=1;",
+            query: "SELECT name,des,wlink,status,image_data,cnt,Perimeter_and_internal_security FROM Vendor WHERE Perimeter_and_internal_security='true' AND status=1 AND cnt=4;",
             key: "Cr6re8VRBm"
         };
 

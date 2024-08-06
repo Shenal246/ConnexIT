@@ -18,11 +18,11 @@ function CyberSecurity() {
     const [currentVendor, setCurrentVendor] = useState(null);
     const navigate = useNavigate();
     const serverlink = connections.serverLink;
-    
+
 
     useEffect(() => {
         const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Cyber_Security_Governance_Compliance FROM Vendor WHERE Cyber_Security_Governance_Compliance='true' AND status=1 AND cnt=1;",
+            query: "SELECT name,des,wlink,status,image_data,cnt,Cyber_Security_Governance_Compliance FROM Vendor WHERE Cyber_Security_Governance_Compliance='true' AND status=1 AND cnt=2;",
             key: "Cr6re8VRBm"
         };
 
@@ -36,7 +36,7 @@ function CyberSecurity() {
 
     }, []);
 
-   
+
 
     const handleCardClick = (vend) => {
         navigate(`/AU/Solutions/CyberSecurity/${vend.name}`, { state: { vend } });
@@ -51,12 +51,12 @@ function CyberSecurity() {
                     <div className='row '>
                         <div className="row text headingrow">
                             <div className="col-3" data-aos="fade-up" data-aos-delay="100">
-                                <hr/>
+                                <hr />
                             </div>
                             <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>Cyber Security
                                 Governance & Compliance</p></div>
                             <div className="col-3" data-aos="fade-up" data-aos-delay="100">
-                                <hr/>
+                                <hr />
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ function CyberSecurity() {
                             </Row>
                             <Row>
                                 <a href={currentVendor && currentVendor.wlink} target='_blank'><Button variant="primary"
-                                                                                                       className='websiteButton'>Visit Website</Button></a>
+                                    className='websiteButton'>Visit Website</Button></a>
                             </Row>
 
                         </Modal.Body>

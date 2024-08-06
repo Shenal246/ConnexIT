@@ -21,7 +21,7 @@ function Server() {
 
     useEffect(() => {
         const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Server_Storage_Backup_Solutions FROM Vendor WHERE Server_Storage_Backup_Solutions='true' AND status=1 AND cnt=1;",
+            query: "SELECT name,des,wlink,status,image_data,cnt,Server_Storage_Backup_Solutions FROM Vendor WHERE Server_Storage_Backup_Solutions='true' AND status=1 AND cnt=4;",
             key: "Cr6re8VRBm"
         };
 
@@ -47,12 +47,12 @@ function Server() {
                     <div className='row '>
                         <div className="row text headingrow">
                             <div className="col-3" data-aos="fade-up" data-aos-delay="100">
-                                <hr/>
+                                <hr />
                             </div>
                             <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>Server Storage
                                 & Backup Solutions</p></div>
                             <div className="col-3" data-aos="fade-up" data-aos-delay="100">
-                                <hr/>
+                                <hr />
                             </div>
                         </div>
                     </div>
@@ -107,7 +107,7 @@ function Server() {
                             </Row>
                             <Row>
                                 <a href={currentVendor && currentVendor.wlink} target='_blank'><Button variant="primary"
-                                                                                                       className='websiteButton'>Visit
+                                    className='websiteButton'>Visit
                                     Website</Button></a>
                             </Row>
 

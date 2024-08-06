@@ -28,7 +28,7 @@ const Events = () => {
 
     useEffect(() => {
         const values = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND status=1 AND cnt=1;",
+            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND status=1 AND cnt=4;",
             key: "Cr6re8VRBm"
         };
 
@@ -39,7 +39,7 @@ const Events = () => {
         });
 
         const values1 = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=7 AND status=1 AND cnt=1;",
+            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=7 AND status=1 AND cnt=4;",
             key: "Cr6re8VRBm"
         };
 

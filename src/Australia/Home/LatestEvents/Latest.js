@@ -30,7 +30,7 @@ const Latest = () => {
     const fetchNews = async () => {
         // Latest One
         const values = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=3 AND status=1 AND cnt=1;",
+            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=3 AND status=1 AND cnt=4;",
             key: "Cr6re8VRBm"
         };
 
@@ -42,7 +42,7 @@ const Latest = () => {
 
         // Latest Two
         const value2 = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=4 AND status=1 AND cnt=1;",
+            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=4 AND status=1 AND cnt=4;",
             key: "Cr6re8VRBm"
         };
 
@@ -54,7 +54,7 @@ const Latest = () => {
 
         // Latest Three
         const value3 = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=5 AND status=1 AND cnt=1;",
+            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=5 AND status=1 AND cnt=4;",
             key: "Cr6re8VRBm"
         };
 
@@ -66,7 +66,7 @@ const Latest = () => {
 
         // Latest Three
         const value4 = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=6 AND status=1 AND cnt=1;",
+            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=6 AND status=1 AND cnt=4;",
             key: "Cr6re8VRBm"
         };
 

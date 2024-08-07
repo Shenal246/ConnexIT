@@ -91,6 +91,13 @@ const About = () => {
             quote: '"Success in sales is not about pushing products, but about understanding and solving customer needs."',
             post: 'Director of Connex HQ',
         }
+        // ,
+        // {
+        //     name: 'Oshan Thudawe',
+        //     img: '/quots/aus.jpg',
+        //     quote: '"Empowering businesses through innovative technology and service."',
+        //     post: 'Director of Connex Australia',
+        // }
 
     ];
     var settings = {

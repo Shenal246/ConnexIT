@@ -203,17 +203,16 @@ const Contact = () => {
 
                 <div className="row">
                     <div className="col-md-6 countryData">
-                        <h1 className='countryName address3'>Sri Lanka</h1>
-                        <h3>Sri Lankan Office</h3>
+                        <h1 className='countryName address3'>Australia</h1>
+                        <h3>Australian Office</h3>
                         <p className='txt1'><i className="fas fa-map-marker-alt img3"></i>
-                            No 286,<br />
-                            <span className='address'>R. A. De Mel Mawatha,</span><br />
-                            <span className='address'>Colombo 00300,</span><br />
-                            <span className='address'>Sri Lanka</span>
+                        14 Alwyn Crescent<br />
+                            <span className='address'>Glenwood  NSW 2767</span><br />
+                            <span className='address'>Australia</span>
                         </p>
                         <button
                             className="neon-button"
-                            onClick={() => window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.8378227416442!2d79.84946567448274!3d6.909986818552493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25965c4fa5a01%3A0x2773f36f89729e4e!2sConnex%20Information%20Technologies%20(Pvt)%20Ltd.!5e0!3m2!1sen!2slk!4v1715597396485!5m2!1sen!2slk')}
+                            onClick={() => window.open('https://www.google.com/maps/place/14+Alwyn+Cres,+Glenwood+NSW+2768,+Australia/@-33.7285605,150.9355453,17z/data=!3m1!4b1!4m6!3m5!1s0x6b129f4f6811c7cf:0x19a2bd9d4db419c7!8m2!3d-33.7285605!4d150.9381202!16s%2Fg%2F11c24g87xz?entry=ttu')}
                         >
                             Get Directions
                         </button>

@@ -17,13 +17,12 @@ const Footer = () => {
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-1 address2">
-                            <h3>Sri Lankan Office</h3>
+                            <h3>Australian Office</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img2" ></i>
-                                No 286,<br />
-                                <span>R. A. De Mel Mawatha,</span><br />
-                                <span> Colombo 00300,</span> <br />
-                                <span>Sri Lanka .</span><br />
-                                <i className="fas fa-phone-volume callIcon2" ></i>Contact: +94114 693 355
+                                14 Alwyn Crescent<br />
+                                <span>Glenwood  NSW 2767</span><br />
+                                <span>Australia </span><br />
+                                <i className="fas fa-phone-volume callIcon2" ></i>Contact: +61 406 125 445
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-2 resources">
@@ -45,10 +44,10 @@ const Footer = () => {
                     <div className="row rowlast">
                         <div className="col-md-6 col-lg-4  ft-1">
                             <div className="footer-icons img icons">
-                                <a className="" href="https://www.facebook.com/connexinformationtechnologies" target="_blank"><i className="bi bi-facebook"></i></a>
+                                <a className="" href="https://web.facebook.com/profile.php?id=61561098997077" target="_blank"><i className="bi bi-facebook"></i></a>
                                 <a className="" href="https://twitter.com/connex_pvt_ltd?lang=en"><i className="bi bi-twitter-x twitterLogo"></i></a>
                                 <a className="" href="https://www.instagram.com/connexinformationtechnologies?igsh=MjYxNnpkN3FqNTd0" target="_blank"><i className="bi bi-instagram insterLogo"></i></a>
-                                <a className="" href="https://www.linkedin.com/company/connexinformationtechnologies/mycompany/" target="_blank"><i className="bi bi-linkedin"></i></a>
+                                <a className="" href="https://www.linkedin.com/showcase/connex-australia/" target="_blank"><i className="bi bi-linkedin"></i></a>
                                 <a className="" href="https://www.youtube.com/@connexinformationtechnologies" target="_blank"><i className="bi bi-youtube insterLogo"></i></a>
                             </div>
                         </div>

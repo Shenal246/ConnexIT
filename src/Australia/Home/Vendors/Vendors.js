@@ -6,35 +6,31 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css'; // Import Swiper bundle CSS
-import { useState, useEffect } from 'react';
-import axios from "axios";
+import { useTranslation } from 'react-i18next';
 
 import './Vendors.css';
 
 // Import your image files
-import connections from '../../../config';
+import ven1 from '../../../images/AusVendors/5.png';
+import ven2 from '../../../images/AusVendors/7.png';
+import ven3 from '../../../images/AusVendors/11.png';
+import ven4 from '../../../images/AusVendors/21.png';
+import ven5 from '../../../images/AusVendors/26.png';
+import ven6 from '../../../images/AusVendors/29.png';
+import ven7 from '../../../images/AusVendors/30.png';
+import ven8 from '../../../images/AusVendors/34.png';
+import ven9 from '../../../images/AusVendors/42.png';
+import ven10 from '../../../images/AusVendors/43.png';
+import ven11 from '../../../images/AusVendors/45.png';
+import ven12 from '../../../images/AusVendors/48.png';
+import ven13 from '../../../images/AusVendors/52.png';
+// Add import statements for all your images here...
 
+const imagePaths = [ven1, ven2, ven3, ven4, ven5, ven6, ven7, ven8, ven9, ven10, ven11, ven12, ven13]; // Add all your image paths to this array
 
 const Vendors = () => {
-
-  const [vendorLogos, setVendorLogos] = useState(null);
-
-  useEffect(() => {
-    fetchVendors();
-  }, []);
-
-  const serverlinkForBackend = connections.slvendorfetch;
-
-  const fetchVendors = async () => {
-    await axios.get(serverlinkForBackend).then((response) => {
-      setVendorLogos(response.data);
-      console.log("Vendor logos------------", response.data);
-
-    }).catch((err) => {
-      console.log(err);
-    });
-    console.log("Vendor logos", vendorLogos);
-  }
+  const { t } = useTranslation();
+  const { ventopic, venText1, venText2 } = t('vendorsec', { returnObjects: true });
 
   return (
     <section className='vendors'>
@@ -42,12 +38,12 @@ const Vendors = () => {
         {/* Vendors Text */}
         <div className="row gy-3" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
           <div className="col-4"><hr /></div>
-          <div className="col-4"><p id='ourVendorsText'>Our Vendors</p></div>
+          <div className="col-4"><p id='ourVendorsText'>{ventopic}</p></div>
           <div className="col-4"><hr /></div>
         </div>
 
         <div className='row vendorText' data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-          <p>Embark on technological Excellence with our Trusted <br />Network of Vendors.</p>
+          <p>{venText1}<br />{venText2}</p>
         </div>
 
         <div className='row' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
@@ -72,10 +68,10 @@ const Vendors = () => {
               modules={[EffectCoverflow, Autoplay]}
               className="mySwiper"
             >
-              {vendorLogos && vendorLogos.map((venimg, index) => (
+              {imagePaths.map((path, index) => (
                 <SwiperSlide key={index}>
                   <div className='image-container'>
-                    <img src={`data:image/jpeg;base64,${venimg && venimg.image_data}`} alt="Vendor Logos" />
+                    <img src={path} alt={`ven${index}`} />
                   </div>
                 </SwiperSlide>
               ))}

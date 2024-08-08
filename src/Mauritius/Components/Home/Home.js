@@ -4,16 +4,16 @@ import WhoweareSection from './Who_we_are/Whoweare';
 import Latest from './LatestEvents/Latest';
 // import Test from './Testing/test';
 import Vendors from './Vendors/Vendors';
-import CamNavbar from '../Navbar/Navbar';
-import CamChat from '../ChatBot/Chat';
-import CamFooter from '../Footer/Footer';
+import MUNavbar from '../Navbar/Navbar';
+import MUChat from '../ChatBot/Chat';
+import MUFooter from '../Footer/Footer';
 
 
 function Home() {
   return (
     <>
-    <CamNavbar/>
-    <CamChat/>
+    <MUNavbar/>
+    <MUChat/>
 
       <HeroSection />
       <WhoweareSection />
@@ -21,7 +21,7 @@ function Home() {
       <Vendors />
       <Latest/>
 
-    <CamFooter/>  
+    <MUFooter/>  
 
     </>
   );

@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import './Blog.css'; // Import your CSS file
 import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap components
 import { useTranslation } from 'react-i18next';
-import CamNavbar from '../Navbar/Navbar';
-import CamChat from '../ChatBot/Chat';
-import CamFooter from '../Footer/Footer';
+import MUNavbar from '../Navbar/Navbar';
+import MUChat from '../ChatBot/Chat';
+import MUFooter from '../Footer/Footer';
 import connections from '../../../config';
 import axios from "axios";
 
@@ -16,11 +16,11 @@ const Blog = () => {
     const { blg1
     } = t('blogsec', { returnObjects: true });
 
-    const serverlinkCamBlog = connections.camBlog;
+    const serverlinkMUBlog = connections.camBlog;
 
     useEffect(() => {
 
-        axios.post(serverlinkCamBlog).then((response) => {
+        axios.post(serverlinkMUBlog).then((response) => {
             setcamBlog(response.data);
             // console.log(response.data[0]);;
         }).catch((err) => {
@@ -34,8 +34,8 @@ const Blog = () => {
     return (
 
         <>
-            <CamNavbar />
-            <CamChat />
+            <MUNavbar />
+            <MUChat />
             <section>
                 <div className="container">
                     <div className='row '>
@@ -87,7 +87,7 @@ const Blog = () => {
                     <Modal.Body> {currentBlog && currentBlog.description}</Modal.Body>
                 </Modal>
             </section>
-            <CamFooter />
+            <MUFooter />
         </>
     );
 }

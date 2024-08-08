@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import './SVendor.css';
-import CamNavbar from '../Navbar/Navbar';
-import CamChat from '../ChatBot/Chat';
-import CamFooter from '../Footer/Footer';
+import MUNavbar from '../Navbar/Navbar';
+import MUChat from '../ChatBot/Chat';
+import MUFooter from '../Footer/Footer';
 import { NavLink } from "react-router-dom";
 import DOMPurify from 'dompurify';
 
@@ -17,8 +17,8 @@ const SingleVendor = () => {
 
     return (
         <>
-            <CamNavbar />
-            <CamChat />
+            <MUNavbar />
+            <MUChat />
             <section>
                 <div className="container sectionVendor">
                     <div className='row'>
@@ -44,14 +44,14 @@ const SingleVendor = () => {
                         <div className='bton'>
                             <a href={vend.wlink} target='_blank' rel='noopener noreferrer'>
                                 <button className='websiteButton'>More </button>
-                                <NavLink to='/KH/ContactUs'><button className='websiteButton'> Inquiry</button></NavLink>
+                                <NavLink to='/MU/ContactUs'><button className='websiteButton'> Inquiry</button></NavLink>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <CamFooter />
+            <MUFooter />
         </>
     );
 };

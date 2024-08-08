@@ -4,9 +4,9 @@ import './Events.css';
 import axios from "axios";
 import connections from '../../../config';
 import { useTranslation } from 'react-i18next';
-import CamNavbar from '../Navbar/Navbar';
-import CamChat from '../ChatBot/Chat';
-import CamFooter from '../Footer/Footer';
+import MUNavbar from '../Navbar/Navbar';
+import MUChat from '../ChatBot/Chat';
+import MUFooter from '../Footer/Footer';
 
 const Events = () => {
     const videoRef = useRef(null);
@@ -58,8 +58,8 @@ const Events = () => {
 
     return (
         <>
-            <CamNavbar />
-            <CamChat />
+            <MUNavbar />
+            <MUChat />
             <div className="container">
                 <div className='row'>
                     <div className="row text">
@@ -130,7 +130,7 @@ const Events = () => {
                     ))}
                 </div>
             </div>
-            <CamFooter />
+            <MUFooter />
         </>
     );
 }

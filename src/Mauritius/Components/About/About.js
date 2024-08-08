@@ -8,9 +8,9 @@ import Slider from "react-slick";
 import 'animate.css';
 import card1 from '../../../images/map/map trans.png';
 import { useTranslation } from 'react-i18next';
-import CamNavbar from '../Navbar/Navbar';
-import CamChat from '../ChatBot/Chat';
-import CamFooter from '../Footer/Footer';
+import MUNavbar from '../Navbar/Navbar';
+import MUChat from '../ChatBot/Chat';
+import MUFooter from '../Footer/Footer';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -116,8 +116,8 @@ const About = () => {
 
     return (
         <>
-            <CamNavbar/>
-            <CamChat/>
+            <MUNavbar/>
+            <MUChat/>
             <section id='t1'>
                 <div class="container classss">
                     <div className='center' data-aos="fade-up" data-aos-delay="200">
@@ -214,7 +214,7 @@ const About = () => {
                     <div className="col-2" ></div>
                 </div>
             </div>
-<CamFooter/>
+<MUFooter/>
         </>
         );
 

@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './products.css';
 import card1 from '../../../images/news.png';
 import Card from 'react-bootstrap/Card';
-import CamNavbar from '../Navbar/Navbar';
-import CamChat from '../ChatBot/Chat';
-import CamFooter from '../Footer/Footer';
+import MUNavbar from '../Navbar/Navbar';
+import MUChat from '../ChatBot/Chat';
+import MUFooter from '../Footer/Footer';
 
 function Products() {
     const [selectedVendor, setSelectedVendor] = useState('');
@@ -20,8 +20,8 @@ function Products() {
 
     return (
         <>
-        <CamNavbar/>
-        <CamChat/>
+        <MUNavbar/>
+        <MUChat/>
         <section>
             <div className="container">
                 <div className='row '>
@@ -73,7 +73,7 @@ function Products() {
 
             </div>
         </section>
-        <CamFooter/>
+        <MUFooter/>
         </>
     );
 }

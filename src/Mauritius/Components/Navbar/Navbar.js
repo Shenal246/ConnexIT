@@ -103,26 +103,26 @@ function Navbar() {
         <header id="header" className="header d-flex align-items-center sticky-top">
           <div className="container-fluid container-xl position-relative d-flex align-items-center">
             <a href="index.html" className="logo d-flex align-items-center me-auto">
-              <NavLink to="/KH" activeClassName='active-link' exact><img src={Logo} alt="Logo" /></NavLink>
+              <NavLink to="/MU" activeClassName='active-link' exact><img src={Logo} alt="Logo" /></NavLink>
             </a>
             <nav id="navmenu" className="navmenu">
               <ul class="no-bullets">
-                <NavLink to="/KH/About" activeClassName='active-link' exact><li><a className="">{tab1}</a></li></NavLink>
+                <NavLink to="/MU/About" activeClassName='active-link' exact><li><a className="">{tab1}</a></li></NavLink>
                 {/* <NavLink to="/Products" activeClassName='active-link' exact><li><a className="">Products</a></li></NavLink> */}
-                <NavLink to="/KH/Solutions" activeClassName='active-link' exact><li><a className="">{tab2}</a></li></NavLink>
+                <NavLink to="/MU/Solutions" activeClassName='active-link' exact><li><a className="">{tab2}</a></li></NavLink>
 
 
                 <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
                   <span className='toggle-dropdown'>{tab3}&nbsp; </span> <i className="bi bi-chevron-down toggle-dropdown arrow1 " ></i></a>
                   <ul className=''>
                     <div >
-                      <NavLink to="/KH/Events&News" activeClassName='active-link' exact>
+                      <NavLink to="/MU/Events&News" activeClassName='active-link' exact>
                         <a>{tab4}</a>
                       </NavLink>
-                      <NavLink to="/KH/UpcomingNews" activeClassName='active-link' exact>
+                      <NavLink to="/MU/UpcomingNews" activeClassName='active-link' exact>
                         <a>{tab5}</a>
                       </NavLink>
-                      <NavLink to="/KH/Blog" activeClassName='active-link' exact>
+                      <NavLink to="/MU/Blog" activeClassName='active-link' exact>
                         <a>{tab6}</a>
                       </NavLink>
 
@@ -130,7 +130,7 @@ function Navbar() {
                   </ul>
                 </li>
 
-                <NavLink to="/KH/Portal" activeClassName='active-link' exact><li><a className="">{tab7}</a></li></NavLink>
+                <NavLink to="/MU/Portal" activeClassName='active-link' exact><li><a className="">{tab7}</a></li></NavLink>
 
                 <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
                   <span className='toggle-dropdown'>{tab8}&nbsp;<img src={cam} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
@@ -140,12 +140,12 @@ function Navbar() {
                       <li><a href="/AU"><img src={aus} alt=" Flag" className='flag' /> Australia</a></li>
                       <li><a href="#"><img src={ban} alt=" Flag" className='flag' /> Bangladesh</a></li>
                       <li><a href="#"><img src={bru} alt=" Flag" className='flag' />Brunei</a></li>
-                      {/* <li><a href="#"><img src={cam} alt=" Flag" className='flag' />Cambodia</a></li>                   */}
+                      <li><a href="/KH"><img src={cam} alt=" Flag" className='flag' />Cambodia</a></li>                  
                       <li><a href="#"><img src={ind} alt=" Flag" className='flag' />India</a></li>
                       <li><a href="#"><img src={laos} alt=" Flag" className='flag' />Laos</a></li>
                       <li><a href="#"><img src={mld} alt=" Flag" className='flag' />Maldives</a></li>
                       <li><a href="#"><img src={myn} alt=" Flag" className='flag' />Myanmar</a></li>
-                      <li><a href="#"><img src={mrt} alt=" Flag" className='flag' />Mauritius</a></li>
+                      {/* <li><a href="#"><img src={mrt} alt=" Flag" className='flag' />Mauritius</a></li> */}
                       <li><a href="#"><img src={sin} alt=" Flag" className='flag' /> Singapore</a></li>
                       <li><a href="/SL"><img src={sl} alt=" Flag" className='flag' />Sri Lanka</a></li>
                       <li><a href="#"><img src={tnz} alt=" Flag" className='flag' />Tanzania</a></li>
@@ -158,7 +158,7 @@ function Navbar() {
               <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <NavLink to="/KH/ContactUs" activeClassName='active-link' className="btn-getstarted" >{tab9}</NavLink>
+            <NavLink to="/MU/ContactUs" activeClassName='active-link' className="btn-getstarted" >{tab9}</NavLink>
             <LanguageSelector/>
 
           </div>

@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import axios from 'axios';
 // import ReCAPTCHA from 'react-google-recaptcha';
 import './Contact.css';
-import mapSL from '../../images/map/mapSL.png';
+import mapaus from '../../images/map/aus.png';
 import Swal from 'sweetalert2';
 import connections from '../../config';
 import AUNavbar from "../Navbar/Navbar";
@@ -219,7 +219,7 @@ const Contact = () => {
                         <hr className='line'></hr><hr className='line'></hr>
                     </div>
                     <div className="col-md-6">
-                        <img src={mapSL} className='mapSL' />
+                        <img src={mapaus} className='mapaus' />
 
                     </div>
                 </div>

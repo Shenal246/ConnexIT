@@ -11,47 +11,6 @@
     text-align: center;
 }
 
-@media (max-width: 425px) {
-    #Text {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 375px) {
-    #Text {
-        font-size: 15px;
-    }
-}
-
-@media (max-width: 768px) {
-    #Text {
-        font-size: 21px;
-    }
-
-    .mapSL {
-        /* margin-left: 30% !important; */
-    }
-
-    .countryData {
-        /* margin-left: 25% !important; */
-        text-align: center;
-
-    }
-
-    .line {
-        width: 350px;
-    }
-
-    .txt1{
-        text-align: left;
-        margin-left: 120px;
-    }
-}
-
-.raw {
-    margin-top: 10px;
-}
-
 #Text {
     text-align: center;
     font-size: 40px;
@@ -120,7 +79,7 @@
 .txt1 {
     margin-top: 30px;
     font-style: oblique;
-    font: bold
+    font: bold;
 }
 
 .txtarea {
@@ -175,10 +134,57 @@
     margin-top: 0.25em;
 }
 
-.mapSL{
-    width: 230px;
-    margin-left: 100px;
+.raw {
+    margin-top: 10px;
 }
-.line{
+
+.mapaus {
+    width: 600px; /* Default width for larger screens */
+}
+
+@media (max-width: 768px) {
+    #Text {
+        font-size: 21px;
+    }
+
+    .mapaus {
+        width: 400px; /* Width for tablets */
+    }
+
+    .countryData {
+        text-align: center;
+    }
+
+    .line {
+        width: 350px;
+    }
+
+    .txt1 {
+        text-align: left;
+        margin-left: 120px;
+    }
+}
+
+@media (max-width: 425px) {
+    #Text {
+        font-size: 15px;
+    }
+
+    .mapaus {
+        width: 400px; /* Width for mobile devices */
+    }
+}
+
+@media (max-width: 375px) {
+    #Text {
+        font-size: 15px;
+    }
+
+    .mapaus {
+        width: 10px !important; /* Width for smaller mobile devices */
+    }
+}
+
+.line {
     display: none;
 }

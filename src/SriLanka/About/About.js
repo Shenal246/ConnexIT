@@ -68,7 +68,7 @@ const About = () => {
             post: 'Director of Connex HQ',
         },
         {
-            name: 'Patric Yogarathnam',
+            name: 'Patrick Yogaratnam',
             img: '/quots/Patrick_yogarathnam.jpg',
             quote: '"Connecting with our global customers requires understanding diverse needs and delivering exceptional service."',
             post: 'CIRO',

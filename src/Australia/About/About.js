@@ -68,7 +68,7 @@ const About = () => {
             post: 'Director of Connex HQ',
         },
         {
-            name: 'Patric Yogarathnam',
+            name: 'Patrick Yogaratnam',
             img: '/quots/Patrick_yogarathnam.jpg',
             quote: '"Connecting with our global customers requires understanding diverse needs and delivering exceptional service."',
             post: 'CIRO',
@@ -91,13 +91,13 @@ const About = () => {
             quote: '"Success in sales is not about pushing products, but about understanding and solving customer needs."',
             post: 'Director of Connex HQ',
         }
-        // ,
-        // {
-        //     name: 'Oshan Thudawe',
-        //     img: '/quots/aus.jpg',
-        //     quote: '"Empowering businesses through innovative technology and service."',
-        //     post: 'Director of Connex Australia',
-        // }
+        ,
+        {
+            name: 'Oshan Thudawe',
+            img: '/quots/aus.jpg',
+            quote: '"Empowering businesses through innovative technology and service."',
+            post: 'Director of Connex Australia',
+        }
 
     ];
     var settings = {

@@ -133,7 +133,7 @@ function Navbar() {
                 <NavLink to="/MU/Portal" activeClassName='active-link' exact><li><a className="">{tab7}</a></li></NavLink>
 
                 <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                  <span className='toggle-dropdown'>{tab8}&nbsp;<img src={cam} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
+                  <span className='toggle-dropdown'>{tab8}&nbsp;<img src={mrt} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
                   <ul className='container1'>
                     <div class="scrollable-menu flagName">
                       

@@ -79,6 +79,25 @@ import AUMicrosoft from "./Australia/Solutions/solutionVendors/Microsoft/Microso
 import AUFAQs from "./Australia/FAQs/FAQs";
 import AUSingleVendor from "./Australia/SingleVendor/SingleVendor";
 
+import MUHome from "./Mauritius/Components/Home/Home";
+import MUAbout from "./Mauritius/Components/About/About";
+import MUEvents from "./Mauritius/Components/Events&News/Events";
+import MUUpcomingEvents from "./Mauritius/Components/Events&News/UpcomingNews/UpcomingNews";
+import MUBlog from "./Mauritius/Components/Blog/Blog";
+import MUContactUs from "./Mauritius/Components/ContactUs/Contact";
+import MUSolutions from "./Mauritius/Components/Solutions/Solutions";
+import MUPortal from "./Mauritius/Components/Portal/Portal";
+import MUCyberSecurity from "./Mauritius/Components/Solutions/solutionVendors/CyberSecurity/CyberSecurity";
+import MUAuthentication from "./Mauritius/Components/Solutions/solutionVendors/Authentication/Authentication";
+import MUSecurityManagement from "./Mauritius/Components/Solutions/solutionVendors/Security/Security";
+import MUPerimia from "./Mauritius/Components/Solutions/solutionVendors/Perimia/Perimia";
+import MUEndpointSecurity from "./Mauritius/Components/Solutions/solutionVendors/Endpoint/Endpoin";
+import MUNetworking from "./Mauritius/Components/Solutions/solutionVendors/Networking/Networking";
+import MUInfrastructure from "./Mauritius/Components/Solutions/solutionVendors/Infrastructure/InfrastructureMonitoring";
+import MUServer from "./Mauritius/Components/Solutions/solutionVendors/ServerBackup/ServerBackup";
+import MUMicrosoft from "./Mauritius/Components/Solutions/solutionVendors/Microsoft/Microsoft";
+import MUSingleVendor from "./Mauritius/Components/SingleVendor/SingleVendor";
+
 
 
 function App() {
@@ -119,7 +138,7 @@ function App() {
                     <Route path="/SL/Solutions/Security/:vendorName" element={<SLSingleVendor />} />
                     <Route path="/SL/Solutions/ServerBackup/:vendorName" element={<SLSingleVendor />} />
 
-                {/*    Cambodia*/}
+                    {/*    Cambodia*/}
                     <Route path="/KH" exact Component={KHHome}></Route>
                     <Route path="/KH/About" exact Component={KHAbout}></Route>
                     <Route path="/KH/Events&News" exact element={<KHEvents />}></Route>
@@ -147,7 +166,7 @@ function App() {
                     <Route path="/KH/Solutions/Security/:vendorName" element={<KHSingleVendor />} />
                     <Route path="/KH/Solutions/ServerBackup/:vendorName" element={<KHSingleVendor />} />
 
-                {/*    Thailand*/}
+                    {/*    Thailand*/}
                     <Route path="/TH" exact Component={THHome}></Route>
                     <Route path="/TH/About" exact Component={THAbout}></Route>
                     <Route path="/TH/Events&News" exact element={<THEvents />}></Route>
@@ -175,7 +194,7 @@ function App() {
                     <Route path="/TH/Solutions/ServerBackup/:vendorName" element={<THSingleVendor />} />
 
                     {/*Australia*/}
-                    
+
                     <Route path="/AU" exact element={<AUHome />} />
                     <Route path="/AU/About" exact element={<AUAbout />} />
                     <Route path="/AU/Events&News" exact element={<AUEvents />} />
@@ -203,6 +222,34 @@ function App() {
                     <Route path="/AU/Solutions/Perimia/:vendorName" element={<AUSingleVendor />} />
                     <Route path="/AU/Solutions/Security/:vendorName" element={<AUSingleVendor />} />
                     <Route path="/AU/Solutions/ServerBackup/:vendorName" element={<AUSingleVendor />} />
+
+                    {/*    Mauritius*/}
+                    <Route path="/MU" exact Component={MUHome}></Route>
+                    <Route path="/MU/About" exact Component={MUAbout}></Route>
+                    <Route path="/MU/Events&News" exact element={<MUEvents />}></Route>
+                    <Route path="/MU/UpcomingNews" exact element={<MUUpcomingEvents />}></Route>
+                    <Route path="/MU/Blog" exact element={<MUBlog />}></Route>
+                    <Route path="/MU/ContactUs" exact Component={MUContactUs}></Route>
+                    <Route path="/MU/Solutions" exact Component={MUSolutions}></Route>
+                    <Route path="/MU/Portal" exact Component={MUPortal}></Route>
+
+                    <Route path="/MU/Solutions/CyberSecurity" element={<MUCyberSecurity />} />
+                    <Route path="/MU/Solutions/Authentication" element={<MUAuthentication />} />
+                    <Route path="/MU/Solutions/SecurityManagement" element={<MUSecurityManagement />} />
+                    <Route path="/MU/Solutions/Perimia" element={<MUPerimia />} />
+                    <Route path="/MU/Solutions/EndpointSecurity" element={<MUEndpointSecurity />} />
+                    <Route path="/MU/Solutions/Networking" element={<MUNetworking />} />
+                    <Route path="/MU/Solutions/Infrastructure" element={<MUInfrastructure />} />
+                    <Route path="/MU/Solutions/Server" element={<MUServer />} />
+                    <Route path="/MU/Solutions/Microsoft" element={<MUMicrosoft />} />
+                    <Route path="/MU/Solutions/Authentication/:vendorName" element={<MUSingleVendor />} />
+                    <Route path="/MU/Solutions/CyberSecurity/:vendorName" element={<MUSingleVendor />} />
+                    <Route path="/MU/Solutions/Endpoin/:vendorName" element={<MUSingleVendor />} />
+                    <Route path="/MU/Solutions/InfrastructureMonitoring/:vendorName" element={<MUSingleVendor />} />
+                    <Route path="/MU/Solutions/Networking/:vendorName" element={<MUSingleVendor />} />
+                    <Route path="/MU/Solutions/Perimia/:vendorName" element={<MUSingleVendor />} />
+                    <Route path="/MU/Solutions/Security/:vendorName" element={<MUSingleVendor />} />
+                    <Route path="/MU/Solutions/ServerBackup/:vendorName" element={<MUSingleVendor />} />
                 </Routes>
 
             </>

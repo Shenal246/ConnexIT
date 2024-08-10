@@ -53,10 +53,10 @@ const Footer = () => {
                     <div className="row rowlast">
                         <div className="col-md-6 col-lg-4  ft-1">
                             <div className="footer-icons img icons">
-                                <a className="" href="https://web.facebook.com/profile.php?id=61558199063705" target="_blank"><i className="fab fa-facebook facebook"></i></a>
+                                <a className="" href="https://www.facebook.com/profile.php?id=61559049842225" target="_blank"><i className="fab fa-facebook facebook"></i></a>
                                 {/* <a className="" href="/"><i className="fa-brands fa-x-twitter twitter" target="_blank"></i></a> */}
                                 {/* <a className="" href="https://www.instagram.com/connexinformationtechnologies?igsh=MjYxNnpkN3FqNTd0" target="_blank"><i className="fab fa-instagram instagram"></i></a> */}
-                                <a className="" href="https://www.linkedin.com/company/connexcambodia/" target="_blank"><i className="fab fa-linkedin-in linkedIn"></i></a>
+                                <a className="" href="https://www.linkedin.com/showcase/connex-mauritius1/" target="_blank"><i className="fab fa-linkedin-in linkedIn"></i></a>
                                 {/* <a className="" href="https://www.youtube.com/@connexinformationtechnologies" target="_blank"><i class="fa-brands fa-square-youtube youtube"></i></a> */}
                             </div>
                         </div>

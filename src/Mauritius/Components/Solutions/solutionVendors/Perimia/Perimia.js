@@ -40,8 +40,8 @@ function Perimia() {
     };
 
     const { t } = useTranslation();
-    const { pr1, pr2
-        } = t('perisec', { returnObjects: true });
+    const { Muripr1, Muripr2
+        } = t('Muriperisec', { returnObjects: true });
 
     return (
         <>
@@ -52,7 +52,7 @@ function Perimia() {
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{pr1}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Muripr1}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ function Perimia() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{pr2}</p>
+                                    <p>{Muripr2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>

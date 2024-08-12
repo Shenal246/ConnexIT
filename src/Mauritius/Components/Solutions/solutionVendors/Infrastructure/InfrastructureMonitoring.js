@@ -41,8 +41,8 @@ function InfrastructureMonitoring() {
     };
 
     const { t } = useTranslation();
-    const { if1, if2
-        } = t('ifmsec', { returnObjects: true });
+    const { Muriif1, Muriif2
+        } = t('Muriifmsec', { returnObjects: true });
 
     return (
         <>
@@ -53,7 +53,7 @@ function InfrastructureMonitoring() {
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{if1}</p></div>
+                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Muriif1}</p></div>
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ function InfrastructureMonitoring() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{if2}</p>
+                                    <p>{Muriif2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>

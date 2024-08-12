@@ -41,8 +41,8 @@ function Server() {
     };
 
     const { t } = useTranslation();
-    const { svr1, svr2
-    } = t('serversec', { returnObjects: true });
+    const { Murisvr1, Murisvr2
+    } = t('Muriserversec', { returnObjects: true });
 
     return (
        <>
@@ -54,7 +54,7 @@ function Server() {
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{svr1}</p></div>
+                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Murisvr1}</p></div>
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ function Server() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{svr1}</p>
+                                    <p>{Murisvr2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>

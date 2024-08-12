@@ -223,8 +223,8 @@ const UpcomingNews = () => {
     };
 
     const { t } = useTranslation();
-    const { upevnt1, upevnt2
-    } = t('upEventSec', { returnObjects: true });
+    const { Muriupevnt1, Muriupevnt2
+    } = t('MuriupEventSec', { returnObjects: true });
 
     return (
         <>
@@ -234,7 +234,7 @@ const UpcomingNews = () => {
                 <div className='row'>
                     <div className="row text">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='UpcomingNewsText'>{upevnt1} <br /> {upevnt2}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='UpcomingNewsText'>{Muriupevnt1} <br /> {Muriupevnt2}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>

@@ -42,8 +42,8 @@ function Security() {
     };
 
     const { t } = useTranslation();
-    const { scrty1, scrty2
-        } = t('securitysec', { returnObjects: true });
+    const { Muriscrty1, Muriscrty2
+        } = t('Murisecuritysec', { returnObjects: true });
 
     return (
         <>
@@ -54,7 +54,7 @@ function Security() {
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{scrty1}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Muriscrty1}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -73,7 +73,7 @@ function Security() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{scrty2}</p>
+                                    <p>{Muriscrty2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>

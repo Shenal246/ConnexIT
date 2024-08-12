@@ -35,7 +35,7 @@ function WhoweareSection() {
   const { t } = useTranslation();
 
   const [counterOn, setCounterOn] = useState(false);
-  const { whotopic, card1, card1Text, card2, card2Text, card3, card3Text, card4, card4Text, rText1, rText2, ic1, ic2, ic3, ic4, contact } = t('whowearesec', { returnObjects: true });
+  const { Muriwhotopic, Muricard1, Muricard1Text, Muricard2, Muricard2Text, Muricard3, Muricard3Text, Muricard4, Muricard4Text, MurirText1, MurirText2, Muriic1, Muriic2, Muriic3, Muriic4, Muricontact } = t('Muriwhowearesec', { returnObjects: true });
 
 
   return (
@@ -44,7 +44,7 @@ function WhoweareSection() {
         <div>
           <div className="row whotextRow" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
             <div className="col-4"><hr /></div>
-            <div className="col-4"><p id='whoweareText'>{whotopic}</p></div>
+            <div className="col-4"><p id='whoweareText'>{Muriwhotopic}</p></div>
             <div className="col-4"><hr /></div>
           </div>
 
@@ -54,22 +54,22 @@ function WhoweareSection() {
                 <div className='row' data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                   <div className='col welogos' onClick={() => setDisShow(true)}>
                     <div className='row'><img src={Dis} className='techimage' /></div>
-                    <div className='row'><p className='techText'>{card1}</p></div>
+                    <div className='row'><p className='techText'>{Muricard1}</p></div>
                   </div>
                   <div className='col welogos' onClick={() => setConShow(true)}>
                     <div className='row'><img src={Con} className='techimage' /></div>
-                    <div className='row'><p className='techText'>{card2}</p></div>
+                    <div className='row'><p className='techText'>{Muricard2}</p></div>
                   </div>
                 </div>
 
                 <div className='row' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                   <div className='col welogos' onClick={() => setTraShow(true)}>
                     <div className='row'><img src={Tra} className='techimage' /></div>
-                    <div className='row'><p className='techText'>{card3}</p></div>
+                    <div className='row'><p className='techText'>{Muricard3}</p></div>
                   </div>
                   <div className='col welogos' onClick={() => setTacShow(true)}>
                     <div className='row'><img src={Tac} className='techimage' /></div>
-                    <div className='row'><p className='techText'>{card4}</p></div>
+                    <div className='row'><p className='techText'>{Muricard4}</p></div>
                   </div>
                 </div>
               </div>
@@ -78,8 +78,8 @@ function WhoweareSection() {
               <div className="col-md-6 d-flex flex-column justify-content-center textarea" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
 
                 <div className="row" id='whText'>
-                  <p className='tx1'>{rText1}</p>
-                  <p className='tx2p'>{rText2}</p>
+                  <p className='tx1'>{MurirText1}</p>
+                  <p className='tx2p'>{MurirText2}</p>
                 </div>
 
 
@@ -92,7 +92,7 @@ function WhoweareSection() {
                       </div>
                     </div>
                     <div className='row textRow'>
-                      <p className='iconText'>{counterOn && <CountUp start={0} end={2023} duration={2} delay={0.5} separator="" />}<br /> {ic1}</p>
+                      <p className='iconText'>{counterOn && <CountUp start={0} end={2023} duration={2} delay={0.5} separator="" />}<br /> {Muriic1}</p>
                     </div>
                   </div>
 
@@ -103,7 +103,7 @@ function WhoweareSection() {
                       </div>
                     </div>
                     <div className='row textRow'>
-                      <p className='iconText'>{counterOn && <CountUp start={0} end={10} duration={3} delay={0.5} />}+ <br />{ic2}</p>
+                      <p className='iconText'>{counterOn && <CountUp start={0} end={10} duration={3} delay={0.5} />}+ <br />{Muriic2}</p>
                     </div>
                   </div>
 
@@ -114,7 +114,7 @@ function WhoweareSection() {
                       </div>
                     </div>
                     <div className='row textRow'>
-                      <p className='iconText'>{counterOn && <CountUp start={0} end={17} duration={3} delay={0.5} />}+ <br />{ic3}</p>
+                      <p className='iconText'>{counterOn && <CountUp start={0} end={17} duration={3} delay={0.5} />}+ <br />{Muriic3}</p>
                     </div>
                   </div>
 
@@ -125,7 +125,7 @@ function WhoweareSection() {
                       </div>
                     </div>
                     <div className='row textRow'>
-                      <p className='iconText'>{counterOn && <CountUp start={0} end={30} duration={3} delay={0.5} />}+ <br />{ic4}</p>
+                      <p className='iconText'>{counterOn && <CountUp start={0} end={30} duration={3} delay={0.5} />}+ <br />{Muriic4}</p>
                     </div>
                   </div>
 
@@ -151,13 +151,13 @@ function WhoweareSection() {
       >
         <Modal.Header closeButton closeVariant='white' className='model-header'>
           <Modal.Title id="example-modal-sizes-title-lg">
-            {card1}
+            {Muricard1}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className='model-body'>
           <div className='row'>
             <div className='col-md'>
-              <p className='model-content-text'>{card1Text}</p>
+              <p className='model-content-text'>{Muricard1Text}</p>
             </div>
 
             <div className='col-md'>
@@ -167,7 +167,7 @@ function WhoweareSection() {
         </Modal.Body>
         <Modal.Footer className='model-footer'>
           <NavLink to="/MU/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
-            {contact}
+            {Muricontact}
           </Button></NavLink>
         </Modal.Footer>
       </Modal>
@@ -188,7 +188,7 @@ function WhoweareSection() {
         <Modal.Body className='model-body'>
           <div className='row'>
             <div className='col-md'>
-              <p className='model-content-text'>{card2Text}</p>
+              <p className='model-content-text'>{Muricard2Text}</p>
             </div>
 
             <div className='col-md'>
@@ -198,7 +198,7 @@ function WhoweareSection() {
         </Modal.Body>
         <Modal.Footer className='model-footer'>
           <NavLink to="/MU/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
-            {contact}
+            {Muricontact}
           </Button></NavLink>
         </Modal.Footer>
       </Modal>
@@ -220,7 +220,7 @@ function WhoweareSection() {
           <div className='row'>
             <div className='col-md'>
               <p className='model-content-text'>
-                {card3Text}
+                {Muricard3Text}
               </p>
             </div>
 
@@ -231,7 +231,7 @@ function WhoweareSection() {
         </Modal.Body>
         <Modal.Footer className='model-footer'>
           <NavLink to="/MU/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
-            {contact}
+            {Muricontact}
           </Button></NavLink>
         </Modal.Footer>
       </Modal>
@@ -253,7 +253,7 @@ function WhoweareSection() {
           <div className='row'>
             <div className='col-md'>
               <p className='model-content-text'>
-                {card4Text}
+                {Muricard4Text}
               </p>
             </div>
 
@@ -264,7 +264,7 @@ function WhoweareSection() {
         </Modal.Body>
         <Modal.Footer className='model-footer'>
           <NavLink to="/MU/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
-            {contact}
+            {Muricontact}
           </Button></NavLink>
         </Modal.Footer>
       </Modal>

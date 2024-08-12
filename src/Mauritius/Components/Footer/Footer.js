@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
     const { t } = useTranslation();
-  const { footHeadTopic, headLine1, headLine2, headLine3,headLine4, footConTopic, conLine1,
-    conLine2, conLine3, conLine4, conLine5, resTopic, res1, res2, res3
-    } = t('footersec', { returnObjects: true });
+  const { MurifootHeadTopic, MuriheadLine1, MuriheadLine2, MuriheadLine3, MuriheadLine4, MurifootConTopic, MuriconLine1,
+    MuriconLine2, MuriconLine3, MuriconLine4, MuriconLine5, MuriresTopic, Murires1, Murires2, Murires3
+    } = t('Murifootersec', { returnObjects: true });
 
 
     return (
@@ -16,35 +16,35 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-lg-4  ft-1">
-                            <h3>{footHeadTopic}</h3>
+                            <h3>{MurifootHeadTopic}</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img" ></i>
-                            {headLine1}<br />
-                                <span>{headLine2}</span><br />
-                                <span> {headLine3}</span> <br />
-                                <i className="fas fa-phone-volume callIcon1" ></i>{headLine4}
+                            {MuriheadLine1}<br />
+                                <span>{MuriheadLine2}</span><br />
+                                <span> {MuriheadLine3}</span> <br />
+                                <i className="fas fa-phone-volume callIcon1" ></i>{MuriheadLine4}
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-1 address2">
-                            <h3>{footConTopic}</h3>
+                            <h3>{MurifootConTopic}</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img2" ></i>
-                            {conLine1}<br />
-                                <span>{conLine2}</span><br />
-                                <span> {conLine3}</span> <br />
-                                <span>{conLine4}</span><br />
-                                <i className="fas fa-phone-volume callIcon2" ></i>{conLine5}
+                            {MuriconLine1}<br />
+                                <span>{MuriconLine2}</span><br />
+                                <span> {MuriconLine3}</span> <br />
+                                <span>{MuriconLine4}</span><br />
+                                <i className="fas fa-phone-volume callIcon2" ></i>{MuriconLine5}
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-2 resources">
-                            <h3>{resTopic}</h3>
+                            <h3>{MuriresTopic}</h3>
                             <ul>
                                 <li className="nav-item">
-                                    <a className="" href="/Events&News">{res1}</a>
+                                    <a className="" href="/Events&News">{Murires1}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="#">{res2}</a>
+                                    <a className="" href="#">{Murires2}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="/">{res3}</a>
+                                    <a className="" href="/">{Murires3}</a>
                                 </li>
 
                             </ul>

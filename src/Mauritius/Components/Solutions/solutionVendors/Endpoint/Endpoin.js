@@ -43,8 +43,8 @@ function Endpoint() {
 
     
     const { t } = useTranslation();
-    const { ep1, ep2
-        } = t('endpsec', { returnObjects: true });
+    const { Muriep1, Muriep2
+        } = t('Muriendpsec', { returnObjects: true });
 
     return (
         <>
@@ -55,7 +55,7 @@ function Endpoint() {
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{ep1}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Muriep1}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -75,7 +75,7 @@ function Endpoint() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{ep2}</p>
+                                    <p>{Muriep2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>

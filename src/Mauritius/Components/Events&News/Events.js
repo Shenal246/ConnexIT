@@ -54,7 +54,7 @@ const Events = () => {
     }, []);
 
     const { t } = useTranslation();
-    const { evnt1, evnt2, evnt3, evnt4, evnt5 } = t('eventsec', { returnObjects: true });
+    const { Murievnt1, Murievnt2, Murievnt3, Murievnt4, Murievnt5 } = t('Murieventsec', { returnObjects: true });
 
     return (
         <>
@@ -64,7 +64,7 @@ const Events = () => {
                 <div className='row'>
                     <div className="row text">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='EventsText'>{evnt1}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='EventsText'>{Murievnt1}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ const Events = () => {
                     <div className="modal-dialog modal-dialog-centered modal-xl">
                         <div className="modal-content modalClr">
                             <div className="modal-header">
-                                <button type="button" className="btn-close close" data-bs-dismiss="modal" aria-label={evnt4}></button>
+                                <button type="button" className="btn-close close" data-bs-dismiss="modal" aria-label={Murievnt4}></button>
                             </div>
                             <div className="modal-body">
                                 {currentVideoLink && (
@@ -97,7 +97,7 @@ const Events = () => {
 
                 {/* Other News */}
                 <div className='row'>
-                    <div className='subTopin'>{evnt5}</div>
+                    <div className='subTopin'>{Murievnt5}</div>
                 </div>
 
                 <div className="row cards">
@@ -114,7 +114,7 @@ const Events = () => {
                                             />
                                         </>
                                     ) : (
-                                        <p>{evnt3}</p>
+                                        <p>{Murievnt3}</p>
                                     )}
                                     <div className="centered">
                                         <span className="fa-solid fa-play playicon"></span>

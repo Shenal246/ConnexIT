@@ -8,15 +8,15 @@ import MUFooter from '../Footer/Footer';
 const Portal = () => {
 
     const { t } = useTranslation();
-    const { ptl1, ptl2
-        } = t('portalsec', { returnObjects: true });
+    const { Muriptl1, Muriptl2
+        } = t('Muriportalsec', { returnObjects: true });
 
     return (
         <>
         <MUNavbar/>
         <MUChat/>
             <div className='portal'>
-                <p><span className='one'>{ptl1}</span><span className='two'> {ptl2}</span> </p>
+                <p><span className='one'>{Muriptl1}</span><span className='two'> {Muriptl2}</span> </p>
             </div>
         <MUFooter/>    
         </>

@@ -94,8 +94,8 @@ function Navbar() {
   }, []); // empty dependency array ensures that this effect runs only once on component mount
 
   const { t } = useTranslation();
-  const { tab1, tab2, tab3, tab4,tab5,tab6,tab7,tab8,tab9
-  } = t('navsec', { returnObjects: true });
+  const { Muritab1, Muritab2, Muritab3, Muritab4, Muritab5, Muritab6, Muritab7, Muritab8, Muritab9
+  } = t('Murinavsec', { returnObjects: true });
 
 
   return (
@@ -107,33 +107,33 @@ function Navbar() {
             </a>
             <nav id="navmenu" className="navmenu">
               <ul class="no-bullets">
-                <NavLink to="/MU/About" activeClassName='active-link' exact><li><a className="">{tab1}</a></li></NavLink>
+                <NavLink to="/MU/About" activeClassName='active-link' exact><li><a className="">{Muritab1}</a></li></NavLink>
                 {/* <NavLink to="/Products" activeClassName='active-link' exact><li><a className="">Products</a></li></NavLink> */}
-                <NavLink to="/MU/Solutions" activeClassName='active-link' exact><li><a className="">{tab2}</a></li></NavLink>
+                <NavLink to="/MU/Solutions" activeClassName='active-link' exact><li><a className="">{Muritab2}</a></li></NavLink>
 
 
                 <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                  <span className='toggle-dropdown'>{tab3}&nbsp; </span> <i className="bi bi-chevron-down toggle-dropdown arrow1 " ></i></a>
+                  <span className='toggle-dropdown'>{Muritab3}&nbsp; </span> <i className="bi bi-chevron-down toggle-dropdown arrow1 " ></i></a>
                   <ul className=''>
                     <div >
                       <NavLink to="/MU/Events&News" activeClassName='active-link' exact>
-                        <a>{tab4}</a>
+                        <a>{Muritab4}</a>
                       </NavLink>
                       <NavLink to="/MU/UpcomingNews" activeClassName='active-link' exact>
-                        <a>{tab5}</a>
+                        <a>{Muritab5}</a>
                       </NavLink>
                       <NavLink to="/MU/Blog" activeClassName='active-link' exact>
-                        <a>{tab6}</a>
+                        <a>{Muritab6}</a>
                       </NavLink>
 
                     </div>
                   </ul>
                 </li>
 
-                <NavLink to="/MU/Portal" activeClassName='active-link' exact><li><a className="">{tab7}</a></li></NavLink>
+                <NavLink to="/MU/Portal" activeClassName='active-link' exact><li><a className="">{Muritab7}</a></li></NavLink>
 
                 <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                  <span className='toggle-dropdown'>{tab8}&nbsp;<img src={mrt} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
+                  <span className='toggle-dropdown'>{Muritab8}&nbsp;<img src={mrt} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
                   <ul className='container1'>
                     <div class="scrollable-menu flagName">
                       
@@ -158,7 +158,7 @@ function Navbar() {
               <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <NavLink to="/MU/ContactUs" activeClassName='active-link' className="btn-getstarted" >{tab9}</NavLink>
+            <NavLink to="/MU/ContactUs" activeClassName='active-link' className="btn-getstarted" >{Muritab9}</NavLink>
             <LanguageSelector/>
 
           </div>

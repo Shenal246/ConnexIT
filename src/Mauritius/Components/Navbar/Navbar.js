@@ -122,9 +122,9 @@ function Navbar() {
                       <NavLink to="/MU/UpcomingNews" activeClassName='active-link' exact>
                         <a>{Muritab5}</a>
                       </NavLink>
-                      <NavLink to="/MU/Blog" activeClassName='active-link' exact>
+                      {/* <NavLink to="/MU/Blog" activeClassName='active-link' exact>
                         <a>{Muritab6}</a>
-                      </NavLink>
+                      </NavLink> */}
 
                     </div>
                   </ul>

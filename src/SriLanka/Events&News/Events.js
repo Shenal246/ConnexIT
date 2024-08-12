@@ -27,19 +27,19 @@ const Events = () => {
     };
 
     useEffect(() => {
-        const values = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND status=1 AND cnt=1;",
-            key: "Cr6re8VRBm"
-        };
+        // const values = {
+        //     query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND status=1 AND cnt=1;",
+        //     key: "Cr6re8VRBm"
+        // };
 
-        axios.post(serverlink, values).then((response) => {
-            setNewsData(response.data);
-        }).catch((err) => {
-            console.log(err);
-        });
+        // axios.post(serverlink, values).then((response) => {
+        //     setNewsData(response.data);
+        // }).catch((err) => {
+        //     console.log(err);
+        // });
 
         const values1 = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=7 AND status=1 AND cnt=1;",
+            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE  status=1 AND cnt=1;",
             key: "Cr6re8VRBm"
         };
 
@@ -65,11 +65,11 @@ const Events = () => {
                 </div>
 
                 {/* Latest News */}
-                <div className='row'>
+                {/* <div className='row'>
                     <div className='subTopin'>Latest Events & News</div>
-                </div>
+                </div> */}
 
-                <div className="row cards">
+                {/* <div className="row cards">
                     {newsData.map((news, index) => (
                         <div className="col-lg-4" key={index}>
                             <div className="card mb-3 card1 text-light position-relative crd rounded-5" data-bs-toggle="modal" data-bs-target="#videoModal" onClick={() => handleCardClick(news.link)}>
@@ -77,7 +77,7 @@ const Events = () => {
                                     {news.image_data ? (
                                         <>
                                             <img
-                                                src={`data:image/jpeg;base64,${news.image_data}`}
+                                                src={data:image/jpeg;base64,${news.image_data}}
                                                 alt={news.title}
                                                 className="card-img-top image rounded-top-5 opacity-75"
 
@@ -99,7 +99,7 @@ const Events = () => {
                             </div>
                         </div>
                     ))}
-                </div>
+                </div> */}
 
                 {/* Modal */}
                 <div className="modal fade" id="videoModal" tabIndex="-1" aria-labelledby="videoModalLabel" aria-hidden="true" onClick={handleCloseModal}>

@@ -407,6 +407,218 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Thaisvr1: "Server Storage & Backup Solutions",
                     Thaisvr2: "No Image Available"
                 }
+
+                // MU Part
+
+                ,
+                Muriherosect: {
+                    Murigreet1: "Leading Technology Distributor",
+                    Murigreet2first: "Welcome to ",
+                    Murigreet2mid1: "Con",
+                    Murigreet2mid2: "nex ",
+                    Murigreet2last: "Information Technologies",
+                    Murigreet3: "Value added distributor for more than 30 leading global vendors.",
+                    Muricontact: "Contact Us",
+                    Muriwtvideo: "Watch Video",
+                },
+                Muriwhowearesec: {
+                    Muriwhotopic: "Who we are",
+                    Muricard1: "Distribution",
+                    Muricard1Text: "Discover our tailor-made solutions, designed to meet end-users requirements with the most competitive, best-fitted answers for their unique needs.",
+                    Muricard2: "Consultancy",
+                    Muricard2Text: "Consultancy service is a unique solution offered by Connex, ensuring the most suitable and competitive solution for an end-user’s requirements. We offer an integrated customized service of consultancy skills that grows and changes with business and customer needs.Connex consultancy provides highly qualified personnel to complement the skills of your own team. Our consultants and engineers act on your behalf to ensure the smooth running of customers’ installation, in a timely manner and according to budget implications.",
+                    Muricard3: "Training",
+                    Muricard3Text: " We believe in the popular adage we are all lifelong learners, hence we strive to create a culture of learning where our employees are afforded numerous opportunities to further their professional development. We also groom our employees for future leadership positions from within the Company.In a fast moving and developing digital world, the Technology industry experiences changes rapidly; therefore we realize the need to keep pace with attrition rates and staying on the edge of the most advanced technologies. Our extensive training and professional development of programmers have contributed to employee retention.",
+                    Muricard4: "TAC Support",
+                    Muricard4Text: "Connex offers 24/7 TAC services, with an array of certified, technical and qualified professionals. We are proud of Service Level Agreement levels of Bronze, Silver, Gold and Platinum.You will get to engage with your Product Manager who will share his understanding of the product, so you are fully informed and equipped with knowledge and the technical know how to use the product. Product research updates will also be shared along with information about deal registration. Connex professional service and technical support service are available for our channel partners only. Please contact.",
+                    MurirText1: "A decade of expertise in cutting-edge technology distribution ",
+                    MurirText2: "A leading technology distributor thrives on adapting to the ever-changing world. If you require diverse solutions to achieve compliance and transform your business, your search ends here. ",
+                    Muriic1: "Found",
+                    Muriic2: "Employees",
+                    Muriic3: "Vendors",
+                    Muriic4: "Partners",
+                    Muricontact: "Contact Us",
+                },
+                Murivendorsec: {
+                    Muriventopic: "Our Vendors",
+                    MurivenText1: "Embark on technological Excellence with our Trusted ",
+                    MurivenText2: "Network of Vendors.",
+
+                },
+                Murilatestsec: {
+                    Murilattopic: "Latest News",
+                },
+                // About us section
+                Muriourstory: {
+                    MuriourSTopic: "Our Story",
+                    MuriourSText: "Founded with a passion for technology and excellence, CONNEX INFORMATION TECHNOLOGY has become a leader in IT product distribution. We started with a vision to revolutionize the industry through innovative solutions and unparalleled support. Our success is built on strong relationships with our clients and partners, enabling us to adapt and meet dynamic market needs. As we grow, we remain committed to innovation, integrity, and partnership, driving mutual growth and setting new benchmarks in the industry.",
+                    MuriourVTopic: "Our Vision",
+                    MuriourVText: "To be the leading global distributor of IT products by fostering strong partnerships, delivering effective marketing, and providing proficient support for mutual growth.",
+                    MuriourMTopic: "Our Mission",
+                    MuriourMText: "Our mission is to globally provide top-tier products and solutions with passion, continuous improvement, and proactive support, ensuring business success and satisfaction for our partners and their customers.",
+                    MurisureshName: "Suresh Wijesinghe",
+                    MurisureshText: `"Leadership is not just about making decisions; it\s about inspiring others to achieve greatness."`,
+                    MurishamalName: "Shamal Aberathne",
+                    MurishamalText: `"In a world of noise, our brand\'s voice must be authentic, engaging, and memorable."`,
+                    MuridilshanName: "Dilshan De Silva",
+                    MuridilshanText: `"Operational excellence is the foundation of our success, driving efficiency and innovation."`,
+                    MurirohanName: "Rohan Samaraweera",
+                    MurirohanText: `"Technology transforms vision into reality, powering our journey into the future."`,
+                    MurirajivName: "Rajiv Senawirathne",
+                    MurirajivText: `"Customer trust and satisfaction are the cornerstones of our company\'s reputation."`,
+                    MuripatricName: "Patrick Yogaratnam",
+                    MuripatricText: `"Connecting with our global customers requires understanding diverse needs and delivering exceptional service."`,
+                    MurierangaName: "Eranga Wickramasinghe",
+                    MurierangaText: `"Building strong relationships with our customers is the cornerstone of our success and growth."`,
+                    MurijananiName: "Janani Siriwardhane",
+                    MurijananiText: `"Empowering employees and fostering a positive culture are the keys to organizational success."`,
+                    MuriromeshName: "Romesh De Silva",
+                    MuriromeshText: `"Success in sales is not about pushing products, but about understanding and solving customer needs."`,
+                    MuriKiththiName: "Kiththi Perera",
+                    MuriKiththiText: `"Transforming potential into performance with innovative technology,"`,
+                },
+                Murilatestsec: {
+                    Murilattopic: "Latest News",
+                },
+                // Sollutions section
+                Murisolutionssec: {
+                    Murimaintopic: "Solutions",
+                    MuriperiTopic: "Perimeter and  Internal Security",
+                    MuricyberTopic: "Cyber Security Governance & Compliance",
+                    MuriauthTopic: "Authentication & Identity Management",
+                    MurisecTopic: "Security Management",
+                    MuriendTopic: "Endpoint Security",
+                    MurinetTopic: "Networking",
+                    MuridataTopic: "Data Center Infrastructure and  Monitoring",
+                    MuriserverTopic: "Server Storage & Backup Solutions",
+                },
+                // Footer section
+                Murifootersec: {
+                    MurifootHeadTopic: "Head Office",
+                    MuriheadLine1: "Level 35,",
+                    MuriheadLine2: "The Gateway West 150 Beach Road,",
+                    MuriheadLine3: "Singapore 189720 .",
+                    MuriheadLine4: "Contact: +6567278910",
+                    MurifootConTopic: "Muriland Office",
+                    MuriconLine1: "184/75,",
+                    MuriconLine2: "17th Floor, Forum Tower,",
+                    MuriconLine3: "Ratchadaphisek Rd, Khwaeng Huai Khwang, Huai Khwang,",
+                    MuriconLine4: "Bangkok 10310, Muriland",
+                    MuriconLine5: "Contact: +66612700590",
+                    MuriresTopic: "Resources",
+                    Murires1: "Event & News",
+                    Murires2: "FAQs",
+                    Murires3: "Careers",
+                },
+                // Chat
+                Murichatsec: {
+                    Muriques1: "Hi! I am here to help you. Can I know your name? ",
+                    Muriques2: `Hi {previousValue}, How Can I help you?`,
+                    Muriques3: "Sure. Can I have your phone number?",
+                    Muriques4: "Thank you! One of our staff will call you shortly.",
+                },
+                // Navbar Section
+                Murinavsec: {
+                    Muritab1: "About Us",
+                    Muritab2: "Solutions",
+                    Muritab3: "Events",
+                    Muritab4: "Events & News",
+                    Muritab5: "Upcoming News",
+                    Muritab6: "Blogs",
+                    Muritab7: "Portal",
+                    Muritab8: "Country",
+                    Muritab9: "Contact Us",
+                },
+
+                // contactus page
+                Muricontsec: {
+                    Muricont1: "Contact Us",
+                    Muricont2: "Reach out to us ",
+                    Muricont3: "to let us know how we can assist you.",
+                    Muricont4: "We are happy to provide",
+                    Muricont5: "customer support or",
+                    Muricont6: "answer any general inquiries",
+                    Muricont7: " you may have.",
+                    Muricont8: "First name",
+                    Muricont9: "First name is required",
+                    Muricont10: "Last name",
+                    Muricont11: "Last name is required",
+                    Muricont12: "Company",
+                    Muricont13: "Company is required",
+                    Muricont14: "Contact Number",
+                    Muricont15: "Contact number must be exactly 10 digits",
+                    Muricont16: "name@example.com",
+                    Muricont17: "Invalid email address",
+                    Muricont18: "Comments are required",
+                    Muricont19: "I accept the privacy & policy",
+                    Muricont20: "You must accept the privacy & policy",
+                    Muricont21: "Submit",
+                    Muricont22: "Clear",
+                    Muricont23: "Muriland",
+                    Muricont24: "Muriland Office",
+                    Muricont25: "184/75, 17th Floor",
+                    Muricont26: "Forum Tower, Ratchadapkisek Rd,",
+                    Muricont27: "Khwaeng Huai Khwang, Hui Khwang,",
+                    Muricont28: "Bangkok 10310, Muriland",
+                    Muricont29: "Get Directions",
+                },
+
+                Murieventsec: {
+                    Murievnt1: "Events & News",
+                    Murievnt2: "Latest Events and News",
+                    Murievnt3: "No Image Available",
+                    Murievnt4: "Close",
+                    Murievnt5: "Events & News",
+                    Murievnt6: "Blogs",
+                },
+                MuriupEventSec: {
+                    Muriupevnt1: "Upcoming",
+                    Muriupevnt2: "Events & News",
+                    Muriupevnt3: "No Image Available",
+                    Muriupevnt4: "Close",
+                },
+                Muriportalsec: {
+                    Muriptl1: "To be launch",
+                    Muriptl2: "Soon"
+                },
+                Muriblogsec: {
+                    Muriblg1: "Blogs"
+                },
+                Muriauthentisec: {
+                    Muriat1: "Authentication & Identity Management",
+                    Muriat2: "No Image Available",
+                },
+                Muricybersec: {
+                    Muricy1: "Cyber Security Governance & Compliance",
+                    Muricy2: "No Image Available"
+                },
+                Muriendpsec: {
+                    Muriep1: "Endpoint Security",
+                    Muriep2: "No Image Available"
+                },
+                Murinewtworksec: {
+                    Murint1: "Networking",
+                    Murint2: "No Image Available"
+                },
+                Muriifmsec: {
+                    Muriif1: "Data Center Infrastructure and Infrastructure Monitoring",
+                    Muriif2: "No Image Available"
+                },
+                Muriperisec: {
+                    Muripr1: "Perimeter And Internal Security",
+                    Muripr2: "No Image Available"
+                },
+                Murisecuritysec: {
+                    Muriscrty1: "Security Management",
+                    Muriscrty2: "No Image Available"
+                },
+                Muriserversec: {
+                    Murisvr1: "Server Storage & Backup Solutions",
+                    Murisvr2: "No Image Available"
+                }
+
+                // End of MU part
+
             }
         },
         kh: {
@@ -800,9 +1012,224 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Thaisvr2: "ไม่มีภาพที่แสดง"
                 }
 
+            },
+        },
+
+        // mauritius translation
+
+        frMuri: {
+            translation: {
+                Muriherosect: {
+                    Murigreet1: "Principal distributeur de technologies",
+                    Murigreet2first: "Bienvenue chez ",
+                    Murigreet2mid1: "Con",
+                    Murigreet2mid2: "nex ",
+                    Murigreet2last: "Information Technologies",
+                    Murigreet3: "Distributeur à valeur ajoutée pour plus de 30 grands fournisseurs mondiaux.",
+                    Muricontact: "Contactez-nous",
+                    Muriwtvideo: "Regarder la vidéo",
+                },
+                Muriwhowearesec: {
+                    Muriwhotopic: "Qui nous sommes",
+                    Muricard1: "Distribution",
+                    Muricard1Text: "Découvrez nos solutions sur mesure, conçues pour répondre aux besoins des utilisateurs finaux avec les réponses les plus compétitives et les mieux adaptées à leurs besoins uniques.",
+                    Muricard2: "Consultance",
+                    Muricard2Text: "Le service de conseil est une solution unique offerte par Connex, garantissant la solution la plus appropriée et compétitive aux besoins des utilisateurs finaux. Nous offrons un service intégré et personnalisé de compétences en conseil qui évolue et change avec les besoins des entreprises et des clients. La consultance Connex fournit du personnel hautement qualifié pour compléter les compétences de votre propre équipe. Nos consultants et ingénieurs agissent en votre nom pour garantir le bon déroulement de l'installation des clients, en temps voulu et selon les implications budgétaires.",
+                    Muricard3: "Formation",
+                    Muricard3Text: "Nous croyons en l'adage populaire selon lequel nous sommes tous des apprenants à vie, c'est pourquoi nous nous efforçons de créer une culture de l'apprentissage où nos employés bénéficient de nombreuses opportunités de développement professionnel. Nous préparons également nos employés à des postes de leadership futurs au sein de l'entreprise. Dans un monde numérique en évolution rapide, l'industrie technologique évolue rapidement ; par conséquent, nous réalisons la nécessité de suivre le rythme des taux de rotation et de rester à la pointe des technologies les plus avancées. Notre formation extensive et notre développement professionnel de programmeurs ont contribué à la fidélisation des employés.",
+                    Muricard4: "Support TAC",
+                    Muricard4Text: "Connex offre des services TAC 24/7, avec une gamme de professionnels certifiés, techniques et qualifiés. Nous sommes fiers des niveaux d'accords de niveau de service Bronze, Silver, Gold et Platinum. Vous pourrez engager avec votre gestionnaire de produit qui partagera sa compréhension du produit, afin que vous soyez pleinement informé et équipé des connaissances et du savoir-faire technique pour utiliser le produit. Les mises à jour de la recherche produit seront également partagées ainsi que des informations sur l'enregistrement des transactions. Le service professionnel et le support technique de Connex sont disponibles uniquement pour nos partenaires de distribution. Veuillez contacter.",
+                    MurirText1: "Une décennie d'expertise dans la distribution de technologies de pointe",
+                    MurirText2: "Un distributeur de technologie de premier plan prospère en s'adaptant à un monde en constante évolution. Si vous avez besoin de solutions diversifiées pour atteindre la conformité et transformer votre entreprise, votre recherche se termine ici.",
+                    Muriic1: "Fondé",
+                    Muriic2: "Employés",
+                    Muriic3: "Fournisseurs",
+                    Muriic4: "Partenaires",
+                    Muricontact: "Contactez-nous",
+                },
+                Murivendorsec: {
+                    Muriventopic: "Nos fournisseurs",
+                    MurivenText1: "Embarquez vers l'excellence technologique avec notre réseau de fournisseurs de confiance",
+                    MurivenText2: ".",
+                },
+                Murilatestsec: {
+                    Murilattopic: "Dernières nouvelles",
+                },
+                // About us section
+                Muriourstory: {
+                    MuriourSTopic: "Notre histoire",
+                    MuriourSText: "Fondé avec une passion pour la technologie et l'excellence, CONNEX INFORMATION TECHNOLOGY est devenu un leader dans la distribution de produits informatiques. Nous avons commencé avec une vision de révolutionner l'industrie grâce à des solutions innovantes et un soutien inégalé. Notre succès repose sur des relations solides avec nos clients et partenaires, nous permettant de nous adapter et de répondre aux besoins dynamiques du marché. Au fur et à mesure de notre croissance, nous restons engagés envers l'innovation, l'intégrité et le partenariat, favorisant une croissance mutuelle et établissant de nouveaux standards dans l'industrie.",
+                    MuriourVTopic: "Notre vision",
+                    MuriourVText: "Être le principal distributeur mondial de produits informatiques en favorisant des partenariats solides, en offrant un marketing efficace et en fournissant un soutien compétent pour une croissance mutuelle.",
+                    MuriourMTopic: "Notre mission",
+                    MuriourMText: "Notre mission est de fournir à l'échelle mondiale des produits et solutions de premier ordre avec passion, amélioration continue et soutien proactif, garantissant le succès des entreprises et la satisfaction de nos partenaires et de leurs clients.",
+                    MurisureshName: "Suresh Wijesinghe",
+                    MurisureshText: "Le leadership ne consiste pas seulement à prendre des décisions ; il s'agit d'inspirer les autres à atteindre la grandeur.",
+                    MurishamalName: "Shamal Aberathne",
+                    MurishamalText: "Dans un monde de bruit, la voix de notre marque doit être authentique, engageante et mémorable.",
+                    MuridilshanName: "Dilshan De Silva",
+                    MuridilshanText: "L'excellence opérationnelle est la base de notre succès, favorisant l'efficacité et l'innovation.",
+                    MurirohanName: "Rohan Samaraweera",
+                    MurirohanText: "La technologie transforme la vision en réalité, propulsant notre voyage vers l'avenir.",
+                    MurirajivName: "Rajiv Senawirathne",
+                    MurirajivText: "La confiance et la satisfaction des clients sont les pierres angulaires de la réputation de notre entreprise.",
+                    MuripatricName: "Patrick Yogaratnam",
+                    MuripatricText: "Se connecter avec nos clients mondiaux nécessite de comprendre des besoins divers et de fournir un service exceptionnel.",
+                    MurierangaName: "Eranga Wickramasinghe",
+                    MurierangaText: "Établir des relations solides avec nos clients est la pierre angulaire de notre succès et de notre croissance.",
+                    MurijananiName: "Janani Siriwardhane",
+                    MurijananiText: "Autonomiser les employés et favoriser une culture positive sont les clés du succès organisationnel.",
+                    MuriromeshName: "Romesh De Silva",
+                    MuriromeshText: "Le succès dans la vente ne consiste pas à pousser des produits, mais à comprendre et à résoudre les besoins des clients.",
+                    MuriKiththiName: "Kiththi Perera",
+                    MuriKiththiText: "Transformer le potentiel en performance avec une technologie innovante.",
+                },
+                Murilatestsec: {
+                    Murilattopic: "Dernières nouvelles",
+                },
+                // Solutions section
+                Murisolutionssec: {
+                    Murimaintopic: "Solutions",
+                    MuriperiTopic: "Sécurité périmétrique et interne",
+                    MuricyberTopic: "Gouvernance et conformité en cybersécurité",
+                    MuriauthTopic: "Gestion de l'authentification et des identités",
+                    MurisecTopic: "Gestion de la sécurité",
+                    MuriendTopic: "Sécurité des points de terminaison",
+                    MurinetTopic: "Réseautage",
+                    MuridataTopic: "Infrastructure et surveillance des centres de données",
+                    MuriserverTopic: "Solutions de stockage et de sauvegarde des serveurs",
+                },
+                // Footer section
+                Murifootersec: {
+                    MurifootHeadTopic: "Siège social",
+                    MuriheadLine1: "Niveau 35,",
+                    MuriheadLine2: "The Gateway West 150 Beach Road,",
+                    MuriheadLine3: "Singapour 189720 .",
+                    MuriheadLine4: "Contact: +6567278910",
+                    MurifootConTopic: "Bureau de Muriland",
+                    MuriconLine1: "184/75,",
+                    MuriconLine2: "17ème étage, Forum Tower,",
+                    MuriconLine3: "Ratchadaphisek Rd, Khwaeng Huai Khwang, Huai Khwang,",
+                    MuriconLine4: "Bangkok 10310, Muriland",
+                    MuriconLine5: "Contact: +66612700590",
+                    MuriresTopic: "Ressources",
+                    Murires1: "Événements et nouvelles",
+                    Murires2: "FAQ",
+                    Murires3: "Carrières",
+                },
+                // Chat
+                Murichatsec: {
+                    Muriques1: "Bonjour! Je suis là pour vous aider. Puis-je connaître votre nom?",
+                    Muriques2: "Bonjour {previousValue}, comment puis-je vous aider?",
+                    Muriques3: "Bien sûr. Puis-je avoir votre numéro de téléphone?",
+                    Muriques4: "Merci! Un de nos employés vous appellera sous peu.",
+                },
+                // Navbar Section
+                Murinavsec: {
+                    Muritab1: "À propos de nous",
+                    Muritab2: "Solutions",
+                    Muritab3: "Événements",
+                    Muritab4: "Événements & Nouvelles",
+                    Muritab5: "Nouvelles à venir",
+                    Muritab6: "Blogs",
+                    Muritab7: "Portail",
+                    Muritab8: "Pays",
+                    Muritab9: "Contactez-nous",
+                },
+
+                // contactus page
+                Muricontsec: {
+                    Muricont1: "Contactez-nous",
+                    Muricont2: "Contactez-nous",
+                    Muricont3: "pour nous faire savoir comment nous pouvons vous aider.",
+                    Muricont4: "Nous sommes heureux de fournir",
+                    Muricont5: "un support client ou",
+                    Muricont6: "répondre à toute demande générale",
+                    Muricont7: "que vous pourriez avoir.",
+                    Muricont8: "Prénom",
+                    Muricont9: "Le prénom est requis",
+                    Muricont10: "Nom de famille",
+                    Muricont11: "Le nom de famille est requis",
+                    Muricont12: "Entreprise",
+                    Muricont13: "L'entreprise est requise",
+                    Muricont14: "Numéro de contact",
+                    Muricont15: "Le numéro de contact doit comporter exactement 10 chiffres",
+                    Muricont16: "nom@exemple.com",
+                    Muricont17: "Adresse e-mail invalide",
+                    Muricont18: "Les commentaires sont requis",
+                    Muricont19: "J'accepte la politique de confidentialité",
+                    Muricont20: "Vous devez accepter la politique de confidentialité",
+                    Muricont21: "Soumettre",
+                    Muricont22: "Effacer",
+                    Muricont23: "Muriland",
+                    Muricont24: "Bureau de Muriland",
+                    Muricont25: "184/75, 17ème étage",
+                    Muricont26: "Forum Tower, Ratchadaphisek Rd,",
+                    Muricont27: "Khwaeng Huai Khwang, Huai Khwang,",
+                    Muricont28: "Bangkok 10310, Muriland",
+                    Muricont29: "Obtenir des directions",
+                },
+
+                Murieventsec: {
+                    Murievnt1: "Événements & Nouvelles",
+                    Murievnt2: "Derniers événements et nouvelles",
+                    Murievnt3: "Aucune image disponible",
+                    Murievnt4: "Fermer",
+                    Murievnt5: "Événements & Nouvelles",
+                    Murievnt6: "Blogs",
+                },
+                MuriupEventSec: {
+                    Muriupevnt1: "À venir",
+                    Muriupevnt2: "Événements & Nouvelles",
+                    Muriupevnt3: "Aucune image disponible",
+                    Muriupevnt4: "Fermer",
+                },
+                Muriportalsec: {
+                    Muriptl1: "À lancer",
+                    Muriptl2: "Bientôt"
+                },
+                Muriblogsec: {
+                    Muriblg1: "Blogs"
+                },
+                Muriauthentisec: {
+                    Muriat1: "Gestion de l'authentification et des identités",
+                    Muriat2: "Aucune image disponible",
+                },
+                Muricybersec: {
+                    Muricy1: "Gouvernance et conformité en cybersécurité",
+                    Muricy2: "Aucune image disponible"
+                },
+                Muriendpsec: {
+                    Muriep1: "Sécurité des points de terminaison",
+                    Muriep2: "Aucune image disponible"
+                },
+                Murinewtworksec: {
+                    Murint1: "Réseautage",
+                    Murint2: "Aucune image disponible"
+                },
+                Muriifmsec: {
+                    Muriif1: "Infrastructure et surveillance des centres de données",
+                    Muriif2: "Aucune image disponible"
+                },
+                Muriperisec: {
+                    Muripr1: "Sécurité périmétrique et interne",
+                    Muripr2: "Aucune image disponible"
+                },
+                Murisecuritysec: {
+                    Muriscrty1: "Gestion de la sécurité",
+                    Muriscrty2: "Aucune image disponible"
+                },
+                Muriserversec: {
+                    Murisvr1: "Solutions de stockage et de sauvegarde des serveurs",
+                    Murisvr2: "Aucune image disponible"
+                }
+
+
 
 
             },
-        }
+        },
+
+
     }
 });

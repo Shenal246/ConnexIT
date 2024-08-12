@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './Contact.css';
-import cambo from '../../../images/map/cambo.png';
+import MuriMap from '../../../images/map/mauritius.png';
 import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2';
 import MUNavbar from '../Navbar/Navbar';
@@ -213,7 +213,7 @@ const Contact = () => {
                         <hr className='line'></hr><hr className='line'></hr>
                     </div>
                     <div className="col-md-6">
-                        <img src={cambo} className='cambo' />
+                        <img src={MuriMap} className='MuriMap' />
 
                     </div>
                 </div>

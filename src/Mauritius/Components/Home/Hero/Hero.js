@@ -1,5 +1,5 @@
 import './Hero.css';
-import Logo from '../../../../images/heronew.png';
+import MuriLogo from '../../../../images/mau.png';
 import React, { useRef, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
@@ -35,31 +35,31 @@ function HeroSection() {
 
   const { t } = useTranslation();
 
-  const { greet1, greet2first, greet2mid1, greet2mid2, greet2last, greet3, contact, wtvideo } = t('herosect', { returnObjects: true });
+  const { Murigreet1, Murigreet2first, Murigreet2mid1, Murigreet2mid2, Murigreet2last, Murigreet3, Muricontact, Muriwtvideo } = t('Muriherosect', { returnObjects: true });
 
   return (
     <section id="hero" className="section hero">
       <div className="container">
         <div className="row gy-4">
           <div className="col-lg-8 order-2 order-lg-1 d-flex flex-column justify-content-center cont" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-            <h3 className='settop'>{greet1}</h3>
-            <h1>{greet2first}<span className='Connexcon'>{greet2mid1}</span><span className='Connexnex'>{greet2mid2}</span> {greet2last}</h1>
-            <p>{greet3}</p>
+            <h3 className='settop'>{Murigreet1}</h3>
+            <h1>{Murigreet2first}<span className='Connexcon'>{Murigreet2mid1}</span><span className='Connexnex'>{Murigreet2mid2}</span> {Murigreet2last}</h1>
+            <p>{Murigreet3}</p>
 
             <div className="row gy-4">
               <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
                 <div className="d-flex">
-                  <NavLink to="/MU/ContactUs" className="btn-get-started">{contact}</NavLink>
+                  <NavLink to="/MU/ContactUs" className="btn-get-started">{Muricontact}</NavLink>
                   {/* <a href="#" className="glightbox btn-watch-video d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#videoModal" onClick={handlePlayVideo}>
                     <i className="bi bi-play-circle"></i>
-                    <span>{wtvideo}</span>
+                    <span>{Muriwtvideo}</span>
                   </a> */}
                 </div>
               </div>
             </div>
           </div>
           <div className="col-lg-4 order-1 order-lg-2 heroroe" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-            <img src={Logo} className="img-fluid animated89 heroimg89" alt="Hero" />
+            <img src={MuriLogo} className="img-fluid animated89 heroimg89" alt="Hero" />
           </div>
           <div className="col-lg-6 order-1 order-lg-2 space"></div>
         </div>

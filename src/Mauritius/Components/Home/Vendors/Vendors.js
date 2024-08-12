@@ -11,20 +11,22 @@ import { useTranslation } from 'react-i18next';
 import './Vendors.css';
 
 // Import your image files
-import ven1 from '../../../../images/CamVendors/1.png';
-import ven2 from '../../../../images/CamVendors/2.png';
-import ven3 from '../../../../images/CamVendors/3.png';
-import ven4 from '../../../../images/CamVendors/4.webp';
-import ven5 from '../../../../images/CamVendors/5.png';
-import ven6 from '../../../../images/CamVendors/6.png';
-import ven7 from '../../../../images/CamVendors/7.png';
-import ven8 from '../../../../images/CamVendors/8.png';
-import ven9 from '../../../../images/CamVendors/9.png';
-import ven10 from '../../../../images/CamVendors/10.png';
-import ven11 from '../../../../images/CamVendors/11.png';
+import mven1 from '../../../../images/MauritiusVendors/5.png';
+import mven2 from '../../../../images/MauritiusVendors/7.png';
+import mven3 from '../../../../images/MauritiusVendors/11.png';
+import mven4 from '../../../../images/MauritiusVendors/21.png';
+import mven5 from '../../../../images/MauritiusVendors/26.png';
+import mven6 from '../../../../images/MauritiusVendors/29.png';
+import mven7 from '../../../../images/MauritiusVendors/30.png';
+import mven8 from '../../../../images/MauritiusVendors/34.png';
+import mven9 from '../../../../images/MauritiusVendors/42.png';
+import mven10 from '../../../../images/MauritiusVendors/43.png';
+import mven11 from '../../../../images/MauritiusVendors/45.png';
+import mven12 from '../../../../images/MauritiusVendors/48.png';
+import mven13 from '../../../../images/MauritiusVendors/52.png';
 // Add import statements for all your images here...
 
-const imagePaths = [ven1, ven2, ven3, ven4, ven5, ven6, ven7, ven8, ven9, ven10, ven11]; // Add all your image paths to this array
+const imagePaths = [mven1, mven2, mven3, mven4, mven5, mven6, mven7, mven8, mven9, mven10, mven11, mven12, mven13]; // Add all your image paths to this array
 
 const Vendors = () => {
   const { t } = useTranslation();

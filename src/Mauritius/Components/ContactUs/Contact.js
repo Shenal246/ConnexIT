@@ -61,11 +61,11 @@ const Contact = () => {
 
 
     const { t } = useTranslation();
-    const { cont1, cont2, cont3, cont4, cont5, cont6, cont7,
-        cont8, cont9, cont10, cont11, cont12, cont13, cont14, cont15, cont16,
-        cont17, cont18, cont19, cont20, cont21, cont22, cont23, cont24, cont25,
-        cont26, cont27, cont28, cont29, cont30
-    } = t('contsec', { returnObjects: true });
+    const { Muricont1, Muricont2, Muricont3, Muricont4, Muricont5, Muricont6, Muricont7,
+        Muricont8, Muricont9, Muricont10, Muricont11, Muricont12, Muricont13, Muricont14, Muricont15, Muricont16,
+        Muricont17, Muricont18, Muricont19, Muricont20, Muricont21, Muricont22, Muricont23, Muricont24, Muricont25,
+        Muricont26, Muricont27, Muricont28, Muricont29, Muricont30
+    } = t('Muricontsec', { returnObjects: true });
 
     return (
         <>
@@ -75,14 +75,14 @@ const Contact = () => {
                 <div className='row'>
                     <div className="row gy-3 text mb-4" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                         <div className="col-md-4"><hr /></div>
-                        <div className="col-md-4"><p id='Text'>{cont1}</p></div>
+                        <div className="col-md-4"><p id='Text'>{Muricont1}</p></div>
                         <div className="col-md-4"><hr /></div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md inputField" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-                        <h1 className='h1'>{cont2}<br /> {cont3}</h1>
-                        <h2 className='h2'>{cont4}<br /> {cont5} <br />{cont6} <br /> {cont7}</h2>
+                        <h1 className='h1'>{Muricont2}<br /> {Muricont3}</h1>
+                        <h2 className='h2'>{Muricont4}<br /> {Muricont5} <br />{Muricont6} <br /> {Muricont7}</h2>
                     </div>
                     <div className="col-md inputField" data-aos="fade-down" dat a-aos-duration="1000" data-aos-delay="50">
                         <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
@@ -92,21 +92,21 @@ const Contact = () => {
                                         <input
                                             type="text"
                                             className={`form-control ${errors.firstName ? 'is-invalid' : ''}`}
-                                            placeholder={cont8}
-                                            aria-label={cont8}
+                                            placeholder={Muricont8}
+                                            aria-label={Muricont8}
                                             {...register('firstName', { required: true })}
                                         />
-                                        {errors.firstName && <span className="text-danger">{cont9}</span>}
+                                        {errors.firstName && <span className="text-danger">{Muricont9}</span>}
                                     </div>
                                     <div className="col-md">
                                         <input
                                             type="text"
                                             className={`form-control ${errors.lastName ? 'is-invalid' : ''}`}
-                                            placeholder={cont10}
-                                            aria-label={cont10}
+                                            placeholder={Muricont10}
+                                            aria-label={Muricont10}
                                             {...register('lastName', { required: true })}
                                         />
-                                        {errors.lastName && <span className="text-danger">{cont11}</span>}
+                                        {errors.lastName && <span className="text-danger">{Muricont11}</span>}
                                     </div>
                                 </div>
                                 <div className="row mb-2">
@@ -114,26 +114,26 @@ const Contact = () => {
                                         <input
                                             type="text"
                                             className={`form-control ${errors.Company ? 'is-invalid' : ''}`}
-                                            placeholder={cont12}
-                                            aria-label={cont12}
+                                            placeholder={Muricont12}
+                                            aria-label={Muricont12}
                                             {...register('Company', { required: true })}
                                         />
-                                        {errors.Company && <span className="text-danger">{cont13}</span>}
+                                        {errors.Company && <span className="text-danger">{Muricont13}</span>}
                                     </div>
                                     <div className="col-md">
                                         <input
                                             type="text"
                                             className={`form-control ${errors.contactNumber ? 'is-invalid' : ''}`}
-                                            placeholder={cont14}
-                                            aria-label={cont14}
+                                            placeholder={Muricont14}
+                                            aria-label={Muricont14}
                                             {...register('contactNumber', {
                                                 required: true,
                                                 pattern: {
                                                     value: /^[0-9]+$/,
-                                                    message: { cont15 },
+                                                    message: { Muricont15 },
                                                 },
                                                 validate: {
-                                                    length: (value) => value.length === 10 || { cont15 },
+                                                    length: (value) => value.length === 10 || { Muricont15 },
                                                 },
                                             })}
                                         />
@@ -147,12 +147,12 @@ const Contact = () => {
                                     type="email"
                                     className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                                     id="floatingInput"
-                                    placeholder={cont16}
+                                    placeholder={Muricont16}
                                     {...register('email', {
                                         required: true,
                                         pattern: {
                                             value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                                            message: { cont17 },
+                                            message: { Muricont17 },
                                         },
                                     })}
                                 />
@@ -162,11 +162,11 @@ const Contact = () => {
                             <div className="col-md">
                                 <textarea
                                     className={`form-control txtarea ${errors.comments ? 'is-invalid' : ''}`}
-                                    placeholder={cont30}
+                                    placeholder={Muricont30}
                                     id="floatingTextarea2"
                                     {...register('comments', { required: true })}
                                 ></textarea>
-                                {errors.comments && <span className="text-danger"> {cont18}</span>}
+                                {errors.comments && <span className="text-danger"> {Muricont18}</span>}
                             </div>
 
                             <div className="form-check formcheck">
@@ -177,17 +177,17 @@ const Contact = () => {
                                     {...register('acceptTerms', { required: true })}
                                 />
                                 <label className="form-check-label tikBox" htmlFor="flexCheckDefault">
-                                    {cont19}
+                                    {Muricont19}
                                 </label>
-                                {errors.acceptTerms && <span className="text-danger"> {cont20}</span>}
+                                {errors.acceptTerms && <span className="text-danger"> {Muricont20}</span>}
                             </div>
 
                             <div className="row mt-4 btnContainer">
                                 <div className="col-md-6 mb-2">
-                                    <button type="submit" className="btn btn-success">{cont21}</button>
+                                    <button type="submit" className="btn btn-success">{Muricont21}</button>
                                 </div>
                                 <div className="col-md-6">
-                                    <button type="reset" className="btn btn-danger" onClick={() => reset()}>{cont22}</button>
+                                    <button type="reset" className="btn btn-danger" onClick={() => reset()}>{Muricont22}</button>
                                 </div>
                             </div>
                         </form>
@@ -196,19 +196,19 @@ const Contact = () => {
 
                 <div className="row">
                     <div className="col-md-6 countryData">
-                        <h1 className='countryName address3'>{cont23}</h1>
-                        <h3>{cont24}</h3>
+                        <h1 className='countryName address3'>{Muricont23}</h1>
+                        <h3>{Muricont24}</h3>
                         <p className='txt1'><i className="fas fa-map-marker-alt img3"></i>
-                            {cont25}<br />
-                            <span className='address'>{cont26}</span><br />
-                            <span className='address'>{cont27}</span><br />
-                            <span className='address'>{cont28}</span>
+                            {Muricont25}<br />
+                            <span className='address'>{Muricont26}</span><br />
+                            <span className='address'>{Muricont27}</span><br />
+                            <span className='address'>{Muricont28}</span>
                         </p>
                         <button
                             className="neon-button"
                             onClick={() => window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15636.537063489868!2d104.91642621180816!3d11.54222489236825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310956d2a2d70f1d%3A0xea84a6a9241db2f6!2sMorgan%20Tower!5e0!3m2!1sen!2slk!4v1718103352142!5m2!1sen!2slk')}
                         >
-                            {cont29}
+                            {Muricont29}
                         </button>
                         <hr className='line'></hr><hr className='line'></hr>
                     </div>

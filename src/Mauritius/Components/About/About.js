@@ -40,64 +40,64 @@ const About = () => {
 
     const { t } = useTranslation();
 
-    const { ourSTopic, ourSText, ourVTopic, ourVText, ourMTopic, ourMText, sureshName, sureshText, shamalName, shamalText, dilshanName, dilshanText, rohanName, rohanText, rajivName,
-        rajivText, patricName, patricText, erangaName, erangaText, jananiName, jananiText, romeshName, romeshText
-    } = t('ourstory', { returnObjects: true });
+    const { MuriourSTopic, MuriourSText, MuriourVTopic, MuriourVText, MuriourMTopic, MuriourMText, MurisureshName, MurisureshText, MurishamalName, MurishamalText, MuridilshanName, MuridilshanText, MurirohanName, MurirohanText, MurirajivName,
+        MurirajivText, MuripatricName, MuripatricText, MurierangaName, MurierangaText, MurijananiName, MurijananiText, MuriromeshName, MuriromeshText
+    } = t('Muriourstory', { returnObjects: true });
 
 
     const data = [
         {
-            name: sureshName,
+            name: MurisureshName,
             img: '/quots/Suresh.jpg',
-            quote: sureshText,
+            quote: MurisureshText,
             post: 'Founder / CEO',
         },
         {
-            name: shamalName,
+            name: MurishamalName,
             img: '/quots/Shamal.jpg',
-            quote: shamalText,
+            quote: MurishamalText,
             post: 'CMO',
         },
         {
-            name: dilshanName,
+            name: MuridilshanName,
             img: '/quots/Dilshan_Silva.jpg',
-            quote: dilshanText,
+            quote: MuridilshanText,
             post: 'COO',
         },
         {
-            name: rohanName,
+            name: MurirohanName,
             img: '/quots/Rohan.jpg',
-            quote: rohanText,
+            quote: MurirohanText,
             post: 'CTO',
         },
         {
-            name: rajivName,
+            name: MurirajivName,
             img: '/quots/Rajiv.jpg',
-            quote: rajivText,
+            quote: MurirajivText,
             post: 'Director of Connex HQ',
         },
         {
-            name: patricName,
+            name: MuripatricName,
             img: '/quots/Patrick_yogarathnam.jpg',
-            quote: patricText,
+            quote: MuripatricText,
             post: 'CIRO',
         },
         {
-            name: erangaName,
+            name: MurierangaName,
             img: '/quots/Eranga.jpg',
-            quote: erangaText,
+            quote: MurierangaText,
             post: 'CRO',
         },
         {
-            name: jananiName,
+            name: MurijananiName,
             img: '/quots/Janani_Siriardhane.jpg',
-            quote: jananiText,
+            quote: MurijananiText,
             post: 'Director of Connex HQ',
         },
         {
-            name: romeshName,
+            name: MuriromeshName,
             img: '/quots/romesh.jpg',
-            quote: romeshText,
+            quote: MuriromeshText,
             post: 'Director of Connex HQ',
         }
 
@@ -128,8 +128,8 @@ const About = () => {
 
                             <div className='col-md-6 para'>
                                 <div className='story'>
-                                    <h1 className='topic'>{ourSTopic}</h1>
-                                    <p><br />{ourSText}</p>
+                                    <h1 className='topic'>{MuriourSTopic}</h1>
+                                    <p><br />{MuriourSText}</p>
                                 </div>
                             </div>
                         </div>
@@ -138,15 +138,15 @@ const About = () => {
                         <div className='row'>
                             <div className='col-md-6 content'>
                                 <div className='story bdround bdround1'>
-                                    <h1 className='topic'>{ourVTopic}</h1>
-                                    <p><br />{ourVText}</p>
+                                    <h1 className='topic'>{MuriourVTopic}</h1>
+                                    <p><br />{MuriourVText}</p>
                                 </div>
                             </div>
 
                             <div className='col-md-6'>
                                 <div className='story bdround bdround2'>
-                                    <h1 className='topic'>{ourMTopic}</h1>
-                                    <p><br />{ourMText}</p>
+                                    <h1 className='topic'>{MuriourMTopic}</h1>
+                                    <p><br />{MuriourMText}</p>
                                 </div>
                             </div>
                         </div>

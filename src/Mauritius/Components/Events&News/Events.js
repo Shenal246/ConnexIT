@@ -41,7 +41,7 @@ const Events = () => {
 
         // For other news
         const values1 = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE status=1 AND cnt=3;",
+            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE status=1 AND cnt=5;",
             key: "Cr6re8VRBm"
         };
 

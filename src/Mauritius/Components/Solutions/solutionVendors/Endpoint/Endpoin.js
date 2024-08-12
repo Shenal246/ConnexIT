@@ -22,7 +22,7 @@ function Endpoint() {
 
     useEffect(() => {
         const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Endpoint_Security FROM Vendor WHERE Endpoint_Security='true' AND status=1 AND cnt=3;",
+            query: "SELECT name,des,wlink,status,image_data,cnt,Endpoint_Security FROM Vendor WHERE Endpoint_Security='true' AND status=1 AND cnt=5;",
             key: "Cr6re8VRBm"
         };
 

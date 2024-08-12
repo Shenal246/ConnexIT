@@ -107,7 +107,7 @@ const Events = () => {
                                 <div className="position-relative">
                                     {news.image_data ? (
                                         <>
-                                            <img
+                                           <img
                                                 src={`data:image/jpeg;base64,${news.image_data}`}
                                                 alt={news.title}
                                                 className="card-img-top image rounded-top-5 opacity-75" style={{ width: '100%', height: 'auto' }}

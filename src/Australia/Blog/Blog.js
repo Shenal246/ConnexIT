@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Blog.css'; // Import your CSS file
 import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap components
 import blog from '../../images/Blogs/blogging-services.jpg';
-import SLFooter from "../Footer/Footer";
-import SLNavbar from "../Navbar/Navbar";
-import SLChat from "../ChatBot/Chat";
+import AUFooter from "../Footer/Footer";
+import AUNavbar from "../Navbar/Navbar";
+import AUChat from "../ChatBot/Chat";
 
 const Blog = () => {
     const [lgShow, setLgShow] = useState(false);

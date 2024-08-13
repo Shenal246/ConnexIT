@@ -123,7 +123,7 @@ function Navbar() {
                 <span className='toggle-dropdown'>Country&nbsp;<img src={nz} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
                 <ul className='container1'>
                   <div class="scrollable-menu flagName">
-                    {/* <li><a href="#"><img src={aus} alt=" Flag" className='flag' /> Australia</a></li> */}
+                    <li><a href="#"><img src={aus} alt=" Flag" className='flag' /> Australia</a></li>
                     <li><a href="#"><img src={ban} alt=" Flag" className='flag' /> Bangladesh</a></li>
                     <li><a href="#"><img src={bru} alt=" Flag" className='flag' />Brunei</a></li>
                     <li><a href="/KH"><img src={cam} alt=" Flag" className='flag' />Cambodia</a></li>

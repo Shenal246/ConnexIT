@@ -18,6 +18,7 @@ import mrt from '../../../images/FlagIcon/mauritius.png';
 import sl from '../../../images/FlagIcon/sri-lanka.png';
 import tnz from '../../../images/FlagIcon/tanzania.png';
 import tld from '../../../images/FlagIcon/thailand.png';
+import nz from '../../../images/FlagIcon/new-zealand (1).png'
 import LanguageSelector from '../language-selector';
 
 
@@ -145,6 +146,7 @@ function Navbar() {
                     <li><a href="#"><img src={mld} alt=" Flag" className='flag' />Maldives</a></li>
                     <li><a href="#"><img src={myn} alt=" Flag" className='flag' />Myanmar</a></li>
                     <li><a href="/MU"><img src={mrt} alt=" Flag" className='flag' />Mauritius</a></li>
+                    <li><a href="/#"><img src={nz} alt=" Flag" className='flag' />New Zealand</a></li>
                     <li><a href="#"><img src={sin} alt=" Flag" className='flag' /> Singapore</a></li>
                     <li><a href="/SL"><img src={sl} alt=" Flag" className='flag' />Sri Lanka</a></li>
                     <li><a href="#"><img src={tnz} alt=" Flag" className='flag' />Tanzania</a></li>

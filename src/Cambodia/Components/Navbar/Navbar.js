@@ -18,6 +18,7 @@ import mrt from '../../../images/FlagIcon/mauritius.png';
 import sl from '../../../images/FlagIcon/sri-lanka.png';
 import tnz from '../../../images/FlagIcon/tanzania.png';
 import tld from '../../../images/FlagIcon/thailand.png';
+import nz from '../../../images/FlagIcon/new-zealand (1).png'
 import LanguageSelector from '../language-selector';
 
 
@@ -94,75 +95,76 @@ function Navbar() {
   }, []); // empty dependency array ensures that this effect runs only once on component mount
 
   const { t } = useTranslation();
-  const { tab1, tab2, tab3, tab4,tab5,tab6,tab7,tab8,tab9
+  const { tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9
   } = t('navsec', { returnObjects: true });
 
 
   return (
     <>
-        <header id="header" className="header d-flex align-items-center sticky-top">
-          <div className="container-fluid container-xl position-relative d-flex align-items-center">
-            <a href="index.html" className="logo d-flex align-items-center me-auto">
-              <NavLink to="/KH" activeClassName='active-link' exact><img src={Logo} alt="Logo" /></NavLink>
-            </a>
-            <nav id="navmenu" className="navmenu">
-              <ul class="no-bullets">
-                <NavLink to="/KH/About" activeClassName='active-link' exact><li><a className="">{tab1}</a></li></NavLink>
-                {/* <NavLink to="/Products" activeClassName='active-link' exact><li><a className="">Products</a></li></NavLink> */}
-                <NavLink to="/KH/Solutions" activeClassName='active-link' exact><li><a className="">{tab2}</a></li></NavLink>
+      <header id="header" className="header d-flex align-items-center sticky-top">
+        <div className="container-fluid container-xl position-relative d-flex align-items-center">
+          <a href="index.html" className="logo d-flex align-items-center me-auto">
+            <NavLink to="/KH" activeClassName='active-link' exact><img src={Logo} alt="Logo" /></NavLink>
+          </a>
+          <nav id="navmenu" className="navmenu">
+            <ul class="no-bullets">
+              <NavLink to="/KH/About" activeClassName='active-link' exact><li><a className="">{tab1}</a></li></NavLink>
+              {/* <NavLink to="/Products" activeClassName='active-link' exact><li><a className="">Products</a></li></NavLink> */}
+              <NavLink to="/KH/Solutions" activeClassName='active-link' exact><li><a className="">{tab2}</a></li></NavLink>
 
 
-                <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                  <span className='toggle-dropdown'>{tab3}&nbsp; </span> <i className="bi bi-chevron-down toggle-dropdown arrow1 " ></i></a>
-                  <ul className=''>
-                    <div >
-                      <NavLink to="/KH/Events&News" activeClassName='active-link' exact>
-                        <a>{tab4}</a>
-                      </NavLink>
-                      <NavLink to="/KH/UpcomingNews" activeClassName='active-link' exact>
-                        <a>{tab5}</a>
-                      </NavLink>
-                      {/* <NavLink to="/KH/Blog" activeClassName='active-link' exact>
+              <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
+                <span className='toggle-dropdown'>{tab3}&nbsp; </span> <i className="bi bi-chevron-down toggle-dropdown arrow1 " ></i></a>
+                <ul className=''>
+                  <div >
+                    <NavLink to="/KH/Events&News" activeClassName='active-link' exact>
+                      <a>{tab4}</a>
+                    </NavLink>
+                    <NavLink to="/KH/UpcomingNews" activeClassName='active-link' exact>
+                      <a>{tab5}</a>
+                    </NavLink>
+                    {/* <NavLink to="/KH/Blog" activeClassName='active-link' exact>
                         <a>{tab6}</a>
                       </NavLink> */}
 
-                    </div>
-                  </ul>
-                </li>
+                  </div>
+                </ul>
+              </li>
 
-                <NavLink to="/KH/Portal" activeClassName='active-link' exact><li><a className="">{tab7}</a></li></NavLink>
+              <NavLink to="/KH/Portal" activeClassName='active-link' exact><li><a className="">{tab7}</a></li></NavLink>
 
-                <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                  <span className='toggle-dropdown'>{tab8}&nbsp;<img src={cam} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
-                  <ul className='container1'>
-                    <div class="scrollable-menu flagName">
-                      
-                      <li><a href="/AU"><img src={aus} alt=" Flag" className='flag' /> Australia</a></li>
-                      <li><a href="#"><img src={ban} alt=" Flag" className='flag' /> Bangladesh</a></li>
-                      <li><a href="#"><img src={bru} alt=" Flag" className='flag' />Brunei</a></li>
-                      {/* <li><a href="#"><img src={cam} alt=" Flag" className='flag' />Cambodia</a></li>                   */}
-                      <li><a href="#"><img src={ind} alt=" Flag" className='flag' />India</a></li>
-                      <li><a href="#"><img src={laos} alt=" Flag" className='flag' />Laos</a></li>
-                      <li><a href="#"><img src={mld} alt=" Flag" className='flag' />Maldives</a></li>
-                      <li><a href="#"><img src={myn} alt=" Flag" className='flag' />Myanmar</a></li>
-                      <li><a href="/MU"><img src={mrt} alt=" Flag" className='flag' />Mauritius</a></li>
-                      <li><a href="#"><img src={sin} alt=" Flag" className='flag' /> Singapore</a></li>
-                      <li><a href="/SL"><img src={sl} alt=" Flag" className='flag' />Sri Lanka</a></li>
-                      <li><a href="#"><img src={tnz} alt=" Flag" className='flag' />Tanzania</a></li>
-                      <li><a href="/TH"><img src={tld} alt=" Flag" className='flag' />Thailand</a></li>
-                      <li><a href="#"><img src={wor} alt=" Flag" className='flag' />UAE</a></li>
-                    </div>
-                  </ul>
-                </li>
-              </ul>
-              <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
-            </nav>
+              <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
+                <span className='toggle-dropdown'>{tab8}&nbsp;<img src={cam} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
+                <ul className='container1'>
+                  <div class="scrollable-menu flagName">
 
-            <NavLink to="/KH/ContactUs" activeClassName='active-link' className="btn-getstarted" >{tab9}</NavLink>
-            <LanguageSelector/>
+                    <li><a href="/AU"><img src={aus} alt=" Flag" className='flag' /> Australia</a></li>
+                    <li><a href="#"><img src={ban} alt=" Flag" className='flag' /> Bangladesh</a></li>
+                    <li><a href="#"><img src={bru} alt=" Flag" className='flag' />Brunei</a></li>
+                    {/* <li><a href="#"><img src={cam} alt=" Flag" className='flag' />Cambodia</a></li>                   */}
+                    <li><a href="#"><img src={ind} alt=" Flag" className='flag' />India</a></li>
+                    <li><a href="#"><img src={laos} alt=" Flag" className='flag' />Laos</a></li>
+                    <li><a href="#"><img src={mld} alt=" Flag" className='flag' />Maldives</a></li>
+                    <li><a href="#"><img src={myn} alt=" Flag" className='flag' />Myanmar</a></li>
+                    <li><a href="/MU"><img src={mrt} alt=" Flag" className='flag' />Mauritius</a></li>
+                    <li><a href="/#"><img src={nz} alt=" Flag" className='flag' />New Zealand</a></li>
+                    <li><a href="#"><img src={sin} alt=" Flag" className='flag' /> Singapore</a></li>
+                    <li><a href="/SL"><img src={sl} alt=" Flag" className='flag' />Sri Lanka</a></li>
+                    <li><a href="#"><img src={tnz} alt=" Flag" className='flag' />Tanzania</a></li>
+                    <li><a href="/TH"><img src={tld} alt=" Flag" className='flag' />Thailand</a></li>
+                    <li><a href="#"><img src={wor} alt=" Flag" className='flag' />UAE</a></li>
+                  </div>
+                </ul>
+              </li>
+            </ul>
+            <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          </nav>
 
-          </div>
-        </header>
+          <NavLink to="/KH/ContactUs" activeClassName='active-link' className="btn-getstarted" >{tab9}</NavLink>
+          <LanguageSelector />
+
+        </div>
+      </header>
 
     </>
   );

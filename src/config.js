@@ -9,7 +9,8 @@ const config = {
     slseatUpdate: 'https://api.connexit.biz/seatupdate',
     slupcomingseat: 'https://api.connexit.biz/slupevst',
     slvendorfetch: 'https://api.connexit.biz/logoforcnt1',
-    camBlog: 'https://api.connexit.biz/camblog'
+    camBlog: 'https://api.connexit.biz/camblog',
+    auupcoming: ''
 };
 
 export default config;

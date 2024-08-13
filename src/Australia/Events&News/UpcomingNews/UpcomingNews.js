@@ -91,7 +91,7 @@ const UpcomingNews = () => {
                     value7: formData.contact,
                     value8: formData.province,
                     value9: formData.city,
-                    value10: 1,
+                    value10: 4,
                     key: "FKoaDwCi7C"
                 };
 

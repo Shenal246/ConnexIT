@@ -242,7 +242,7 @@ const UpcomingNews = () => {
                 </div>
 
                 {/* microsoft even card */}
-                <div className='row microsoftcard'>
+                {/* <div className='row microsoftcard'>
                     <div className="card mb-3 cards2">
                         <div className="row g-0">
                             <div className="col-md-4">
@@ -268,7 +268,7 @@ const UpcomingNews = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/*end of the microsoft even card */}
 
                 <div className='row '>

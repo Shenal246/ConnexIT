@@ -166,7 +166,7 @@ function WhoweareSection() {
           </div>
         </Modal.Body>
         <Modal.Footer className='model-footer'>
-          <NavLink to="/TH/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
+          <NavLink to="/Brn/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
             {Thaicontact}
           </Button></NavLink>
         </Modal.Footer>
@@ -197,7 +197,7 @@ function WhoweareSection() {
           </div>
         </Modal.Body>
         <Modal.Footer className='model-footer'>
-          <NavLink to="/TH/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
+          <NavLink to="/Brn/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
             {Thaicontact}
           </Button></NavLink>
         </Modal.Footer>
@@ -230,7 +230,7 @@ function WhoweareSection() {
           </div>
         </Modal.Body>
         <Modal.Footer className='model-footer'>
-          <NavLink to="/TH/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
+          <NavLink to="/Brn/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
             {Thaicontact}
           </Button></NavLink>
         </Modal.Footer>
@@ -263,7 +263,7 @@ function WhoweareSection() {
           </div>
         </Modal.Body>
         <Modal.Footer className='model-footer'>
-          <NavLink to="/TH/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
+          <NavLink to="/Brn/ContactUs"><Button onClick={handleClose} className='contactUs-button'>
             {Thaicontact}
           </Button></NavLink>
         </Modal.Footer>

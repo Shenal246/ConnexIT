@@ -36,7 +36,7 @@ function Server() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/TH/Solutions/ServerBackup/${vend.name}`, { state: { vend } });
+        navigate(`/Brn/Solutions/ServerBackup/${vend.name}`, { state: { vend } });
     };
 
     const { t } = useTranslation();

@@ -44,7 +44,7 @@ const SingleVendor = () => {
                         <div className='bton'>
                             <a href={vend.wlink} target='_blank' rel='noopener noreferrer'>
                                 <button className='websiteButton'>More</button>
-                                <NavLink to='/TH/ContactUs'><button className='websiteButton'> Inquiry</button></NavLink>
+                                <NavLink to='/Brn/ContactUs'><button className='websiteButton'> Inquiry</button></NavLink>
                             </a>
                         </div>
                     </div>

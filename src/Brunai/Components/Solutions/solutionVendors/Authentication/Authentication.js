@@ -36,7 +36,7 @@ function Authentication() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/TH/Solutions/Authentication/${vend.name}`, { state: { vend } });
+        navigate(`/Brn/Solutions/Authentication/${vend.name}`, { state: { vend } });
     };
 
 

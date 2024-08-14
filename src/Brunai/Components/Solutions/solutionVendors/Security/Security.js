@@ -37,7 +37,7 @@ function Security() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/TH/Solutions/Security/${vend.name}`, { state: { vend } });
+        navigate(`/Brn/Solutions/Security/${vend.name}`, { state: { vend } });
     };
 
     const { t } = useTranslation();

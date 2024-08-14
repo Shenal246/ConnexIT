@@ -99,6 +99,24 @@ import MUMicrosoft from "./Mauritius/Components/Solutions/solutionVendors/Micros
 import MUSingleVendor from "./Mauritius/Components/SingleVendor/SingleVendor";
 
 
+import BrnHome from "./Brunai/Components/Home/Home";
+import BrnAbout from "./Brunai/Components/About/About";
+import BrnEvents from "./Brunai/Components/Events&News/Events";
+import BrnUpcomingEvents from "./Brunai/Components/Events&News/UpcomingNews/UpcomingNews";
+import BrnBlog from "./Brunai/Components/Blog/Blog";
+import BrnContactUs from "./Brunai/Components/ContactUs/Contact";
+import BrnSolutions from "./Brunai/Components/Solutions/Solutions";
+import BrnPortal from "./Brunai/Components/Portal/Portal";
+import BrnCyberSecurity from "./Brunai/Components/Solutions/solutionVendors/CyberSecurity/CyberSecurity";
+import BrnAuthentication from "./Brunai/Components/Solutions/solutionVendors/Authentication/Authentication";
+import BrnSecurityManagement from "./Brunai/Components/Solutions/solutionVendors/Security/Security";
+import BrnInternetSecurity from "./Brunai/Components/Solutions/solutionVendors/Perimia/Perimia";
+import BrnEndpointSecurity from "./Brunai/Components/Solutions/solutionVendors/Endpoint/Endpoin";
+import BrnNetworking from "./Brunai/Components/Solutions/solutionVendors/Networking/Networking";
+import BrnInfrastructure from "./Brunai/Components/Solutions/solutionVendors/Infrastructure/InfrastructureMonitoring";
+import BrnServer from "./Brunai/Components/Solutions/solutionVendors/ServerBackup/ServerBackup";
+import BrnSingleVendor from "./Brunai/Components/SingleVendor/SingleVendor";
+
 
 function App() {
 
@@ -250,6 +268,35 @@ function App() {
                     <Route path="/MU/Solutions/Perimia/:vendorName" element={<MUSingleVendor />} />
                     <Route path="/MU/Solutions/Security/:vendorName" element={<MUSingleVendor />} />
                     <Route path="/MU/Solutions/ServerBackup/:vendorName" element={<MUSingleVendor />} />
+
+
+                    {/*    Brunei*/}
+                    <Route path="/Brn" exact Component={BrnHome}></Route>
+                    <Route path="/Brn/About" exact Component={BrnAbout}></Route>
+                    <Route path="/Brn/Events&News" exact element={<BrnEvents />}></Route>
+                    <Route path="/Brn/UpcomingNews" exact element={<BrnUpcomingEvents />}></Route>
+                    <Route path="/Brn/Blog" exact element={<BrnBlog />}></Route>
+                    <Route path="/Brn/ContactUs" exact Component={BrnContactUs}></Route>
+                    <Route path="/Brn/Solutions" exact Component={BrnSolutions}></Route>
+                    <Route path="/Brn/Portal" exact Component={BrnPortal}></Route>
+
+                    <Route path="/Brn/Solutions/CyberSecurity" element={<BrnCyberSecurity />} />
+                    <Route path="/Brn/Solutions/Authentication" element={<BrnAuthentication />} />
+                    <Route path="/Brn/Solutions/SecurityManagement" element={<BrnSecurityManagement />} />
+                    <Route path="/Brn/Solutions/InternetSecurity" element={<BrnInternetSecurity />} />
+                    <Route path="/Brn/Solutions/EndpointSecurity" element={<BrnEndpointSecurity />} />
+                    <Route path="/Brn/Solutions/Networking" element={<BrnNetworking />} />
+                    <Route path="/Brn/Solutions/Infrastructure" element={<BrnInfrastructure />} />
+                    <Route path="/Brn/Solutions/Server" element={<BrnServer />} />
+                    <Route path="/Brn/Solutions/Authentication/:vendorName" element={<BrnSingleVendor />} />
+                    <Route path="/Brn/Solutions/CyberSecurity/:vendorName" element={<BrnSingleVendor />} />
+                    <Route path="/Brn/Solutions/Endpoin/:vendorName" element={<BrnSingleVendor />} />
+                    <Route path="/Brn/Solutions/InfrastructureMonitoring/:vendorName" element={<BrnSingleVendor />} />
+                    <Route path="/Brn/Solutions/Networking/:vendorName" element={<BrnSingleVendor />} />
+                    <Route path="/Brn/Solutions/Perimia/:vendorName" element={<BrnSingleVendor />} />
+                    <Route path="/Brn/Solutions/Security/:vendorName" element={<BrnSingleVendor />} />
+                    <Route path="/Brn/Solutions/ServerBackup/:vendorName" element={<BrnSingleVendor />} />
+
                 </Routes>
 
             </>

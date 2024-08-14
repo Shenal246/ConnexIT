@@ -48,7 +48,7 @@ function HeroSection() {
             <div className="row gy-4">
               <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
                 <div className="d-flex">
-                  <NavLink to="/TH/ContactUs" className="btn-get-started">{Thaicontact}</NavLink>
+                  <NavLink to="/Brn/ContactUs" className="btn-get-started">{Thaicontact}</NavLink>
                   {/* <a href="#" className="glightbox btn-watch-video d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#videoModal" onClick={handlePlayVideo}>
                     <i className="bi bi-play-circle"></i>
                     <span>{wtvideo}</span>

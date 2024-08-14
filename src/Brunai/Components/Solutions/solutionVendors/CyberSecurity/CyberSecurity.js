@@ -36,7 +36,7 @@ function CyberSecurity() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/TH/Solutions/CyberSecurity/${vend.name}`, { state: { vend } });
+        navigate(`/Brn/Solutions/CyberSecurity/${vend.name}`, { state: { vend } });
     };
 
     const { t } = useTranslation();

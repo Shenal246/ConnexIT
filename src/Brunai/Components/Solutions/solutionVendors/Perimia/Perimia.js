@@ -40,8 +40,8 @@ function Perimia() {
     };
 
     const { t } = useTranslation();
-    const { Thaipr1, Thaipr2
-        } = t('Thaiperisec', { returnObjects: true });
+    const { Brnpr1, Brnpr2
+        } = t('Brnperisec', { returnObjects: true });
 
     return (
         <>
@@ -52,7 +52,7 @@ function Perimia() {
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Thaipr1}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Brnpr1}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ function Perimia() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{Thaipr2}</p>
+                                    <p>{Brnpr2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>

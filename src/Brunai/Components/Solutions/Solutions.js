@@ -16,7 +16,7 @@ import mrcst from '../../../images/pillers/Microsoft.jpg';
 
 function Solutions() {
   const { t } = useTranslation();
-  const { Thaimaintopic, ThaiperiTopic, ThaicyberTopic, ThaiauthTopic, ThaisecTopic, ThaiendTopic, ThainetTopic, ThaidataTopic, ThaiserverTopic, ThaiMicrosoft } = t('Thaisolutionssec', { returnObjects: true });
+  const { Brnmaintopic, BrnperiTopic, BrncyberTopic, BrnauthTopic, BrnsecTopic, BrnendTopic, BrnnetTopic, BrndataTopic, BrnserverTopic, BrnMicrosoft } = t('Brnsolutionssec', { returnObjects: true });
 
 
   return (
@@ -28,7 +28,7 @@ function Solutions() {
           <div className='row'>
             <div className="row text">
               <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-              <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Thaimaintopic}</p></div>
+              <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Brnmaintopic}</p></div>
               <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
             </div>
           </div>
@@ -38,7 +38,7 @@ function Solutions() {
                 <div className="card crd">
                   <img src={Perimie} className="card-img-top" alt="Perimeter and Internal Security" />
                   <div className="card-body cardSize">
-                    <p className="card-text txts">{ThaiperiTopic}</p>
+                    <p className="card-text txts">{BrnperiTopic}</p>
                   </div>
                 </div>
               </NavLink>
@@ -48,7 +48,7 @@ function Solutions() {
                 <div className="card crd">
                   <img src={cyber} className="card-img-top" alt="Cyber Security Governance & Compliance" />
                   <div className="card-body cardSize">
-                    <p className="card-text txts">{ThaicyberTopic}</p>
+                    <p className="card-text txts">{BrncyberTopic}</p>
                   </div>
                 </div>
               </NavLink>
@@ -58,7 +58,7 @@ function Solutions() {
                 <div className="card crd">
                   <img src={Authitianit} className="card-img-top" alt="Authentication & Identity Management" />
                   <div className="card-body cardSize">
-                    <p className="card-text txts">{ThaiauthTopic}</p>
+                    <p className="card-text txts">{BrnauthTopic}</p>
                   </div>
                 </div>
               </NavLink>
@@ -71,7 +71,7 @@ function Solutions() {
                 <div className="card crd">
                   <img src={Security} className="card-img-top" alt="Security Management" />
                   <div className="card-body cardSize1">
-                    <p className="card-text txts">{ThaisecTopic}</p>
+                    <p className="card-text txts">{BrnsecTopic}</p>
                   </div>
                 </div>
               </NavLink>
@@ -81,7 +81,7 @@ function Solutions() {
                 <div className="card crd">
                   <img src={datapoint} className="card-img-top" alt="Endpoint Security" />
                   <div className="card-body cardSize1">
-                    <p className="card-text txts">{ThaiendTopic}</p>
+                    <p className="card-text txts">{BrnendTopic}</p>
                   </div>
                 </div>
               </NavLink>
@@ -91,7 +91,7 @@ function Solutions() {
                 <div className="card crd">
                   <img src={networking} className="card-img-top" alt="Networking" />
                   <div className="card-body cardSize1">
-                    <p className="card-text txts">{ThainetTopic}</p>
+                    <p className="card-text txts">{BrnnetTopic}</p>
                   </div>
                 </div>
               </NavLink>
@@ -103,7 +103,7 @@ function Solutions() {
               <div className="card crd">
                 <img src={endpoint} className="card-img-top endpoint" alt="Data Center Infrastructure and Infrastructure Monitoring" />
                 <div className="card-body cardSize1">
-                  <p className="card-text txts">{ThaidataTopic}</p>
+                  <p className="card-text txts">{BrndataTopic}</p>
                 </div>
               </div>
             </NavLink>
@@ -113,7 +113,7 @@ function Solutions() {
                 <div className="card crd ">
                   <img src={servers} className="card-img-top solImageHight" alt="Server Storage & Backup Solutions" />
                   <div className="card-body cardSize1">
-                    <p className="card-text txts">{ThaiserverTopic}</p>
+                    <p className="card-text txts">{BrnserverTopic}</p>
                   </div>
                 </div>
               </NavLink>
@@ -123,7 +123,7 @@ function Solutions() {
                 <div className="card crd ">
                   <img src={mrcst} className="card-img-top solImageHight" alt="Microsoft" />
                   <div className="card-body cardSize1">
-                    <p className="card-text txts">{ThaiMicrosoft}</p>
+                    <p className="card-text txts">{BrnMicrosoft}</p>
                   </div>
                 </div>
               </NavLink>

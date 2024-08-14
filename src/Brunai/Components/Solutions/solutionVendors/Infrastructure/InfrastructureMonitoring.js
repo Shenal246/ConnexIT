@@ -40,8 +40,8 @@ function InfrastructureMonitoring() {
     };
 
     const { t } = useTranslation();
-    const { Thaiif1, Thaiif2
-        } = t('Thaiifmsec', { returnObjects: true });
+    const { Brnif1, Brnif2
+        } = t('Brnifmsec', { returnObjects: true });
 
     return (
         <>
@@ -52,7 +52,7 @@ function InfrastructureMonitoring() {
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Thaiif1}</p></div>
+                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Brnif1}</p></div>
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ function InfrastructureMonitoring() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{Thaiif2}</p>
+                                    <p>{Brnif2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>

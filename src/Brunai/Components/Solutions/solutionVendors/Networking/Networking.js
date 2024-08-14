@@ -40,8 +40,8 @@ function Networking() {
     };
 
     const { t } = useTranslation();
-    const { Thaint1, Thaint2
-        } = t('Thainewtworksec', { returnObjects: true });
+    const { Brnnt1, Brnnt2
+        } = t('Brnnewtworksec', { returnObjects: true });
         
     return (
         <>
@@ -52,7 +52,7 @@ function Networking() {
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Thaint1}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Brnnt1}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -72,7 +72,7 @@ function Networking() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{Thaint2}</p>
+                                    <p>{Brnnt2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>

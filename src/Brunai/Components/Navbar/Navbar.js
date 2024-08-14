@@ -94,8 +94,8 @@ function Navbar() {
   }, []); // empty dependency array ensures that this effect runs only once on component mount
 
   const { t } = useTranslation();
-  const { Thaitab1, Thaitab2, Thaitab3, Thaitab4, Thaitab5, Thaitab6, Thaitab7, Thaitab8, Thaitab9
-  } = t('Thainavsec', { returnObjects: true });
+  const { Brntab1, Brntab2, Brntab3, Brntab4, Brntab5, Brntab6, Brntab7, Brntab8, Brntab9
+  } = t('Brnnavsec', { returnObjects: true });
 
 
   return (
@@ -107,33 +107,33 @@ function Navbar() {
           </a>
           <nav id="navmenu" className="navmenu">
             <ul class="no-bullets">
-              <NavLink to="/Brn/About" activeClassName='active-link' exact><li><a className="">{Thaitab1}</a></li></NavLink>
+              <NavLink to="/Brn/About" activeClassName='active-link' exact><li><a className="">{Brntab1}</a></li></NavLink>
               {/* <NavLink to="/Products" activeClassName='active-link' exact><li><a className="">Products</a></li></NavLink> */}
-              <NavLink to="/Brn/Solutions" activeClassName='active-link' exact><li><a className="">{Thaitab2}</a></li></NavLink>
+              <NavLink to="/Brn/Solutions" activeClassName='active-link' exact><li><a className="">{Brntab2}</a></li></NavLink>
 
 
               <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                <span className='toggle-dropdown'>{Thaitab3}&nbsp; </span> <i className="bi bi-chevron-down toggle-dropdown arrow1 " ></i></a>
+                <span className='toggle-dropdown'>{Brntab3}&nbsp; </span> <i className="bi bi-chevron-down toggle-dropdown arrow1 " ></i></a>
                 <ul className=''>
                   <div >
                     <NavLink to="/Brn/Events&News" activeClassName='active-link' exact>
-                      <a>{Thaitab4}</a>
+                      <a>{Brntab4}</a>
                     </NavLink>
                     <NavLink to="/Brn/UpcomingNews" activeClassName='active-link' exact>
-                      <a>{Thaitab5}</a>
+                      <a>{Brntab5}</a>
                     </NavLink>
                     {/* <NavLink to="/Brn/Blog" activeClassName='active-link' exact>
-                        <a>{Thaitab6}</a>
+                        <a>{Brntab6}</a>
                       </NavLink> */}
 
                   </div>
                 </ul>
               </li>
 
-              <NavLink to="/Brn/Portal" activeClassName='active-link' exact><li><a className="">{Thaitab7}</a></li></NavLink>
+              <NavLink to="/Brn/Portal" activeClassName='active-link' exact><li><a className="">{Brntab7}</a></li></NavLink>
 
               <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                <span className='toggle-dropdown'>{Thaitab8}&nbsp;<img src={bru} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
+                <span className='toggle-dropdown'>{Brntab8}&nbsp;<img src={bru} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
                 <ul className='container1'>
                   <div class="scrollable-menu flagName">
 
@@ -159,7 +159,7 @@ function Navbar() {
             <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
 
-          <NavLink to="/Brn/ContactUs" activeClassName='active-link' className="btn-getstarted" >{Thaitab9}</NavLink>
+          <NavLink to="/Brn/ContactUs" activeClassName='active-link' className="btn-getstarted" >{Brntab9}</NavLink>
           <LanguageSelector />
 
         </div>

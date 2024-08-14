@@ -41,8 +41,8 @@ function Authentication() {
 
 
     const { t } = useTranslation();
-    const { Thaiat1, Thaiat2
-        } = t('Thaiauthentisec', { returnObjects: true });
+    const { Brnat1, Brnat2
+        } = t('Brnauthentisec', { returnObjects: true });
 
 
     return (
@@ -54,7 +54,7 @@ function Authentication() {
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Thaiat1}</p></div>
+                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Brnat1}</p></div>
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ function Authentication() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{Thaiat2}</p>
+                                    <p>{Brnat2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>

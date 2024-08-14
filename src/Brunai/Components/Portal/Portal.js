@@ -8,15 +8,15 @@ import BrnFooter from '../Footer/Footer';
 const Portal = () => {
 
     const { t } = useTranslation();
-    const { Thaiptl1, Thaiptl2
-        } = t('Thaiportalsec', { returnObjects: true });
+    const { Brnptl1, Brnptl2
+        } = t('Brnportalsec', { returnObjects: true });
 
     return (
         <>
         <BrnNavbar/>
         <BrnChat/>
             <div className='portal'>
-                <p><span className='one'>{Thaiptl1}</span><span className='two'> {Thaiptl2}</span> </p>
+                <p><span className='one'>{Brnptl1}</span><span className='two'> {Brnptl2}</span> </p>
             </div>
         <BrnFooter/>
         </>

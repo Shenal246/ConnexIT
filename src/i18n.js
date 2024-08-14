@@ -618,9 +618,220 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 Muriserversec: {
                     Murisvr1: "Server Storage & Backup Solutions",
                     Murisvr2: "No Image Available"
-                }
+                },
 
                 // End of MU part
+
+
+                //Brunei
+
+                Brnherosect: {
+                    Brngreet1: "Leading Technology Distributor",
+                    Brngreet2first: "Welcome to ",
+                    Brngreet2mid: "Connex ",
+                    Brngreet2last: "Information Technologies",
+                    Brngreet3: "Value added distributor for more than 30 leading global vendors.",
+                    Brncontact: "Contact Us",
+                    Brnwtvideo: "Watch Video",
+                },
+                Brnwhowearesec: {
+                    Brnwhotopic: "Who we are",
+                    Brncard1: "Distribution",
+                    Brncard1Text: "Discover our tailor-made solutions, designed to meet end-users requirements with the most competitive, best-fitted answers for their unique needs.",
+                    Brncard2: "Consultancy",
+                    Brncard2Text: "Consultancy service is a unique solution offered by Connex, ensuring the most suitable and competitive solution for an end-user’s requirements. We offer an integrated customized service of consultancy skills that grows and changes with business and customer needs.Connex consultancy provides highly qualified personnel to complement the skills of your own team. Our consultants and engineers act on your behalf to ensure the smooth running of customers’ installation, in a timely manner and according to budget implications.",
+                    Brncard3: "Training",
+                    Brncard3Text: " We believe in the popular adage we are all lifelong learners, hence we strive to create a culture of learning where our employees are afforded numerous opportunities to further their professional development. We also groom our employees for future leadership positions from within the Company.In a fast moving and developing digital world, the Technology industry experiences changes rapidly; therefore we realize the need to keep pace with attrition rates and staying on the edge of the most advanced technologies. Our extensive training and professional development of programmers have contributed to employee retention.",
+                    Brncard4: "TAC Support",
+                    Brncard4Text: "Connex offers 24/7 TAC services, with an array of certified, technical and qualified professionals. We are proud of Service Level Agreement levels of Bronze, Silver, Gold and Platinum.You will get to engage with your Product Manager who will share his understanding of the product, so you are fully informed and equipped with knowledge and the technical know how to use the product. Product research updates will also be shared along with information about deal registration. Connex professional service and technical support service are available for our channel partners only. Please contact.",
+                    BrnrText1: "A decade of expertise in cutting-edge technology distribution ",
+                    BrnrText2: "A leading technology distributor thrives on adapting to the ever-changing world. If you require diverse solutions to achieve compliance and transform your business, your search ends here. ",
+                    Brnic1: "Found",
+                    Brnic2: "Employees",
+                    Brnic3: "Vendors",
+                    Brnic4: "Partners",
+                    Brncontact: "Contact Us",
+                },
+                Brnvendorsec: {
+                    Brnventopic: "Our Vendors",
+                    BrnvenText1: "Embark on technological Excellence with our Trusted ",
+                    BrnvenText2: "Network of Vendors.",
+
+                },
+                Brnlatestsec: {
+                    Brnlattopic: "Latest News",
+                },
+                // About us section
+                Brnourstory: {
+                    BrnourSTopic: "Our Story",
+                    BrnourSText: "Founded with a passion for technology and excellence, CONNEX INFORMATION TECHNOLOGY has become a leader in IT product distribution. We started with a vision to revolutionize the industry through innovative solutions and unparalleled support. Our success is built on strong relationships with our clients and partners, enabling us to adapt and meet dynamic market needs. As we grow, we remain committed to innovation, integrity, and partnership, driving mutual growth and setting new benchmarks in the industry.",
+                    BrnourVTopic: "Our Vision",
+                    BrnourVText: "To be the leading global distributor of IT products by fostering strong partnerships, delivering effective marketing, and providing proficient support for mutual growth.",
+                    BrnourMTopic: "Our Mission",
+                    BrnourMText: "Our mission is to globally provide top-tier products and solutions with passion, continuous improvement, and proactive support, ensuring business success and satisfaction for our partners and their customers.",
+                    BrnsureshName: "Suresh Wijesinghe",
+                    BrnsureshText: `"Leadership is not just about making decisions; it\s about inspiring others to achieve greatness."`,
+                    BrnshamalName: "Shamal Aberathne",
+                    BrnshamalText: `"In a world of noise, our brand\'s voice must be authentic, engaging, and memorable."`,
+                    BrndilshanName: "Dilshan De Silva",
+                    BrndilshanText: `"Operational excellence is the foundation of our success, driving efficiency and innovation."`,
+                    BrnrohanName: "Rohan Samaraweera",
+                    BrnrohanText: `"Technology transforms vision into reality, powering our journey into the future."`,
+                    BrnrajivName: "Rajiv Senawirathne",
+                    BrnrajivText: `"Customer trust and satisfaction are the cornerstones of our company\'s reputation."`,
+                    BrnpatricName: "Patrick Yogaratnam",
+                    BrnpatricText: `"Connecting with our global customers requires understanding diverse needs and delivering exceptional service."`,
+                    BrnerangaName: "Eranga Wickramasinghe",
+                    BrnerangaText: `"Building strong relationships with our customers is the cornerstone of our success and growth."`,
+                    BrnjananiName: "Janani Siriwardhane",
+                    BrnjananiText: `"Empowering employees and fostering a positive culture are the keys to organizational success."`,
+                    BrnromeshName: "Romesh De Silva",
+                    BrnromeshText: `"Success in sales is not about pushing products, but about understanding and solving customer needs."`,
+                    BrnKiththiName: "Kiththi Perera",
+                    BrnKiththiText: `"Transforming potential into performance with innovative technology,"`,
+                },
+                Brnlatestsec: {
+                    Brnlattopic: "Latest News",
+                },
+                // Sollutions section
+                Brnsolutionssec: {
+                    Brnmaintopic: "Solutions",
+                    BrnperiTopic: "Perimeter and  Internal Security",
+                    BrncyberTopic: "Cyber Security Governance & Compliance",
+                    BrnauthTopic: "Authentication & Identity Management",
+                    BrnsecTopic: "Security Management",
+                    BrnendTopic: "Endpoint Security",
+                    BrnnetTopic: "Networking",
+                    BrndataTopic: "Data Center Infrastructure and  Monitoring",
+                    BrnserverTopic: "Server Storage & Backup Solutions",
+                },
+                // Footer section
+                Brnfootersec: {
+                    BrnfootHeadTopic: "Head Office",
+                    BrnheadLine1: "Level 35,",
+                    BrnheadLine2: "The Gateway West 150 Beach Road,",
+                    BrnheadLine3: "Singapore 189720 .",
+                    BrnheadLine4: "Contact: +6567278910",
+                    BrnfootConTopic: "Brnland Office",
+                    BrnconLine1: "184/75,",
+                    BrnconLine2: "17th Floor, Forum Tower,",
+                    BrnconLine3: "Ratchadaphisek Rd, Khwaeng Huai Khwang, Huai Khwang,",
+                    BrnconLine4: "Bangkok 10310, Brnland",
+                    BrnconLine5: "Contact: +66612700590",
+                    BrnresTopic: "Resources",
+                    Brnres1: "Event & News",
+                    Brnres2: "FAQs",
+                    Brnres3: "Careers",
+                },
+                // Chat
+                Brnchatsec: {
+                    Brnques1: "Hi! I am here to help you. Can I know your name? ",
+                    Brnques2: `Hi {previousValue}, How Can I help you?`,
+                    Brnques3: "Sure. Can I have your phone number?",
+                    Brnques4: "Thank you! One of our staff will call you shortly.",
+                },
+                // Navbar Section
+                Brnnavsec: {
+                    Brntab1: "About Us",
+                    Brntab2: "Solutions",
+                    Brntab3: "Events",
+                    Brntab4: "Events & News",
+                    Brntab5: "Upcoming News",
+                    Brntab6: "Blogs",
+                    Brntab7: "Portal",
+                    Brntab8: "Country",
+                    Brntab9: "Contact Us",
+                },
+
+                // contactus page
+                Brncontsec: {
+                    Brncont1: "Contact Us",
+                    Brncont2: "Reach out to us ",
+                    Brncont3: "to let us know how we can assist you.",
+                    Brncont4: "We are happy to provide",
+                    Brncont5: "customer support or",
+                    Brncont6: "answer any general inquiries",
+                    Brncont7: " you may have.",
+                    Brncont8: "First name",
+                    Brncont9: "First name is required",
+                    Brncont10: "Last name",
+                    Brncont11: "Last name is required",
+                    Brncont12: "Company",
+                    Brncont13: "Company is required",
+                    Brncont14: "Contact Number",
+                    Brncont15: "Contact number must be exactly 10 digits",
+                    Brncont16: "name@example.com",
+                    Brncont17: "Invalid email address",
+                    Brncont18: "Comments are required",
+                    Brncont19: "I accept the privacy & policy",
+                    Brncont20: "You must accept the privacy & policy",
+                    Brncont21: "Submit",
+                    Brncont22: "Clear",
+                    Brncont23: "Brnland",
+                    Brncont24: "Brnland Office",
+                    Brncont25: "184/75, 17th Floor",
+                    Brncont26: "Forum Tower, Ratchadapkisek Rd,",
+                    Brncont27: "Khwaeng Huai Khwang, Hui Khwang,",
+                    Brncont28: "Bangkok 10310, Brnland",
+                    Brncont29: "Get Directions",
+                    Brncont30: "Leave A Comment"
+                },
+
+                Brneventsec: {
+                    Brnevnt1: "Events & News",
+                    Brnevnt2: "Latest Events and News",
+                    Brnevnt3: "No Image Available",
+                    Brnevnt4: "Close",
+                    Brnevnt5: "Events & News",
+                    Brnevnt6: "Blogs",
+                },
+                BrnupEventSec: {
+                    Brnupevnt1: "Upcoming",
+                    Brnupevnt2: "Events & News",
+                    Brnupevnt3: "No Image Available",
+                    Brnupevnt4: "Close",
+                },
+                Brnportalsec: {
+                    Brnptl1: "To be launch",
+                    Brnptl2: "Soon"
+                },
+                Brnblogsec: {
+                    Brnblg1: "Blogs"
+                },
+                Brnauthentisec: {
+                    Brnat1: "Authentication & Identity Management",
+                    Brnat2: "No Image Available",
+                },
+                Brncybersec: {
+                    Brncy1: "Cyber Security Governance & Compliance",
+                    Brncy2: "No Image Available"
+                },
+                Brnendpsec: {
+                    Brnep1: "Endpoint Security",
+                    Brnep2: "No Image Available"
+                },
+                Brnnewtworksec: {
+                    Brnnt1: "Networking",
+                    Brnnt2: "No Image Available"
+                },
+                Brnifmsec: {
+                    Brnif1: "Data Center Infrastructure and Infrastructure Monitoring",
+                    Brnif2: "No Image Available"
+                },
+                Brnperisec: {
+                    Brnpr1: "Perimeter And Internal Security",
+                    Brnpr2: "No Image Available"
+                },
+                Brnsecuritysec: {
+                    Brnscrty1: "Security Management",
+                    Brnscrty2: "No Image Available"
+                },
+                Brnserversec: {
+                    Brnsvr1: "Server Storage & Backup Solutions",
+                    Brnsvr2: "No Image Available"
+                }
+
+                //Brunei End
 
             }
         },
@@ -1115,7 +1326,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     MuriconLine1: "Centre d'Affaires Ebene Junction,",
                     MuriconLine2: "Suites C-03,",
                     MuriconLine3: "Rue de la Démocratie,",
-                    MuriconLine4: "Ebene, Maurice",                    
+                    MuriconLine4: "Ebene, Maurice",
                     MuriconLine5: "Contact: +66612700590",
                     MuriresTopic: "Ressources",
                     Murires1: "Événements et nouvelles",
@@ -1229,13 +1440,210 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Murisvr1: "Solutions de stockage et de sauvegarde des serveurs",
                     Murisvr2: "Aucune image disponible"
                 }
-
-
-
-
             },
         },
 
+        //Brunei Translation
+        frMalay: {
+            translation: {
+                Brnherosect: {
+                    Brngreet1: "Pengedar Teknologi Utama",
+                    Brngreet2first: "Selamat datang ke ",
+                    Brngreet2mid: "Connex ",
+                    Brngreet2last: "Teknologi Maklumat",
+                    Brngreet3: "Pengedar nilai tambah untuk lebih daripada 30 vendor global terkemuka.",
+                    Brncontact: "Hubungi Kami",
+                    Brnwtvideo: "Tonton Video"
+                },
+                Brnwhowearesec: {
+                    Brnwhotopic: "Siapa Kami",
+                    Brncard1: "Pengedaran",
+                    Brncard1Text: "Temui penyelesaian yang diperibadikan kami, direka untuk memenuhi keperluan pengguna akhir dengan jawapan yang paling kompetitif dan sesuai untuk keperluan unik mereka.",
+                    Brncard2: "Perundingan",
+                    Brncard2Text: "Perkhidmatan perundingan adalah penyelesaian unik yang ditawarkan oleh Connex, memastikan penyelesaian yang paling sesuai dan kompetitif untuk keperluan pengguna akhir. Kami menawarkan perkhidmatan perundingan yang disesuaikan secara bersepadu yang berkembang dan berubah bersama dengan keperluan perniagaan dan pelanggan. Perundingan Connex menyediakan kakitangan yang sangat berkelayakan untuk melengkapkan kemahiran pasukan anda sendiri. Perunding dan jurutera kami bertindak bagi pihak anda untuk memastikan kelancaran pemasangan pelanggan, dalam masa yang ditetapkan dan mengikut anggaran kos.",
+                    Brncard3: "Latihan",
+                    Brncard3Text: "Kami percaya pada pepatah popular bahawa kita semua adalah pelajar seumur hidup, oleh itu kami berusaha untuk mewujudkan budaya pembelajaran di mana pekerja kami diberikan pelbagai peluang untuk meningkatkan pembangunan profesional mereka. Kami juga melatih pekerja kami untuk jawatan kepimpinan masa depan dari dalam syarikat. Dalam dunia digital yang cepat berkembang, industri Teknologi mengalami perubahan dengan pantas; oleh itu kami menyedari keperluan untuk mengikuti kadar pusing ganti dan sentiasa berada di hadapan teknologi yang paling maju. Latihan dan pembangunan profesional kami yang meluas untuk pengaturcara telah menyumbang kepada pengekalan pekerja.",
+                    Brncard4: "Sokongan TAC",
+                    Brncard4Text: "Connex menawarkan perkhidmatan TAC 24/7, dengan pelbagai profesional yang bertauliah, teknikal dan berkelayakan. Kami bangga dengan tahap Perjanjian Tahap Perkhidmatan seperti Gangsa, Perak, Emas dan Platinum. Anda akan berhubung dengan Pengurus Produk anda yang akan berkongsi pemahamannya tentang produk, supaya anda benar-benar dimaklumkan dan dilengkapi dengan pengetahuan serta kemahiran teknikal untuk menggunakan produk tersebut. Kemas kini penyelidikan produk juga akan dikongsi bersama dengan maklumat mengenai pendaftaran tawaran. Perkhidmatan profesional dan sokongan teknikal Connex hanya tersedia untuk rakan kongsi saluran kami sahaja. Sila hubungi.",
+                    BrnrText1: "Sepuluh tahun kepakaran dalam pengedaran teknologi canggih",
+                    BrnrText2: "Pengedar teknologi utama berkembang dengan menyesuaikan diri dengan dunia yang sentiasa berubah. Jika anda memerlukan pelbagai penyelesaian untuk mencapai pematuhan dan mengubah perniagaan anda, pencarian anda berakhir di sini.",
+                    Brnic1: "Ditemui",
+                    Brnic2: "Pekerja",
+                    Brnic3: "Vendor",
+                    Brnic4: "Rakan Kongsi",
+                    Brncontact: "Hubungi Kami"
+                },
+                Brnvendorsec: {
+                    Brnventopic: "Vendor Kami",
+                    BrnvenText1: "Mulakan kecemerlangan teknologi dengan ",
+                    BrnvenText2: "Rangkaian Vendor Kami."
+                },
+                Brnlatestsec: {
+                    Brnlattopic: "Berita Terkini"
+                },
+                Brnourstory: {
+                    BrnourSTopic: "Kisah Kami",
+                    BrnourSText: "Ditubuhkan dengan semangat untuk teknologi dan kecemerlangan, CONNEX INFORMATION TECHNOLOGY telah menjadi peneraju dalam pengedaran produk IT. Kami bermula dengan visi untuk merevolusikan industri melalui penyelesaian inovatif dan sokongan yang tiada tandingan. Kejayaan kami dibina atas hubungan yang kukuh dengan pelanggan dan rakan kongsi kami, membolehkan kami menyesuaikan diri dan memenuhi keperluan pasaran yang dinamik. Sebagai kami berkembang, kami tetap komited kepada inovasi, integriti, dan perkongsian, memacu pertumbuhan bersama dan menetapkan penanda aras baru dalam industri.",
+                    BrnourVTopic: "Visi Kami",
+                    BrnourVText: "Untuk menjadi pengedar produk IT global terkemuka dengan membina perkongsian yang kukuh, menyampaikan pemasaran yang berkesan, dan menyediakan sokongan yang mahir untuk pertumbuhan bersama.",
+                    BrnourMTopic: "Misi Kami",
+                    BrnourMText: "Misi kami adalah untuk menyediakan produk dan penyelesaian terbaik di seluruh dunia dengan semangat, peningkatan berterusan, dan sokongan proaktif, memastikan kejayaan perniagaan dan kepuasan untuk rakan kongsi kami dan pelanggan mereka.",
+                    BrnsureshName: "Suresh Wijesinghe",
+                    BrnsureshText: `"Kepimpinan bukan sekadar membuat keputusan; ia tentang memberi inspirasi kepada orang lain untuk mencapai kejayaan."`,
+                    BrnshamalName: "Shamal Aberathne",
+                    BrnshamalText: `"Dalam dunia yang bising, suara jenama kami mesti autentik, menarik, dan mudah diingati."`,
+                    BrndilshanName: "Dilshan De Silva",
+                    BrndilshanText: `"Kecemerlangan operasi adalah asas kejayaan kami, memacu kecekapan dan inovasi."`,
+                    BrnrohanName: "Rohan Samaraweera",
+                    BrnrohanText: `"Teknologi mengubah visi menjadi realiti, menggerakkan perjalanan kami ke masa depan."`,
+                    BrnrajivName: "Rajiv Senawirathne",
+                    BrnrajivText: `"Kepercayaan dan kepuasan pelanggan adalah asas reputasi syarikat kami."`,
+                    BrnpatricName: "Patrick Yogaratnam",
+                    BrnpatricText: `"Berhubung dengan pelanggan global kami memerlukan pemahaman terhadap keperluan yang pelbagai dan memberikan perkhidmatan yang luar biasa."`,
+                    BrnerangaName: "Eranga Wickramasinghe",
+                    BrnerangaText: `"Membina hubungan yang kukuh dengan pelanggan kami adalah asas kejayaan dan pertumbuhan kami."`,
+                    BrnjananiName: "Janani Siriwardhane",
+                    BrnjananiText: `"Memberdayakan pekerja dan memupuk budaya positif adalah kunci kejayaan organisasi."`,
+                    BrnromeshName: "Romesh De Silva",
+                    BrnromeshText: `"Kejayaan dalam jualan bukanlah tentang mendorong produk, tetapi tentang memahami dan menyelesaikan keperluan pelanggan."`,
+                    BrnKiththiName: "Kiththi Perera",
+                    BrnKiththiText: `"Mengubah potensi menjadi prestasi dengan teknologi inovatif."`
+                },
+                Brnlatestsec: {
+                    Brnlattopic: "Berita Terkini"
+                },
+                Brnsolutionssec: {
+                    Brnmaintopic: "Penyelesaian",
+                    BrnperiTopic: "Keselamatan Perimeter dan Dalaman",
+                    BrncyberTopic: "Tadbir Urus & Pematuhan Keselamatan Siber",
+                    BrnauthTopic: "Pengesahan & Pengurusan Identiti",
+                    BrnsecTopic: "Pengurusan Keselamatan",
+                    BrnendTopic: "Keselamatan Titik Akhir",
+                    BrnnetTopic: "Rangkaian",
+                    BrndataTopic: "Infrastruktur Pusat Data dan Pemantauan",
+                    BrnserverTopic: "Penyelesaian Penyimpanan & Sandaran Pelayan"
+                },
+                Brnfootersec: {
+                    BrnfootHeadTopic: "Ibu Pejabat",
+                    BrnheadLine1: "Tingkat 35,",
+                    BrnheadLine2: "The Gateway West 150 Beach Road,",
+                    BrnheadLine3: "Singapura 189720.",
+                    BrnheadLine4: "Hubungi: +6567278910",
+                    BrnfootConTopic: "Pejabat Brnland",
+                    BrnconLine1: "184/75,",
+                    BrnconLine2: "Tingkat 17, Forum Tower,",
+                    BrnconLine3: "Jalan Ratchadaphisek, Khwaeng Huai Khwang, Huai Khwang,",
+                    BrnconLine4: "Bangkok 10310, Brnland",
+                    BrnconLine5: "Hubungi: +66612700590",
+                    BrnresTopic: "Sumber",
+                    Brnres1: "Acara & Berita",
+                    Brnres2: "Soalan Lazim",
+                    Brnres3: "Kerjaya"
+                },
+                Brnchatsec: {
+                    Brnques1: "Hai! Saya di sini untuk membantu anda. Boleh saya tahu nama anda?",
+                    Brnques2: "Hai {previousValue}, bagaimana saya boleh membantu anda?",
+                    Brnques3: "Tentu. Boleh saya dapatkan nombor telefon anda?",
+                    Brnques4: "Terima kasih! Salah seorang kakitangan kami akan menghubungi anda tidak lama lagi."
+                },
+                Brnnavsec: {
+                    Brntab1: "Tentang Kami",
+                    Brntab2: "Penyelesaian",
+                    Brntab3: "Acara",
+                    Brntab4: "Acara & Berita",
+                    Brntab5: "Berita Akan Datang",
+                    Brntab6: "Blog",
+                    Brntab7: "Portal",
+                    Brntab8: "Negara",
+                    Brntab9: "Hubungi Kami"
+                },
+                Brncontsec: {
+                    Brncont1: "Hubungi Kami",
+                    Brncont2: "Hubungi kami ",
+                    Brncont3: "untuk memberitahu kami bagaimana kami boleh membantu anda.",
+                    Brncont4: "Kami gembira untuk memberikan",
+                    Brncont5: "sokongan pelanggan atau",
+                    Brncont6: "menjawab sebarang pertanyaan umum",
+                    Brncont7: "yang anda ada.",
+                    Brncont8: "Nama pertama",
+                    Brncont9: "Nama pertama diperlukan",
+                    Brncont10: "Nama akhir",
+                    Brncont11: "Nama akhir diperlukan",
+                    Brncont12: "Syarikat",
+                    Brncont13: "Syarikat diperlukan",
+                    Brncont14: "Nombor Telefon",
+                    Brncont15: "Nombor telefon mesti tepat 10 digit",
+                    Brncont16: "nama@example.com",
+                    Brncont17: "Alamat e-mel tidak sah",
+                    Brncont18: "Komen diperlukan",
+                    Brncont19: "Saya terima privasi & dasar",
+                    Brncont20: "Anda mesti menerima privasi & dasar",
+                    Brncont21: "Hantar",
+                    Brncont22: "Kosongkan",
+                    Brncont23: "Brnland",
+                    Brncont24: "Pejabat Brnland",
+                    Brncont25: "184/75, Tingkat 17",
+                    Brncont26: "Forum Tower, Jalan Ratchadaphisek,",
+                    Brncont27: "Khwaeng Huai Khwang, Hui Khwang,",
+                    Brncont28: "Bangkok 10310, Brnland",
+                    Brncont29: "Dapatkan Arah",
+                    Brncont30: "Tinggalkan Komen"
+                },
+                Brneventsec: {
+                    Brnevnt1: "Acara & Berita",
+                    Brnevnt2: "Acara dan Berita Terkini",
+                    Brnevnt3: "Tiada Imej Tersedia",
+                    Brnevnt4: "Tutup",
+                    Brnevnt5: "Acara & Berita",
+                    Brnevnt6: "Blog"
+                },
+                BrnupEventSec: {
+                    Brnupevnt1: "Akan Datang",
+                    Brnupevnt2: "Acara & Berita",
+                    Brnupevnt3: "Tiada Imej Tersedia",
+                    Brnupevnt4: "Tutup"
+                },
+                Brnportalsec: {
+                    Brnptl1: "Akan dilancarkan",
+                    Brnptl2: "Tidak Lama Lagi"
+                },
+                Brnblogsec: {
+                    Brnblg1: "Blog"
+                },
+                Brnauthentisec: {
+                    Brnat1: "Pengesahan & Pengurusan Identiti",
+                    Brnat2: "Tiada Imej Tersedia"
+                },
+                Brncybersec: {
+                    Brncy1: "Tadbir Urus & Pematuhan Keselamatan Siber",
+                    Brncy2: "Tiada Imej Tersedia"
+                },
+                Brnendpsec: {
+                    Brnep1: "Keselamatan Titik Akhir",
+                    Brnep2: "Tiada Imej Tersedia"
+                },
+                Brnnewtworksec: {
+                    Brnnt1: "Rangkaian",
+                    Brnnt2: "Tiada Imej Tersedia"
+                },
+                Brnifmsec: {
+                    Brnif1: "Infrastruktur Pusat Data dan Pemantauan Infrastruktur",
+                    Brnif2: "Tiada Imej Tersedia"
+                },
+                Brnperisec: {
+                    Brnpr1: "Keselamatan Perimeter dan Dalaman",
+                    Brnpr2: "Tiada Imej Tersedia"
+                },
+                Brnsecuritysec: {
+                    Brnscrty1: "Pengurusan Keselamatan",
+                    Brnscrty2: "Tiada Imej Tersedia"
+                },
+                Brnserversec: {
+                    Brnsvr1: "Penyelesaian Penyimpanan & Sandaran Pelayan",
+                    Brnsvr2: "Tiada Imej Tersedia"
+                }
+            }
 
+        }
     }
 });

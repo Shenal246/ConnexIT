@@ -40,70 +40,70 @@ const About = () => {
 
     const { t } = useTranslation();
 
-    const { ThaiourSTopic, ThaiourSText, ThaiourVTopic, ThaiourVText, ThaiourMTopic, ThaiourMText, ThaisureshName, ThaisureshText, ThaishamalName, ThaishamalText, ThaidilshanName, ThaidilshanText, ThairohanName, ThairohanText, ThairajivName,
-        ThairajivText, ThaipatricName, ThaipatricText, ThaierangaName, ThaierangaText, ThaijananiName, ThaijananiText, ThairomeshName, ThairomeshText, ThaiKiththiName, ThaiKiththiText
-    } = t('Thaiourstory', { returnObjects: true });
+    const { BrnourSTopic, BrnourSText, BrnourVTopic, BrnourVText, BrnourMTopic, BrnourMText, BrnsureshName, BrnsureshText, BrnshamalName, BrnshamalText, BrndilshanName, BrndilshanText, BrnrohanName, BrnrohanText, BrnrajivName,
+        BrnrajivText, BrnpatricName, BrnpatricText, BrnerangaName, BrnerangaText, BrnjananiName, BrnjananiText, BrnromeshName, BrnromeshText, BrnKiththiName, BrnKiththiText
+    } = t('Brnourstory', { returnObjects: true });
 
 
     const data = [
         {
-            name: ThaisureshName,
+            name: BrnsureshName,
             img: '/quots/Suresh.jpg',
-            quote: ThaisureshText,
+            quote: BrnsureshText,
             post: 'Founder / CEO',
         },
         {
-            name: ThaishamalName,
+            name: BrnshamalName,
             img: '/quots/Shamal.jpg',
-            quote: ThaishamalText,
+            quote: BrnshamalText,
             post: 'CMO',
         },
         {
-            name: ThaidilshanName,
+            name: BrndilshanName,
             img: '/quots/Dilshan_Silva.jpg',
-            quote: ThaidilshanText,
+            quote: BrndilshanText,
             post: 'COO',
         },
         {
-            name: ThairohanName,
+            name: BrnrohanName,
             img: '/quots/Rohan.jpg',
-            quote: ThairohanText,
+            quote: BrnrohanText,
             post: 'CTO',
         },
         {
-            name: ThairajivName,
+            name: BrnrajivName,
             img: '/quots/Rajiv.jpg',
-            quote: ThairajivText,
+            quote: BrnrajivText,
             post: 'Director',
         },
         {
-            name: ThaipatricName,
+            name: BrnpatricName,
             img: '/quots/Patrick_yogarathnam.jpg',
-            quote: ThaipatricText,
+            quote: BrnpatricText,
             post: 'CIRO',
         },
         {
-            name: ThaierangaName,
+            name: BrnerangaName,
             img: '/quots/Eranga.jpg',
-            quote: ThaierangaText,
+            quote: BrnerangaText,
             post: 'CRO',
         },
         {
-            name: ThaijananiName,
+            name: BrnjananiName,
             img: '/quots/Janani_Siriardhane.jpg',
-            quote: ThaijananiText,
+            quote: BrnjananiText,
             post: 'Director',
         },
         {
-            name: ThairomeshName,
+            name: BrnromeshName,
             img: '/quots/romesh.jpg',
-            quote: ThairomeshText,
+            quote: BrnromeshText,
             post: 'Director',
         },
         {
-            name: ThaiKiththiName,
+            name: BrnKiththiName,
             img: '/quots/Kiththi.jpg',
-            quote: ThaiKiththiText,
+            quote: BrnKiththiText,
             post: 'Director of Connex Thailand',
         }
 
@@ -134,8 +134,8 @@ const About = () => {
 
                             <div className='col-md-6 para'>
                                 <div className='story'>
-                                    <h1 className='topic'>{ThaiourSTopic}</h1>
-                                    <p><br />{ThaiourSText}</p>
+                                    <h1 className='topic'>{BrnourSTopic}</h1>
+                                    <p><br />{BrnourSText}</p>
                                 </div>
                             </div>
                         </div>
@@ -144,15 +144,15 @@ const About = () => {
                         <div className='row'>
                             <div className='col-md-6 content'>
                                 <div className='story bdround bdround1'>
-                                    <h1 className='topic'>{ThaiourVTopic}</h1>
-                                    <p><br />{ThaiourVText}</p>
+                                    <h1 className='topic'>{BrnourVTopic}</h1>
+                                    <p><br />{BrnourVText}</p>
                                 </div>
                             </div>
 
                             <div className='col-md-6'>
                                 <div className='story bdround bdround2'>
-                                    <h1 className='topic'>{ThaiourMTopic}</h1>
-                                    <p><br />{ThaiourMText}</p>
+                                    <h1 className='topic'>{BrnourMTopic}</h1>
+                                    <p><br />{BrnourMText}</p>
                                 </div>
                             </div>
                         </div>

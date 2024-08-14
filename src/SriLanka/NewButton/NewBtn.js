@@ -2,14 +2,11 @@ import React from 'react';
 import './NewButton.css';
 
 function NewBtn() {
-  const handleClick = () => {
-    window.location.href = 'https://outlook.office.com/calendar/view/month';
-  };
 
   return (
     <div className='meetRow'>
       <div className="button-container">
-        <button className="bottom-button" onClick={handleClick}>👉 Meet our team</button>
+        <a href='https://outlook.office365.com/owa/calendar/Meetingourexpertise@connexit.biz/bookings/' target='_blank'>  <button className="bottom-button" >👉 Meet our team</button></a>
         {/* <button className="top-button"></button> */}
       </div>
     </div>

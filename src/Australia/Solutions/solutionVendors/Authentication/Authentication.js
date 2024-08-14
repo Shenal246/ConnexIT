@@ -33,37 +33,37 @@ function Authentication() {
         <>
             <AUNavbar />
             <AUChat />
-        <section className='heroSolution'>
-            <div className="container">
-                <div className='row'>
-                    <div className="row text headingrow">
-                        <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>Authentication & Identity Management</p></div>
-                        <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
+            <section className='heroSolution'>
+                <div className="container">
+                    <div className='row'>
+                        <div className="row text headingrow">
+                            <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
+                            <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>Authentication & Identity Management</p></div>
+                            <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
+                        </div>
                     </div>
-                </div>
-                <div className="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 rowmargin">
-                    {vendors && vendors.map((vend, index) => (
-                        <div className="col" key={index}>
-                            <div className="card h-100" onClick={() => handleCardClick(vend)}>
-                                {vend.image_data ? (
-                                    <img
-                                        src={`data:image/jpeg;base64,${vend.image_data}`}
-                                        alt={vend.name}
-                                        className="card-img-top"
-                                    />
-                                ) : (
-                                    <p>No Image Available</p>
-                                )}
-                                <div className="card-body">
-                                    <h5 className="card-title vendorTitel">{vend.name}</h5>
+                    <div className="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 rowmargin">
+                        {vendors && vendors.map((vend, index) => (
+                            <div className="col" key={index}>
+                                <div className="card h-100" onClick={() => handleCardClick(vend)}>
+                                    {vend.image_data ? (
+                                        <img
+                                            src={`data:image/jpeg;base64,${vend.image_data}`}
+                                            alt={vend.name}
+                                            className="card-img-top"
+                                        />
+                                    ) : (
+                                        <p>No Image Available</p>
+                                    )}
+                                    <div className="card-body">
+                                        <h5 className="card-title vendorTitel">{vend.name}</h5>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
             <AUFooter />
         </>
     );

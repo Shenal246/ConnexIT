@@ -67,8 +67,8 @@ function Chat() {
   }, [images.length]);
 
   const { t } = useTranslation();
-  const { Thaiques1, Thaiques2, Thaiques3, Thaiques4
-  } = t('Thaichatsec', { returnObjects: true });
+  const { Brnques1, Brnques2, Brnques3, Brnques4
+  } = t('Brnchatsec', { returnObjects: true });
 
   return (
     <div ref={chatBotRef} className="chat-container" style={{ '--floating-button-image': `url(${images[currentImageIndex]})` }}>

@@ -10,8 +10,8 @@ import BrnFooter from '../Footer/Footer';
 const Blog = () => {
     const [lgShow, setLgShow] = useState(false);
     const { t } = useTranslation();
-    const { Thaiblg1
-        } = t('Thaiblogsec', { returnObjects: true });
+    const { Brnblg1
+        } = t('Brnblogsec', { returnObjects: true });
 
 
     return (
@@ -23,7 +23,7 @@ const Blog = () => {
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Thaiblg1}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Brnblg1}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>

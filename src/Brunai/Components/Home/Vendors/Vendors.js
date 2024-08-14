@@ -27,7 +27,7 @@ const imagePaths = [ven2, ven3, ven4, ven5, ven6, ven7, ven8, ven9, ven11, ven12
 
 const Vendors = () => {
   const { t } = useTranslation();
-  const { Thaiventopic, ThaivenText1, ThaivenText2 } = t('Thaivendorsec', { returnObjects: true });
+  const { Brnventopic, BrnvenText1, BrnvenText2 } = t('Brnvendorsec', { returnObjects: true });
 
   return (
     <section className='vendors'>
@@ -35,12 +35,12 @@ const Vendors = () => {
         {/* Vendors Text */}
         <div className="row gy-3" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
           <div className="col-4"><hr /></div>
-          <div className="col-4"><p id='ourVendorsText'>{Thaiventopic}</p></div>
+          <div className="col-4"><p id='ourVendorsText'>{Brnventopic}</p></div>
           <div className="col-4"><hr /></div>
         </div>
 
         <div className='row vendorText' data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-          <p>{ThaivenText1}<br />{ThaivenText2}</p>
+          <p>{BrnvenText1}<br />{BrnvenText2}</p>
         </div>
 
         <div className='row' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">

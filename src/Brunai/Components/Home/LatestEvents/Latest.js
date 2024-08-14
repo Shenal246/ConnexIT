@@ -86,14 +86,14 @@ const Latest = () => {
     }, []);
 
     const { t } = useTranslation();
-    const { Thailattopic } = t('Thailatestsec', { returnObjects: true });
+    const { Brnlattopic } = t('Brnlatestsec', { returnObjects: true });
 
     return (
         <section >
             <div className='container latest'>
                 <div className="row gy-3 headingRow" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                     <div className="col-4"><hr /></div>
-                    <div className="col-4"><p id='whoweareText'>{Thailattopic}</p></div>
+                    <div className="col-4"><p id='whoweareText'>{Brnlattopic}</p></div>
                     <div className="col-4"><hr /></div>
                 </div>
 

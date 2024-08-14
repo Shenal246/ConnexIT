@@ -56,8 +56,8 @@ const Events = () => {
     }, []);
 
     const { t } = useTranslation();
-    const { Thaievnt1, Thaievnt2, Thaievnt3, Thaievnt4, Thaievnt5
-        } = t('Thaieventsec', { returnObjects: true });
+    const { Brnevnt1, Brnevnt2, Brnevnt3, Brnevnt4, Brnevnt5
+        } = t('Brneventsec', { returnObjects: true });
 
 
     return (
@@ -68,14 +68,14 @@ const Events = () => {
             <div className='row'>
                 <div className="row text">
                     <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                    <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='EventsText'>{Thaievnt1}</p></div>
+                    <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='EventsText'>{Brnevnt1}</p></div>
                     <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                 </div>
             </div>
 
             {/* Latest News */}
             <div className='row'>
-                <div className='subTopin'>{Thaievnt2}</div>
+                <div className='subTopin'>{Brnevnt2}</div>
             </div>
 
             <div className="row cards">
@@ -93,7 +93,7 @@ const Events = () => {
                                         />
                                     </>
                                 ) : (
-                                    <p>{Thaievnt3}</p>
+                                    <p>{Brnevnt3}</p>
                                 )}
 
                                 <div className="centered">
@@ -138,7 +138,7 @@ const Events = () => {
 
             {/* Other News */}
             <div className='row'>
-                <div className='subTopin'>{Thaievnt5}</div>
+                <div className='subTopin'>{Brnevnt5}</div>
             </div>
 
             <div className="row cards">
@@ -156,7 +156,7 @@ const Events = () => {
                                         />
                                     </>
                                 ) : (
-                                    <p>{Thaievnt3}</p>
+                                    <p>{Brnevnt3}</p>
                                 )}
                                 <div className="centered">
                                     <Link to="#" className="fa-solid fa-play playicon"></Link>

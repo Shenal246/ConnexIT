@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
     const { t } = useTranslation();
-  const { ThaifootHeadTopic, ThaiheadLine1, ThaiheadLine2, ThaiheadLine3,ThaiheadLine4, ThaifootConTopic, ThaiconLine1,
-    ThaiconLine2, ThaiconLine3, ThaiconLine4, ThaiconLine5, ThairesTopic, Thaires1, Thaires2, Thaires3
-    } = t('Thaifootersec', { returnObjects: true });
+  const { BrnfootHeadTopic, BrnheadLine1, BrnheadLine2, BrnheadLine3,BrnheadLine4, BrnfootConTopic, BrnconLine1,
+    BrnconLine2, BrnconLine3, BrnconLine4, BrnconLine5, BrnresTopic, Brnres1, Brnres2, Brnres3
+    } = t('Brnfootersec', { returnObjects: true });
 
 
     return (
@@ -16,35 +16,35 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-lg-4  ft-1">
-                            <h3>{ThaifootHeadTopic}</h3>
+                            <h3>{BrnfootHeadTopic}</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img" ></i>
-                            {ThaiheadLine1}<br />
-                                <span>{ThaiheadLine2}</span><br />
-                                <span> {ThaiheadLine3}</span> <br />
-                                <i className="fas fa-phone-volume callIcon1" ></i>{ThaiheadLine4}
+                            {BrnheadLine1}<br />
+                                <span>{BrnheadLine2}</span><br />
+                                <span> {BrnheadLine3}</span> <br />
+                                <i className="fas fa-phone-volume callIcon1" ></i>{BrnheadLine4}
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-1 address2">
-                            <h3>{ThaifootConTopic}</h3>
+                            <h3>{BrnfootConTopic}</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img2" ></i>
-                            {ThaiconLine1}<br />
-                                <span>{ThaiconLine2}</span><br />
-                                <span> {ThaiconLine3}</span> <br />
-                                <span>{ThaiconLine4}</span><br />
-                                <i className="fas fa-phone-volume callIcon2" ></i>{ThaiconLine5}
+                            {BrnconLine1}<br />
+                                <span>{BrnconLine2}</span><br />
+                                <span> {BrnconLine3}</span> <br />
+                                <span>{BrnconLine4}</span><br />
+                                <i className="fas fa-phone-volume callIcon2" ></i>{BrnconLine5}
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-2 resources">
-                            <h3>{ThairesTopic}</h3>
+                            <h3>{BrnresTopic}</h3>
                             <ul>
                                 <li className="nav-item">
-                                    <a className="" href="/Events&News">{Thaires1}</a>
+                                    <a className="" href="/Events&News">{Brnres1}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="/FAQs">{Thaires2}</a>
+                                    <a className="" href="/FAQs">{Brnres2}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="/">{Thaires3}</a>
+                                    <a className="" href="/">{Brnres3}</a>
                                 </li>
 
                             </ul>

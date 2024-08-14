@@ -147,7 +147,7 @@ function Navbar() {
                     <li><a href="#"><img src={mld} alt=" Flag" className='flag' />Maldives</a></li>
                     <li><a href="#"><img src={myn} alt=" Flag" className='flag' />Myanmar</a></li>
                     {/* <li><a href="#"><img src={mrt} alt=" Flag" className='flag' />Mauritius</a></li> */}
-                    <li><a href="/#"><img src={nz} alt=" Flag" className='flag' />New Zealand</a></li>
+                    <li><a href="#"><img src={nz} alt=" Flag" className='flag' />New Zealand</a></li>
                     <li><a href="#"><img src={sin} alt=" Flag" className='flag' /> Singapore</a></li>
                     <li><a href="/SL"><img src={sl} alt=" Flag" className='flag' />Sri Lanka</a></li>
                     <li><a href="#"><img src={tnz} alt=" Flag" className='flag' />Tanzania</a></li>

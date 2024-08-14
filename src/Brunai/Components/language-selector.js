@@ -4,7 +4,7 @@ import './language-selector.css';
 
 const languages = [
     { code: 'en', lang: 'English', flag: '🌍' },
-    { code: 'frThai', lang: 'Thai', flag: '🌍' },
+    { code: 'frMalay', lang: 'Malay', flag: '🌍' },
 ];
 
 const LanguageSelector = () => {

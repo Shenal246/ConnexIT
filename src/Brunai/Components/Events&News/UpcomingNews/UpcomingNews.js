@@ -2,9 +2,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './UpcomingNews.css';
 import axios from "axios";
-import ThaiNavbar from '../../Navbar/Navbar';
-import ThaiChat from '../../ChatBot/Chat';
-import ThaiFooter from '../../Footer/Footer';
+import BrnNavbar from '../../Navbar/Navbar';
+import BrnChat from '../../ChatBot/Chat';
+import BrnFooter from '../../Footer/Footer';
 import Swal from 'sweetalert2';
 import connections from '../../../../config';
 import { useTranslation } from 'react-i18next';
@@ -228,8 +228,8 @@ const UpcomingNews = () => {
 
     return (
         <>
-            <ThaiNavbar/>
-            <ThaiChat/>
+            <BrnNavbar/>
+            <BrnChat/>
             <div className="container">
                 <div className='row'>
                     <div className="row text">
@@ -385,7 +385,7 @@ const UpcomingNews = () => {
                     </Modal.Body>
                 </Modal>
             </div >
-            <ThaiFooter/>
+            <BrnFooter/>
         </>
     );
 }

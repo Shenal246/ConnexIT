@@ -168,7 +168,7 @@ const Contact = () => {
                             ></textarea>
                             {errors.comments && <span className="text-danger"> {cont18}</span>}
                         </div>
-
+ 
                         <div className="form-check formcheck">
                             <input
                                 className={`form-check-input ${errors.acceptTerms ? 'is-invalid' : ''}`}

@@ -3,9 +3,9 @@ import './Blog.css'; // Import your CSS file
 import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap components
 import blog from '../../../images/Blogs/blogging-services.jpg';
 import { useTranslation } from 'react-i18next';
-import ThaiNavbar from '../Navbar/Navbar';
-import ThaiChat from '../Navbar/Navbar';
-import ThaiFooter from '../Footer/Footer';
+import BrnNavbar from '../Navbar/Navbar';
+import BrnChat from '../Navbar/Navbar';
+import BrnFooter from '../Footer/Footer';
 
 const Blog = () => {
     const [lgShow, setLgShow] = useState(false);
@@ -16,8 +16,8 @@ const Blog = () => {
 
     return (
         <>
-        <ThaiNavbar/>
-        <ThaiChat/>
+        <BrnNavbar/>
+        <BrnChat/>
         <section>
             <div className="container">
                 <div className='row '>
@@ -66,7 +66,7 @@ const Blog = () => {
             </Modal>
         </section>
         
-        <ThaiFooter/>
+        <BrnFooter/>
         </>
     );
 }

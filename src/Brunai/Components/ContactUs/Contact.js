@@ -5,9 +5,9 @@ import './Contact.css';
 import mapThl from '../../../images/map/thailand.png';
 import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2'
-import ThaiNavbar from '../Navbar/Navbar';
-import ThaiChat from '../Navbar/Navbar';
-import ThaiFooter from '../Footer/Footer';
+import BrnNavbar from '../Navbar/Navbar';
+import BrnChat from '../Navbar/Navbar';
+import BrnFooter from '../Footer/Footer';
 import connections from '../../../config';
 
 const Contact = () => {
@@ -69,8 +69,8 @@ const Contact = () => {
 
     return (
         <>
-            {/* <ThaiNavbar/> */}
-            <ThaiChat />
+            {/* <BrnNavbar/> */}
+            <BrnChat />
 
             <div className="container">
                 <div className='row'>
@@ -219,7 +219,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <ThaiFooter />
+            <BrnFooter />
         </>
     );
 }

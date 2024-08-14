@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import './SVendor.css';
-import ThaiNavbar from '../Navbar/Navbar';
-import ThaiChat from '../ChatBot/Chat';
-import ThaiFooter from '../Footer/Footer';
+import BrnNavbar from '../Navbar/Navbar';
+import BrnChat from '../ChatBot/Chat';
+import BrnFooter from '../Footer/Footer';
 import { NavLink } from "react-router-dom";
 import DOMPurify from 'dompurify';
 
@@ -17,8 +17,8 @@ const SingleVendor = () => {
 
     return (
         <>
-            <ThaiNavbar />
-            <ThaiChat />
+            <BrnNavbar />
+            <BrnChat />
             <section>
                 <div className="container sectionVendor">
                     <div className='row'>
@@ -50,7 +50,7 @@ const SingleVendor = () => {
                     </div>
                 </div>
             </section>
-            <ThaiFooter />
+            <BrnFooter />
         </>
     );
 };

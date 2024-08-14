@@ -9,9 +9,9 @@ import Perimie from '../../../images/pillers/Perimie.jpg';
 import servers from '../../../images/pillers/severBackup.jpg';
 import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';
-import ThaiNavbar from '../Navbar/Navbar';
-import ThaiChat from '../ChatBot/Chat';
-import ThaiFooter from '../Footer/Footer';
+import BrnNavbar from '../Navbar/Navbar';
+import BrnChat from '../ChatBot/Chat';
+import BrnFooter from '../Footer/Footer';
 import mrcst from '../../../images/pillers/Microsoft.jpg';
 
 function Solutions() {
@@ -21,8 +21,8 @@ function Solutions() {
 
   return (
     <>
-      <ThaiNavbar />
-      <ThaiChat />
+      <BrnNavbar />
+      <BrnChat />
       <section id='hero' className='hero1'>
         <div className="container text-center">
           <div className='row'>
@@ -133,7 +133,7 @@ function Solutions() {
 
 
       </section>
-      <ThaiFooter />
+      <BrnFooter />
     </>
   );
 }

@@ -155,6 +155,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     cont27: "Village 14, Sangkat Tonle Bassac,",
                     cont28: "Khan Chamkarmon, Phnom Penh, Cambodia",
                     cont29: "Get Directions",
+                    cont30: "Leave A Comment"
                 },
                 eventsec: {
                     evnt1: "Events & News",
@@ -352,6 +353,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Thaicont27: "Khwaeng Huai Khwang, Hui Khwang,",
                     Thaicont28: "Bangkok 10310, Thailand",
                     Thaicont29: "Get Directions",
+                    Thaicont30: "Leave A Comment"
                 },
 
                 Thaieventsec: {
@@ -561,6 +563,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Muricont27: "Rue De La Democratie",
                     Muricont28: "Ebene, Mauritius",
                     Muricont29: "Get Directions",
+                    Muricont30: "Leave a comment"
                 },
 
                 Murieventsec: {
@@ -762,6 +765,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     cont27: "ភូមិ១៤ សង្កាត់ទន្លេបាសាក់",
                     cont28: "ខណ្ឌចំការមន រាជធានីភ្នំពេញ",
                     cont29: "ទទួលដំណើរ",
+                    cont30: "បោះពុម្ភមតិយោបល់នៅទីនេ"
                 },
 
                 eventsec: {
@@ -960,6 +964,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Thaicont27: "แขวงห้วยขวาง เขตห้วยขวาง",
                     Thaicont28: "กรุงเทพฯ 10310 ประเทศไทย",
                     Thaicont29: "ขอเส้นทาง",
+                    Thaicont30: "ฝากความคิดเห็นไว้ที่นี่"
                 },
 
                 Thaieventsec: {
@@ -1168,6 +1173,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Muricont27: "Rue de la Démocratie",
                     Muricont28: "Ebene, Maurice",
                     Muricont29: "Obtenir des directions",
+                    Muricont30: "Kite enn komanter isi"
                 },
 
                 Murieventsec: {

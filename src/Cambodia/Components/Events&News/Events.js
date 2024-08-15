@@ -31,7 +31,7 @@ const Events = () => {
         // const values = {
         //     query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND type=3 AND type=4 AND type=5 AND type=6 AND status=1 AND cnt=3;",
         //     key: "Cr6re8VRBm"
-        // };
+        // }; 
 
         // axios.post(serverlink, values).then((response) => {
         //     setNewsData(response.data);

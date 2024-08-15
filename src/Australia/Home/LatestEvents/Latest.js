@@ -149,7 +149,7 @@ const Latest = () => {
                     {/* See more button */}
                     <div className="row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                         <div className="navigation">
-                            <NavLink to="/KH/Events&News">
+                            <NavLink to="/AU/Events&News">
                                 <Button variant="" className='iconsss' style={{ backgroundColor: '#01066B' }}>
                                     <BsArrowRight size={30} />
                                 </Button>

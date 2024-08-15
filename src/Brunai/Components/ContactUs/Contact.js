@@ -32,7 +32,7 @@ const Contact = () => {
             value4: values[3],
             value5: values[4],
             value6: values[5],
-            value7: 2,
+            value7: 6,
             value8: 1,
             key: "FKoaDwCi7C"
         };

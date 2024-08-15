@@ -109,7 +109,7 @@ const UpcomingNews = () => {
                 if (!isNaN(intresponseSeat)) {
                     if (intresponseSeat > 0) {
                         // alert("Seat count is ok");
-                        // Submit the Form
+                        // Submit the Form 
 
                         // console.log(value33);
                         // console.log(intresponseSeat);

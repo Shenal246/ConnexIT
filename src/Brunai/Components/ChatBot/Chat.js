@@ -25,7 +25,7 @@ function Chat() {
       value1: name,
       value2: problem,
       value3: tpno,
-      value4: 2,
+      value4: 6,
       value5: 1,
       value6: currentDateTime,
       key: "FKoaDwCi7C"

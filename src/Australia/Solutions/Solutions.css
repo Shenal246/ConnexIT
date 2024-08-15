@@ -172,10 +172,6 @@
 }
 
 
-.solImageHight{
-  height: 265px !important;
-}
-
 
 
 /* Styles for devices with a max-width of 1024px */
@@ -188,7 +184,16 @@
     height: 147px;
   }
 
-  .card-img-top.endpoint {
+  .card-img-top .endpoint {
     height: 265px; /* Adjust this height as needed */
   }
+}
+
+.endpoint{
+  height: 205px !important;
+}
+
+
+.endpt{
+ 
 }

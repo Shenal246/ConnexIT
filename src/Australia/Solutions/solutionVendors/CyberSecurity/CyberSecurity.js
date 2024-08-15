@@ -22,7 +22,7 @@ function CyberSecurity() {
 
     useEffect(() => {
         const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Cyber_Security_Governance_Compliance FROM Vendor WHERE Cyber_Security_Governance_Compliance='true' AND status=1 AND cnt=2;",
+            query: "SELECT name,des,wlink,status,image_data,cnt,Cyber_Security_Governance_Compliance FROM Vendor WHERE Cyber_Security_Governance_Compliance='true' AND status=1 AND cnt=4;",
             key: "Cr6re8VRBm"
         };
 

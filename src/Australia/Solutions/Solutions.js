@@ -95,7 +95,7 @@ function Solutions() {
             <div className="col">
               <NavLink to="/AU/Solutions/Infrastructure" activeClassName='active-link'>
                 <div className="card crd">
-                  <img src={endpoint} className="card-img-top endpoint" alt="Data Center Infrastructure and Infrastructure Monitoring" />
+                  <img src={endpoint} className="card-img-top endpoint111" alt="Data Center Infrastructure and Infrastructure Monitoring" />
                   <div className="card-body cardSize1">
                     <p className="card-text txts endpt">Data Center Infrastructure and Monitoring</p>
                   </div>
@@ -105,7 +105,7 @@ function Solutions() {
             <div className="col">
               <NavLink to="/AU/Solutions/Server" activeClassName='active-link'>
                 <div className="card crd">
-                  <img src={servers} className="card-img-top endpoint" alt="Server Storage & Backup Solutions" />
+                  <img src={servers} className="card-img-top endpoint111" alt="Server Storage & Backup Solutions" />
                   <div className="card-body cardSize1">
                     <p className="card-text txts">Server Storage & Backup Solutions</p>
                   </div>

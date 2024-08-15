@@ -12,12 +12,10 @@ import { useTranslation } from 'react-i18next';
 import BrnNavbar from '../Navbar/Navbar';
 import BrnChat from '../ChatBot/Chat';
 import BrnFooter from '../Footer/Footer';
-import mrcst from '../../../images/pillers/Microsoft.jpg';
 
 function Solutions() {
   const { t } = useTranslation();
-  const { Brnmaintopic, BrnperiTopic, BrncyberTopic, BrnauthTopic, BrnsecTopic, BrnendTopic, BrnnetTopic, BrndataTopic, BrnserverTopic, BrnMicrosoft } = t('Brnsolutionssec', { returnObjects: true });
-
+  const { Brnmaintopic, BrnperiTopic, BrncyberTopic, BrnauthTopic, BrnsecTopic, BrnendTopic, BrnnetTopic, BrndataTopic, BrnserverTopic } = t('Brnsolutionssec', { returnObjects: true });
 
   return (
     <>
@@ -32,7 +30,8 @@ function Solutions() {
               <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
             </div>
           </div>
-          <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin1234">
+
+          <div className="row row-cols-1 row-cols-lg-4 g-2 g-lg-3 rowmargin1234">
             <div className="col">
               <NavLink to="/Brn/Solutions/InternetSecurity" activeClassName='active-link'>
                 <div className="card crd">
@@ -63,9 +62,6 @@ function Solutions() {
                 </div>
               </NavLink>
             </div>
-          </div>
-
-          <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin1234">
             <div className="col">
               <NavLink to="/Brn/Solutions/SecurityManagement" activeClassName='active-link'>
                 <div className="card crd">
@@ -76,6 +72,9 @@ function Solutions() {
                 </div>
               </NavLink>
             </div>
+          </div>
+
+          <div className="row row-cols-1 row-cols-lg-4 g-2 g-lg-3 rowmargin1234">
             <div className="col">
               <NavLink to="/Brn/Solutions/EndpointSecurity" activeClassName='active-link'>
                 <div className="card crd">
@@ -96,42 +95,28 @@ function Solutions() {
                 </div>
               </NavLink>
             </div>
-          </div>
-
-          <div className="row row-cols-1 row-cols-lg-3 g-2 g-lg-3 rowmargin1234">
-            <NavLink to="/Brn/Solutions/Infrastructure" activeClassName='active-link'>
-              <div className="card crd">
-                <img src={endpoint} className="card-img-top endpoint" alt="Data Center Infrastructure and Infrastructure Monitoring" />
-                <div className="card-body cardSize1">
-                  <p className="card-text txts">{BrndataTopic}</p>
+            <div className="col">
+              <NavLink to="/Brn/Solutions/Infrastructure" activeClassName='active-link'>
+                <div className="card crd">
+                  <img src={endpoint} className="card-img-top endpoint111" alt="Data Center Infrastructure and Infrastructure Monitoring" />
+                  <div className="card-body cardSize1">
+                    <p className="card-text txts">{BrndataTopic}</p>
+                  </div>
                 </div>
-              </div>
-            </NavLink>
-
-            <div className="col column">
+              </NavLink>
+            </div>
+            <div className="col">
               <NavLink to="/Brn/Solutions/Server" activeClassName='active-link'>
                 <div className="card crd ">
-                  <img src={servers} className="card-img-top solImageHight" alt="Server Storage & Backup Solutions" />
+                  <img src={servers} className="card-img-top endpoint111" alt="Server Storage & Backup Solutions" />
                   <div className="card-body cardSize1">
                     <p className="card-text txts">{BrnserverTopic}</p>
                   </div>
                 </div>
               </NavLink>
             </div>
-            <div className="col column">
-              <NavLink to="/Brn/Solutions/Microsoft" activeClassName='active-link'>
-                <div className="card crd ">
-                  <img src={mrcst} className="card-img-top solImageHight" alt="Microsoft" />
-                  <div className="card-body cardSize1">
-                    <p className="card-text txts">{BrnMicrosoft}</p>
-                  </div>
-                </div>
-              </NavLink>
-            </div>
           </div>
         </div>
-
-
       </section>
       <BrnFooter />
     </>

@@ -206,7 +206,7 @@ const Contact = () => {
                         </p>
                         <button
                             className="neon-button"
-                            onClick={() => window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15636.537063489868!2d104.91642621180816!3d11.54222489236825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310956d2a2d70f1d%3A0xea84a6a9241db2f6!2sMorgan%20Tower!5e0!3m2!1sen!2slk!4v1718103352142!5m2!1sen!2slk')}
+                            onClick={() => window.open('https://www.google.com/maps/place/Eb%C3%A8ne+Junction/@-20.2400375,57.4826907,17z/data=!3m1!4b1!4m6!3m5!1s0x217c5adfd66d47b7:0x66c97e6459aed9d4!8m2!3d-20.2400375!4d57.4852656!16s%2Fg%2F11c0qrj_7d?entry=ttu')}
                         >
                             {Muricont29}
                         </button>

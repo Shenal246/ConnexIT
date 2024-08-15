@@ -207,7 +207,7 @@ const Contact = () => {
                         </p>
                         <button
                             className="neon-button"
-                            onClick={() => window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.0918992814586!2d100.57137787589524!3d13.773331296793016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29f1e570cdf27%3A0xa3b67073f54a5f10!2sPNP%20International%20Legal%20Co.%2C%20Ltd.!5e0!3m2!1sen!2slk!4v1718093144399!5m2!1sen!2slk')}
+                            onClick={() => window.open('https://www.google.com/maps/search/No.B22,B23+%26+B24,+Block+B+Bangunan+Habza,+Spg+150,+Kg+kiulap+Gadong+B,+Brunei+Muara,+BE1518+Brunei+Darussalam/@4.89983,114.8974833,13.46z?entry=ttu')}
                         >
                             {Brncont29}
                         </button>

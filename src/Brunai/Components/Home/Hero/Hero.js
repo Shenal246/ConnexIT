@@ -1,5 +1,5 @@
 import './Hero.css';
-import Logo from '../../../../images/ThailandIT.png';
+import Logo from '../../../../images/Brunei.png';
 import React, { useRef, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import { useTranslation } from 'react-i18next';

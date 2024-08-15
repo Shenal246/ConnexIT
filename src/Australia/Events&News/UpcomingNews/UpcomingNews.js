@@ -18,7 +18,7 @@ const UpcomingNews = () => {
 
     useEffect(() => {
 
-        axios.post(camupevserverlink).then((response) => {
+        axios.post(auupevserverlink).then((response) => {
             setSLUpEv(response.data);
         }).catch((err) => {
             console.log(err);
@@ -70,7 +70,7 @@ const UpcomingNews = () => {
     };
 
     const serverlink1234 = connections.slupreg;
-    const camupevserverlink = connections.auupcoming;
+    const auupevserverlink = connections.auupcoming;
     const slseatupdate = connections.slseatUpdate;
     const slupseatcount = connections.slupcomingseat;
 

@@ -11,7 +11,8 @@ const config = {
     slvendorfetch: 'https://api.connexit.biz/logoforcnt1',
     camBlog: 'https://api.connexit.biz/camblog',
     auupcoming: '',
-    muupcoming: ''
+    muupcoming: '',
+    bruupcoming: ''
 };
 
 export default config;

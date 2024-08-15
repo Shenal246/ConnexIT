@@ -25,7 +25,7 @@ const Events = () => {
     const handleCardClick = (nlink) => {
         setCurrentVideoLink(nlink);
     };
-
+ 
     useEffect(() => {
         // const values = {
         //     query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND status=1 AND cnt=1;",

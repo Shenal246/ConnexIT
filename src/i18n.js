@@ -283,6 +283,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     ThainetTopic: "Networking",
                     ThaidataTopic: "Data Center Infrastructure and  Monitoring",
                     ThaiserverTopic: "Server Storage & Backup Solutions",
+                    ThaiMicrosoft: "Microsoft"
                 },
                 // Footer section
                 Thaifootersec: {
@@ -493,6 +494,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     MurinetTopic: "Networking",
                     MuridataTopic: "Data Center Infrastructure and  Monitoring",
                     MuriserverTopic: "Server Storage & Backup Solutions",
+                    MuriMicrosoft: "Microsoft"
                 },
                 // Footer section
                 Murifootersec: {
@@ -1110,6 +1112,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     ThainetTopic: "เครือข่าย",
                     ThaidataTopic: "โครงสร้างพื้นฐานและการตรวจสอบศูนย์ข้อมูล",
                     ThaiserverTopic: "โซลูชั่นการจัดเก็บและสำรองข้อมูลเซิร์ฟเวอร์",
+                    ThaiMicrosoft: "ไมโครซอฟท์"
                 },
                 Thaifootersec: {
                     ThaifootHeadTopic: "สำนักงานใหญ่",
@@ -1314,6 +1317,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     MurinetTopic: "Réseautage",
                     MuridataTopic: "Infrastructure et surveillance des centres de données",
                     MuriserverTopic: "Solutions de stockage et de sauvegarde des serveurs",
+                    MuriMicrosoft: "Microsoft"
                 },
                 // Footer section
                 Murifootersec: {

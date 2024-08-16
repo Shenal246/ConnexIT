@@ -15,12 +15,11 @@
 }
 
 .cardSize {
-  height: 70px;
-  padding: 0% !important;
+  height: 80px !important;
 }
 
 .cardSize1{
-  height: 60px;
+  height: 80px !important;
 }
 
 .crd {
@@ -108,10 +107,11 @@
   font: bold;
   font-weight: 600;
   padding: 0 !important;
+  
 
 }
 
-.txts1{
+.txts1{ 
   font-size: 20px;
   font: bold;
   font-weight: 600;

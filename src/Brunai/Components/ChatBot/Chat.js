@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './Chat.css';
 import ChatBot from 'react-simple-chatbot';
-import Botpic from '../../../images/chatprof.png';
+import Botpic1 from '../../../images/Chat/chat1.jpg';
 import axios from "axios";
 import { useTranslation } from 'react-i18next';
 import connections from '../../../config';
@@ -13,7 +13,7 @@ function Chat() {
   const chatinsert = connections.slchatinsert;
 
   const handleEnd = async ({ values }) => {
-    console.log(values);
+    console.log(values); 
 
     const name = values[0];
     const problem = values[1];
@@ -53,7 +53,7 @@ function Chat() {
   }, []);
 
   const images = [
-    Botpic, Botpic
+    Botpic1, Botpic1
   ];
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -113,7 +113,7 @@ function Chat() {
         floating={true}
         handleEnd={handleEnd}
         className="custom-chatbot"
-        botAvatar={Botpic}
+        botAvatar={Botpic1}
         headerTitle="Kiara"
       />
       <div className="online-dot"></div>

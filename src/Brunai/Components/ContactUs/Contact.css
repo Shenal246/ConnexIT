@@ -176,11 +176,33 @@
 }
 
 .mapBru{
-    padding: 50px;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
     /* width: 550px; */
     /* margin-top: 105px !important; */
     /* margin-bottom: 15px !important; */
 }
 .line{
     display: none;
+}
+
+/* Mobile View */
+@media only screen and (max-width: 768px) {
+    .mapBru {
+        padding-top: 50px !important; /* Adjust padding for mobile */
+        padding-bottom: 50px !important; /* Adjust padding for mobile */
+        /* Uncomment and adjust the following properties if needed */
+        /* width: 100%; */
+        /* margin-top: 50px !important; */
+        /* margin-bottom: 10px !important; */
+    }
+}
+
+/* For very small devices like phones */
+@media only screen and (max-width: 480px) {
+    .mapBru {
+        padding-top: 30px !important; /* Further adjustment for smaller screens */
+        padding-bottom: 30px !important; /* Further adjustment for smaller screens */
+        margin-left: 60px !important;
+    }
 }

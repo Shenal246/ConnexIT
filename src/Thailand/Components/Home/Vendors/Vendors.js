@@ -6,28 +6,43 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css'; // Import Swiper bundle CSS
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import axios from "axios";
+import vendor123 from '../../../../images/AusVendors/11.png'
 
 import './Vendors.css';
 
 // Import your image files
-import ven2 from '../../../../images/ThaiVendors/2.png';
-import ven3 from '../../../../images/ThaiVendors/3.png';
-import ven4 from '../../../../images/ThaiVendors/4.png';
-import ven5 from '../../../../images/ThaiVendors/5.png';
-import ven6 from '../../../../images/ThaiVendors/6.png';
-import ven7 from '../../../../images/ThaiVendors/7.png';
-import ven8 from '../../../../images/ThaiVendors/8.png';
-import ven9 from '../../../../images/ThaiVendors/9.png';
-import ven11 from '../../../../images/ThaiVendors/11.png';
-import ven12 from '../../../../images/ThaiVendors/12.jpg';
-// Add import statements for all your images here...
+import connections from '../../../../config';
 
-const imagePaths = [ven2, ven3, ven4, ven5, ven6, ven7, ven8, ven9, ven11, ven12]; // Add all your image paths to this array
 
 const Vendors = () => {
+
   const { t } = useTranslation();
   const { Thaiventopic, ThaivenText1, ThaivenText2 } = t('Thaivendorsec', { returnObjects: true });
+
+
+  const [vendorLogos, setVendorLogos] = useState(null);
+
+  useEffect(() => {
+    fetchVendors();
+  }, []);
+
+  const serverlinkForBackend = connections.vendorlogo;
+
+  const fetchVendors = async () => {
+    await axios.get(serverlinkForBackend, {
+      headers: { cnt: 2 }
+  }).then((response) => {
+      setVendorLogos(response.data);
+      console.log("Vendor logos------------", response.data);
+
+    }).catch((err) => {
+      console.log(err);
+    });
+    console.log("Vendor logos", vendorLogos);
+  }
 
   return (
     <section className='vendors'>
@@ -65,13 +80,14 @@ const Vendors = () => {
               modules={[EffectCoverflow, Autoplay]}
               className="mySwiper"
             >
-              {imagePaths.map((path, index) => (
+              {vendorLogos && vendorLogos.map((venimg, index) => (
                 <SwiperSlide key={index}>
                   <div className='image-container'>
-                    <img src={path} alt={`ven${index}`} />
+                    <img src={`data:image/jpeg;base64,${venimg && venimg.image_data}`} alt="Vendor Logos" />
                   </div>
                 </SwiperSlide>
               ))}
+
             </Swiper>
           </div>
           <div className='col-lg-1'></div>

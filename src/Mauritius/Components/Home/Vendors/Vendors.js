@@ -6,31 +6,43 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow, Autoplay } from 'swiper/modules';
 import 'swiper/swiper-bundle.css'; // Import Swiper bundle CSS
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import axios from "axios";
+import vendor123 from '../../../../images/AusVendors/11.png'
 
 import './Vendors.css';
 
 // Import your image files
-import mven1 from '../../../../images/MauritiusVendors/5.png';
-import mven2 from '../../../../images/MauritiusVendors/7.png';
-import mven3 from '../../../../images/MauritiusVendors/11.png';
-import mven4 from '../../../../images/MauritiusVendors/21.png';
-import mven5 from '../../../../images/MauritiusVendors/26.png';
-import mven6 from '../../../../images/MauritiusVendors/29.png';
-import mven7 from '../../../../images/MauritiusVendors/30.png';
-import mven8 from '../../../../images/MauritiusVendors/34.png';
-import mven9 from '../../../../images/MauritiusVendors/42.png';
-import mven10 from '../../../../images/MauritiusVendors/43.png';
-import mven11 from '../../../../images/MauritiusVendors/45.png';
-import mven12 from '../../../../images/MauritiusVendors/48.png';
-import mven13 from '../../../../images/MauritiusVendors/52.png';
-// Add import statements for all your images here...
+import connections from '../../../../config';
 
-const imagePaths = [mven1, mven2, mven3, mven4, mven5, mven6, mven7, mven8, mven9, mven10, mven11, mven12, mven13]; // Add all your image paths to this array
 
 const Vendors = () => {
+
   const { t } = useTranslation();
   const { Muriventopic, MurivenText1, MurivenText2 } = t('Murivendorsec', { returnObjects: true });
+
+
+  const [vendorLogos, setVendorLogos] = useState(null);
+
+  useEffect(() => {
+    fetchVendors();
+  }, []);
+
+  const serverlinkForBackend = connections.vendorlogo;
+
+  const fetchVendors = async () => {
+    await axios.get(serverlinkForBackend, {
+      headers: { cnt: 5 }
+  }).then((response) => {
+      setVendorLogos(response.data);
+      console.log("Vendor logos------------", response.data);
+
+    }).catch((err) => {
+      console.log(err);
+    });
+    console.log("Vendor logos", vendorLogos);
+  }
 
   return (
     <section className='vendors'>
@@ -68,13 +80,14 @@ const Vendors = () => {
               modules={[EffectCoverflow, Autoplay]}
               className="mySwiper"
             >
-              {imagePaths.map((path, index) => (
+              {vendorLogos && vendorLogos.map((venimg, index) => (
                 <SwiperSlide key={index}>
                   <div className='image-container'>
-                    <img src={path} alt={`ven${index}`} />
+                    <img src={`data:image/jpeg;base64,${venimg && venimg.image_data}`} alt="Vendor Logos" />
                   </div>
                 </SwiperSlide>
               ))}
+
             </Swiper>
           </div>
           <div className='col-lg-1'></div>

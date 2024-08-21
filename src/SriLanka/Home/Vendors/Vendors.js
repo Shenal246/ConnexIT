@@ -23,10 +23,12 @@ const Vendors = () => {
     fetchVendors();
   }, []);
 
-  const serverlinkForBackend = connections.slvendorfetch;
+  const serverlinkForBackend = connections.vendorlogo;
 
   const fetchVendors = async () => {
-    await axios.get(serverlinkForBackend).then((response) => {
+    await axios.get(serverlinkForBackend, {
+      headers: { cnt: 1 }
+  }).then((response) => {
       setVendorLogos(response.data);
       console.log("Vendor logos------------", response.data);
 

@@ -16,6 +16,8 @@ const config = {
     // bruupcoming: '',
   
     newcontactus: `${link}/NewContactUs`,
+    vendorlogo: `${link}/vendorlogo`,
+    allNewsByType:`${link}/allnewsbytype`,
 
 
 

@@ -17,7 +17,7 @@ const Contact = () => {
     // const [isHuman, setIsHuman] = useState(false);
     // const recaptchaRef = useRef();
 
-    const serverlink = connections.serverLinkInsert;
+    const serverlink = connections.newcontactus;
 
     const onSubmit = async (data) => {
         // if (!isHuman) {
@@ -25,28 +25,25 @@ const Contact = () => {
         //     return;
         // }
 
-        const values = [data.firstName, data.lastName, data.Company, data.contactNumber, data.email, data.comments];
-
         const value33 = {
-            query: "INSERT INTO contactus(firstname, lastname, company, tpno,email,comment,countryid,statusid) VALUES (?,?,?,?,?,?,?,?)",
-            value1: values[0],
-            value2: values[1],
-            value3: values[2],
-            value4: values[3],
-            value5: values[4],
-            value6: values[5],
-            value7: 4,
-            value8: 1,
-            key: "FKoaDwCi7C"
+            
+            firstname: data.firstName,
+            lastname: data.lastName,
+            company: data.Company,
+            tpno: data.contactNumber,
+            email: data.email,
+            comment: data.comments,
+         
         };
-
+        
         console.log(value33);
-
+        
         try {
-            const response = await axios.post(serverlink, value33);
+            const response = await axios.post(serverlink, value33, {
+                headers: { cnt: 4 }
+            });
             if (response.status === 200) {
                 Swal.fire({
-                    // position: "top-end",
                     icon: "success",
                     title: "Successfully Submitted",
                     showConfirmButton: false,

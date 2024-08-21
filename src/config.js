@@ -1,3 +1,4 @@
+import {link} from '../src/Mainlink.js'
 const config = {
     // serverLink: 'https://api.connexit.biz/search',
     // serverLinkInsert: 'https://api.connexit.biz/insert',
@@ -13,11 +14,8 @@ const config = {
     // auupcoming: '',
     // muupcoming: '',
     // bruupcoming: '',
-
-
-
-
-    newcontactus: 'http://192.168.13.163:5000/NewContactUs',
+  
+    newcontactus: `${link}/NewContactUs`,
 
 
 

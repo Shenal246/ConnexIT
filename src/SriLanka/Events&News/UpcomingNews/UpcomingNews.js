@@ -16,9 +16,17 @@ const UpcomingNews = () => {
     const [sLUpEv, setSLUpEv] = useState([]);
     const [currentUpcoming, setcurrentUpcoming] = useState(null);
 
+    const serverlink1234 = connections.eventregister;
+    const slupevserverlink = connections.upcomings;
+    const slseatupdate = connections.upcomingsSeatUpdate;
+    const slupseatcount = connections.upcomingsseat;
+
     useEffect(() => {
 
-        axios.post(slupevserverlink).then((response) => {
+        axios.get(slupevserverlink,{
+            headers: { 
+                cnt: 1 
+            }}).then((response) => {
             setSLUpEv(response.data);
         }).catch((err) => {
             console.log(err);
@@ -69,10 +77,7 @@ const UpcomingNews = () => {
         return errors;
     };
 
-    const serverlink1234 = connections.slupreg;
-    const slupevserverlink = connections.slupcoming;
-    const slseatupdate = connections.slseatUpdate;
-    const slupseatcount = connections.slupcomingseat;
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -81,30 +86,34 @@ const UpcomingNews = () => {
         if (Object.keys(validationErrors).length === 0) {
             try {
                 const value33 = {
-                    query: "",
-                    value1: currentUpcoming && currentUpcoming.id,
-                    value2: formData.title,
-                    value3: formData.name,
-                    value4: formData.designation,
-                    value5: formData.company,
-                    value6: formData.email,
-                    value7: formData.contact,
-                    value8: formData.province,
-                    value9: formData.city,
-                    value10: 1,
-                    key: "FKoaDwCi7C"
+                    upcomingid: currentUpcoming?.id, // Using optional chaining for safer access
+                    title: formData.title,
+                    name: formData.name,
+                    designation: formData.designation,
+                    companyname: formData.company,
+                    email: formData.email,
+                    contactno: formData.contact,
+                    province: formData.province,
+                    city: formData.city,
+                    cnt:'1'
                 };
-
+                
+               
+                
                 const seatCount = {
                     id: currentUpcoming && currentUpcoming.id,
                 };
 
-                const responseSeat = await axios.post(slupseatcount, seatCount);
+                const responseSeat = await axios.get(slupseatcount,  {
+                    headers: { 
+                        cnt: currentUpcoming && currentUpcoming.id,
+                    }
+                });
                 // console.log("Seats COunt-----------", responseSeat.data[0].seats);
 
-                const intresponseSeat = parseInt(responseSeat.data[0].seats);
+                const intresponseSeat = (parseInt(responseSeat.data[0].seats))-1;
 
-                // alert(intresponseSeat);
+                 
 
                 if (!isNaN(intresponseSeat)) {
                     if (intresponseSeat > 0) {
@@ -115,22 +124,16 @@ const UpcomingNews = () => {
                         // console.log(intresponseSeat);
                         const response123 = await axios.post(serverlink1234, value33);
                         // const response123 = null;
-                        // console.log(response123);
+                        console.log(response123);
                         if (response123.status === 200) {
                             // if (true) {
 
-                            const newSeatCount = intresponseSeat - 1;
-                            const StringnewSeatCount = newSeatCount.toString();
-                            // console.log("New Seat Count",StringnewSeatCount);
-
-                            const seatCount1234 = {
-                                query: "",
-                                value1: StringnewSeatCount,
-                                value2: currentUpcoming && currentUpcoming.id,
-                                key: "FKoaDwCi7C"
-                            };
-
-                            const response123456 = await axios.post(slseatupdate, seatCount1234);
+                         
+                            const data={
+                                seat:intresponseSeat
+                            }
+                            const id= currentUpcoming && currentUpcoming.id;
+                            const response123456 = await axios.put(`${slseatupdate}/${id}`, data);
                             // const response123456 = null;
                             // console.log("Sending data",seatCount1234);
 

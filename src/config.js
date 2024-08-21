@@ -19,6 +19,10 @@ const config = {
     vendorlogo: `${link}/vendorlogo`,
     allNewsByType:`${link}/allnewsbytype`,
     allNews:`${link}/allnews`,
+    upcomings:`${link}/upcomings`,
+    eventregister:`${link}/eventregister`,
+    upcomingsseat:`${link}/upcomingsseat`,
+    upcomingsSeatUpdate:`${link}/upcomingsseat`,
 
 
 

@@ -1,16 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Swal from 'sweetalert2';
 import './Chat.css';
-import Botpic1 from '../../images/Chat/chat1.jpg';
-import Botpic2 from '../../images/Chat/chat2.jpg';
-import Botpic3 from '../../images/Chat/chat3.jpg';
+import robo1 from '../../images/Chat/robo1.jpg';
+import robo2 from '../../images/Chat/robo2.jpg';
+import robo3 from '../../images/Chat/robo3.jpg';
 
 
 
 function Chat() {
   const chatBotRef = useRef(null);
 
-  const images = [Botpic1, Botpic2, Botpic3];
+  const images = [robo1, robo2, robo3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Image rotation logic

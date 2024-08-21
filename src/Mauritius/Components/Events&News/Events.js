@@ -4,9 +4,9 @@ import './Events.css';
 import axios from "axios";
 import connections from '../../../config';
 import { useTranslation } from 'react-i18next';
-import MUNavbar from '../Navbar/Navbar';
-import MUChat from '../ChatBot/Chat';
-import MUFooter from '../Footer/Footer';
+import CamNavbar from '../Navbar/Navbar';
+import CamChat from '../ChatBot/Chat';
+import CamFooter from '../Footer/Footer';
 
 const Events = () => {
     const videoRef = useRef(null);
@@ -14,7 +14,7 @@ const Events = () => {
     const [othernewsData, setOtherNewsData] = useState([]);
     const [currentVideoLink, setCurrentVideoLink] = useState(null);
 
-    const serverlink = connections.serverLink;
+    const serverlink = connections.allNews;
 
     const handleCloseModal = () => {
         if (videoRef.current) {
@@ -29,7 +29,7 @@ const Events = () => {
 
     useEffect(() => {
         // const values = {
-        //     query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND type=3 AND type=4 AND type=5 AND type=6 AND status=1 AND cnt=3;",
+        //     query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND status=1 AND cnt=1;",
         //     key: "Cr6re8VRBm"
         // };
 
@@ -39,32 +39,33 @@ const Events = () => {
         //     console.log(err);
         // });
 
-        // For other news
-        const values1 = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE status=1 AND cnt=5;",
-            key: "Cr6re8VRBm"
-        };
 
-        axios.post(serverlink, values1).then((response) => {
+        axios.get(serverlink, {
+            headers: { 
+                cnt: 5
+            }
+        })
+        .then((response) => {
             setOtherNewsData(response.data);
-        }).catch((err) => {
+            console.log(othernewsData);
+        })
+        .catch((err) => {
             console.log(err);
         });
-
+        
     }, []);
-
     const { t } = useTranslation();
-    const { Murievnt1, Murievnt2, Murievnt3, Murievnt4, Murievnt5 } = t('Murieventsec', { returnObjects: true });
+    const { evnt1, evnt2, evnt3, evnt4, evnt5 } = t('eventsec', { returnObjects: true });
 
     return (
         <>
-            <MUNavbar />
-            <MUChat />
+            <CamNavbar />
+            <CamChat />
             <div className="container">
                 <div className='row'>
                     <div className="row text">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='EventsText'>{Murievnt1}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='EventsText'>{evnt1}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -74,7 +75,7 @@ const Events = () => {
                     <div className="modal-dialog modal-dialog-centered modal-xl">
                         <div className="modal-content modalClr">
                             <div className="modal-header">
-                                <button type="button" className="btn-close close" data-bs-dismiss="modal" aria-label={Murievnt4}></button>
+                                <button type="button" className="btn-close close" data-bs-dismiss="modal" aria-label={evnt4}></button>
                             </div>
                             <div className="modal-body">
                                 {currentVideoLink && (
@@ -97,7 +98,7 @@ const Events = () => {
 
                 {/* Other News */}
                 <div className='row'>
-                    <div className='subTopin'>{Murievnt5}</div>
+                    <div className='subTopin'>{evnt5}</div>
                 </div>
 
                 <div className="row cards">
@@ -107,14 +108,14 @@ const Events = () => {
                                 <div className="position-relative">
                                     {news.image_data ? (
                                         <>
-                                            <img
+                                           <img
                                                 src={`data:image/jpeg;base64,${news.image_data}`}
                                                 alt={news.title}
                                                 className="card-img-top image rounded-top-5 opacity-75" style={{ width: '100%', height: 'auto' }}
                                             />
                                         </>
                                     ) : (
-                                        <p>{Murievnt3}</p>
+                                        <p>{evnt3}</p>
                                     )}
                                     <div className="centered">
                                         <span className="fa-solid fa-play playicon"></span>
@@ -130,7 +131,7 @@ const Events = () => {
                     ))}
                 </div>
             </div>
-            <MUFooter />
+            <CamFooter />
         </>
     );
 }

@@ -14,7 +14,7 @@ const Events = () => {
     const [othernewsData, setOtherNewsData] = useState([]);
     const [currentVideoLink, setCurrentVideoLink] = useState(null);
 
-    const serverlink = connections.serverLink;
+    const serverlink = connections.allNews;
 
     const handleCloseModal = () => {
         if (videoRef.current) {
@@ -29,9 +29,9 @@ const Events = () => {
 
     useEffect(() => {
         // const values = {
-        //     query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND type=3 AND type=4 AND type=5 AND type=6 AND status=1 AND cnt=3;",
+        //     query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND status=1 AND cnt=1;",
         //     key: "Cr6re8VRBm"
-        // }; 
+        // };
 
         // axios.post(serverlink, values).then((response) => {
         //     setNewsData(response.data);
@@ -39,20 +39,21 @@ const Events = () => {
         //     console.log(err);
         // });
 
-        // For other news
-        const values1 = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE status=1 AND cnt=3;",
-            key: "Cr6re8VRBm"
-        };
 
-        axios.post(serverlink, values1).then((response) => {
+        axios.get(serverlink, {
+            headers: { 
+                cnt: 3
+            }
+        })
+        .then((response) => {
             setOtherNewsData(response.data);
-        }).catch((err) => {
+            console.log(othernewsData);
+        })
+        .catch((err) => {
             console.log(err);
         });
-
+        
     }, []);
-
     const { t } = useTranslation();
     const { evnt1, evnt2, evnt3, evnt4, evnt5 } = t('eventsec', { returnObjects: true });
 

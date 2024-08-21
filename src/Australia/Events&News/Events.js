@@ -13,7 +13,7 @@ const Events = () => {
     const [othernewsData, setOtherNewsData] = useState([]);
     const [currentVideoLink, setCurrentVideoLink] = useState(null);
 
-    const serverlink = connections.serverLink;
+    const serverlink = connections.allNews;
 
     const handleCloseModal = () => {
         if (videoRef.current) {
@@ -28,7 +28,7 @@ const Events = () => {
 
     useEffect(() => {
         // const values = {
-        //     query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND status=1 AND cnt=4;",
+        //     query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE type=2 AND status=1 AND cnt=1;",
         //     key: "Cr6re8VRBm"
         // };
 
@@ -38,17 +38,20 @@ const Events = () => {
         //     console.log(err);
         // });
 
-        const values1 = {
-            query: "SELECT title,link,type,status,image_data,cnt FROM news WHERE status=1 AND cnt=4;",
-            key: "Cr6re8VRBm"
-        };
 
-        axios.post(serverlink, values1).then((response) => {
+        axios.get(serverlink, {
+            headers: { 
+                cnt: 4
+            }
+        })
+        .then((response) => {
             setOtherNewsData(response.data);
-        }).catch((err) => {
+            console.log(othernewsData);
+        })
+        .catch((err) => {
             console.log(err);
         });
-
+        
     }, []);
 
     return (

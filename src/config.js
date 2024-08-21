@@ -18,6 +18,7 @@ const config = {
     newcontactus: `${link}/NewContactUs`,
     vendorlogo: `${link}/vendorlogo`,
     allNewsByType:`${link}/allnewsbytype`,
+    allNews:`${link}/allnews`,
 
 
 

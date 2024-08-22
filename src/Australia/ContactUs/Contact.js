@@ -8,7 +8,7 @@ import Swal from 'sweetalert2';
 import connections from '../../config';
 import AUNavbar from "../Navbar/Navbar";
 import AUChat from "../ChatBot/Chat";
-import SLFooter from "../Footer/Footer";
+import AUFooter from "../Footer/Footer";
 // import NewBtn from '../NewButton/NewBtn';
 
 const Contact = () => {
@@ -221,7 +221,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <SLFooter />
+            <AUFooter />
         </>
     );
 }

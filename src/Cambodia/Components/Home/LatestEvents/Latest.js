@@ -5,6 +5,8 @@ import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 import connections from '../../../../config';
+import { useTranslation } from 'react-i18next';
+
 
 const Latest = () => {
     const videoRef = useRef(null);
@@ -50,12 +52,18 @@ const Latest = () => {
         fetchNews();
       }, []);
 
+      
+      
+  const { t } = useTranslation();
+
+  const { lattopic } = t('latestsec', { returnObjects: true });
+
     return (
         <section >
             <div className='container latest'>
                 <div className="row gy-3 headingRow" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                     <div className="col-4"><hr /></div>
-                    <div className="col-4"><p id='whoweareText'>Latest News</p></div>
+                    <div className="col-4"><p id='whoweareText'>{lattopic}</p></div>
                     <div className="col-4"><hr /></div>
                 </div>
 
@@ -128,7 +136,7 @@ const Latest = () => {
                     {/* See more button */}
                     <div className="row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                         <div className="navigation">
-                            <NavLink to="/SL/Events&News"><Button variant="" className='iconsss' style={{ backgroundColor: '#01066B' }}>
+                            <NavLink to="/KH/Events&News"><Button variant="" className='iconsss' style={{ backgroundColor: '#01066B' }}>
                                 <BsArrowRight size={30} />
                             </Button></NavLink>
                         </div>

@@ -1,1 +1,1 @@
-export const link = 'https://development.connexit.biz/api';
+export const link = 'https://development.connexit.biz';

@@ -62,7 +62,7 @@ const Latest = () => {
             <div className='container latest'>
                 <div className="row gy-3 headingRow" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                     <div className="col-4"><hr /></div>
-                    <div className="col-4"><p id='whoweareText'>L{Thailattopic}</p></div>
+                    <div className="col-4"><p id='whoweareText'>{Thailattopic}</p></div>
                     <div className="col-4"><hr /></div>
                 </div>
 

@@ -2,12 +2,13 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './UpcomingNews.css';
 import axios from "axios";
-import BrnNavbar from '../../Navbar/Navbar';
-import BrnChat from '../../ChatBot/Chat';
-import BrnFooter from '../../Footer/Footer';
+import BrnNavbar from "../../Navbar/Navbar";
+import BrnChat from "../../ChatBot/Chat";
+import BrnFooter from "../../Footer/Footer";
 import Swal from 'sweetalert2';
 import connections from '../../../../config';
 import { useTranslation } from 'react-i18next';
+// import microsoft from '../../../images/techImages/microsoft-2.jpg'
 
 import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap components
 
@@ -16,9 +17,17 @@ const UpcomingNews = () => {
     const [sLUpEv, setSLUpEv] = useState([]);
     const [currentUpcoming, setcurrentUpcoming] = useState(null);
 
+    const serverlink1234 = connections.eventregister;
+    const slupevserverlink = connections.upcomings;
+    const slseatupdate = connections.upcomingsSeatUpdate;
+    const slupseatcount = connections.upcomingsseat;
+
     useEffect(() => {
 
-        axios.post(bruupevserverlink).then((response) => {
+        axios.get(slupevserverlink,{
+            headers: { 
+                cnt: 6 
+            }}).then((response) => {
             setSLUpEv(response.data);
         }).catch((err) => {
             console.log(err);
@@ -69,10 +78,7 @@ const UpcomingNews = () => {
         return errors;
     };
 
-    const serverlink1234 = connections.slupreg;
-    const bruupevserverlink = connections.bruupcoming;
-    const slseatupdate = connections.slseatUpdate;
-    const slupseatcount = connections.slupcomingseat;
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -81,52 +87,56 @@ const UpcomingNews = () => {
         if (Object.keys(validationErrors).length === 0) {
             try {
                 const value33 = {
-                    query: "",
-                    value1: currentUpcoming && currentUpcoming.id,
-                    value2: formData.title,
-                    value3: formData.name,
-                    value4: formData.designation,
-                    value5: formData.company,
-                    value6: formData.email,
-                    value7: formData.contact,
-                    value8: formData.province,
-                    value9: formData.city,
-                    value10: 6,
-                    key: "FKoaDwCi7C"
+                    upcomingid: currentUpcoming?.id, // Using optional chaining for safer access
+                    title: formData.title,
+                    name: formData.name,
+                    designation: formData.designation,
+                    companyname: formData.company,
+                    email: formData.email,
+                    contactno: formData.contact,
+                    province: formData.province,
+                    city: formData.city,
+                    cnt:'6'
                 };
-
+                
+               
+                
                 const seatCount = {
                     id: currentUpcoming && currentUpcoming.id,
                 };
 
-                const responseSeat = await axios.post(slupseatcount, seatCount);
-                // console.log(responseSeat.data[0].seats);
+                const responseSeat = await axios.get(slupseatcount,  {
+                    headers: { 
+                        cnt: currentUpcoming && currentUpcoming.id,
+                    }
+                });
+                // console.log("Seats COunt-----------", responseSeat.data[0].seats);
 
-                const intresponseSeat = parseInt(responseSeat.data[0].seats);
+                var intresponseSeat = parseInt(responseSeat.data[0].seats);
 
-                // alert(intresponseSeat);
+                 
 
                 if (!isNaN(intresponseSeat)) {
                     if (intresponseSeat > 0) {
                         // alert("Seat count is ok");
                         // Submit the Form
-
-                        console.log(value33);
+                        intresponseSeat=intresponseSeat-1;
+                        // console.log(value33);
+                        // console.log(intresponseSeat);
                         const response123 = await axios.post(serverlink1234, value33);
                         // const response123 = null;
                         console.log(response123);
                         if (response123.status === 200) {
+                            // if (true) {
 
-                            const newSeatCount = intresponseSeat - 1;
-
-                            const seatCount1234 = {
-                                query: "",
-                                value1: newSeatCount,
-                                value2: currentUpcoming && currentUpcoming.id,
-                                key: "FKoaDwCi7C"
-                            };
-
-                            const response123456 = await axios.post(slseatupdate, seatCount1234);
+                         
+                            const data={
+                                seat:intresponseSeat
+                            }
+                            const id= currentUpcoming && currentUpcoming.id;
+                            const response123456 = await axios.put(`${slseatupdate}/${id}`, data);
+                            // const response123456 = null;
+                            // console.log("Sending data",seatCount1234);
 
                             if (response123456.status === 200) {
                                 Swal.fire({
@@ -161,7 +171,7 @@ const UpcomingNews = () => {
                         Swal.fire({
                             // position: "top-end",
                             icon: "error",
-                            title: "All the Seats are Full",
+                            title: "No Seats are currently available",
                             showConfirmButton: false,
                             timer: 1500
                         });
@@ -224,12 +234,12 @@ const UpcomingNews = () => {
 
     const { t } = useTranslation();
     const { Brnupevnt1, Brnupevnt2
-    } = t('BrnupEventSec', { returnObjects: true });
+    } = t('BrnupEventSec', { returnObjects: true });
 
     return (
         <>
-            <BrnNavbar/>
-            <BrnChat/>
+            <BrnNavbar />
+            <BrnChat />
             <div className="container">
                 <div className='row'>
                     <div className="row text">
@@ -238,6 +248,36 @@ const UpcomingNews = () => {
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
+
+                {/* microsoft even card */}
+                {/* <div className='row microsoftcard'>
+                    <div className="card mb-3 cards2">
+                        <div className="row g-0">
+                            <div className="col-md-4">
+                                <img src={microsoft} className="img-fluid  blogimg mcroimg" alt="Microsoft Event" />
+                            </div>
+                            <div className="col-md-8">
+                                <div className="card-body">
+                                    <div className='row'>
+                                        <h3 className="card-title ">Microsoft Event</h3>
+                                    </div>
+                                    <br />
+                                    <div className='row buttnRow'>
+                                        <div className='col-md-5 '>
+                                            
+                                            <h5>Mode : Physical</h5>
+                                            
+                                        </div>
+                                        <div className='col-md-7'>
+                                            <button className="btn btn-info read-more" onClick={() => { setLgShow(true); setcurrentUpcoming({ title: 'Microsoft Event', date: '2024-08-15', time: '10:00 AM', mode: 'Online', seats: 'Unlimited', description: 'Join us for an exclusive Microsoft event where we will unveil the latest innovations and updates.' }); }}>Register</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
+                {/*end of the microsoft even card */}
 
                 <div className='row '>
                     {sLUpEv && sLUpEv.map((slup, ind) => (
@@ -286,7 +326,7 @@ const UpcomingNews = () => {
                             Event Register
                         </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
+                    <Modal.Body> 
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-6" style={{ backgroundColor: '#f8f9fa', borderRight: '1px solid #dee2e6' }}>
@@ -375,6 +415,8 @@ const UpcomingNews = () => {
                                             </div>
                                         </div>
 
+
+
                                         <Button className="form-group" variant="primary" type="submit">
                                             Submit
                                         </Button>
@@ -385,7 +427,7 @@ const UpcomingNews = () => {
                     </Modal.Body>
                 </Modal>
             </div >
-            <BrnFooter/>
+            <BrnFooter />
         </>
     );
 }

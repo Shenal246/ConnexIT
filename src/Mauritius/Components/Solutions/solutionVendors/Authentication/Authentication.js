@@ -9,25 +9,21 @@ import { Row } from 'react-bootstrap';
 import connections from '../../../../../config';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import CamNavbar from '../../../Navbar/Navbar';
-import CamChat from '../../../ChatBot/Chat';
-import CamFooter from '../../../Footer/Footer';
+import MUNavbar from '../../../Navbar/Navbar';
+import MUChat from '../../../ChatBot/Chat';
+import MUFooter from '../../../Footer/Footer';
 
 function Authentication() {
     const [vendors, setVendors] = useState([]);
     const [show, setShow] = useState(false);
     const [currentVendor, setCurrentVendor] = useState(null);
     const navigate = useNavigate();
-    const serverlink = connections.serverLink;
+    const serverlink = connections.pillor3;
 
     useEffect(() => {
-        const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Authentication_Identity_Management FROM Vendor WHERE Authentication_Identity_Management='true' AND status=1 AND cnt=5;",
-            key: "Cr6re8VRBm"
-        };
-
-        axios.post(serverlink, values).then((response) => {
+        axios.get(serverlink, {headers:{cnt:5}}).then((response) => {
             setVendors(response.data);
+            console.log(vendors);
         }).catch((err) => {
             console.log(err);
         });
@@ -37,7 +33,7 @@ function Authentication() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/KH/Solutions/Authentication/${vend.name}`, { state: { vend } });
+        navigate(`/MU/Solutions/Authentication/${vend.name}`, { state: { vend } });
     };
 
 
@@ -48,8 +44,8 @@ function Authentication() {
 
     return (
         <>
-        <CamNavbar/>
-        <CamChat/>
+        <MUNavbar/>
+        <MUChat/>
         
         <section>
             <div className="container">
@@ -115,7 +111,7 @@ function Authentication() {
                 </Modal>
             </div>
         </section>
-        <CamFooter/>
+        <MUFooter/>
         </>
     );
 }

@@ -9,9 +9,9 @@ import { Row } from 'react-bootstrap';
 import connections from '../../../../../config';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import CamNavbar from '../../../Navbar/Navbar';
-import CamChat from '../../../ChatBot/Chat';
-import CamFooter from '../../../Footer/Footer';
+import MUNavbar from '../../../Navbar/Navbar';
+import MUChat from '../../../ChatBot/Chat';
+import MUFooter from '../../../Footer/Footer';
 
 
 function Security() {
@@ -19,16 +19,12 @@ function Security() {
     const [show, setShow] = useState(false);
     const [currentVendor, setCurrentVendor] = useState(null);
     const navigate = useNavigate();
-    const serverlink = connections.serverLink;
+    const serverlink = connections.pillor4;
 
     useEffect(() => {
-        const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Security_Management FROM Vendor WHERE Security_Management='true' AND status=1 AND cnt=5;",
-            key: "Cr6re8VRBm"
-        };
-
-        axios.post(serverlink, values).then((response) => {
+        axios.get(serverlink, {headers:{cnt:5}}).then((response) => {
             setVendors(response.data);
+            console.log(vendors);
         }).catch((err) => {
             console.log(err);
         });
@@ -38,7 +34,7 @@ function Security() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/KH/Solutions/Security/${vend.name}`, { state: { vend } });
+        navigate(`/MU/Solutions/Security/${vend.name}`, { state: { vend } });
     };
 
     const { t } = useTranslation();
@@ -47,8 +43,8 @@ function Security() {
 
     return (
         <>
-        <CamNavbar/>
-        <CamChat/>
+        <MUNavbar/>
+        <MUChat/>
         <section>
             <div className="container">
                 <div className='row '>
@@ -112,7 +108,7 @@ function Security() {
                 </Modal>
             </div>
         </section>
-        <CamFooter/>
+        <MUFooter/>
         
         </>
     );

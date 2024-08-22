@@ -75,7 +75,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 },
                 // Sollutions section
                 solutionssec: {
-                    solu: "Solution",
+                    solu: "Solutions",
                     periTopic: "Perimeter and  Internal Security",
                     cyberTopic: "Cyber Security Governance & Compliance",
                     authTopic: "Authentication & Identity Management",

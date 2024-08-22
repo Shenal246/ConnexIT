@@ -9,21 +9,21 @@ import SLFooter from "../../../Footer/Footer";
 // import { useNavigate } from 'react-router-dom';
 function Authentication() {
     const [vendors, setVendors] = useState([]);
-    const serverlink = connections.serverLink;
+    
     const navigate = useNavigate();
+    const serverlink = connections.pillor3;
 
     useEffect(() => {
-        const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Authentication_Identity_Management FROM Vendor WHERE Authentication_Identity_Management='true' AND status=1 AND cnt=1;",
-            key: "Cr6re8VRBm"
-        };
-
-        axios.post(serverlink, values).then((response) => {
+        axios.get(serverlink, {headers:{cnt:1}}).then((response) => {
             setVendors(response.data);
+            console.log(vendors);
         }).catch((err) => {
             console.log(err);
         });
-    }, [serverlink]);
+
+        console.log(vendors);
+
+    }, []);
 
     const handleCardClick = (vend) => {
         navigate(`/SL/Solutions/Authentication/${vend.name}`, { state: { vend } });

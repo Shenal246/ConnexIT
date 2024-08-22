@@ -25,6 +25,17 @@ const config = {
     upcomingsSeatUpdate:`${link}/upcomingsseat`,
 
 
+    //vendor-piilor
+    pillor1:`${link}/vendorpillor1`,
+    pillor2:`${link}/vendorpillor2`,
+    pillor3:`${link}/vendorpillor3`,
+    pillor4:`${link}/vendorpillor4`,
+    pillor5:`${link}/vendorpillor5`,
+    pillor6:`${link}/vendorpillor6`,
+    pillor7:`${link}/vendorpillor7`,
+    pillor8:`${link}/vendorpillor8`,
+
+
 
 
 

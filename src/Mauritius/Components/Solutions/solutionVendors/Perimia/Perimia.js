@@ -8,25 +8,21 @@ import { Row } from 'react-bootstrap';
 import connections from '../../../../../config';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import CamNavbar from '../../../Navbar/Navbar';
-import CamChat from '../../../ChatBot/Chat';
-import CamFooter from '../../../Footer/Footer';
+import MUNavbar from '../../../Navbar/Navbar';
+import MUChat from '../../../ChatBot/Chat';
+import MUFooter from '../../../Footer/Footer';
 
 function Perimia() {
     const [vendors, setVendors] = useState([]);
     const [show, setShow] = useState(false);
     const [currentVendor, setCurrentVendor] = useState(null);
     const navigate = useNavigate();
-    const serverlink = connections.serverLink;
+    const serverlink = connections.pillor1;
 
     useEffect(() => {
-        const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Perimeter_and_internal_security FROM Vendor WHERE Perimeter_and_internal_security='true' AND status=1 AND cnt=5;",
-            key: "Cr6re8VRBm"
-        };
-
-        axios.post(serverlink, values).then((response) => {
+        axios.get(serverlink, {headers:{cnt:5}}).then((response) => {
             setVendors(response.data);
+            console.log(vendors);
         }).catch((err) => {
             console.log(err);
         });
@@ -36,7 +32,7 @@ function Perimia() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/KH/Solutions/Perimia/${vend.name}`, { state: { vend } });
+        navigate(`/MU/Solutions/Perimia/${vend.name}`, { state: { vend } });
     };
 
     const { t } = useTranslation();
@@ -45,8 +41,8 @@ function Perimia() {
 
     return (
         <>
-        <CamNavbar/>
-        <CamChat/>
+        <MUNavbar/>
+        <MUChat/>
         <section>
             <div className="container">
                 <div className='row '>
@@ -112,7 +108,7 @@ function Perimia() {
             </div>
         </section>
         
-        <CamFooter/>
+        <MUFooter/>
         </>
     );
 }

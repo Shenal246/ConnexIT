@@ -8,9 +8,9 @@ import { Row } from 'react-bootstrap';
 import connections from '../../../../../config';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import CamNavbar from '../../../Navbar/Navbar';
-import CamChat from '../../../ChatBot/Chat';
-import CamFooter from '../../../Footer/Footer';
+import MUNavbar from '../../../Navbar/Navbar';
+import MUChat from '../../../ChatBot/Chat';
+import MUFooter from '../../../Footer/Footer';
 
 
 function InfrastructureMonitoring() {
@@ -18,16 +18,12 @@ function InfrastructureMonitoring() {
     const [show, setShow] = useState(false);
     const [currentVendor, setCurrentVendor] = useState(null);
     const navigate = useNavigate();
-    const serverlink = connections.serverLink;
+    const serverlink = connections.pillor7;
 
     useEffect(() => {
-        const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Data_Center_Infrastructure_and_Infrastructure_Monitoring FROM Vendor WHERE Data_Center_Infrastructure_and_Infrastructure_Monitoring='true' AND status=1 AND cnt=5;",
-            key: "Cr6re8VRBm"
-        };
-
-        axios.post(serverlink, values).then((response) => {
+        axios.get(serverlink, {headers:{cnt:5}}).then((response) => {
             setVendors(response.data);
+            console.log(vendors);
         }).catch((err) => {
             console.log(err);
         });
@@ -37,7 +33,7 @@ function InfrastructureMonitoring() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/KH/Solutions/InfrastructureMonitoring/${vend.name}`, { state: { vend } });
+        navigate(`/MU/Solutions/InfrastructureMonitoring/${vend.name}`, { state: { vend } });
     };
 
     const { t } = useTranslation();
@@ -46,8 +42,8 @@ function InfrastructureMonitoring() {
 
     return (
         <>
-        <CamNavbar/>
-        <CamChat/>
+        <MUNavbar/>
+        <MUChat/>
         <section>
             <div className="container">
                 <div className='row '>
@@ -112,7 +108,7 @@ function InfrastructureMonitoring() {
                 </Modal>
             </div>
         </section>
-        <CamFooter/>
+        <MUFooter/>
         
         </>
     );

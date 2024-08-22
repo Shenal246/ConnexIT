@@ -117,6 +117,27 @@ import BrnInfrastructure from "./Brunai/Components/Solutions/solutionVendors/Inf
 import BrnServer from "./Brunai/Components/Solutions/solutionVendors/ServerBackup/ServerBackup";
 import BrnSingleVendor from "./Brunai/Components/SingleVendor/SingleVendor";
 
+// NZ 
+import NZHome from "./NewZealand/Home/Home";
+import NZAbout from "./NewZealand/About/About";
+import NZEvents from "./NewZealand/Events&News/Events";
+import NZUpcomingEvents from "./NewZealand/Events&News/UpcomingNews/UpcomingNews";
+import NZBlog from "./NewZealand/Blog/Blog";
+import NZContactUs from "./NewZealand/ContactUs/Contact";
+import NZSolutions from "./NewZealand/Solutions/Solutions";
+import NZPortal from "./NewZealand/Portal/Portal";
+import NZCyberSecurity from "./NewZealand/Solutions/solutionVendors/CyberSecurity/CyberSecurity";
+import NZAuthentication from "./NewZealand/Solutions/solutionVendors/Authentication/Authentication";
+import NZSecurityManagement from "./NewZealand/Solutions/solutionVendors/Security/Security";
+import NZPerimia from "./NewZealand/Solutions/solutionVendors/Perimia/Perimia";
+import NZEndpointSecurity from "./NewZealand/Solutions/solutionVendors/Endpoint/Endpoin";
+import NZNetworking from "./NewZealand/Solutions/solutionVendors/Networking/Networking";
+import NZInfrastructure from "./NewZealand/Solutions/solutionVendors/Infrastructure/InfrastructureMonitoring";
+import NZServer from "./NewZealand/Solutions/solutionVendors/ServerBackup/ServerBackup";
+import NZMicrosoft from "./NewZealand/Solutions/solutionVendors/Microsoft/Microsoft";
+import NZFAQs from "./NewZealand/FAQs/FAQs";
+import NZSingleVendor from "./NewZealand/SingleVendor/SingleVendor";
+
 
 function App() {
 
@@ -296,6 +317,37 @@ function App() {
                     <Route path="/Brn/Solutions/Perimia/:vendorName" element={<BrnSingleVendor />} />
                     <Route path="/Brn/Solutions/Security/:vendorName" element={<BrnSingleVendor />} />
                     <Route path="/Brn/Solutions/ServerBackup/:vendorName" element={<BrnSingleVendor />} />
+
+
+                    {/*New Zealand*/}
+
+                    <Route path="/NZ" exact element={<NZHome />} />
+                    <Route path="/NZ/About" exact element={<NZAbout />} />
+                    <Route path="/NZ/Events&News" exact element={<NZEvents />} />
+                    <Route path="/NZ/UpcomingNews" exact element={<NZUpcomingEvents />} />
+                    <Route path="/NZ/Blog" exact element={<NZBlog />} />
+                    <Route path="/NZ/ContactUs" exact element={<NZContactUs />} />
+                    <Route path="/NZ/Solutions" exact element={<NZSolutions />} />
+                    <Route path="/NZ/Portal" exact element={<NZPortal />} />
+
+                    <Route path="/NZ/Solutions/CyberSecurity" element={<NZCyberSecurity />} />
+                    <Route path="/NZ/Solutions/Authentication" element={<NZAuthentication />} />
+                    <Route path="/NZ/Solutions/SecurityManagement" element={<NZSecurityManagement />} />
+                    <Route path="/NZ/Solutions/Perimia" element={<NZPerimia />} />
+                    <Route path="/NZ/Solutions/EndpointSecurity" element={<NZEndpointSecurity />} />
+                    <Route path="/NZ/Solutions/Networking" element={<NZNetworking />} />
+                    <Route path="/NZ/Solutions/Infrastructure" element={<NZInfrastructure />} />
+                    <Route path="/NZ/Solutions/Server" element={<NZServer />} />
+                    <Route path="/NZ/Solutions/Microsoft" element={<NZMicrosoft />} />
+                    <Route path="/NZ/FAQs" element={<NZFAQs />} />
+                    <Route path="/NZ/Solutions/Authentication/:vendorName" element={<NZSingleVendor />} />
+                    <Route path="/NZ/Solutions/CyberSecurity/:vendorName" element={<NZSingleVendor />} />
+                    <Route path="/NZ/Solutions/Endpoin/:vendorName" element={<NZSingleVendor />} />
+                    <Route path="/NZ/Solutions/InfrastructureMonitoring/:vendorName" element={<NZSingleVendor />} />
+                    <Route path="/NZ/Solutions/Networking/:vendorName" element={<NZSingleVendor />} />
+                    <Route path="/NZ/Solutions/Perimia/:vendorName" element={<NZSingleVendor />} />
+                    <Route path="/NZ/Solutions/Security/:vendorName" element={<NZSingleVendor />} />
+                    <Route path="/NZ/Solutions/ServerBackup/:vendorName" element={<NZSingleVendor />} />
 
                 </Routes>
 

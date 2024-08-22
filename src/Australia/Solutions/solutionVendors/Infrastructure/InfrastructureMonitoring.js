@@ -17,16 +17,12 @@ function InfrastructureMonitoring() {
     const [currentVendor, setCurrentVendor] = useState(null);
     const navigate = useNavigate();
 
-    const serverlink = connections.serverLink;
+    const serverlink = connections.pillor7;
 
     useEffect(() => {
-        const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Data_Center_Infrastructure_and_Infrastructure_Monitoring FROM Vendor WHERE Data_Center_Infrastructure_and_Infrastructure_Monitoring='true' AND status=1 AND cnt=4;",
-            key: "Cr6re8VRBm"
-        };
-
-        axios.post(serverlink, values).then((response) => {
+        axios.get(serverlink, {headers:{cnt:4}}).then((response) => {
             setVendors(response.data);
+            console.log(vendors);
         }).catch((err) => {
             console.log(err);
         });

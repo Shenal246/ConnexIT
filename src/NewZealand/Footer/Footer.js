@@ -20,8 +20,8 @@ const Footer = () => {
                             <h3>New Zealand Office</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img2" ></i>
                             1a Woodridge Drive,<br />
-                                <span>Woodridge  NSW 2767</span><br />
-                                <span>Wellington, 6037 </span><br />
+                                <span>Woodridge,</span><br />
+                                <span>Wellington, 6037, </span><br />
                                 <span>New Zealand </span><br />
                                 {/* contact number  */}
                                 <i className="fas fa-phone-volume callIcon2" ></i>Contact: 

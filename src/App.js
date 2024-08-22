@@ -262,7 +262,7 @@ function App() {
                     <Route path="/AU/Solutions/Security/:vendorName" element={<AUSingleVendor />} />
                     <Route path="/AU/Solutions/ServerBackup/:vendorName" element={<AUSingleVendor />} />
 
-                    {/*    Mauritius*/}
+                    {/* Mauritius*/}
                     <Route path="/MU" exact Component={MUHome}></Route>
                     <Route path="/MU/About" exact Component={MUAbout}></Route>
                     <Route path="/MU/Events&News" exact element={<MUEvents />}></Route>
@@ -351,7 +351,7 @@ function App() {
 
                 </Routes>
 
-            </>
+            </> 
         </Router>
     );
 }

@@ -2,9 +2,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './UpcomingNews.css';
 import axios from "axios";
-import SLNavbar from "../../Navbar/Navbar";
-import SLChat from "../../ChatBot/Chat";
-import SLFooter from "../../Footer/Footer";
+import AUNavbar from "../../Navbar/Navbar";
+import AUChat from "../../ChatBot/Chat";
+import AUFooter from "../../Footer/Footer";
 import Swal from 'sweetalert2';
 import connections from '../../../config';
 import microsoft from '../../../images/techImages/microsoft-2.jpg'
@@ -233,8 +233,8 @@ const UpcomingNews = () => {
 
     return (
         <>
-            <SLNavbar />
-            <SLChat />
+            <AUNavbar />
+            <AUChat />
             <div className="container">
                 <div className='row'>
                     <div className="row text">
@@ -422,7 +422,7 @@ const UpcomingNews = () => {
                     </Modal.Body>
                 </Modal>
             </div >
-            <SLFooter />
+            <AUFooter />
         </>
     );
 }

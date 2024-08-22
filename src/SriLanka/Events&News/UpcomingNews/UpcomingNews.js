@@ -111,7 +111,7 @@ const UpcomingNews = () => {
                 });
                 // console.log("Seats COunt-----------", responseSeat.data[0].seats);
 
-                const intresponseSeat = (parseInt(responseSeat.data[0].seats))-1;
+                var intresponseSeat = parseInt(responseSeat.data[0].seats);
 
                  
 
@@ -119,7 +119,7 @@ const UpcomingNews = () => {
                     if (intresponseSeat > 0) {
                         // alert("Seat count is ok");
                         // Submit the Form
-
+                        intresponseSeat=intresponseSeat-1;
                         // console.log(value33);
                         // console.log(intresponseSeat);
                         const response123 = await axios.post(serverlink1234, value33);
@@ -321,7 +321,7 @@ const UpcomingNews = () => {
                             Event Register
                         </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
+                    <Modal.Body> 
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-6" style={{ backgroundColor: '#f8f9fa', borderRight: '1px solid #dee2e6' }}>

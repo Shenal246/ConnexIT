@@ -2,9 +2,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './UpcomingNews.css';
 import axios from "axios";
-import AUNavbar from "../../Navbar/Navbar";
-import AUChat from "../../ChatBot/Chat";
-import AUFooter from "../../Footer/Footer";
+import SLNavbar from "../../Navbar/Navbar";
+import SLChat from "../../ChatBot/Chat";
+import SLFooter from "../../Footer/Footer";
 import Swal from 'sweetalert2';
 import connections from '../../../config';
 import microsoft from '../../../images/techImages/microsoft-2.jpg'
@@ -16,9 +16,17 @@ const UpcomingNews = () => {
     const [sLUpEv, setSLUpEv] = useState([]);
     const [currentUpcoming, setcurrentUpcoming] = useState(null);
 
+    const serverlink1234 = connections.eventregister;
+    const slupevserverlink = connections.upcomings;
+    const slseatupdate = connections.upcomingsSeatUpdate;
+    const slupseatcount = connections.upcomingsseat;
+
     useEffect(() => {
 
-        axios.post(auupevserverlink).then((response) => {
+        axios.get(slupevserverlink,{
+            headers: { 
+                cnt: 4 
+            }}).then((response) => {
             setSLUpEv(response.data);
         }).catch((err) => {
             console.log(err);
@@ -69,10 +77,7 @@ const UpcomingNews = () => {
         return errors;
     };
 
-    const serverlink1234 = connections.slupreg;
-    const auupevserverlink = connections.auupcoming;
-    const slseatupdate = connections.slseatUpdate;
-    const slupseatcount = connections.slupcomingseat;
+
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -81,56 +86,54 @@ const UpcomingNews = () => {
         if (Object.keys(validationErrors).length === 0) {
             try {
                 const value33 = {
-                    query: "",
-                    value1: currentUpcoming && currentUpcoming.id,
-                    value2: formData.title,
-                    value3: formData.name,
-                    value4: formData.designation,
-                    value5: formData.company,
-                    value6: formData.email,
-                    value7: formData.contact,
-                    value8: formData.province,
-                    value9: formData.city,
-                    value10: 4,
-                    key: "FKoaDwCi7C"
+                    upcomingid: currentUpcoming?.id, // Using optional chaining for safer access
+                    title: formData.title,
+                    name: formData.name,
+                    designation: formData.designation,
+                    companyname: formData.company,
+                    email: formData.email,
+                    contactno: formData.contact,
+                    province: formData.province,
+                    city: formData.city,
+                    cnt:'4'
                 };
-
+                
+               
+                
                 const seatCount = {
                     id: currentUpcoming && currentUpcoming.id,
                 };
 
-                const responseSeat = await axios.post(slupseatcount, seatCount);
+                const responseSeat = await axios.get(slupseatcount,  {
+                    headers: { 
+                        cnt: currentUpcoming && currentUpcoming.id,
+                    }
+                });
                 // console.log("Seats COunt-----------", responseSeat.data[0].seats);
 
-                const intresponseSeat = parseInt(responseSeat.data[0].seats);
+                var intresponseSeat = parseInt(responseSeat.data[0].seats);
 
-                // alert(intresponseSeat);
+                 
 
                 if (!isNaN(intresponseSeat)) {
                     if (intresponseSeat > 0) {
                         // alert("Seat count is ok");
-                        // Submit the Form 
-
+                        // Submit the Form
+                        intresponseSeat=intresponseSeat-1;
                         // console.log(value33);
                         // console.log(intresponseSeat);
                         const response123 = await axios.post(serverlink1234, value33);
                         // const response123 = null;
-                        // console.log(response123);
+                        console.log(response123);
                         if (response123.status === 200) {
                             // if (true) {
 
-                            const newSeatCount = intresponseSeat - 1;
-                            const StringnewSeatCount = newSeatCount.toString();
-                            // console.log("New Seat Count",StringnewSeatCount);
-
-                            const seatCount1234 = {
-                                query: "",
-                                value1: StringnewSeatCount,
-                                value2: currentUpcoming && currentUpcoming.id,
-                                key: "FKoaDwCi7C"
-                            };
-
-                            const response123456 = await axios.post(slseatupdate, seatCount1234);
+                         
+                            const data={
+                                seat:intresponseSeat
+                            }
+                            const id= currentUpcoming && currentUpcoming.id;
+                            const response123456 = await axios.put(`${slseatupdate}/${id}`, data);
                             // const response123456 = null;
                             // console.log("Sending data",seatCount1234);
 
@@ -230,8 +233,8 @@ const UpcomingNews = () => {
 
     return (
         <>
-            <AUNavbar />
-            <AUChat />
+            <SLNavbar />
+            <SLChat />
             <div className="container">
                 <div className='row'>
                     <div className="row text">
@@ -318,7 +321,7 @@ const UpcomingNews = () => {
                             Event Register
                         </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>
+                    <Modal.Body> 
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-6" style={{ backgroundColor: '#f8f9fa', borderRight: '1px solid #dee2e6' }}>
@@ -419,7 +422,7 @@ const UpcomingNews = () => {
                     </Modal.Body>
                 </Modal>
             </div >
-            <AUFooter />
+            <SLFooter />
         </>
     );
 }

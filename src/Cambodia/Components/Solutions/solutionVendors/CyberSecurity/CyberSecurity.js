@@ -18,16 +18,12 @@ function CyberSecurity() {
     const [show, setShow] = useState(false);
     const [currentVendor, setCurrentVendor] = useState(null);
     const navigate = useNavigate();
-    const serverlink = connections.serverLink;
+    const serverlink = connections.pillor2;
 
     useEffect(() => {
-        const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Cyber_Security_Governance_Compliance FROM Vendor WHERE Cyber_Security_Governance_Compliance='true' AND status=1 AND cnt=3;",
-            key: "Cr6re8VRBm"
-        };
-
-        axios.post(serverlink, values).then((response) => {
+        axios.get(serverlink, {headers:{cnt:3}}).then((response) => {
             setVendors(response.data);
+            console.log(vendors);
         }).catch((err) => {
             console.log(err);
         });
@@ -35,6 +31,7 @@ function CyberSecurity() {
         console.log(vendors);
 
     }, []);
+
 
     const handleCardClick = (vend) => {
         navigate(`/KH/Solutions/CyberSecurity/${vend.name}`, { state: { vend } });

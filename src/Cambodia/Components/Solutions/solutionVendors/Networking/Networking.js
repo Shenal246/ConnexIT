@@ -18,16 +18,12 @@ function Networking() {
     const [show, setShow] = useState(false);
     const [currentVendor, setCurrentVendor] = useState(null);
     const navigate = useNavigate();
-    const serverlink = connections.serverLink;
+    const serverlink = connections.pillor6;
 
     useEffect(() => {
-        const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Networking FROM Vendor WHERE Networking='true' AND status=1 AND cnt=3;",
-            key: "Cr6re8VRBm"
-        };
-
-        axios.post(serverlink, values).then((response) => {
+        axios.get(serverlink, {headers:{cnt:3}}).then((response) => {
             setVendors(response.data);
+            console.log(vendors);
         }).catch((err) => {
             console.log(err);
         });
@@ -35,6 +31,7 @@ function Networking() {
         console.log(vendors);
 
     }, []);
+
 
     const handleCardClick = (vend) => {
         navigate(`/KH/Solutions/Networking/${vend.name}`, { state: { vend } });

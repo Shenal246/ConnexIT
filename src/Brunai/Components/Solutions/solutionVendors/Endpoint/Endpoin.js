@@ -17,16 +17,12 @@ function Endpoint() {
     const [show, setShow] = useState(false);
     const [currentVendor, setCurrentVendor] = useState(null);
     const navigate = useNavigate();
-    const serverlink = connections.serverLink;
+    const serverlink = connections.pillor5;
 
     useEffect(() => {
-        const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Endpoint_Security FROM Vendor WHERE Endpoint_Security='true' AND status=1 AND cnt=6;",
-            key: "Cr6re8VRBm"
-        };
-
-        axios.post(serverlink, values).then((response) => {
+        axios.get(serverlink, {headers:{cnt:6}}).then((response) => {
             setVendors(response.data);
+            console.log(vendors);
         }).catch((err) => {
             console.log(err);
         });

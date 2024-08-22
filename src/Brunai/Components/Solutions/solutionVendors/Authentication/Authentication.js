@@ -17,16 +17,12 @@ function Authentication() {
     const [show, setShow] = useState(false);
     const [currentVendor, setCurrentVendor] = useState(null);
     const navigate = useNavigate();
-    const serverlink = connections.serverLink;
+    const serverlink = connections.pillor3;
 
     useEffect(() => {
-        const values = {
-            query: "SELECT name,des,wlink,status,image_data,cnt,Authentication_Identity_Management FROM Vendor WHERE Authentication_Identity_Management='true' AND status=1 AND cnt=6;",
-            key: "Cr6re8VRBm"
-        };
-
-        axios.post(serverlink, values).then((response) => {
+        axios.get(serverlink, {headers:{cnt:6}}).then((response) => {
             setVendors(response.data);
+            console.log(vendors);
         }).catch((err) => {
             console.log(err);
         });
@@ -34,7 +30,6 @@ function Authentication() {
         console.log(vendors);
 
     }, []);
-
     const handleCardClick = (vend) => {
         navigate(`/Brn/Solutions/Authentication/${vend.name}`, { state: { vend } });
     };

@@ -54,10 +54,10 @@ const Footer = () => {
                         <div className="col-md-6 col-lg-4  ft-1">
                             <div className="footer-icons img icons">
                                 <a className="" href="https://www.facebook.com/profile.php?id=61558366792000" target="_blank"><i className="fab fa-facebook facebook"></i></a>
-                                {/* <a className="" href="/"><i className="fa-brands fa-x-twitter twitter" target="_blank"></i></a> */}
-                                {/* <a className="" href="https://www.instagram.com/connexinformationtechnologies?igsh=MjYxNnpkN3FqNTd0" target="_blank"><i className="fab fa-instagram instagram"></i></a> */}
+                                <a className="" href="/"><i className="fa-brands fa-x-twitter twitter" target="_blank"></i></a>
+                                <a className="" href="https://www.instagram.com/connexinformationtechnologies?igsh=MjYxNnpkN3FqNTd0" target="_blank"><i className="fab fa-instagram instagram"></i></a>
                                 <a className="" href="https://www.linkedin.com/showcase/connex-thailand1/" target="_blank"><i className="fab fa-linkedin-in linkedIn"></i></a>
-                                {/* <a className="" href="https://www.youtube.com/@connexinformationtechnologies" target="_blank"><i class="fa-brands fa-square-youtube youtube"></i></a> */}
+                                <a className="" href="https://www.youtube.com/@connexinformationtechnologies" target="_blank"><i class="fa-brands fa-square-youtube youtube"></i></a>
                             </div>
                         </div>
                         <div className=" col-md-4  ft-1 address2">

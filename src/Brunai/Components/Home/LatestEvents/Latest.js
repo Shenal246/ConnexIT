@@ -5,6 +5,7 @@ import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 import connections from '../../../../config';
+import { useTranslation } from 'react-i18next';
 
 const Latest = () => {
     const videoRef = useRef(null);
@@ -50,12 +51,19 @@ const Latest = () => {
         fetchNews();
       }, []);
 
+
+      
+  const { t } = useTranslation();
+
+  const { Brnlattopic } = t('Brnlatestsec', { returnObjects: true });
+
+
     return (
         <section >
             <div className='container latest'>
                 <div className="row gy-3 headingRow" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                     <div className="col-4"><hr /></div>
-                    <div className="col-4"><p id='whoweareText'>Latest News</p></div>
+                    <div className="col-4"><p id='whoweareText'>{Brnlattopic}</p></div>
                     <div className="col-4"><hr /></div>
                 </div>
 
@@ -161,7 +169,7 @@ const Latest = () => {
                     </div>
 
                 </div>
-            </div>
+            </div> 
         </section>
     );
 }

@@ -653,7 +653,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Brnic3: "Vendors",
                     Brnic4: "Partners",
                     Brncontact: "Contact Us",
-                },
+                }, 
                 Brnvendorsec: {
                     Brnventopic: "Our Vendors",
                     BrnvenText1: "Embark on technological Excellence with our Trusted ",

@@ -18,7 +18,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     greet3: "Value added distributor for more than 30 leading global vendors.",
                     contact: "Contact Us",
                     wtvideo: "Watch Video",
-                },
+                }, 
                 whowearesec: {
                     whotopic: "Who we are",
                     card1: "Distribution",

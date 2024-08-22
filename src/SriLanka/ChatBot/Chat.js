@@ -8,7 +8,7 @@ import robo3 from '../../images/Chat/robo3.jpg';
 
 
 function Chat() {
-  const chatBotRef = useRef(null);
+  const chatBotRef = useRef(null); 
 
   const images = [robo1, robo2, robo3];
   const [currentImageIndex, setCurrentImageIndex] = useState(0);

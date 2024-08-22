@@ -19,7 +19,7 @@ function Solutions() {
 
 
   const { t } = useTranslation();
-  const { Murisolu, MuriperiTopic, MuricyberTopic, MuriauthTopic, MurisecTopic, MuriendTopic, MurinetTopic, MuridataTopic, MuriserverTopic, MuriMicrosoft
+  const { Murimaintopic, MuriperiTopic, MuricyberTopic, MuriauthTopic, MurisecTopic, MuriendTopic, MurinetTopic, MuridataTopic, MuriserverTopic, MuriMicrosoft
   } = t('Murisolutionssec', { returnObjects: true });
 
   return (
@@ -31,7 +31,7 @@ function Solutions() {
           <div className='row'>
             <div className="row text">
               <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-              <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Murisolu}</p></div>
+              <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Murimaintopic}</p></div>
               <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
             </div>
           </div>

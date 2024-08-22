@@ -182,7 +182,7 @@ function WhoweareSection() {
       >
         <Modal.Header closeButton closeVariant='white' className='model-header'>
           <Modal.Title id="example-modal-sizes-title-lg">
-            Consultancy
+            {card2}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className='model-body'>
@@ -213,7 +213,7 @@ function WhoweareSection() {
       >
         <Modal.Header closeButton closeVariant='white' className='model-header'>
           <Modal.Title id="example-modal-sizes-title-lg">
-            Training
+            {card3}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className='model-body'>
@@ -246,7 +246,7 @@ function WhoweareSection() {
       >
         <Modal.Header closeButton closeVariant='white' className='model-header'>
           <Modal.Title id="example-modal-sizes-title-lg">
-            TAC Support
+            {card4}
           </Modal.Title>
         </Modal.Header>
         <Modal.Body className='model-body'>

@@ -139,7 +139,8 @@
 }
 
 .mapnz {
-    width: 600px; /* Default width for larger screens */
+    width: 500px; /* Default width for larger screens */
+    margin-top: -50px;
 }
 
 @media (max-width: 768px) {
@@ -184,6 +185,7 @@
         width: 10px !important; /* Width for smaller mobile devices */
     }
 }
+
 
 .line {
     display: none;

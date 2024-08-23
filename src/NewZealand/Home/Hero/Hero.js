@@ -1,5 +1,5 @@
 import './Hero.css';
-import Logo from '../../../images/Connex-Aus-logo.png';
+import Logo from '../../../images/NZLOGO.png';
 import React, { useRef, useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 

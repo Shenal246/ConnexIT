@@ -19,12 +19,13 @@ const Footer = () => {
                         <div className="col-md-6 col-lg-4  ft-1 address2">
                             <h3>New Zealand Office</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img2" ></i>
-                            1a Woodridge Drive,<br />
-                                <span>Woodridge,</span><br />
-                                <span>Wellington, 6037, </span><br />
-                                <span>New Zealand </span><br />
+                                CONNEX INFORMATION TECHNOLOGIES LIMITED,<br />
+                                <span>Plimmer Towers ,</span><br />
+                                <span>2-6 Glimmer Terrace,  </span><br />
+                                <span>Wellington, 6011</span><br />
                                 {/* contact number  */}
-                                <i className="fas fa-phone-volume callIcon2" ></i>Contact: 
+                                {/* <i className="fas fa-phone-volume callIcon2" ></i>Contact:  */}
+
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-2 resources">

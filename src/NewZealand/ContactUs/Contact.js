@@ -203,10 +203,10 @@ const Contact = () => {
                         <h1 className='countryName address3'>New Zealand</h1>
                         <h3>New Zealand Office</h3>
                         <p className='txt1'><i className="fas fa-map-marker-alt img3"></i>
-                        1a Woodridge Drive<br />
-                            <span className='address'>Woodridge</span><br />
-                            <span className='address'>Wellington, 6037, NZ
-                            </span>
+                            CONNEX INFORMATION TECHNOLOGIES LIMITED,<br />
+                            <span className='address'>Plimmer Towers ,</span><br />
+                            <span className='address'>2-6 Glimmer Terrace,</span><br />
+                            <span className='address'>Wellington, 6011</span>
                         </p>
                         <button
                             className="neon-button"

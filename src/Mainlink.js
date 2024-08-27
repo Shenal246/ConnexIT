@@ -1,1 +1,1 @@
-export const link = 'http://192.168.13.163:5000';
+export const link = 'http:/api.connexit.biz';

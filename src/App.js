@@ -40,6 +40,7 @@ import KHInfrastructure from "./Cambodia/Components/Solutions/solutionVendors/In
 import KHServer from "./Cambodia/Components/Solutions/solutionVendors/ServerBackup/ServerBackup";
 import KHMicrosoft from "./Cambodia/Components/Solutions/solutionVendors/Microsoft/Microsoft";
 import KHSingleVendor from "./Cambodia/Components/SingleVendor/SingleVendor";
+import KHSeagate from "./Cambodia/Components/Seagate/SeagateSinglePage";
 
 import THHome from "./Thailand/Components/Home/Home";
 import THAbout from "./Thailand/Components/About/About";
@@ -186,6 +187,7 @@ function App() {
                     <Route path="/KH/ContactUs" exact Component={KHContactUs}></Route>
                     <Route path="/KH/Solutions" exact Component={KHSolutions}></Route>
                     <Route path="/KH/Portal" exact Component={KHPortal}></Route>
+                    <Route path="/KH/Seagate" element={<KHSeagate />} />
 
                     <Route path="/KH/Solutions/CyberSecurity" element={<KHCyberSecurity />} />
                     <Route path="/KH/Solutions/Authentication" element={<KHAuthentication />} />

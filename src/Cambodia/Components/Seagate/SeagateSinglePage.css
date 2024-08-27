@@ -1,0 +1,116 @@
+.main-section {
+    /* background-image: url('../../../images/images/bd.jpg'); */
+    /* background-repeat: no-repeat; */
+    width: 100%;
+    color: #fff;
+    padding-bottom: 50px;
+}
+
+.mainheading {
+    color: #fff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 22px;
+    opacity: .9;
+    
+}
+
+.secondheading {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.para {
+    max-width: 700px;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 auto;
+}
+
+.carousel-container .react-multi-carousel-item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.carousel-container .react-multi-carousel-track {
+    transition: transform 0.5s ease;
+}
+
+.cardStyle {
+    border-radius: 30px !important;
+    margin: 0 15px;
+    padding: 60px 20px 20px 20px;
+    transition: background-color 0.3s ease;
+    /* background-color: hsla(0, 0%, 100%, .205) !important; */
+    background-color: #acbdbd4d !important;
+}
+
+.cardStyle:hover {
+    background-color: #707271a6 !important;
+}
+
+.cardBodyStyle {
+    padding: 20px;
+}
+
+.cardimg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    transition: transform 5s ease;
+}
+
+.cardimg:hover {
+    animation: upDown 1s ease-in-out infinite alternate;
+}
+
+@keyframes upDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.cardtitile {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 22px;
+}
+
+.cardtext {
+    margin: 30px 0 30px 0;
+    font-size: 16px;
+}
+
+.imageContainerStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.btnStyle {
+    border-radius: 30px !important;
+    padding: 5px 25px !important;
+    background-color: #000 !important;
+    border: 1px solid #000 !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+}
+
+.video-container {
+    position: relative;
+    width: 90%;
+    display: inline-block;
+}
+
+
+.video-player {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}

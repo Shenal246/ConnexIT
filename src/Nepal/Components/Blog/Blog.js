@@ -3,27 +3,27 @@ import './Blog.css'; // Import your CSS file
 import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap components
 import blog from '../../../images/Blogs/blogging-services.jpg';
 import { useTranslation } from 'react-i18next';
-import BrnNavbar from '../Navbar/Navbar';
-import BrnChat from '../Navbar/Navbar';
-import BrnFooter from '../Footer/Footer';
+import NPLNavbar from '../Navbar/Navbar';
+import NPLChat from '../Navbar/Navbar';
+import NPLFooter from '../Footer/Footer';
 
 const Blog = () => {
     const [lgShow, setLgShow] = useState(false);
     const { t } = useTranslation();
-    const { Brnblg1
-        } = t('Brnblogsec', { returnObjects: true });
+    const { NPLblg1
+        } = t('NPLblogsec', { returnObjects: true });
 
 
     return (
         <>
-        <BrnNavbar/>
-        <BrnChat/>
+        <NPLNavbar/>
+        <NPLChat/>
         <section>
             <div className="container">
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Brnblg1}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{NPLblg1}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -66,7 +66,7 @@ const Blog = () => {
             </Modal>
         </section>
         
-        <BrnFooter/>
+        <NPLFooter/>
         </>
     );
 }

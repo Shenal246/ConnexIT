@@ -55,7 +55,7 @@ const Latest = () => {
       
   const { t } = useTranslation();
 
-  const { Brnlattopic } = t('Brnlatestsec', { returnObjects: true });
+  const { NPLlattopic } = t('NPLlatestsec', { returnObjects: true });
 
 
     return (
@@ -63,7 +63,7 @@ const Latest = () => {
             <div className='container latest'>
                 <div className="row gy-3 headingRow" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                     <div className="col-4"><hr /></div>
-                    <div className="col-4"><p id='whoweareText'>{Brnlattopic}</p></div>
+                    <div className="col-4"><p id='whoweareText'>{NPLlattopic}</p></div>
                     <div className="col-4"><hr /></div>
                 </div>
 
@@ -136,7 +136,7 @@ const Latest = () => {
                     {/* See more button */}
                     <div className="row" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">
                         <div className="navigation">
-                            <NavLink to="/Brn/Events&News"><Button variant="" className='iconsss' style={{ backgroundColor: '#01066B' }}>
+                            <NavLink to="/NPL/Events&News"><Button variant="" className='iconsss' style={{ backgroundColor: '#01066B' }}>
                                 <BsArrowRight size={30} />
                             </Button></NavLink>
                         </div>

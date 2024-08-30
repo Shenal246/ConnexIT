@@ -20,7 +20,7 @@ import connections from '../../../../config';
 const Vendors = () => {
 
   const { t } = useTranslation();
-  const { Brnventopic, BrnvenText1, BrnvenText2 } = t('Brnvendorsec', { returnObjects: true });
+  const { NPLventopic, NPLvenText1, NPLvenText2 } = t('NPLvendorsec', { returnObjects: true });
 
 
   const [vendorLogos, setVendorLogos] = useState(null);
@@ -50,12 +50,12 @@ const Vendors = () => {
         {/* Vendors Text */}
         <div className="row gy-3" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
           <div className="col-4"><hr /></div>
-          <div className="col-4"><p id='ourVendorsText'>{Brnventopic}</p></div>
+          <div className="col-4"><p id='ourVendorsText'>{NPLventopic}</p></div>
           <div className="col-4"><hr /></div>
         </div>
 
         <div className='row vendorText' data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-          <p>{BrnvenText1}<br />{BrnvenText2}</p>
+          <p>{NPLvenText1}<br />{NPLvenText2}</p>
         </div>
 
         <div className='row' data-aos="fade-up" data-aos-duration="1000" data-aos-delay="50">

@@ -34,21 +34,21 @@ function HeroSection() {
 
   const { t } = useTranslation();
 
-  const { Brngreet1, Brngreet2first, Brngreet2mid, Brngreet2last, Brngreet3, Brncontact, Brnwtvideo } = t('Brnherosect', { returnObjects: true });
+  const { NPLgreet1, NPLgreet2first, NPLgreet2mid, NPLgreet2last, NPLgreet3, NPLcontact, NPLwtvideo } = t('NPLherosect', { returnObjects: true });
 
   return (
     <section id="hero" className="section hero">
       <div className="container">
         <div className="row gy-4">
           <div className="col-lg-8 order-2 order-lg-1 d-flex flex-column justify-content-center cont" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-            <h3 className='settop'>{Brngreet1}</h3>
-            <h1>{Brngreet2first}<span className='Connexcon'>{Brngreet2mid}</span>{Brngreet2last}</h1>
-            <p>{Brngreet3}</p>
+            <h3 className='settop'>{NPLgreet1}</h3>
+            <h1>{NPLgreet2first}<span className='Connexcon'>{NPLgreet2mid}</span>{NPLgreet2last}</h1>
+            <p>{NPLgreet3}</p>
 
             <div className="row gy-4">
               <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
                 <div className="d-flex">
-                  <NavLink to="/Brn/ContactUs" className="btn-get-started">{Brncontact}</NavLink>
+                  <NavLink to="/NPL/ContactUs" className="btn-get-started">{NPLcontact}</NavLink>
                   {/* <a href="#" className="glightbox btn-watch-video d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#videoModal" onClick={handlePlayVideo}>
                     <i className="bi bi-play-circle"></i>
                     <span>{wtvideo}</span>

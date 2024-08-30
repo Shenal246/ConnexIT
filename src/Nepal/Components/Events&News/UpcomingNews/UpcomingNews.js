@@ -2,9 +2,9 @@ import React, { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './UpcomingNews.css';
 import axios from "axios";
-import BrnNavbar from "../../Navbar/Navbar";
-import BrnChat from "../../ChatBot/Chat";
-import BrnFooter from "../../Footer/Footer";
+import NPLNavbar from "../../Navbar/Navbar";
+import NPLChat from "../../ChatBot/Chat";
+import NPLFooter from "../../Footer/Footer";
 import Swal from 'sweetalert2';
 import connections from '../../../../config';
 import { useTranslation } from 'react-i18next';
@@ -233,18 +233,18 @@ const UpcomingNews = () => {
     };
 
     const { t } = useTranslation();
-    const { Brnupevnt1, Brnupevnt2
-    } = t('BrnupEventSec', { returnObjects: true });
+    const { NPLupevnt1, NPLupevnt2
+    } = t('NPLupEventSec', { returnObjects: true });
 
     return (
         <>
-            <BrnNavbar />
-            <BrnChat />
+            <NPLNavbar />
+            <NPLChat />
             <div className="container">
                 <div className='row'>
                     <div className="row text">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='UpcomingNewsText'>{Brnupevnt1} <br /> {Brnupevnt2}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='UpcomingNewsText'>{NPLupevnt1} <br /> {NPLupevnt2}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -427,7 +427,7 @@ const UpcomingNews = () => {
                     </Modal.Body>
                 </Modal>
             </div >
-            <BrnFooter />
+            <NPLFooter />
         </>
     );
 }

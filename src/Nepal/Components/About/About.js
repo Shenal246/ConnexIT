@@ -8,9 +8,9 @@ import Slider from "react-slick";
 import 'animate.css';
 import card1 from '../../../images/map/map trans.png';
 import { useTranslation } from 'react-i18next';
-import BrnNavbar from '../Navbar/Navbar';
-import BrnChat from '../ChatBot/Chat';
-import BrnFooter from '../Footer/Footer';
+import NPLNavbar from '../Navbar/Navbar';
+import NPLChat from '../ChatBot/Chat';
+import NPLFooter from '../Footer/Footer';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
@@ -40,70 +40,70 @@ const About = () => {
 
     const { t } = useTranslation();
 
-    const { BrnourSTopic, BrnourSText, BrnourVTopic, BrnourVText, BrnourMTopic, BrnourMText, BrnsureshName, BrnsureshText, BrnshamalName, BrnshamalText, BrndilshanName, BrndilshanText, BrnrohanName, BrnrohanText, BrnrajivName,
-        BrnrajivText, BrnpatricName, BrnpatricText, BrnerangaName, BrnerangaText, BrnjananiName, BrnjananiText, BrnromeshName, BrnromeshText, BrnKiththiName, BrnKiththiText
-    } = t('Brnourstory', { returnObjects: true });
+    const { NPLourSTopic, NPLourSText, NPLourVTopic, NPLourVText, NPLourMTopic, NPLourMText, NPLsureshName, NPLsureshText, NPLshamalName, NPLshamalText, NPLdilshanName, NPLdilshanText, NPLrohanName, NPLrohanText, NPLrajivName,
+        NPLrajivText, NPLpatricName, NPLpatricText, NPLerangaName, NPLerangaText, NPLjananiName, NPLjananiText, NPLromeshName, NPLromeshText, NPLKiththiName, NPLKiththiText
+    } = t('NPLourstory', { returnObjects: true });
 
 
     const data = [
         {
-            name: BrnsureshName,
+            name: NPLsureshName,
             img: '/quots/Suresh.jpg',
-            quote: BrnsureshText,
+            quote: NPLsureshText,
             post: 'Founder / CEO',
         },
         {
-            name: BrnshamalName,
+            name: NPLshamalName,
             img: '/quots/Shamal.jpg',
-            quote: BrnshamalText,
+            quote: NPLshamalText,
             post: 'CMO',
         },
         {
-            name: BrndilshanName,
+            name: NPLdilshanName,
             img: '/quots/Dilshan_Silva.jpg',
-            quote: BrndilshanText,
+            quote: NPLdilshanText,
             post: 'COO',
         },
         {
-            name: BrnrohanName,
+            name: NPLrohanName,
             img: '/quots/Rohan.jpg',
-            quote: BrnrohanText,
+            quote: NPLrohanText,
             post: 'CTO',
         },
         {
-            name: BrnrajivName,
+            name: NPLrajivName,
             img: '/quots/Rajiv.jpg',
-            quote: BrnrajivText,
+            quote: NPLrajivText,
             post: 'Director',
         },
         {
-            name: BrnpatricName,
+            name: NPLpatricName,
             img: '/quots/Patrick_yogarathnam.jpg',
-            quote: BrnpatricText,
+            quote: NPLpatricText,
             post: 'CIRO',
         },
         {
-            name: BrnerangaName,
+            name: NPLerangaName,
             img: '/quots/Eranga.jpg',
-            quote: BrnerangaText,
+            quote: NPLerangaText,
             post: 'CRO',
         },
         {
-            name: BrnjananiName,
+            name: NPLjananiName,
             img: '/quots/Janani_Siriardhane.jpg',
-            quote: BrnjananiText,
+            quote: NPLjananiText,
             post: 'Director',
         },
         {
-            name: BrnromeshName,
+            name: NPLromeshName,
             img: '/quots/romesh.jpg',
-            quote: BrnromeshText,
+            quote: NPLromeshText,
             post: 'Director',
         },
         {
-            name: BrnKiththiName,
+            name: NPLKiththiName,
             img: '/quots/Kiththi.jpg',
-            quote: BrnKiththiText,
+            quote: NPLKiththiText,
             post: 'Director of Connex Thailand',
         }
 
@@ -122,8 +122,8 @@ const About = () => {
 
     return (
         <>
-            <BrnNavbar />
-            <BrnChat />
+            <NPLNavbar />
+            <NPLChat />
             <section id='t1'>
                 <div class="container classss">
                     <div className='center' data-aos="fade-up" data-aos-delay="200">
@@ -134,8 +134,8 @@ const About = () => {
 
                             <div className='col-md-6 para'>
                                 <div className='story'>
-                                    <h1 className='topic'>{BrnourSTopic}</h1>
-                                    <p><br />{BrnourSText}</p>
+                                    <h1 className='topic'>{NPLourSTopic}</h1>
+                                    <p><br />{NPLourSText}</p>
                                 </div>
                             </div>
                         </div>
@@ -144,15 +144,15 @@ const About = () => {
                         <div className='row'>
                             <div className='col-md-6 content'>
                                 <div className='story bdround bdround1'>
-                                    <h1 className='topic'>{BrnourVTopic}</h1>
-                                    <p><br />{BrnourVText}</p>
+                                    <h1 className='topic'>{NPLourVTopic}</h1>
+                                    <p><br />{NPLourVText}</p>
                                 </div>
                             </div>
 
                             <div className='col-md-6'>
                                 <div className='story bdround bdround2'>
-                                    <h1 className='topic'>{BrnourMTopic}</h1>
-                                    <p><br />{BrnourMText}</p>
+                                    <h1 className='topic'>{NPLourMTopic}</h1>
+                                    <p><br />{NPLourMText}</p>
                                 </div>
                             </div>
                         </div>
@@ -220,7 +220,7 @@ const About = () => {
                     <div className="col-2" ></div>
                 </div>
             </div>
-            <BrnFooter />
+            <NPLFooter />
         </>);
 
 

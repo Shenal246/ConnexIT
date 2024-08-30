@@ -4,9 +4,9 @@ import './Events.css';
 import axios from "axios";
 import connections from '../../../config';
 import { useTranslation } from 'react-i18next';
-import BrnNavbar from '../Navbar/Navbar';
-import BrnChat from '../ChatBot/Chat';
-import BrnFooter from '../Footer/Footer';
+import NPLNavbar from '../Navbar/Navbar';
+import NPLChat from '../ChatBot/Chat';
+import NPLFooter from '../Footer/Footer';
 
 const Events = () => {
     const videoRef = useRef(null);
@@ -56,19 +56,19 @@ const Events = () => {
     }, []);
 
     const { t } = useTranslation();
-    const { Brnevnt1, Brnevnt2, Brnevnt3, Brnevnt4, Brnevnt5
-        } = t('Brneventsec', { returnObjects: true });
+    const { NPLevnt1, NPLevnt2, NPLevnt3, NPLevnt4, NPLevnt5
+        } = t('NPLeventsec', { returnObjects: true });
 
 
     return (
         <>
-        <BrnNavbar/>
-        <BrnChat/>
+        <NPLNavbar/>
+        <NPLChat/>
         <div className="container">
             <div className='row'>
                 <div className="row text">
                     <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                    <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='EventsText'>{Brnevnt1}</p></div>
+                    <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='EventsText'>{NPLevnt1}</p></div>
                     <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                 </div>
             </div>
@@ -77,7 +77,7 @@ const Events = () => {
 
             {/* Other News */}
             <div className='row'>
-                <div className='subTopin'>{Brnevnt5}</div>
+                <div className='subTopin'>{NPLevnt5}</div>
             </div>
 
             <div className="row cards">
@@ -95,7 +95,7 @@ const Events = () => {
                                         />
                                     </>
                                 ) : (
-                                    <p>{Brnevnt3}</p>
+                                    <p>{NPLevnt3}</p>
                                 )}
                                 <div className="centered">
                                     <Link to="#" className="fa-solid fa-play playicon"></Link>
@@ -137,7 +137,7 @@ const Events = () => {
                 </div>
             </div>
         </div>
-        <BrnFooter/>
+        <NPLFooter/>
         </>
     );
 }

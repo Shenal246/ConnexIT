@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
     const { t } = useTranslation();
-  const { BrnfootHeadTopic, BrnheadLine1, BrnheadLine2, BrnheadLine3,BrnheadLine4, BrnfootConTopic, BrnconLine1,
-    BrnconLine2, BrnconLine3, BrnconLine4, BrnconLine5, BrnresTopic, Brnres1, Brnres2, Brnres3
-    } = t('Brnfootersec', { returnObjects: true });
+  const { NPLfootHeadTopic, NPLheadLine1, NPLheadLine2, NPLheadLine3,NPLheadLine4, NPLfootConTopic, NPLconLine1,
+    NPLconLine2, NPLconLine3, NPLconLine4, NPLconLine5, NPLresTopic, NPLres1, NPLres2, NPLres3
+    } = t('NPLfootersec', { returnObjects: true });
 
 
     return (
@@ -16,35 +16,35 @@ const Footer = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-6 col-lg-4  ft-1">
-                            <h3>{BrnfootHeadTopic}</h3>
+                            <h3>{NPLfootHeadTopic}</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img" ></i>
-                            {BrnheadLine1}<br />
-                                <span>{BrnheadLine2}</span><br />
-                                <span> {BrnheadLine3}</span> <br />
-                                <i className="fas fa-phone-volume callIcon1" ></i>{BrnheadLine4}
+                            {NPLheadLine1}<br />
+                                <span>{NPLheadLine2}</span><br />
+                                <span> {NPLheadLine3}</span> <br />
+                                <i className="fas fa-phone-volume callIcon1" ></i>{NPLheadLine4}
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-1 address2">
-                            <h3>{BrnfootConTopic}</h3>
+                            <h3>{NPLfootConTopic}</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img2" ></i>
-                            {BrnconLine1}<br />
-                                <span>{BrnconLine2}</span><br />
-                                <span> {BrnconLine3}</span> <br />
-                                <span>{BrnconLine4}</span><br />
-                                <i className="fas fa-phone-volume callIcon2" ></i>{BrnconLine5}
+                            {NPLconLine1}<br />
+                                <span>{NPLconLine2}</span><br />
+                                <span> {NPLconLine3}</span> <br />
+                                <span>{NPLconLine4}</span><br />
+                                <i className="fas fa-phone-volume callIcon2" ></i>{NPLconLine5}
                             </p>
                         </div>
                         <div className="col-md-6 col-lg-4  ft-2 resources">
-                            <h3>{BrnresTopic}</h3>
+                            <h3>{NPLresTopic}</h3>
                             <ul>
                                 <li className="nav-item">
-                                    <a className="" href="/Events&News">{Brnres1}</a>
+                                    <a className="" href="/Events&News">{NPLres1}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="/FAQs">{Brnres2}</a>
+                                    <a className="" href="/FAQs">{NPLres2}</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="" href="/">{Brnres3}</a>
+                                    <a className="" href="/">{NPLres3}</a>
                                 </li>
 
                             </ul>

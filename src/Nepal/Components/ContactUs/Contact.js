@@ -5,9 +5,9 @@ import './Contact.css';
 import mapbru from '../../../images/map/brunei.png';
 import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2'
-import BrnNavbar from '../Navbar/Navbar';
-import BrnChat from '../Navbar/Navbar';
-import BrnFooter from '../Footer/Footer';
+import NPLNavbar from '../Navbar/Navbar';
+import NPLChat from '../Navbar/Navbar';
+import NPLFooter from '../Footer/Footer';
 import connections from '../../../config';
 
 const Contact = () => {
@@ -60,29 +60,29 @@ const Contact = () => {
 
 
     const { t } = useTranslation();
-    const { Brncont1, Brncont2, Brncont3, Brncont4, Brncont5, Brncont6, Brncont7,
-        Brncont8, Brncont9, Brncont10, Brncont11, Brncont12, Brncont13, Brncont14, Brncont15, Brncont16,
-        Brncont17, Brncont18, Brncont19, Brncont20, Brncont21, Brncont22, Brncont23, Brncont24, Brncont25,
-        Brncont26, Brncont27, Brncont28, Brncont29, Brncont30
-    } = t('Brncontsec', { returnObjects: true });
+    const { NPLcont1, NPLcont2, NPLcont3, NPLcont4, NPLcont5, NPLcont6, NPLcont7,
+        NPLcont8, NPLcont9, NPLcont10, NPLcont11, NPLcont12, NPLcont13, NPLcont14, NPLcont15, NPLcont16,
+        NPLcont17, NPLcont18, NPLcont19, NPLcont20, NPLcont21, NPLcont22, NPLcont23, NPLcont24, NPLcont25,
+        NPLcont26, NPLcont27, NPLcont28, NPLcont29, NPLcont30
+    } = t('NPLcontsec', { returnObjects: true });
 
     return (
         <>
-            {/* <BrnNavbar/> */}
-            <BrnChat />
+            {/* <NPLNavbar/> */}
+            <NPLChat />
 
             <div className="container">
                 <div className='row'>
                     <div className="row gy-3 text mb-4" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                         <div className="col-md-4"><hr /></div>
-                        <div className="col-md-4"><p id='Text'>{Brncont1}</p></div>
+                        <div className="col-md-4"><p id='Text'>{NPLcont1}</p></div>
                         <div className="col-md-4"><hr /></div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md inputField" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-                        <h1 className='h1'>{Brncont2}<br /> {Brncont3}</h1>
-                        <h2 className='h2'>{Brncont4}<br /> {Brncont5} <br />{Brncont6} <br /> {Brncont7}</h2>
+                        <h1 className='h1'>{NPLcont2}<br /> {NPLcont3}</h1>
+                        <h2 className='h2'>{NPLcont4}<br /> {NPLcont5} <br />{NPLcont6} <br /> {NPLcont7}</h2>
                     </div>
                     <div className="col-md inputField" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
                         <form ref={formRef} onSubmit={handleSubmit(onSubmit)}>
@@ -92,21 +92,21 @@ const Contact = () => {
                                         <input
                                             type="text"
                                             className={`form-control ${errors.firstName ? 'is-invalid' : ''}`}
-                                            placeholder={Brncont8}
-                                            aria-label={Brncont8}
+                                            placeholder={NPLcont8}
+                                            aria-label={NPLcont8}
                                             {...register('firstName', { required: true })}
                                         />
-                                        {errors.firstName && <span className="text-danger">{Brncont9}</span>}
+                                        {errors.firstName && <span className="text-danger">{NPLcont9}</span>}
                                     </div>
                                     <div className="col-md">
                                         <input
                                             type="text"
                                             className={`form-control ${errors.lastName ? 'is-invalid' : ''}`}
-                                            placeholder={Brncont10}
-                                            aria-label={Brncont10}
+                                            placeholder={NPLcont10}
+                                            aria-label={NPLcont10}
                                             {...register('lastName', { required: true })}
                                         />
-                                        {errors.lastName && <span className="text-danger">{Brncont11}</span>}
+                                        {errors.lastName && <span className="text-danger">{NPLcont11}</span>}
                                     </div>
                                 </div>
                                 <div className="row mb-2">
@@ -114,26 +114,26 @@ const Contact = () => {
                                         <input
                                             type="text"
                                             className={`form-control ${errors.Company ? 'is-invalid' : ''}`}
-                                            placeholder={Brncont12}
-                                            aria-label={Brncont12}
+                                            placeholder={NPLcont12}
+                                            aria-label={NPLcont12}
                                             {...register('Company', { required: true })}
                                         />
-                                        {errors.Company && <span className="text-danger">{Brncont13}</span>}
+                                        {errors.Company && <span className="text-danger">{NPLcont13}</span>}
                                     </div>
                                     <div className="col-md">
                                         <input
                                             type="text"
                                             className={`form-control ${errors.contactNumber ? 'is-invalid' : ''}`}
-                                            placeholder={Brncont14}
-                                            aria-label={Brncont14}
+                                            placeholder={NPLcont14}
+                                            aria-label={NPLcont14}
                                             {...register('contactNumber', {
                                                 required: true,
                                                 pattern: {
                                                     value: /^[0-9]+$/,
-                                                    message: Brncont15,
+                                                    message: NPLcont15,
                                                 },
                                                 validate: {
-                                                    length: (value) => value.length === 10 || Brncont15,
+                                                    length: (value) => value.length === 10 || NPLcont15,
                                                 },
                                             })}
                                         />
@@ -147,12 +147,12 @@ const Contact = () => {
                                     type="email"
                                     className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                                     id="floatingInput"
-                                    placeholder={Brncont16}
+                                    placeholder={NPLcont16}
                                     {...register('email', {
                                         required: true,
                                         pattern: {
                                             value: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-                                            message: Brncont17,
+                                            message: NPLcont17,
                                         },
                                     })}
                                 />
@@ -162,11 +162,11 @@ const Contact = () => {
                             <div className="col-md">
                                 <textarea
                                     className={`form-control txtarea ${errors.comments ? 'is-invalid' : ''}`}
-                                    placeholder={Brncont30}
+                                    placeholder={NPLcont30}
                                     id="floatingTextarea2"
                                     {...register('comments', { required: true })}
                                 ></textarea>
-                                {errors.comments && <span className="text-danger">{Brncont18}</span>}
+                                {errors.comments && <span className="text-danger">{NPLcont18}</span>}
                             </div>
 
                             <div className="form-check formcheck">
@@ -177,17 +177,17 @@ const Contact = () => {
                                     {...register('acceptTerms', { required: true })}
                                 />
                                 <label className="form-check-label tikBox" htmlFor="flexCheckDefault">
-                                    {Brncont19}
+                                    {NPLcont19}
                                 </label>
-                                {errors.acceptTerms && <span className="text-danger">{Brncont20}</span>}
+                                {errors.acceptTerms && <span className="text-danger">{NPLcont20}</span>}
                             </div>
 
                             <div className="row mt-4 btnContainer">
                                 <div className="col-md-6 mb-2">
-                                    <button type="submit" className="btn btn-success">{Brncont21}</button>
+                                    <button type="submit" className="btn btn-success">{NPLcont21}</button>
                                 </div>
                                 <div className="col-md-6">
-                                    <button type="reset" className="btn btn-danger" onClick={() => reset()}>{Brncont22}</button>
+                                    <button type="reset" className="btn btn-danger" onClick={() => reset()}>{NPLcont22}</button>
                                 </div>
                             </div>
                         </form>
@@ -196,19 +196,19 @@ const Contact = () => {
 
                 <div className="row">
                     <div className="col-md-6 countryData">
-                        <h1 className='countryName address3'>{Brncont23}</h1>
-                        <h3>{Brncont24}</h3>
+                        <h1 className='countryName address3'>{NPLcont23}</h1>
+                        <h3>{NPLcont24}</h3>
                         <p className='txt1'><i className="fas fa-map-marker-alt img3"></i>
-                            {Brncont25}<br />
-                            <span className='address'>{Brncont26}</span><br />
-                            <span className='address'>{Brncont27}</span><br />
-                            <span className='address'>{Brncont28}</span>
+                            {NPLcont25}<br />
+                            <span className='address'>{NPLcont26}</span><br />
+                            <span className='address'>{NPLcont27}</span><br />
+                            <span className='address'>{NPLcont28}</span>
                         </p>
                         <button
                             className="neon-button"
                             onClick={() => window.open('https://www.google.com/maps/search/No.B22,B23+%26+B24,+Block+B+Bangunan+Habza,+Spg+150,+Kg+kiulap+Gadong+B,+Brunei+Muara,+BE1518+Brunei+Darussalam/@4.89983,114.8974833,13.46z?entry=ttu')}
                         >
-                            {Brncont29}
+                            {NPLcont29}
                         </button>
                         <hr className='line'></hr><hr className='line'></hr>
                     </div>
@@ -218,7 +218,7 @@ const Contact = () => {
                 </div>
             </div>
 
-            <BrnFooter />
+            <NPLFooter />
         </>
     );
 }

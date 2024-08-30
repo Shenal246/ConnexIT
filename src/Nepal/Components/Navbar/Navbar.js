@@ -19,6 +19,7 @@ import sl from '../../../images/FlagIcon/sri-lanka.png';
 import tnz from '../../../images/FlagIcon/tanzania.png';
 import tld from '../../../images/FlagIcon/thailand.png';
 import nz from '../../../images/FlagIcon/new-zealand (1).png';
+import npl from '../../../images/FlagIcon/nepal.png';
 
 
 import LanguageSelector from '../language-selector';
@@ -135,7 +136,7 @@ function Navbar() {
               <NavLink to="/Brn/Portal" activeClassName='active-link' exact><li><a className="">{Brntab7}</a></li></NavLink>
 
               <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                <span className='toggle-dropdown'>{Brntab8}&nbsp;<img src={bru} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
+                <span className='toggle-dropdown'>{Brntab8}&nbsp;<img src={npl} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
                 <ul className='container1'>
                   <div class="scrollable-menu flagName">
 

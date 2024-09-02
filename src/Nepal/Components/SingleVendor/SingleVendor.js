@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import './SVendor.css';
-import BrnNavbar from '../Navbar/Navbar';
-import BrnChat from '../ChatBot/Chat';
-import BrnFooter from '../Footer/Footer';
+import NPLNavbar from '../Navbar/Navbar';
+import NPLChat from '../ChatBot/Chat';
+import NPLFooter from '../Footer/Footer';
 import { NavLink } from "react-router-dom";
 import DOMPurify from 'dompurify';
 
@@ -17,8 +17,8 @@ const SingleVendor = () => {
 
     return (
         <>
-            <BrnNavbar />
-            <BrnChat />
+            <NPLNavbar />
+            <NPLChat />
             <section>
                 <div className="container sectionVendor">
                     <div className='row'>
@@ -44,13 +44,13 @@ const SingleVendor = () => {
                         <div className='bton'>
                             <a href={vend.wlink} target='_blank' rel='noopener noreferrer'>
                                 <button className='websiteButton'>More</button>
-                                <NavLink to='/Brn/ContactUs'><button className='websiteButton'> Inquiry</button></NavLink>
+                                <NavLink to='/NPL/ContactUs'><button className='websiteButton'> Inquiry</button></NavLink>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
-            <BrnFooter />
+            <NPLFooter />
         </>
     );
 };

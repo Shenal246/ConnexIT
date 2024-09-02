@@ -1,24 +1,24 @@
 // import React from 'react';
 import './Portal.css';
 import { useTranslation } from 'react-i18next';
-import BrnNavbar from '../Navbar/Navbar';
-import BrnChat from '../ChatBot/Chat';
-import BrnFooter from '../Footer/Footer';
+import NPLNavbar from '../Navbar/Navbar';
+import NPLChat from '../ChatBot/Chat';
+import NPLFooter from '../Footer/Footer';
 
 const Portal = () => {
 
     const { t } = useTranslation();
-    const { Brnptl1, Brnptl2
-        } = t('Brnportalsec', { returnObjects: true });
+    const { NPLptl1, NPLptl2
+        } = t('NPLportalsec', { returnObjects: true });
 
     return (
         <>
-        <BrnNavbar/>
-        <BrnChat/>
+        <NPLNavbar/>
+        <NPLChat/>
             <div className='portal'>
-                <p><span className='one'>{Brnptl1}</span><span className='two'> {Brnptl2}</span> </p>
+                <p><span className='one'>{NPLptl1}</span><span className='two'> {NPLptl2}</span> </p>
             </div>
-        <BrnFooter/>
+        <NPLFooter/>
         </>
     );
 };

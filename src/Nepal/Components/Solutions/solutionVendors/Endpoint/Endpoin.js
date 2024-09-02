@@ -8,9 +8,9 @@ import { Row } from 'react-bootstrap';
 import connections from '../../../../../config';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import BrnNavbar from '../../../Navbar/Navbar';
-import BrnChat from '../../../ChatBot/Chat';
-import BrnFooter from '../../../Footer/Footer';
+import NPLNavbar from '../../../Navbar/Navbar';
+import NPLChat from '../../../ChatBot/Chat';
+import NPLFooter from '../../../Footer/Footer';
 
 function Endpoint() {
     const [vendors, setVendors] = useState([]);
@@ -32,25 +32,25 @@ function Endpoint() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/Brn/Solutions/Endpoin/${vend.name}`, { state: { vend } });
+        navigate(`/NPL/Solutions/Endpoin/${vend.name}`, { state: { vend } });
     };
 
 
     
     const { t } = useTranslation();
-    const { Brnep1, Brnep2
-        } = t('Brnendpsec', { returnObjects: true });
+    const { NPLep1, NPLep2
+        } = t('NPLendpsec', { returnObjects: true });
 
     return (
         <>
-        <BrnNavbar/>
-        <BrnChat/>
+        <NPLNavbar/>
+        <NPLChat/>
         <section>
             <div className="container">
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Brnep1}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{NPLep1}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -70,7 +70,7 @@ function Endpoint() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{Brnep2}</p>
+                                    <p>{NPLep2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>
@@ -109,7 +109,7 @@ function Endpoint() {
                 </Modal>
             </div>
         </section>
-        <BrnFooter />
+        <NPLFooter />
         </>
     );
 }

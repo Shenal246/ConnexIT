@@ -8,9 +8,9 @@ import { Row } from 'react-bootstrap';
 import connections from '../../../../../config';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import BrnNavbar from '../../../Navbar/Navbar';
-import BrnChat from '../../../ChatBot/Chat';
-import BrnFooter from '../../../Footer/Footer';
+import NPLNavbar from '../../../Navbar/Navbar';
+import NPLChat from '../../../ChatBot/Chat';
+import NPLFooter from '../../../Footer/Footer';
 
 
 function Security() {
@@ -33,23 +33,23 @@ function Security() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/Brn/Solutions/Security/${vend.name}`, { state: { vend } });
+        navigate(`/NPL/Solutions/Security/${vend.name}`, { state: { vend } });
     };
 
     const { t } = useTranslation();
-    const { Brnscrty1, Brnscrty2
-        } = t('Brnsecuritysec', { returnObjects: true });
+    const { NPLscrty1, NPLscrty2
+        } = t('NPLsecuritysec', { returnObjects: true });
 
     return (
         <>
-        <BrnNavbar/>
-        <BrnChat/>
+        <NPLNavbar/>
+        <NPLChat/>
         <section>
             <div className="container">
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Brnscrty1}</p></div>
+                        <div className="col-4" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{NPLscrty1}</p></div>
                         <div className="col-4" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ function Security() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{Brnscrty2}</p>
+                                    <p>{NPLscrty2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>
@@ -107,7 +107,7 @@ function Security() {
                 </Modal>
             </div>
         </section>
-        <BrnFooter />
+        <NPLFooter />
         </>
     );
 }

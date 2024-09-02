@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './products.css';
 import card1 from '../../images/news.png';
 import Card from 'react-bootstrap/Card';
-import BrnNavbar from '../Navbar/Navbar';
-import BrnChat from '../ChatBot/Chat';
-import BrnFooter from '../Footer/Footer';
+import NPLNavbar from '../Navbar/Navbar';
+import NPLChat from '../ChatBot/Chat';
+import NPLFooter from '../Footer/Footer';
 
 function Products() {
     const [selectedVendor, setSelectedVendor] = useState('');
@@ -20,8 +20,8 @@ function Products() {
 
     return (
         <>
-        <BrnNavbar/>
-        <BrnChat/>
+        <NPLNavbar/>
+        <NPLChat/>
         
        
         <section>
@@ -75,7 +75,7 @@ function Products() {
 
             </div>
         </section>
-        <BrnFooter/>
+        <NPLFooter/>
     </>
     );
 }

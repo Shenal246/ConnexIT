@@ -8,9 +8,9 @@ import { Row } from 'react-bootstrap';
 import connections from '../../../../../config';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import BrnNavbar from '../../../Navbar/Navbar';
-import BrnChat from '../../../ChatBot/Chat';
-import BrnFooter from '../../../Footer/Footer';
+import NPLNavbar from '../../../Navbar/Navbar';
+import NPLChat from '../../../ChatBot/Chat';
+import NPLFooter from '../../../Footer/Footer';
 
 function InfrastructureMonitoring() {
     const [vendors, setVendors] = useState([]);
@@ -32,23 +32,23 @@ function InfrastructureMonitoring() {
     }, []);
 
     const handleCardClick = (vend) => {
-        navigate(`/Brn/Solutions/InfrastructureMonitoring/${vend.name}`, { state: { vend } });
+        navigate(`/NPL/Solutions/InfrastructureMonitoring/${vend.name}`, { state: { vend } });
     };
 
     const { t } = useTranslation();
-    const { Brnif1, Brnif2
-        } = t('Brnifmsec', { returnObjects: true });
+    const { NPLif1, NPLif2
+        } = t('NPLifmsec', { returnObjects: true });
 
     return (
         <>
-        <BrnNavbar/>
-        <BrnChat/>
+        <NPLNavbar/>
+        <NPLChat/>
         <section>
             <div className="container">
                 <div className='row '>
                     <div className="row text headingrow">
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
-                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{Brnif1}</p></div>
+                        <div className="col-6" data-aos="fade-up" data-aos-delay="100"><p id='topic'>{NPLif1}</p></div>
                         <div className="col-3" data-aos="fade-up" data-aos-delay="100"><hr /></div>
                     </div>
                 </div>
@@ -68,7 +68,7 @@ function InfrastructureMonitoring() {
                                         />
                                     </>
                                 ) : (
-                                    <p>{Brnif2}</p>
+                                    <p>{NPLif2}</p>
                                 )}
                                 <div class="card-body">
                                     <h5 class="card-title vendorTitel">{vend.name}</h5>
@@ -107,7 +107,7 @@ function InfrastructureMonitoring() {
                 </Modal>
             </div>
         </section>
-        <BrnFooter />
+        <NPLFooter />
         </>
     );
 }

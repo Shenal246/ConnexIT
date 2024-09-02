@@ -97,8 +97,8 @@ function Navbar() {
   }, []); // empty dependency array ensures that this effect runs only once on component mount
 
   const { t } = useTranslation();
-  const { Brntab1, Brntab2, Brntab3, Brntab4, Brntab5, Brntab6, Brntab7, Brntab8, Brntab9
-  } = t('Brnnavsec', { returnObjects: true });
+  const { NPLtab1, NPLtab2, NPLtab3, NPLtab4, NPLtab5, NPLtab6, NPLtab7, NPLtab8, NPLtab9
+  } = t('NPLnavsec', { returnObjects: true });
 
 
   return (
@@ -106,37 +106,37 @@ function Navbar() {
       <header id="header" className="header d-flex align-items-center sticky-top">
         <div className="container-fluid container-xl position-relative d-flex align-items-center">
           <a href="index.html" className="logo d-flex align-items-center me-auto">
-            <NavLink to="/Brn" activeClassName='active-link' exact><img src={Logo} alt="Logo" /></NavLink>
+            <NavLink to="/NPL" activeClassName='active-link' exact><img src={Logo} alt="Logo" /></NavLink>
           </a>
           <nav id="navmenu" className="navmenu">
             <ul class="no-bullets">
-              <NavLink to="/Brn/About" activeClassName='active-link' exact><li><a className="">{Brntab1}</a></li></NavLink>
+              <NavLink to="/NPL/About" activeClassName='active-link' exact><li><a className="">{NPLtab1}</a></li></NavLink>
               {/* <NavLink to="/Products" activeClassName='active-link' exact><li><a className="">Products</a></li></NavLink> */}
-              <NavLink to="/Brn/Solutions" activeClassName='active-link' exact><li><a className="">{Brntab2}</a></li></NavLink>
+              <NavLink to="/NPL/Solutions" activeClassName='active-link' exact><li><a className="">{NPLtab2}</a></li></NavLink>
 
 
               <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                <span className='toggle-dropdown'>{Brntab3}&nbsp; </span> <i className="bi bi-chevron-down toggle-dropdown arrow1 " ></i></a>
+                <span className='toggle-dropdown'>{NPLtab3}&nbsp; </span> <i className="bi bi-chevron-down toggle-dropdown arrow1 " ></i></a>
                 <ul className=''>
                   <div >
-                    <NavLink to="/Brn/Events&News" activeClassName='active-link' exact>
-                      <a>{Brntab4}</a>
+                    <NavLink to="/NPL/Events&News" activeClassName='active-link' exact>
+                      <a>{NPLtab4}</a>
                     </NavLink>
-                    <NavLink to="/Brn/UpcomingNews" activeClassName='active-link' exact>
-                      <a>{Brntab5}</a>
+                    <NavLink to="/NPL/UpcomingNews" activeClassName='active-link' exact>
+                      <a>{NPLtab5}</a>
                     </NavLink>
-                    {/* <NavLink to="/Brn/Blog" activeClassName='active-link' exact>
-                        <a>{Brntab6}</a>
+                    {/* <NavLink to="/NPL/Blog" activeClassName='active-link' exact>
+                        <a>{NPLtab6}</a>
                       </NavLink> */}
 
                   </div>
                 </ul>
               </li>
 
-              <NavLink to="/Brn/Portal" activeClassName='active-link' exact><li><a className="">{Brntab7}</a></li></NavLink>
+              <NavLink to="/NPL/Portal" activeClassName='active-link' exact><li><a className="">{NPLtab7}</a></li></NavLink>
 
               <li className="dropdown countries"><a href="#" className='toggle-dropdown'>
-                <span className='toggle-dropdown'>{Brntab8}&nbsp;<img src={npl} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
+                <span className='toggle-dropdown'>{NPLtab8}&nbsp;<img src={npl} alt=" Flag" className='flag flagNavbar' /> </span> <i className="bi bi-chevron-down toggle-dropdown arrow " ></i></a>
                 <ul className='container1'>
                   <div class="scrollable-menu flagName">
 
@@ -162,7 +162,7 @@ function Navbar() {
             <i className="mobile-nav-toggle d-xl-none bi bi-list"></i>
           </nav>
 
-          <NavLink to="/Brn/ContactUs" activeClassName='active-link' className="btn-getstarted" >{Brntab9}</NavLink>
+          <NavLink to="/NPL/ContactUs" activeClassName='active-link' className="btn-getstarted" >{NPLtab9}</NavLink>
           <LanguageSelector />
 
         </div>

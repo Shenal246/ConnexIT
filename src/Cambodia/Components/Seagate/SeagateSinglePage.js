@@ -83,7 +83,7 @@ function SeagateSinglePage() {
                 </div>
                 <Card.Body className='cardBodyStyle'>
                   <Card.Title className='cardtitile'>One Touch Hub</Card.Title>
-                  <Card.Text className='cardtext'>Up to 20 TB</Card.Text>
+                  {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
                   <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
@@ -93,7 +93,7 @@ function SeagateSinglePage() {
                 </div>
                 <Card.Body className='cardBodyStyle'>
                   <Card.Title className='cardtitile'>BarraCuda 3.5”</Card.Title>
-                  <Card.Text className='cardtext'>Hard Drive 8 TB</Card.Text>
+                  {/* <Card.Text className='cardtext'>Hard Drive 8 TB</Card.Text> */}
                   <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
@@ -103,7 +103,7 @@ function SeagateSinglePage() {
                 </div>
                 <Card.Body className='cardBodyStyle'>
                   <Card.Title className='cardtitile'>SkyHawk</Card.Title>
-                  <Card.Text className='cardtext'>Up to 8 TB</Card.Text>
+                  {/* <Card.Text className='cardtext'>Up to 8 TB</Card.Text> */}
                   <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
@@ -113,7 +113,7 @@ function SeagateSinglePage() {
                 </div>
                 <Card.Body className='cardBodyStyle'>
                   <Card.Title className='cardtitile'>Firecuda Okoye</Card.Title>
-                  <Card.Text className='cardtext'>Up to 20 TB</Card.Text>
+                  {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
                   <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>

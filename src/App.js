@@ -119,25 +119,25 @@ import BrnServer from "./Brunai/Components/Solutions/solutionVendors/ServerBacku
 import BrnSingleVendor from "./Brunai/Components/SingleVendor/SingleVendor";
 
 // NZ 
-import NZHome from "./NewZealand/Home/Home";
-import NZAbout from "./NewZealand/About/About";
-import NZEvents from "./NewZealand/Events&News/Events";
-import NZUpcomingEvents from "./NewZealand/Events&News/UpcomingNews/UpcomingNews";
-import NZBlog from "./NewZealand/Blog/Blog";
-import NZContactUs from "./NewZealand/ContactUs/Contact";
-import NZSolutions from "./NewZealand/Solutions/Solutions";
-import NZPortal from "./NewZealand/Portal/Portal";
-import NZCyberSecurity from "./NewZealand/Solutions/solutionVendors/CyberSecurity/CyberSecurity";
-import NZAuthentication from "./NewZealand/Solutions/solutionVendors/Authentication/Authentication";
-import NZSecurityManagement from "./NewZealand/Solutions/solutionVendors/Security/Security";
-import NZPerimia from "./NewZealand/Solutions/solutionVendors/Perimia/Perimia";
-import NZEndpointSecurity from "./NewZealand/Solutions/solutionVendors/Endpoint/Endpoin";
-import NZNetworking from "./NewZealand/Solutions/solutionVendors/Networking/Networking";
-import NZInfrastructure from "./NewZealand/Solutions/solutionVendors/Infrastructure/InfrastructureMonitoring";
-import NZServer from "./NewZealand/Solutions/solutionVendors/ServerBackup/ServerBackup";
-import NZMicrosoft from "./NewZealand/Solutions/solutionVendors/Microsoft/Microsoft";
-import NZFAQs from "./NewZealand/FAQs/FAQs";
-import NZSingleVendor from "./NewZealand/SingleVendor/SingleVendor";
+// import NZHome from "./NewZealand/Home/Home";
+// import NZAbout from "./NewZealand/About/About";
+// import NZEvents from "./NewZealand/Events&News/Events";
+// import NZUpcomingEvents from "./NewZealand/Events&News/UpcomingNews/UpcomingNews";
+// import NZBlog from "./NewZealand/Blog/Blog";
+// import NZContactUs from "./NewZealand/ContactUs/Contact";
+// import NZSolutions from "./NewZealand/Solutions/Solutions";
+// import NZPortal from "./NewZealand/Portal/Portal";
+// import NZCyberSecurity from "./NewZealand/Solutions/solutionVendors/CyberSecurity/CyberSecurity";
+// import NZAuthentication from "./NewZealand/Solutions/solutionVendors/Authentication/Authentication";
+// import NZSecurityManagement from "./NewZealand/Solutions/solutionVendors/Security/Security";
+// import NZPerimia from "./NewZealand/Solutions/solutionVendors/Perimia/Perimia";
+// import NZEndpointSecurity from "./NewZealand/Solutions/solutionVendors/Endpoint/Endpoin";
+// import NZNetworking from "./NewZealand/Solutions/solutionVendors/Networking/Networking";
+// import NZInfrastructure from "./NewZealand/Solutions/solutionVendors/Infrastructure/InfrastructureMonitoring";
+// import NZServer from "./NewZealand/Solutions/solutionVendors/ServerBackup/ServerBackup";
+// import NZMicrosoft from "./NewZealand/Solutions/solutionVendors/Microsoft/Microsoft";
+// import NZFAQs from "./NewZealand/FAQs/FAQs";
+// import NZSingleVendor from "./NewZealand/SingleVendor/SingleVendor";
 
 
 function App() {
@@ -323,7 +323,7 @@ function App() {
 
                     {/*New Zealand*/}
 
-                    <Route path="/NZ" exact element={<NZHome />} />
+                    {/* <Route path="/NZ" exact element={<NZHome />} />
                     <Route path="/NZ/About" exact element={<NZAbout />} />
                     <Route path="/NZ/Events&News" exact element={<NZEvents />} />
                     <Route path="/NZ/UpcomingNews" exact element={<NZUpcomingEvents />} />
@@ -349,7 +349,7 @@ function App() {
                     <Route path="/NZ/Solutions/Networking/:vendorName" element={<NZSingleVendor />} />
                     <Route path="/NZ/Solutions/Perimia/:vendorName" element={<NZSingleVendor />} />
                     <Route path="/NZ/Solutions/Security/:vendorName" element={<NZSingleVendor />} />
-                    <Route path="/NZ/Solutions/ServerBackup/:vendorName" element={<NZSingleVendor />} />
+                    <Route path="/NZ/Solutions/ServerBackup/:vendorName" element={<NZSingleVendor />} /> */}
 
                 </Routes>
 

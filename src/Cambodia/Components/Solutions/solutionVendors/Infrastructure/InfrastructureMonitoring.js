@@ -11,39 +11,30 @@ import { useTranslation } from 'react-i18next';
 import CamNavbar from '../../../Navbar/Navbar';
 import CamChat from '../../../ChatBot/Chat';
 import CamFooter from '../../../Footer/Footer';
-import seagate from '../../../../../images/CamVendors/11.png';
+import seagate from '../../../../../images/CamVendors/seagate_CMYK_stacked_pos.png';
 
-function InfrastructureMonitoring() {
+function Server() {
     const [vendors, setVendors] = useState([]);
     const [show, setShow] = useState(false);
     const [currentVendor, setCurrentVendor] = useState(null);
     const navigate = useNavigate();
     const serverlink = connections.pillor7;
 
-    // Define the first vendor object for the image using the imported seagate image
-    const firstVendor = {
-        id: 'custom-image',
-        name: 'Seagate ',
-        image_data: null,
-        image_url: seagate,
-        title: 'Seagate Custom Image',
-        des: 'This is a description for the Seagate vendor.',
-        wlink: 'https://www.seagate.com'
-    };
-
     useEffect(() => {
         axios.get(serverlink, { headers: { cnt: 3 } }).then((response) => {
             const vendorList = response.data;
-            setVendors([firstVendor, ...vendorList]);
+            setVendors(vendorList);  // Removed Seagate from vendor list
         }).catch((err) => {
             console.log(err);
         });
     }, []);
 
     const handleCardClick = (vend) => {
-        if (vend.id === 'custom-image') {
-            navigate('/KH/Seagate');
+        if (vend === 'custom-image') {
+            // Navigate to a different route when the first card is clicked
+            navigate('/KH/Seagate');  // Replace with the actual route of your new component
         } else {
+            // Navigate to the dynamic route for other vendor cards
             navigate(`/KH/Solutions/InfrastructureMonitoring/${vend.name}`, { state: { vend } });
         }
     };
@@ -66,16 +57,22 @@ function InfrastructureMonitoring() {
                     </div>
                     <div className="row row-cols-2 row-cols-lg-5 g-2 g-lg-3 rowmargin">
 
+                        {/* Hardcoded Image Card */}
+                        <div className="col">
+                            <div className="card h-100" onClick={() => handleCardClick('custom-image')}>
+                                <img
+                                    src={seagate} 
+                                    alt="Custom Image"
+                                    className="card-img-top custom-image-height"
+                                />
+                            </div>
+                        </div>
+
+                        {/* Render remaining vendor cards dynamically */}
                         {vendors.map((vend, index) => (
                             <div className="col" key={index}>
-                                <div className="card h-100" onClick={() => { handleCardClick(vend); }}>
-                                    {vend.id === 'custom-image' ? (
-                                        <img
-                                            src={vend.image_url}
-                                            alt={vend.title}
-                                            className="card-img-top"
-                                        />
-                                    ) : vend.image_data ? (
+                                <div className="card h-100" onClick={() => handleCardClick(vend)}>
+                                    {vend.image_data ? (
                                         <img
                                             src={`data:image/jpeg;base64,${vend.image_data}`}
                                             alt={vend.title}
@@ -121,4 +118,4 @@ function InfrastructureMonitoring() {
     );
 }
 
-export default InfrastructureMonitoring;
+export default Server;

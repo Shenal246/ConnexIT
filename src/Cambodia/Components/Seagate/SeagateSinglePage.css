@@ -114,3 +114,29 @@
     height: auto;
     border-radius: 20px;
 }
+
+/* Base style for large screens */
+.imgseagate {
+    width: 20%; /* Default width for large screens */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991.98px) {
+    .imgseagate {
+        width: 40%; /* Adjust width for medium devices */
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
+    .imgseagate {
+        width: 60%; /* Adjust width for small devices */
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .imgseagate {
+        width: 80%; /* Adjust width for extra small devices */
+    }
+}

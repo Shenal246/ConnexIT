@@ -18,3 +18,8 @@
 .btnBody{
     text-align: center;
 }
+
+.custom-image-height {
+    width: 230px !important;  /* Adjust the height value as needed */
+     
+}

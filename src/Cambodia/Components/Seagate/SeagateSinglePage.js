@@ -10,6 +10,7 @@ import image4 from '../../../images/images/4.png';
 import CamNavbar from '../Navbar/Navbar';
 import CamChat from '../ChatBot/Chat';
 import CamFooter from '../Footer/Footer';
+import seagate from '../../../../src/images/CamVendors/seagate_CMYK_stacked_pos.png'
 
 import seagatevideo from '../../../images/images/seagate_vid2.gif';
 // import videobg from '../../../images/video bg img.jpg';
@@ -46,12 +47,13 @@ function SeagateSinglePage() {
     <CamNavbar/>
     <div className='main-section'>
       {/* Header Section */}
-      <div className="text-center py-4">
-        <h1 className='mainheading'>Seagate</h1>
+      <div className="text-center mt-2">
+        {/* <h1 className='mainheading'>Seagate</h1> */}
+        <img src={seagate} className='imgseagate'/>
       </div>
 
       {/* Discover Section */}
-      <Container className="text-center mt-5">
+      <Container className="text-center mt-2">
         <h2 className='secondheading'>Discover Seagate Products</h2>
         <p className='para'>
           At Seagate, we understand that data is the backbone of your digital world. From personal use to enterprise
@@ -84,7 +86,7 @@ function SeagateSinglePage() {
                 <Card.Body className='cardBodyStyle'>
                   <Card.Title className='cardtitile'>One Touch Hub</Card.Title>
                   {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
-                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                  <Button variant="outline-light" className='btnStyle' href="https://branding.seagate.com/folder/7dbeed6a-e1f8-48db-90e1-b6734f710a56" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
               <Card className="text-center text-white cardStyle">
@@ -94,7 +96,7 @@ function SeagateSinglePage() {
                 <Card.Body className='cardBodyStyle'>
                   <Card.Title className='cardtitile'>BarraCuda 3.5”</Card.Title>
                   {/* <Card.Text className='cardtext'>Hard Drive 8 TB</Card.Text> */}
-                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                  <Button variant="outline-light" className='btnStyle' href="https://branding.seagate.com/folder/08e80ced-e492-42e9-95fa-aa1a20cffa65" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
               <Card className="text-center text-white cardStyle">
@@ -104,7 +106,7 @@ function SeagateSinglePage() {
                 <Card.Body className='cardBodyStyle'>
                   <Card.Title className='cardtitile'>SkyHawk</Card.Title>
                   {/* <Card.Text className='cardtext'>Up to 8 TB</Card.Text> */}
-                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                  <Button variant="outline-light" className='btnStyle' href="https://branding.seagate.com/search/SkyHawk" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
               <Card className="text-center text-white cardStyle">
@@ -114,7 +116,7 @@ function SeagateSinglePage() {
                 <Card.Body className='cardBodyStyle'>
                   <Card.Title className='cardtitile'>Firecuda Okoye</Card.Title>
                   {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
-                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                  <Button variant="outline-light" className='btnStyle' href="https://branding.seagate.com/search/Firecuda%20Okoye" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
             </Carousel>

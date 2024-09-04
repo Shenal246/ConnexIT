@@ -10,11 +10,11 @@ const Footer = () => {
                         <div className="col-md-6 col-lg-4  ft-1">
                             <h3>Head Office</h3>
                             <p className='txt'> <i className="fas fa-map-marker-alt img" ></i>
-                                Level 35,<br />
-                                <span>The Gateway West 150 Beach Road,</span><br />
-                                <span> Singapore 189720 .</span> <br />
+                            60, Paya Lebar Road,<br />
+                                <span>#06-39, Paya Lebar Square,</span><br />
+                                <span>Singapore 409051.</span> <br />
                                 <i className="fas fa-phone-volume callIcon1" ></i>Contact: +6567278910
-                            </p>
+                            </p>  
                         </div>
                         <div className="col-md-6 col-lg-4  ft-1 address2">
                             <h3>Australian Office</h3>

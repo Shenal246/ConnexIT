@@ -7,6 +7,9 @@ import image1 from '../../../images/images/1.png';
 import image2 from '../../../images/images/2.png';
 import image3 from '../../../images/images/3.png';
 import image4 from '../../../images/images/4.png';
+import image5 from '../../../images/images/5.png';
+import image6 from '../../../images/images/6.png';
+import image7 from '../../../images/images/7.png';
 import CamNavbar from '../Navbar/Navbar';
 import CamChat from '../ChatBot/Chat';
 import CamFooter from '../Footer/Footer';
@@ -84,41 +87,82 @@ function SeagateSinglePage() {
                   <Card.Img variant="top" src={image1} className='cardimg'/>
                 </div>
                 <Card.Body className='cardBodyStyle'>
-                  <Card.Title className='cardtitile'>One Touch Hub</Card.Title>
+                  <Card.Title className='cardtitile'>One Touch  2TB</Card.Title>
                   {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
-                  <Button variant="outline-light" className='btnStyle' href="https://branding.seagate.com/folder/7dbeed6a-e1f8-48db-90e1-b6734f710a56" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/external-hard-drives/one-touch-external-drives/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
+
+
               <Card className="text-center text-white cardStyle">
                 <div className='imageContainerStyle'>
                   <Card.Img variant="top" src={image2} className='cardimg'/>
                 </div>
                 <Card.Body className='cardBodyStyle'>
-                  <Card.Title className='cardtitile'>BarraCuda 3.5”</Card.Title>
+                  <Card.Title className='cardtitile'>One Touch  4TB</Card.Title>
                   {/* <Card.Text className='cardtext'>Hard Drive 8 TB</Card.Text> */}
-                  <Button variant="outline-light" className='btnStyle' href="https://branding.seagate.com/folder/08e80ced-e492-42e9-95fa-aa1a20cffa65" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/external-hard-drives/one-touch-external-drives/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
+
+
               <Card className="text-center text-white cardStyle">
                 <div className='imageContainerStyle'>
                   <Card.Img variant="top" src={image3} className='cardimg'/>
                 </div>
                 <Card.Body className='cardBodyStyle'>
-                  <Card.Title className='cardtitile'>SkyHawk</Card.Title>
+                  <Card.Title className='cardtitile'>ONE TOUCH HUB</Card.Title>
                   {/* <Card.Text className='cardtext'>Up to 8 TB</Card.Text> */}
-                  <Button variant="outline-light" className='btnStyle' href="https://branding.seagate.com/search/SkyHawk" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/external-hard-drives/one-touch-hub/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
+
+
               <Card className="text-center text-white cardStyle">
                 <div className='imageContainerStyle'>
                   <Card.Img variant="top" src={image4} className='cardimg'/>
                 </div>
                 <Card.Body className='cardBodyStyle'>
-                  <Card.Title className='cardtitile'>Firecuda Okoye</Card.Title>
+                  <Card.Title className='cardtitile'>GAME 2TB</Card.Title>
                   {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
-                  <Button variant="outline-light" className='btnStyle' href="https://branding.seagate.com/search/Firecuda%20Okoye" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/gaming-drives/pc-gaming/firecuda-gaming-external-hard-drives/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
+
+              <Card className="text-center text-white cardStyle">
+                <div className='imageContainerStyle'>
+                  <Card.Img variant="top" src={image5} className='cardimg'/>
+                </div>
+                <Card.Body className='cardBodyStyle'>
+                  <Card.Title className='cardtitile'>GAME 5TB</Card.Title>
+                  {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
+                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/gaming-drives/pc-gaming/firecuda-gaming-external-hard-drives/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                </Card.Body>
+              </Card>
+
+              <Card className="text-center text-white cardStyle">
+                <div className='imageContainerStyle'>
+                  <Card.Img variant="top" src={image6} className='cardimg'/>
+                </div>
+                <Card.Body className='cardBodyStyle'>
+                  <Card.Title className='cardtitile'>ONE TOUCH SSD 1TB</Card.Title>
+                  {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
+                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/external-hard-drives/one-touch-ssd/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                </Card.Body>
+              </Card>
+
+              <Card className="text-center text-white cardStyle">
+                <div className='imageContainerStyle'>
+                  <Card.Img variant="top" src={image7} className='cardimg'/>
+                </div>
+                <Card.Body className='cardBodyStyle'>
+                  <Card.Title className='cardtitile'>ONE TOUCH SSD 2TB</Card.Title>
+                  {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
+                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/external-hard-drives/one-touch-ssd/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                </Card.Body>
+              </Card>
+
+
             </Carousel>
           </Col>
         </Row>

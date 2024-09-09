@@ -1,18 +1,101 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+    margin-top: 20px !important ;
+}
 
-.portal{
-    /* background-color: rgb(255, 255, 255); */
-    padding: 7%;
-    margin-top: 6%;
-    margin-bottom: 6%;
-    font:bold;
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.content-box {
+    background-color: #f4f4f923;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-size: 60px;
+    max-width: 600px;
+    width: 100%;
 }
 
-.one{
-color: rgb(103, 173, 211);
+
+.content-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(10, 124, 212); /* Matches .one */
 }
 
-.two{
-color: green;
+.content-box p {
+    font-size: 1.2rem;
+    color: white; /* Matches .contentOne */
+    margin-bottom: 30px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+/* Styling for button container */
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the buttons */
+    margin-top: 20px;
+}
+
+/* General styling for buttons with reduced size */
+.cta-button {
+    padding: 10px 25px; /* Reduced padding for smaller buttons */
+    background-color: black; /* Black background */
+    color: #00FFFF; /* Neon cyan text */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    font-size: 0.9rem; /* Reduced font size */
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 0 3px rgba(0, 255, 255, 0.6), 0 0 3px rgba(0, 255, 255, 0.6); /* Glowing effect */
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    width: 150px; /* Reduced button width */
+}
+
+/* Hover effect to enhance the glow */
+.cta-button:hover {
+    box-shadow: 0 0 3px rgba(0, 255, 255, 1), 0 0 3px rgba(0, 255, 255, 1);
+    transform: scale(1.05); /* Slight scale up effect */
+}
+
+/* Optional individual button styles */
+.join-button {
+    background-color: black;
+}
+
+.sign-in-button {
+    background-color: black;
+}
+
+/* Button container */
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between the two buttons */
+    margin-top: 20px;
+}
+
+.explore-button{
+    background-color: black;
+    width: 200px;
+}
+
+.contentTwo{
+    text-align: left ;
+    margin-left: 130px !important;
+}
+
+.contentThree{
+    text-align: justify;
 }

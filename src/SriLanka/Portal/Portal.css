@@ -169,7 +169,23 @@
         height: auto;
         margin-top: 20px;
     }
+
+    
+    
 }
+
+@media (min-width: 370px) and (max-width: 751px) {
+    .Portalcontainer2{
+        margin-bottom:150px !important;
+    }
+
+    .contentTwo{
+        margin-top: -90px !important;
+    }
+
+    
+}
+
 
 /* Tablet Devices (min-width: 601px and max-width: 900px) */
 @media (min-width: 601px) and (max-width: 900px) {
@@ -204,6 +220,18 @@
     .right-image {
         width: 100%;
         height: auto;
+    }
+
+     .Portalcontainer2{
+        margin-bottom:150px !important;
+    }
+
+    .contentTwo{
+        margin-top: -200px !important;
+    }
+
+    .cardFour{
+        margin-bottom: 5px;
     }
 }
 
@@ -241,6 +269,14 @@
         width: 100%;
         height: auto;
     }
+
+    
+}
+
+@media (min-width: 1022px) and (max-width: 1435px){
+    .Portalcontainer2{
+        margin-bottom:100px !important;
+    }
 }
 
 /* 3rd Section - Get Started */
@@ -253,9 +289,12 @@
     color: #ffffff;
 }
 
+
+
 .get-started-portal h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 20px; 
+    color: #0078d4;
     
 }
 
@@ -273,7 +312,7 @@
     gap: 20px;
 }
 
-.step-box.card {
+.step-box.cardFour {
     background-color:rgba(255, 255, 255, 0.093);
     color: #0078d4;
     border-radius: 10px;
@@ -287,7 +326,7 @@
     /* justify-content: space-between; */
 }
 
-.step-box.card:hover {
+.step-box.cardFour:hover {
 
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
 }
@@ -381,4 +420,144 @@
     margin-top: 15px !important;
     text-align: center; /* Center-align the button */
 }
+
+/* section 4 */
+
+.sectionFour {
+    align-items: center;
+    margin-top: 50px;
+    background-color: #f9f9f925;
+    min-height: 50vh;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.sectionFour h2 {
+    color: white;
+    text-align: center !important;
+    padding: 20px;
+}
+
+/* Card Styling */
+.cardFour {
+    background-color: #ffffff58;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+   
+}
+
+.cardFour:hover {
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Scrollable Card */
+.scrollable-cardFour {
+    max-height: 210px; /* Limit the height of the cardFour */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    background-color: #121c438d !important;
+ 
+}
+
+.content-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.content-list li:last-child {
+    border-bottom: none;
+}
+
+/* Custom scrollbar styling */
+.scrollable-cardFour::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scrollable-cardFour::-webkit-scrollbar-thumb {
+    background-color: #0078d4;
+    border-radius: 10px;
+}
+
+.scrollable-cardFour::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+/* Non-scrollable cardFour styling */
+.non-scrollable-cardFour {
+    height: 210px !important; /* Fixed height for the cardFour */
+    background-color: #121c438d !important;
+    display: flex; /* Use flexbox to align content */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Add some padding for inner content */
+    text-align: left; /* Align text to left for better readability */
+    border-radius: 10px; /* Rounded corners for consistency */
+    overflow: hidden; /* Prevent overflow of content */
+}
+
+/* List styling */
+.icon-list {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 0;
+}
+
+.icon-list li {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem; /* Font size for the list items */
+    padding: 1px 0;
+    color: white; /* White text for list items */
+}
+
+.icon-list li .icon {
+    margin-right: 1px; /* Space between the icon and the text */
+    font-size: 0.8rem; /* Adjust icon size */
+    color: #ffffff; /* Icon color */
+}
+
+/* Ensure both cardFours look consistent */
+.scrollable-cardFour, .non-scrollable-cardFour {
+    background-color: #121c438d !important;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.scrollable-cardFour ul, .non-scrollable-cardFour ul {
+    margin: 0;
+    padding-left: 0; /* Remove left padding */
+}
+
+.scrollable-cardFour ul li, .non-scrollable-cardFour ul li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+/* Text inside non-scrollable cardFour */
+.non-scrollable-cardFour p {
+    color: white !important;
+    font-size: 1.2rem;
+    padding: 10px 20px; /* Add some padding for inner content */
+}
+
+/* Large font size for "Hello Connex" */
+.large-font11 {
+    font-size: 2.9rem !important; /* Increase font size for "Hello Connex" */
+    text-align: center; /* Center the text */
+    color: #ffffff; /* Optional: white color */
+}
+
+
 

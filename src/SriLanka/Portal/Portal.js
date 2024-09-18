@@ -66,7 +66,7 @@ const Portal = () => {
                                 everything you need to succeed — from powerful resources to personalized support.
                             </p>
                             <div className="Portal-button-row">
-                                <button className="cta-button explore-button">Explore Now</button>
+                                <a href='https://partneradminportal.connexit.biz/' className="cta-button explore-button"  target='blank'>Explore Now</a>
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@ const Portal = () => {
                     </div>
                     <div className='row'>
                         <div className="getStarted-button-row">
-                            <button className="get-started-button">Get Started</button>
+                            <a href='https://partneradminportal.connexit.biz/' className="get-started-button"  target='blank'>Get Started</a>
                         </div>
                     </div>
                 </div>

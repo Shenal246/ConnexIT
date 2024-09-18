@@ -90,3 +90,31 @@
 .mcroimg{
     width: 400px !important;
 }
+
+/* Custom styles for the Copilot modal */
+
+.copilot-modal .modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.copilot-modal .modal-body {
+    background: linear-gradient(135deg, #f0e4f7 0%, #c8e4fb 100%); /* Updated gradient */
+    padding: 0;
+}
+
+.copilot-modal .modal-footer {
+    border-top: none;
+    padding-top: 0;
+}
+
+.copilot-modal .btn-primary {
+    background-color: #0078d4; /* Microsoft's primary blue color */
+    border-color: #0078d4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+.copilot-modal .modal-title {
+    font-weight: bold;
+    color: #333;
+}

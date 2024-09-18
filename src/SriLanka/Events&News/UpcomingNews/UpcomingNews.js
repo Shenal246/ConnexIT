@@ -7,7 +7,7 @@ import SLChat from "../../ChatBot/Chat";
 import SLFooter from "../../Footer/Footer";
 import Swal from 'sweetalert2';
 import connections from '../../../config';
-import microsoft from '../../../images/techImages/microsoft-2.jpg'
+import microsoft from '../../../images/techImages/microsoft-3.jpg'
 
 import { Modal, Button } from 'react-bootstrap'; // Import other Bootstrap components
 
@@ -21,19 +21,21 @@ const UpcomingNews = () => {
     const slseatupdate = connections.upcomingsSeatUpdate;
     const slupseatcount = connections.upcomingsseat;
 
-    useEffect(() => {
+    // State to control the Copilot summary modal
+    const [showCopilotModal, setShowCopilotModal] = useState(false);
 
-        axios.get(slupevserverlink,{
-            headers: { 
-                cnt: 1 
-            }}).then((response) => {
+    useEffect(() => {
+        axios.get(slupevserverlink, {
+            headers: {
+                cnt: 1
+            }
+        }).then((response) => {
             setSLUpEv(response.data);
         }).catch((err) => {
             console.log(err);
         });
 
         console.log(sLUpEv);;
-
     }, []);
 
     const [lgShow, setLgShow] = useState(false);
@@ -46,7 +48,6 @@ const UpcomingNews = () => {
         contact: '',
         province: '',
         city: ''
-
     });
     const [errors, setErrors] = useState({});
 
@@ -77,8 +78,6 @@ const UpcomingNews = () => {
         return errors;
     };
 
-
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const validationErrors = validate();
@@ -95,51 +94,36 @@ const UpcomingNews = () => {
                     contactno: formData.contact,
                     province: formData.province,
                     city: formData.city,
-                    cnt:'1'
+                    cnt: '1'
                 };
-                
-               
-                
+
                 const seatCount = {
                     id: currentUpcoming && currentUpcoming.id,
                 };
 
-                const responseSeat = await axios.get(slupseatcount,  {
-                    headers: { 
+                const responseSeat = await axios.get(slupseatcount, {
+                    headers: {
                         cnt: currentUpcoming && currentUpcoming.id,
                     }
                 });
-                // console.log("Seats COunt-----------", responseSeat.data[0].seats);
 
                 var intresponseSeat = parseInt(responseSeat.data[0].seats);
 
-                 
-
                 if (!isNaN(intresponseSeat)) {
                     if (intresponseSeat > 0) {
-                        // alert("Seat count is ok");
-                        // Submit the Form
-                        intresponseSeat=intresponseSeat-1;
-                        // console.log(value33);
-                        // console.log(intresponseSeat);
+                        intresponseSeat = intresponseSeat - 1;
+
                         const response123 = await axios.post(serverlink1234, value33);
-                        // const response123 = null;
                         console.log(response123);
                         if (response123.status === 200) {
-                            // if (true) {
-
-                         
-                            const data={
-                                seat:intresponseSeat
+                            const data = {
+                                seat: intresponseSeat
                             }
-                            const id= currentUpcoming && currentUpcoming.id;
+                            const id = currentUpcoming && currentUpcoming.id;
                             const response123456 = await axios.put(`${slseatupdate}/${id}`, data);
-                            // const response123456 = null;
-                            // console.log("Sending data",seatCount1234);
 
                             if (response123456.status === 200) {
                                 Swal.fire({
-                                    // position: "top-end",
                                     icon: "success",
                                     title: "Successfully Submitted",
                                     showConfirmButton: false,
@@ -161,14 +145,11 @@ const UpcomingNews = () => {
                             } else {
                                 alert(' Error reducing the seat count');
                             }
-
-
                         } else {
                             alert('Failed to submit the form.');
                         }
                     } else {
                         Swal.fire({
-                            // position: "top-end",
                             icon: "error",
                             title: "No Seats are currently available",
                             showConfirmButton: false,
@@ -188,14 +169,10 @@ const UpcomingNews = () => {
                         setcurrentUpcoming(null);
                     }
                 } else {
-                    // If it is online seat count is unlimited. So run this code
-                    console.log("Seat Count is not a number section", value33);
                     const response123 = await axios.post(serverlink1234, value33);
-                    // const response123 = null;
                     console.log(response123);
                     if (response123.status === 200) {
                         Swal.fire({
-                            // position: "top-end",
                             icon: "success",
                             title: "Successfully Submitted",
                             showConfirmButton: false,
@@ -217,17 +194,10 @@ const UpcomingNews = () => {
                         alert('Failed to submit the form.');
                     }
                 }
-
-                if (responseSeat) {
-
-                }
-
-
             } catch (error) {
                 console.error('Error submitting the form', error);
                 alert('An error occurred while submitting the form.');
             }
-            // setLgShow(false);
         }
     };
 
@@ -244,40 +214,112 @@ const UpcomingNews = () => {
                     </div>
                 </div>
 
-                {/* microsoft even card */}
-                {/* <div className='row microsoftcard'>
+                {/* microsoft event card */}
+                <div className='row microsoftcard'>
                     <div className="card mb-3 cards2">
                         <div className="row g-0">
                             <div className="col-md-4">
-                                <img src={microsoft} className="img-fluid  blogimg mcroimg" alt="Microsoft Event" />
+                                <img src={microsoft} className="img-fluid blogimg mcroimg" alt="Microsoft Event" />
                             </div>
                             <div className="col-md-8">
                                 <div className="card-body">
                                     <div className='row'>
-                                        <h3 className="card-title ">Microsoft Event</h3>
+                                        <h3 className="card-title"><div className="d-flex align-items-center">
+                                            {/* Add Microsoft Logo */}
+                                            <img
+                                                src="https://img.icons8.com/color/48/000000/microsoft.png"
+                                                alt="Microsoft Logo"
+                                                style={{ marginRight: '10px' }}
+                                            />
+                                            <Modal.Title id="copilot-modal-title">Microsoft 365 Copilot</Modal.Title>
+                                        </div></h3>
                                     </div>
                                     <br />
                                     <div className='row buttnRow'>
-                                        <div className='col-md-5 '>
-                                            
+                                        <div className='col-md-5'>
+                                            <h4>Meet Microsoft Copilot</h4>
                                             <h5>Mode : Physical</h5>
-                                            
                                         </div>
                                         <div className='col-md-7'>
-                                            <button className="btn btn-info read-more" onClick={() => { setLgShow(true); setcurrentUpcoming({ title: 'Microsoft Event', date: '2024-08-15', time: '10:00 AM', mode: 'Online', seats: 'Unlimited', description: 'Join us for an exclusive Microsoft event where we will unveil the latest innovations and updates.' }); }}>Register</button>
+                                            <button className="btn btn-info read-more" onClick={() => setShowCopilotModal(true)}>
+                                                Register
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> */}
-                {/*end of the microsoft even card */}
+                </div>
+                {/*end of the microsoft event card */}
+
+                {/* Copilot Summary Modal */}
+                <Modal
+                    show={showCopilotModal}
+                    onHide={() => setShowCopilotModal(false)}
+                    size="lg"
+                    aria-labelledby="copilot-modal-title"
+                    className="copilot-modal"
+                >
+                    <Modal.Header closeButton style={{ borderBottom: 'none' }}>
+                        <div className="d-flex align-items-center">
+                            {/* Add Microsoft Logo */}
+                            <img
+                                src="https://img.icons8.com/color/48/000000/microsoft.png"
+                                alt="Microsoft Logo"
+                                style={{ marginRight: '10px' }}
+                            />
+                            <Modal.Title id="copilot-modal-title">Microsoft 365 Copilot</Modal.Title>
+                        </div>
+                    </Modal.Header>
+                    <Modal.Body style={{
+                        background: 'linear-gradient(135deg, #f0e4f7 0%, #c8e4fb 100%)', // Updated pastel gradient
+                        color: '#333', // Text color
+                        borderRadius: '12px',
+                        padding: '30px',
+                        boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)', // Softer shadow for a modern look
+                    }}>
+                        <div style={{
+                            backgroundColor: 'rgba(255, 255, 255, 0.8)', // Semi-transparent white for frosted glass effect
+                            padding: '20px',
+                            borderRadius: '8px',
+                            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+                            backdropFilter: 'blur(8px)' // Blur effect for frosted glass
+                        }}>
+                            <h4 style={{ color: '#0078d4' }}>Your Copilot for work</h4>
+                            <p>Copilot streamlines meeting management and boosts productivity:</p>
+                            <ul>
+                                <li><strong>Preparation:</strong> Generates agendas, prioritizes topics.</li>
+                                <li><strong>Scheduling:</strong> Finds optimal times, sends reminders.</li>
+                                <li><strong>During Meetings:</strong> Takes notes, assists with Q&A.</li>
+                                <li><strong>Post-Meeting:</strong> Distributes summaries, analyzes feedback.</li>
+                                <li><strong>Event Planning:</strong> Manages tasks, tracks logistics.</li>
+                            </ul>
+                            <p>This process ensures well-organized workflows for the COE.</p>
+                        </div>
+                    </Modal.Body>
+                    <Modal.Footer style={{ borderTop: 'none', justifyContent: 'center', marginTop: '10px' }}>
+                        <Button
+                            variant="primary"
+                            onClick={() => {
+                                // Redirect to Outlook
+                                window.open('https://outlook.live.com/', '_blank');
+                            }}
+                            style={{ backgroundColor: '#0078d4', borderColor: '#0078d4', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }} // Updated to match Microsoft's primary color
+
+                        >
+                            Register
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+
+
+
 
                 <div className='row '>
                     {sLUpEv && sLUpEv.map((slup, ind) => (
-                        <div className="row" >
-                            <div className="card mb-3 cards2" key={ind}>
+                        <div className="row" key={ind}>
+                            <div className="card mb-3 cards2">
                                 <div className="row g-0">
                                     <div className="col-md-4">
                                         <img src={`data:image/jpeg;base64,${slup.image_data}`} className="img-fluid rounded-start blogimg" alt="..." />
@@ -285,7 +327,7 @@ const UpcomingNews = () => {
                                     <div className="col-md-8">
                                         <div className="card-body">
                                             <div className='row'>
-                                                <h3 className="card-title " >{slup.title}</h3>
+                                                <h3 className="card-title">{slup.title}</h3>
                                             </div>
                                             <br />
                                             <div className='row buttnRow'>
@@ -304,10 +346,10 @@ const UpcomingNews = () => {
                                 </div>
                             </div>
                         </div>
-
                     ))}
                 </div>
 
+                {/* Existing Registration Modal */}
                 <Modal
                     size="xl"
                     show={lgShow}
@@ -321,7 +363,7 @@ const UpcomingNews = () => {
                             Event Register
                         </Modal.Title>
                     </Modal.Header>
-                    <Modal.Body> 
+                    <Modal.Body>
                         <div className="container">
                             <div className="row">
                                 <div className="col-md-6" style={{ backgroundColor: '#f8f9fa', borderRight: '1px solid #dee2e6' }}>
@@ -343,7 +385,7 @@ const UpcomingNews = () => {
                                                     value={formData.title}
                                                     onChange={handleChange}
                                                 >
-                                                    <option value="" disabled selected>Select Title</option>
+                                                    <option value="" disabled>Select Title</option>
                                                     <option value="Mr.">Mr.</option>
                                                     <option value="Mrs.">Mrs.</option>
                                                     <option value="Miss">Miss</option>
@@ -379,7 +421,6 @@ const UpcomingNews = () => {
                                             {errors.contact && <div className="invalid-feedback">{errors.contact}</div>}
                                         </div>
 
-
                                         <div className='row locationSelect'>
                                             <div className="form-group col-md-5">
                                                 <label htmlFor="province">Province</label>
@@ -389,7 +430,7 @@ const UpcomingNews = () => {
                                                     value={formData.province}
                                                     onChange={handleChange}
                                                 >
-                                                    <option value="" disabled selected>Select Province</option>
+                                                    <option value="" disabled>Select Province</option>
                                                     <option value="Western">Western </option>
                                                     <option value="Southern">Southern</option>
                                                     <option value="Central">Central</option>
@@ -397,7 +438,7 @@ const UpcomingNews = () => {
                                                     <option value="North Central">North Central</option>
                                                     <option value="Northern">Northern</option>
                                                     <option value="North Western">North Western</option>
-                                                    <option value="Sabaragamuwa">Sabaragamuwa	</option>
+                                                    <option value="Sabaragamuwa">Sabaragamuwa</option>
                                                     <option value="Uva">Uva</option>
                                                 </select>
                                                 {errors.province && <div className="invalid-feedback">{errors.province}</div>}
@@ -410,8 +451,6 @@ const UpcomingNews = () => {
                                             </div>
                                         </div>
 
-
-
                                         <Button className="form-group" variant="primary" type="submit">
                                             Submit
                                         </Button>
@@ -421,7 +460,7 @@ const UpcomingNews = () => {
                         </div>
                     </Modal.Body>
                 </Modal>
-            </div >
+            </div>
             <SLFooter />
         </>
     );

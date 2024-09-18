@@ -215,7 +215,7 @@ const UpcomingNews = () => {
                 </div>
 
                 {/* microsoft event card */}
-                <div className='row microsoftcard'>
+                {/* <div className='row microsoftcard'>
                     <div className="card mb-3 cards2">
                         <div className="row g-0">
                             <div className="col-md-4">
@@ -225,7 +225,7 @@ const UpcomingNews = () => {
                                 <div className="card-body">
                                     <div className='row'>
                                         <h3 className="card-title"><div className="d-flex align-items-center">
-                                            {/* Add Microsoft Logo */}
+                                            
                                             <img
                                                 src="https://img.icons8.com/color/48/000000/microsoft.png"
                                                 alt="Microsoft Logo"
@@ -250,7 +250,7 @@ const UpcomingNews = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 {/*end of the microsoft event card */}
 
                 {/* Copilot Summary Modal */}

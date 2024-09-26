@@ -7,9 +7,11 @@ import image1 from '../../../images/images/1.png';
 import image2 from '../../../images/images/2.png';
 import image3 from '../../../images/images/3.png';
 import image4 from '../../../images/images/4.png';
-import image5 from '../../../images/images/5.png';
+import image5 from '../../../images/images/barracuda.png';
 import image6 from '../../../images/images/6.png';
-import image7 from '../../../images/images/7.png';
+import image7 from '../../../images/images/ironwolf.png';
+import image8 from '../../../images/images/skyhawk.png';
+
 import CamNavbar from '../Navbar/Navbar';
 import CamChat from '../ChatBot/Chat';
 import CamFooter from '../Footer/Footer';
@@ -87,7 +89,7 @@ function SeagateSinglePage() {
                   <Card.Img variant="top" src={image1} className='cardimg'/>
                 </div>
                 <Card.Body className='cardBodyStyle'>
-                  <Card.Title className='cardtitile'>One Touch Hard Drive</Card.Title>
+                  <Card.Title className='cardtitile'>One Touch External Hard Drive</Card.Title>
                   {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
                   <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/external-hard-drives/one-touch-external-drives/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
@@ -104,7 +106,7 @@ function SeagateSinglePage() {
                 <Card.Body className='cardBodyStyle'>
                   <Card.Title className='cardtitile'>ONE TOUCH HUB</Card.Title>
                   {/* <Card.Text className='cardtext'>Up to 8 TB</Card.Text> */}
-                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/external-hard-drives/one-touch-hub/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                  <Button variant="outline-light" className='btnStyle1' href="https://www.seagate.com/in/en/products/external-hard-drives/one-touch-hub/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
 
@@ -114,7 +116,7 @@ function SeagateSinglePage() {
                   <Card.Img variant="top" src={image4} className='cardimg'/>
                 </div>
                 <Card.Body className='cardBodyStyle'>
-                  <Card.Title className='cardtitile'>FireCuda Gaming </Card.Title>
+                  <Card.Title className='cardtitile'>FireCuda Gaming External Hard Drive</Card.Title>
                   {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
                   <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/gaming-drives/pc-gaming/firecuda-gaming-external-hard-drives/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
@@ -129,7 +131,45 @@ function SeagateSinglePage() {
                 <Card.Body className='cardBodyStyle'>
                   <Card.Title className='cardtitile'>ONE TOUCH SSD </Card.Title>
                   {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
-                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/external-hard-drives/one-touch-ssd/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                  <Button variant="outline-light" className='btnStyle1' href="https://www.seagate.com/in/en/products/external-hard-drives/one-touch-ssd/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                </Card.Body>
+              </Card>
+
+
+
+              <Card className="text-center text-white cardStyle">
+                <div className='imageContainerStyle'>
+                  <Card.Img variant="top" src={image7} className='cardimg'/>
+                </div>
+                <Card.Body className='cardBodyStyle'>
+                  <Card.Title className='cardtitile'>IronWolf NAS Hard Drives</Card.Title>
+                  {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
+                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/nas-drives/ironwolf-hard-drive/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                </Card.Body>
+              </Card>
+
+              
+              <Card className="text-center text-white cardStyle">
+                <div className='imageContainerStyle'>
+                  <Card.Img variant="top" src={image5} className='cardimg'/>
+                </div>
+                <Card.Body className='cardBodyStyle'>
+                  <Card.Title className='cardtitile'>BarraCuda Hard Drive</Card.Title>
+                  {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
+                  <Button variant="outline-light" className='btnStyle1' href="https://www.seagate.com/in/en/products/hard-drives/barracuda-hard-drive/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
+                </Card.Body>
+              </Card>
+
+              
+              
+              <Card className="text-center text-white cardStyle">
+                <div className='imageContainerStyle'>
+                  <Card.Img variant="top" src={image8} className='cardimg'/>
+                </div>
+                <Card.Body className='cardBodyStyle'>
+                  <Card.Title className='cardtitile'>SkyHawk Video Hard Drives</Card.Title>
+                  {/* <Card.Text className='cardtext'>Up to 20 TB</Card.Text> */}
+                  <Button variant="outline-light" className='btnStyle' href="https://www.seagate.com/in/en/products/video-analytics/skyhawk-hard-drive/" target="_blank" rel="noopener noreferrer">LEARN MORE</Button>
                 </Card.Body>
               </Card>
 

@@ -44,6 +44,7 @@
     transition: background-color 0.3s ease;
     /* background-color: hsla(0, 0%, 100%, .205) !important; */
     background-color: #acbdbd4d !important;
+    height: 430px !important;
 }
 
 .cardStyle:hover {
@@ -78,7 +79,7 @@
     font-size: 20px;
     font-weight: 600;
     margin-bottom: 20px;
-    margin-top: 20px !important;
+    margin-top: 17px !important;
     line-height: 22px;
 }
 
@@ -101,6 +102,16 @@
     border: 1px solid #000 !important;
     color: #fff !important;
     font-weight: 700 !important;
+}
+
+.btnStyle1 {
+    border-radius: 30px !important;
+    padding: 5px 25px !important;
+    background-color: #000 !important;
+    border: 1px solid #000 !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    margin-top: 22px;
 }
 
 .video-container {

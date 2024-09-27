@@ -349,12 +349,14 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Thaicont22: "Clear",
                     Thaicont23: "Thailand",
                     Thaicont24: "Thailand Office",
-                    Thaicont25: "184/75, 17th Floor",
-                    Thaicont26: "Forum Tower, Ratchadapkisek Rd,",
-                    Thaicont27: "Khwaeng Huai Khwang, Hui Khwang,",
+                    Thaicont25: "184/79",
+                    Thaicont26: "Forum Tower Buiding, 17th Floor,",
+                    Thaicont27: "Ratchadaphisek Road, Huai Khwang,",
                     Thaicont28: "Bangkok 10310, Thailand",
                     Thaicont29: "Get Directions",
                     Thaicont30: "Leave A Comment"
+
+
                 },
 
                 Thaieventsec: {
@@ -1173,10 +1175,10 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Thaicont22: "ล้าง",
                     Thaicont23: "ประเทศไทย",
                     Thaicont24: "สำนักงานประเทศไทย",
-                    Thaicont25: "184/75 ชั้น 17",
-                    Thaicont26: "อาคารฟอรั่ม ถนนรัชดาภิเษก",
-                    Thaicont27: "แขวงห้วยขวาง เขตห้วยขวาง",
-                    Thaicont28: "กรุงเทพฯ 10310 ประเทศไทย",
+                    Thaicont25: "184/79",
+                    Thaicont26: "อาคารฟอรัม ชั้น 17",
+                    Thaicont27: "ถนนรัชดาภิเษก, ห้วยขวาง,",
+                    Thaicont28: "กรุงเทพฯ 10310, ประเทศไทย",
                     Thaicont29: "ขอเส้นทาง",
                     Thaicont30: "ฝากความคิดเห็นไว้ที่นี่"
                 },

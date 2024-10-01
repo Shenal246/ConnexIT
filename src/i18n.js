@@ -627,6 +627,220 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 // End of MU part
 
 
+                // NPL Part
+
+
+                NPLherosect: {
+                    NPLgreet1: "Leading Technology Distributor",
+                    NPLgreet2first: "Welcome to ",
+                    NPLgreet2mid1: "Con",
+                    NPLgreet2mid2: "nex ",
+                    NPLgreet2last: "Information Technologies",
+                    NPLgreet3: "Value added distributor for more than 30 leading global vendors.",
+                    NPLcontact: "Contact Us",
+                    NPLwtvideo: "Watch Video",
+                },
+                NPLwhowearesec: {
+                    NPLwhotopic: "Who we are",
+                    NPLcard1: "Distribution",
+                    NPLcard1Text: "Discover our tailor-made solutions, designed to meet end-users requirements with the most competitive, best-fitted answers for their unique needs.",
+                    NPLcard2: "Consultancy",
+                    NPLcard2Text: "Consultancy service is a unique solution offered by Connex, ensuring the most suitable and competitive solution for an end-user’s requirements. We offer an integrated customized service of consultancy skills that grows and changes with business and customer needs.Connex consultancy provides highly qualified personnel to complement the skills of your own team. Our consultants and engineers act on your behalf to ensure the smooth running of customers’ installation, in a timely manner and according to budget implications.",
+                    NPLcard3: "Training",
+                    NPLcard3Text: " We believe in the popular adage we are all lifelong learners, hence we strive to create a culture of learning where our employees are afforded numerous opportunities to further their professional development. We also groom our employees for future leadership positions from within the Company.In a fast moving and developing digital world, the Technology industry experiences changes rapidly; therefore we realize the need to keep pace with attrition rates and staying on the edge of the most advanced technologies. Our extensive training and professional development of programmers have contributed to employee retention.",
+                    NPLcard4: "TAC Support",
+                    NPLcard4Text: "Connex offers 24/7 TAC services, with an array of certified, technical and qualified professionals. We are proud of Service Level Agreement levels of Bronze, Silver, Gold and Platinum.You will get to engage with your Product Manager who will share his understanding of the product, so you are fully informed and equipped with knowledge and the technical know how to use the product. Product research updates will also be shared along with information about deal registration. Connex professional service and technical support service are available for our channel partners only. Please contact.",
+                    NPLrText1: "A decade of expertise in cutting-edge technology distribution ",
+                    NPLrText2: "A leading technology distributor thrives on adapting to the ever-changing world. If you require diverse solutions to achieve compliance and transform your business, your search ends here. ",
+                    NPLic1: "Found",
+                    NPLic2: "Employees",
+                    NPLic3: "Vendors",
+                    NPLic4: "Partners",
+                    NPLcontact: "Contact Us",
+                },
+                NPLvendorsec: {
+                    NPLventopic: "Our Vendors",
+                    NPLvenText1: "Embark on technological Excellence with our Trusted ",
+                    NPLvenText2: "Network of Vendors.",
+
+                },
+                NPLlatestsec: {
+                    NPLlattopic: "Latest News",
+                },
+                // About us section
+                NPLourstory: {
+                    NPLourSTopic: "Our Story",
+                    NPLourSText: "Founded with a passion for technology and excellence, CONNEX INFORMATION TECHNOLOGY has become a leader in IT product distribution. We started with a vision to revolutionize the industry through innovative solutions and unparalleled support. Our success is built on strong relationships with our clients and partners, enabling us to adapt and meet dynamic market needs. As we grow, we remain committed to innovation, integrity, and partnership, driving mutual growth and setting new benchmarks in the industry.",
+                    NPLourVTopic: "Our Vision",
+                    NPLourVText: "To be the leading global distributor of IT products by fostering strong partnerships, delivering effective marketing, and providing proficient support for mutual growth.",
+                    NPLourMTopic: "Our Mission",
+                    NPLourMText: "Our mission is to globally provide top-tier products and solutions with passion, continuous improvement, and proactive support, ensuring business success and satisfaction for our partners and their customers.",
+                    NPLsureshName: "Suresh Wijesinghe",
+                    NPLsureshText: `"Leadership is not just about making decisions; it\s about inspiring others to achieve greatness."`,
+                    NPLshamalName: "Shamal Aberathne",
+                    NPLshamalText: `"In a world of noise, our brand\'s voice must be authentic, engaging, and memorable."`,
+                    NPLdilshanName: "Dilshan De Silva",
+                    NPLdilshanText: `"Operational excellence is the foundation of our success, driving efficiency and innovation."`,
+                    NPLrohanName: "Rohan Samaraweera",
+                    NPLrohanText: `"Technology transforms vision into reality, powering our journey into the future."`,
+                    NPLrajivName: "Rajiv Senawirathne",
+                    NPLrajivText: `"Customer trust and satisfaction are the cornerstones of our company\'s reputation."`,
+                    NPLpatricName: "Patrick Yogaratnam",
+                    NPLpatricText: `"Connecting with our global customers requires understanding diverse needs and delivering exceptional service."`,
+                    NPLerangaName: "Eranga Wickramasinghe",
+                    NPLerangaText: `"Building strong relationships with our customers is the cornerstone of our success and growth."`,
+                    NPLjananiName: "Janani Siriwardhane",
+                    NPLjananiText: `"Empowering employees and fostering a positive culture are the keys to organizational success."`,
+                    NPLromeshName: "Romesh De Silva",
+                    NPLromeshText: `"Success in sales is not about pushing products, but about understanding and solving customer needs."`,
+                    NPLKiththiName: "Kiththi Perera",
+                    NPLKiththiText: `"Transforming potential into performance with innovative technology,"`,
+                },
+                NPLlatestsec: {
+                    NPLlattopic: "Latest News",
+                },
+                // Sollutions section
+                NPLsolutionssec: {
+                    NPLmaintopic: "Solutions",
+                    NPLperiTopic: "Perimeter and  Internal Security",
+                    NPLcyberTopic: "Cyber Security Governance & Compliance",
+                    NPLauthTopic: "Authentication & Identity Management",
+                    NPLsecTopic: "Security Management",
+                    NPLendTopic: "Endpoint Security",
+                    NPLnetTopic: "Networking",
+                    NPLdataTopic: "Data Center Infrastructure and  Monitoring",
+                    NPLserverTopic: "Server Storage & Backup Solutions",
+                    NPLMicrosoft: "Microsoft"
+                },
+                // Footer section
+                NPLfootersec: {
+                    NPLfootHeadTopic: "Head Office",
+                    NPLiheadLine1: "60, Paya Lebar Road,",
+                    NPLheadLine2: " #06-39, Paya Lebar Square, ",
+                    NPLheadLine3: "Singapore 409051 .",
+                    NPLheadLine4: "Contact: +6567278910",
+                    NPLfootConTopic: "Mauritius Office",
+                    NPLconLine1: "Office C-03, ",
+                    NPLconLine2: "Ebene Junction, ",
+                    NPLconLine3: "Ebene, Quatre Bornes,",
+                    NPLconLine4: "Mauritius",
+                    NPLconLine5: "Contact: +23 05 942 8354",
+                    NPLresTopic: "Resources",
+                    NPLres1: "Event & News",
+                    NPLres2: "FAQs",
+                    NPLres3: "Careers",
+                },
+                // Chat
+                NPLchatsec: {
+                    NPLques1: "Hi! I am here to help you. Can I know your name? ",
+                    NPLques2: `Hi {previousValue}, How Can I help you?`,
+                    NPLques3: "Sure. Can I have your phone number?",
+                    NPLques4: "Thank you! One of our staff will call you shortly.",
+                },
+                // Navbar Section
+                NPLnavsec: {
+                    NPLtab1: "About Us",
+                    NPLtab2: "Solutions",
+                    NPLtab3: "Events",
+                    NPLtab4: "Events & News",
+                    NPLtab5: "Upcoming News",
+                    NPLtab6: "Blogs",
+                    NPLtab7: "Portal",
+                    NPLtab8: "Country",
+                    NPLtab9: "Contact Us",
+                },
+
+                // contactus page
+                NPLcontsec: {
+                    NPLcont1: "Contact Us",
+                    NPLcont2: "Reach out to us ",
+                    NPLcont3: "to let us know how we can assist you.",
+                    NPLcont4: "We are happy to provide",
+                    NPLcont5: "customer support or",
+                    NPLcont6: "answer any general inquiries",
+                    NPLcont7: " you may have.",
+                    NPLcont8: "First name",
+                    NPLcont9: "First name is required",
+                    NPLcont10: "Last name",
+                    NPLcont11: "Last name is required",
+                    NPLcont12: "Company",
+                    NPLcont13: "Company is required",
+                    NPLcont14: "Contact Number",
+                    NPLcont15: "Contact number must be exactly 10 digits",
+                    NPLcont16: "name@example.com",
+                    NPLcont17: "Invalid email address",
+                    NPLcont18: "Comments are required",
+                    NPLcont19: "I accept the privacy & policy",
+                    NPLcont20: "You must accept the privacy & policy",
+                    NPLcont21: "Submit",
+                    NPLcont22: "Clear",
+                    NPLcont23: "Mauritius",
+                    NPLcont24: "Mauritius Office",
+                    NPLcont25: "Office C-03,",
+                    NPLcont26: "Ebene Junction,",
+                    NPLcont27: "Ebene, Quatre Bornes, ",
+                    NPLcont28: "Mauritius",
+                    NPLcont29: "Get Directions",
+                    NPLcont30: "Leave a comment"
+                },
+
+                NPLeventsec: {
+                    NPLevnt1: "Events & News",
+                    NPLevnt2: "Latest Events and News",
+                    NPLevnt3: "No Image Available",
+                    NPLevnt4: "Close",
+                    NPLevnt5: "Events & News",
+                    NPLevnt6: "Blogs",
+                },
+                NPLupEventSec: {
+                    NPLupevnt1: "Upcoming",
+                    NPLupevnt2: "Events & News",
+                    NPLupevnt3: "No Image Available",
+                    NPLupevnt4: "Close",
+                },
+                NPLportalsec: {
+                    NPLptl1: "To be launch",
+                    NPLptl2: "Soon"
+                },
+                NPLblogsec: {
+                    NPLblg1: "Blogs"
+                },
+                NPLauthentisec: {
+                    NPLat1: "Authentication & Identity Management",
+                    NPLat2: "No Image Available",
+                },
+                NPLcybersec: {
+                    NPLcy1: "Cyber Security Governance & Compliance",
+                    NPLcy2: "No Image Available"
+                },
+                NPLendpsec: {
+                    NPLep1: "Endpoint Security",
+                    NPLep2: "No Image Available"
+                },
+                NPLnewtworksec: {
+                    NPLnt1: "Networking",
+                    NPLnt2: "No Image Available"
+                },
+                NPLifmsec: {
+                    NPLif1: "Data Center Infrastructure and Infrastructure Monitoring",
+                    NPLif2: "No Image Available"
+                },
+                NPLperisec: {
+                    NPLpr1: "Perimeter And Internal Security",
+                    NPLpr2: "No Image Available"
+                },
+                NPLsecuritysec: {
+                    NPLscrty1: "Security Management",
+                    NPLscrty2: "No Image Available"
+                },
+                NPLserversec: {
+                    NPLsvr1: "Server Storage & Backup Solutions",
+                    NPLsvr2: "No Image Available"
+                },
+
+                // End of NPL part
+
+
                 //Brunei
 
                 Brnherosect: {
@@ -722,7 +936,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     BrnconLine3: "Kg Kiulap,Gadong B, Brunei Muara, BE1518,   ",
                     BrnconLine4: " Brunei Darussalam.",
                     BrnconLine5: "Contact: +673 223 3575",
-                    BrnresTopic: "Resources",   
+                    BrnresTopic: "Resources",
                     Brnres1: "Event & News",
                     Brnres2: "FAQs",
                     Brnres3: "Careers",
@@ -1387,7 +1601,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Muricont23: "Maurice",
                     Muricont24: "Bureau de Maurice",
                     Muricont25: "Bureau C-03,",
-                    Muricont26: "Ebene Junction,",   
+                    Muricont26: "Ebene Junction,",
                     Muricont27: "Ebene, Quatre Bornes,",
                     Muricont28: "Maurice.",
                     Muricont29: "Obtenir des directions",
@@ -1541,7 +1755,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     BrnconLine1: "Connex Information Technologies Sdn Bhd",
                     BrnconLine2: "Tidak. B22, B23 & B24, Blok B, Bangunan Habza, Spg 150,",
                     BrnconLine3: "Kg Kiulap, Gadong B, Brunei Muara, BE1518,",
-                    BrnconLine4: "Brunei Darussalam."  ,                
+                    BrnconLine4: "Brunei Darussalam.",
                     BrnconLine5: "Hubungi: +673 223 3575",
                     BrnresTopic: "Sumber",
                     Brnres1: "Acara & Berita",

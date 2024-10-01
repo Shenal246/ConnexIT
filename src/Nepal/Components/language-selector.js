@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'; 
 import './language-selector.css';
 
 const languages = [
     { code: 'en', lang: 'English', flag: '🌍' },
-    { code: 'frMalay', lang: 'Malay', flag: '🌍' },
+    { code: 'frNepali', lang: 'Nepali', flag: '🌍' },
 ];
 
 const LanguageSelector = () => {

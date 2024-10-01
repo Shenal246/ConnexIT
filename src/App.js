@@ -118,7 +118,25 @@ import BrnInfrastructure from "./Brunai/Components/Solutions/solutionVendors/Inf
 import BrnServer from "./Brunai/Components/Solutions/solutionVendors/ServerBackup/ServerBackup";
 import BrnSingleVendor from "./Brunai/Components/SingleVendor/SingleVendor";
 
-// NZ 
+import NPLHome from "./Nepal/Components/Home/Home";
+import NPLAbout from "./Nepal/Components/About/About";
+import NPLEvents from "./Nepal/Components/Events&News/Events";
+import NPLUpcomingEvents from "./Nepal/Components/Events&News/UpcomingNews/UpcomingNews";
+import NPLBlog from "./Nepal/Components/Blog/Blog";
+import NPLContactUs from "./Nepal/Components/ContactUs/Contact";
+import NPLSolutions from "./Nepal/Components/Solutions/Solutions";
+import NPLPortal from "./Nepal/Components/Portal/Portal";
+import NPLCyberSecurity from "./Nepal/Components/Solutions/solutionVendors/CyberSecurity/CyberSecurity";
+import NPLAuthentication from "./Nepal/Components/Solutions/solutionVendors/Authentication/Authentication";
+import NPLSecurityManagement from "./Nepal/Components/Solutions/solutionVendors/Security/Security";
+import NPLInternetSecurity from "./Nepal/Components/Solutions/solutionVendors/Perimia/Perimia";
+import NPLEndpointSecurity from "./Nepal/Components/Solutions/solutionVendors/Endpoint/Endpoin";
+import NPLNetworking from "./Nepal/Components/Solutions/solutionVendors/Networking/Networking";
+import NPLInfrastructure from "./Nepal/Components/Solutions/solutionVendors/Infrastructure/InfrastructureMonitoring";
+import NPLServer from "./Nepal/Components/Solutions/solutionVendors/ServerBackup/ServerBackup";
+import NPLSingleVendor from "./Nepal/Components/SingleVendor/SingleVendor";
+
+// NZ NPL
 // import NZHome from "./NewZealand/Home/Home";
 // import NZAbout from "./NewZealand/About/About";
 // import NZEvents from "./NewZealand/Events&News/Events";
@@ -319,6 +337,33 @@ function App() {
                     <Route path="/Brn/Solutions/Perimia/:vendorName" element={<BrnSingleVendor />} />
                     <Route path="/Brn/Solutions/Security/:vendorName" element={<BrnSingleVendor />} />
                     <Route path="/Brn/Solutions/ServerBackup/:vendorName" element={<BrnSingleVendor />} />
+
+                    {/* Nepal*/}
+                    <Route path="/NPL" exact Component={NPLHome}></Route>
+                    <Route path="/NPL/About" exact Component={NPLAbout}></Route>
+                    <Route path="/NPL/Events&News" exact element={<NPLEvents />}></Route>
+                    <Route path="/NPL/UpcomingNews" exact element={<NPLUpcomingEvents />}></Route>
+                    <Route path="/NPL/Blog" exact element={<NPLBlog />}></Route>
+                    <Route path="/NPL/ContactUs" exact Component={NPLContactUs}></Route>
+                    <Route path="/NPL/Solutions" exact Component={NPLSolutions}></Route>
+                    <Route path="/NPL/Portal" exact Component={NPLPortal}></Route>
+
+                    <Route path="/NPL/Solutions/CyberSecurity" element={<NPLCyberSecurity />} />
+                    <Route path="/NPL/Solutions/Authentication" element={<NPLAuthentication />} />
+                    <Route path="/NPL/Solutions/SecurityManagement" element={<NPLSecurityManagement />} />
+                    <Route path="/NPL/Solutions/InternetSecurity" element={<NPLInternetSecurity />} />
+                    <Route path="/NPL/Solutions/EndpointSecurity" element={<NPLEndpointSecurity />} />
+                    <Route path="/NPL/Solutions/Networking" element={<NPLNetworking />} />
+                    <Route path="/NPL/Solutions/Infrastructure" element={<NPLInfrastructure />} />
+                    <Route path="/NPL/Solutions/Server" element={<NPLServer />} />
+                    <Route path="/NPL/Solutions/Authentication/:vendorName" element={<NPLSingleVendor />} />
+                    <Route path="/NPL/Solutions/CyberSecurity/:vendorName" element={<NPLSingleVendor />} />
+                    <Route path="/NPL/Solutions/Endpoin/:vendorName" element={<NPLSingleVendor />} />
+                    <Route path="/NPL/Solutions/InfrastructureMonitoring/:vendorName" element={<NPLSingleVendor />} />
+                    <Route path="/NPL/Solutions/Networking/:vendorName" element={<NPLSingleVendor />} />
+                    <Route path="/NPL/Solutions/Perimia/:vendorName" element={<NPLSingleVendor />} />
+                    <Route path="/NPL/Solutions/Security/:vendorName" element={<NPLSingleVendor />} />
+                    <Route path="/NPL/Solutions/ServerBackup/:vendorName" element={<NPLSingleVendor />} />
 
 
                     {/*New Zealand*/}

@@ -117,7 +117,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     tab2: "Solutions",
                     tab3: "Events",
                     tab4: "Events & News",
-                    tab5: "Upcoming News",
+                    tab5: "Upcoming Events",
                     tab6: "Blogs",
                     tab7: "Portal",
                     tab8: "Country",
@@ -167,7 +167,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 },
                 upEventSec: {
                     upevnt1: "Upcoming",
-                    upevnt2: "Events & News",
+                    upevnt2: "Events ",
                     upevnt3: "No Image Available",
                     upevnt4: "Close",
                 },
@@ -316,7 +316,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Thaitab2: "Solutions",
                     Thaitab3: "Events",
                     Thaitab4: "Events & News",
-                    Thaitab5: "Upcoming News",
+                    Thaitab5: "Upcoming Events",
                     Thaitab6: "Blogs",
                     Thaitab7: "Portal",
                     Thaitab8: "Country",
@@ -369,7 +369,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 },
                 ThaiupEventSec: {
                     Thaiupevnt1: "Upcoming",
-                    Thaiupevnt2: "Events & News",
+                    Thaiupevnt2: "Events ",
                     Thaiupevnt3: "No Image Available",
                     Thaiupevnt4: "Close",
                 },
@@ -529,7 +529,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Muritab2: "Solutions",
                     Muritab3: "Events",
                     Muritab4: "Events & News",
-                    Muritab5: "Upcoming News",
+                    Muritab5: "Upcoming Events",
                     Muritab6: "Blogs",
                     Muritab7: "Portal",
                     Muritab8: "Country",
@@ -580,7 +580,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 },
                 MuriupEventSec: {
                     Muriupevnt1: "Upcoming",
-                    Muriupevnt2: "Events & News",
+                    Muriupevnt2: "Events ",
                     Muriupevnt3: "No Image Available",
                     Muriupevnt4: "Close",
                 },
@@ -625,7 +625,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 },
 
                 // End of MU part
-
+ 
 
                 // NPL Part
 
@@ -743,7 +743,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     NPLtab2: "Solutions",
                     NPLtab3: "Events",
                     NPLtab4: "Events & News",
-                    NPLtab5: "Upcoming News",
+                    NPLtab5: "Upcoming Events",
                     NPLtab6: "Blogs",
                     NPLtab7: "Portal",
                     NPLtab8: "Country",
@@ -794,7 +794,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 },
                 NPLupEventSec: {
                     NPLupevnt1: "Upcoming",
-                    NPLupevnt2: "Events & News",
+                    NPLupevnt2: "Events",
                     NPLupevnt3: "No Image Available",
                     NPLupevnt4: "Close",
                 },
@@ -954,7 +954,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                     Brntab2: "Solutions",
                     Brntab3: "Events",
                     Brntab4: "Events & News",
-                    Brntab5: "Upcoming News",
+                    Brntab5: "Upcoming Events",
                     Brntab6: "Blogs",
                     Brntab7: "Portal",
                     Brntab8: "Country",
@@ -1005,7 +1005,7 @@ i18n.use(LanguageDetector).use(initReactI18next).init({
                 },
                 BrnupEventSec: {
                     Brnupevnt1: "Upcoming",
-                    Brnupevnt2: "Events & News",
+                    Brnupevnt2: "Events ",
                     Brnupevnt3: "No Image Available",
                     Brnupevnt4: "Close",
                 },

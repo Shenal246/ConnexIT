@@ -111,7 +111,7 @@ function Navbar() {
                       <a>Events & News</a>
                     </NavLink>
                     <NavLink to="/SL/UpcomingNews" activeClassName='active-link' exact>
-                      <a>Upcoming News</a>
+                      <a>Upcoming Events</a>
                     </NavLink>
                     {/* <NavLink to="/SL/Blog" activeClassName='active-link' exact>
                         <a>Blogs</a>

@@ -34,7 +34,7 @@ function HeroSection() {
 
   const { t } = useTranslation();
 
-  const { NPLgreet1, NPLgreet2first, NPLgreet2mid, NPLgreet2last, NPLgreet3, NPLcontact, NPLwtvideo } = t('NPLherosect', { returnObjects: true });
+  const {NPLgreet1, NPLgreet2first, NPLgreet2mid1, NPLgreet2mid2, NPLgreet2last, NPLgreet3, NPLcontact, wtvideo  } = t('NPLherosect', { returnObjects: true });
 
   return (
     <section id="hero" className="section hero">
@@ -42,13 +42,13 @@ function HeroSection() {
         <div className="row gy-4">
           <div className="col-lg-8 order-2 order-lg-1 d-flex flex-column justify-content-center cont" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
             <h3 className='settop'>{NPLgreet1}</h3>
-            <h1>{NPLgreet2first}<span className='Connexcon'>{NPLgreet2mid}</span>{NPLgreet2last}</h1>
+            <h1>{NPLgreet2first}<span className='Connexcon'>{NPLgreet2mid1}</span><span className='Connexnex'>{NPLgreet2mid2}</span> {NPLgreet2last}</h1>
             <p>{NPLgreet3}</p>
 
             <div className="row gy-4">
               <div className="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
                 <div className="d-flex">
-                  <NavLink to="/NPL/ContactUs" className="btn-get-started">{NPLcontact}</NavLink>
+                  <NavLink to="/KH/ContactUs" className="btn-get-started">{NPLcontact}</NavLink>
                   {/* <a href="#" className="glightbox btn-watch-video d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#videoModal" onClick={handlePlayVideo}>
                     <i className="bi bi-play-circle"></i>
                     <span>{wtvideo}</span>

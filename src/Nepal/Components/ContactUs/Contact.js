@@ -206,7 +206,7 @@ const Contact = () => {
                         </p>
                         <button
                             className="neon-button"
-                            onClick={() => window.open('https://www.google.com/maps/search/No.B22,B23+%26+B24,+Block+B+Bangunan+Habza,+Spg+150,+Kg+kiulap+Gadong+B,+Brunei+Muara,+BE1518+Brunei+Darussalam/@4.89983,114.8974833,13.46z?entry=ttu')}
+                            onClick={() => window.open('https://maps.app.goo.gl/X7BPGZXTRifBDqek8')}
                         >
                             {NPLcont29}
                         </button>

@@ -39,7 +39,7 @@ const Contact = () => {
         
         try {
             const response = await axios.post(serverlink, value33, {
-                headers: { cnt: 6 }
+                headers: { cnt: 8 }
             });
             if (response.status === 200) {
                 Swal.fire({

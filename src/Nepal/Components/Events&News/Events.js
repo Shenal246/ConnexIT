@@ -42,7 +42,7 @@ const Events = () => {
 
         axios.get(serverlink, {
             headers: { 
-                cnt: 6
+                cnt: 8
             }
         })
         .then((response) => {

@@ -26,7 +26,7 @@ const UpcomingNews = () => {
 
         axios.get(slupevserverlink,{
             headers: { 
-                cnt: 6 
+                cnt: 8 
             }}).then((response) => {
             setSLUpEv(response.data);
         }).catch((err) => {
@@ -96,7 +96,7 @@ const UpcomingNews = () => {
                     contactno: formData.contact,
                     province: formData.province,
                     city: formData.city,
-                    cnt:'6'
+                    cnt:'8'
                 };
                 
                

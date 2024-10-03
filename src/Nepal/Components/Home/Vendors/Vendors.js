@@ -33,7 +33,7 @@ const Vendors = () => {
 
   const fetchVendors = async () => {
     await axios.get(serverlinkForBackend, {
-      headers: { cnt: 6 }
+      headers: { cnt: 8 }
   }).then((response) => {
       setVendorLogos(response.data);
       console.log("Vendor logos------------", response.data);

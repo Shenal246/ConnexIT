@@ -34,7 +34,7 @@ const Latest = () => {
             // Make the API request with axios
             const response = await axios.get(serverlink, {
               headers: {
-                cnt: 6,  // Your cnt value
+                cnt: 8,  // Your cnt value
                 type: 2, // Your type value
               },
             });

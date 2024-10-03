@@ -20,7 +20,7 @@ function Authentication() {
     const serverlink = connections.pillor3;
 
     useEffect(() => {
-        axios.get(serverlink, {headers:{cnt:6}}).then((response) => {
+        axios.get(serverlink, {headers:{cnt:8}}).then((response) => {
             setVendors(response.data);
             console.log(vendors);
         }).catch((err) => {

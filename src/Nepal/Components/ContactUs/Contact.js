@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 import './Contact.css';
-import mapbru from '../../../images/map/brunei.png';
+import nplmap from '../../../images/map/Nepal Connected.png';
 import { useTranslation } from 'react-i18next';
 import Swal from 'sweetalert2'
 import NPLNavbar from '../Navbar/Navbar';
@@ -213,7 +213,7 @@ const Contact = () => {
                         <hr className='line'></hr><hr className='line'></hr>
                     </div>
                     <div className="col-md-6">
-                        <img src={mapbru} className='mapBru' />
+                        <img src={nplmap} className='mapnpl' />
                     </div>
                 </div>
             </div>

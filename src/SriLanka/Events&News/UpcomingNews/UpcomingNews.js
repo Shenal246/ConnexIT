@@ -215,7 +215,7 @@ const UpcomingNews = () => {
                 </div>
 
                 {/* microsoft event card */}
-                {/* <div className='row microsoftcard'>
+                <div className='row microsoftcard'>
                     <div className="card mb-3 cards2">
                         <div className="row g-0">
                             <div className="col-md-4">
@@ -250,7 +250,7 @@ const UpcomingNews = () => {
                             </div>
                         </div>
                     </div>
-                </div> */}
+                </div>
                 {/*end of the microsoft event card */}
 
                 {/* Copilot Summary Modal */}
@@ -303,12 +303,12 @@ const UpcomingNews = () => {
                             variant="primary"
                             onClick={() => {
                                 // Redirect to Outlook
-                                window.open('https://outlook.live.com/', '_blank');
+                                window.open('https://outlook.office365.com/owa/calendar/MicrosoftEvent@connexit.biz/bookings/', '_blank');
                             }}
-                            style={{ backgroundColor: '#0078d4', borderColor: '#0078d4', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)' }} // Updated to match Microsoft's primary color
+                            style={{ backgroundColor: '#0078d4', borderColor: '#0078d4', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',  width: '200px' }} // Updated to match Microsoft's primary color
 
                         >
-                            Register
+                            Book A Meeting
                         </Button>
                     </Modal.Footer>
                 </Modal>

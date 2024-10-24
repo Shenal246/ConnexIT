@@ -236,19 +236,4 @@
 
 
 
-/* For tablets and small desktops between 768px and 1024px */
-@media only screen and (max-width: 1024px) and (min-width: 768px) {
-    .feedbackbtnrow {
-        left: 75%; /* Position 40% from the left */
-    }
-}
-
-/* For mobile devices, less than 768px wide */
-@media only screen and (max-width: 767px) {
-    .feedbackbtnrow {
-        right: 75% !important; /* Position 40% from the left */
-    }
-}
-
-
 

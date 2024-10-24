@@ -82,6 +82,103 @@
     font-size: 13px;
     cursor: pointer;
     border-radius: 10px;
+    top: -26px;
 }
 }
 
+
+/* Feedback Button Styling */
+.feedback-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: #000000;
+    border: 2px solid #00ffff;
+    border-radius: 50px;
+    padding: 1px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    outline: none;
+    height: 35px !important;
+}
+
+.feedback-button::after {
+    content: '➔';
+    background-color: #76b9fd;
+    color: white;
+    border-radius: 50%;
+    padding: 10px;
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: #ff3b30 !important;
+    height: 35px !important;
+}
+
+.feedback-button:hover {
+    background-color: #ff3b30;
+    color: white;
+    border: #ff3b30 !important;
+}
+
+.feedback-button:hover::after {
+    background-color: white;
+    color: #ff3b30;
+    border: #ff3b30 !important;
+}
+
+
+.feedbackbtnrow{
+    margin-top: 10px !important;
+    z-index: 20 !important;
+    left: 87%;
+    position: fixed;
+    display: flex;
+    bottom: 67%;
+    z-index: 1;
+}
+
+
+/* For tablets and small desktops between 768px and 1024px */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .feedbackbtnrow {
+        left: 80%; /* Move feedback button more to the left */
+        bottom: 66%; /* Move feedback button further down */
+    }
+}
+
+/* For mobile devices, less than 768px wide */
+@media only screen and (max-width: 768px) {
+    .feedbackbtnrow {
+        left: 80%; /* Move feedback button even more to the left */
+        bottom: 66%; /* Move feedback button further down */
+    }
+}
+
+/* For very small mobile devices, less than 480px wide */
+@media only screen and (max-width: 479px) {
+    .feedbackbtnrow {
+        left: 63%; /* Move feedback button to the far left */
+        bottom: 74%; /* Move feedback button even further down */
+    }
+
+    /* Adjust feedback button size on small devices */
+    .feedback-button {
+        width: 120px;
+        height: 30px !important;
+        font-size: 12px;
+    }
+
+    .feedback-button::after {
+        font-size: 14px;
+        padding: 8px;
+        height: 30px !important;
+    }
+}

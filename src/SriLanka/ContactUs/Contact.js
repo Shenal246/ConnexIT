@@ -76,6 +76,7 @@ const Contact = () => {
                         <div className="col-md-4"><hr /></div>
                         <div className="col-md-4"><p id='Text'>Contact Us</p></div>
                         <div className="col-md-4"><hr /></div>
+                        
                     </div>
                 </div>
                 <div className="row">
@@ -228,25 +229,6 @@ const Contact = () => {
                     </div>
                 </div>
 
-
-
-                <div className='row feedbackbtnrow'>
-                    <div className='col-md-10'>
-             
-                    </div>
-
-                    <div className='col-md-2'>
-                        <a
-                            href="https://forms.office.com/Pages/ResponsePage.aspx?id=fuSYqqNza0mmRNxa-fbwsfBpQjK7vGlNg0EwUHwk9rhUMjYyTE5LMkpCN0NZREY4VkVVNjVITUlaNC4u"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
-                            <button className="feedback-button">
-                                Inquiries
-                            </button>
-                        </a>
-                    </div>
-                </div>
 
             </div>
             <SLFooter />

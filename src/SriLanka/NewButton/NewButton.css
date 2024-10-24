@@ -47,5 +47,41 @@
     height: 60px !important;
     margin-top: -5px;
     opacity: 0;
-    /* Reduce opacity to 0 on hover */
+    /* Reduce opacity to 0 on hover */ 
 }
+
+
+
+/* For tablets and small desktops between 768px and 1024px */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .button-container {
+        left: 75%; /* Position 40% from the left */
+    }
+}
+
+/* For mobile devices, less than 768px wide */
+@media only screen and (max-width: 767px) {
+    .button-container {
+        left: 15% ; /* Position 60% from the left */
+    }
+}
+
+/* For very small mobile devices, less than 480px wide */
+@media only screen and (max-width: 479px) {
+    .button-container {
+        left: 60% !important; /* Position 80% from the left */
+        
+    }
+
+    .bottom-button,
+.top-button {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+}
+

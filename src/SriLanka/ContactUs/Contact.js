@@ -24,21 +24,21 @@ const Contact = () => {
         //     alert('Please verify that you are a human!');
         //     return;
         // }
-      
+
 
         const value33 = {
-            
+
             firstname: data.firstName,
             lastname: data.lastName,
             company: data.Company,
             tpno: data.contactNumber,
             email: data.email,
             comment: data.comments,
-         
+
         };
-        
+
         console.log(value33);
-        
+
         try {
             const response = await axios.post(serverlink, value33, {
                 headers: { cnt: 1 }
@@ -58,7 +58,7 @@ const Contact = () => {
             console.error('Error submitting the form', error);
             alert('An error occurred while submitting the form.');
         }
-        
+
     };
 
     // const handleRecaptchaChange = (value) => {
@@ -69,7 +69,7 @@ const Contact = () => {
         <>
             <SLNavbar />
             <SLChat />
-            <NewBtn/>
+            <NewBtn />
             <div className="container">
                 <div className='row'>
                     <div className="row gy-3 text mb-4" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
@@ -159,12 +159,12 @@ const Contact = () => {
                             </div>
 
                             <div className="col-md">
-                            <textarea
-                                className={`form-control txtarea ${errors.comments ? 'is-invalid' : ''}`}
-                                placeholder="Leave a comment here"
-                                id="floatingTextarea2"
-                                {...register('comments', { required: true })}
-                            ></textarea>
+                                <textarea
+                                    className={`form-control txtarea ${errors.comments ? 'is-invalid' : ''}`}
+                                    placeholder="Leave a comment here"
+                                    id="floatingTextarea2"
+                                    {...register('comments', { required: true })}
+                                ></textarea>
                                 {errors.comments && <span className="text-danger">Comments are required</span>}
                             </div>
 
@@ -216,6 +216,10 @@ const Contact = () => {
                         >
                             Get Directions
                         </button>
+
+                        <br />
+
+
                         <hr className='line'></hr><hr className='line'></hr>
                     </div>
                     <div className="col-md-6">
@@ -223,6 +227,27 @@ const Contact = () => {
 
                     </div>
                 </div>
+
+
+
+                <div className='row feedbackbtnrow'>
+                    <div className='col-md-10'>
+             
+                    </div>
+
+                    <div className='col-md-2'>
+                        <a
+                            href="https://forms.office.com/Pages/ResponsePage.aspx?id=fuSYqqNza0mmRNxa-fbwsfBpQjK7vGlNg0EwUHwk9rhUMjYyTE5LMkpCN0NZREY4VkVVNjVITUlaNC4u"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <button className="feedback-button">
+                                Inquiries
+                            </button>
+                        </a>
+                    </div>
+                </div>
+
             </div>
             <SLFooter />
         </>

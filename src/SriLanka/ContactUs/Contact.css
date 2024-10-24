@@ -182,3 +182,73 @@
 .line{
     display: none;
 }
+/* Feedback Button Styling */
+.feedback-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    color: #000000; /* Red color for the text */
+    border: 2px solid #00ffff; /* Red border */
+    border-radius: 50px; /* Rounded edges */
+    padding: 1px 10px; /* Padding for the button */
+    font-size: 16px; /* Font size for the text */
+    font-weight: bold; /* Bold text */
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    outline: none; /* Remove outline */
+    margin-top: 15px;
+    height: 35px !important;
+}
+
+/* Red circle with the arrow */
+.feedback-button::after {
+    content: '➔'; /* Right arrow symbol */
+    background-color: #76b9fd; /* Red background */
+    color: white; /* White arrow */
+    border-radius: 50%; /* Make the circle */
+    padding: 10px;
+    margin-left: 15px; /* Space between the text and circle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border: #ff3b30 !important;
+    height: 35px !important;
+}
+
+/* Button hover effect */
+.feedback-button:hover {
+    background-color: #ff3b30; /* Change background to red */
+    color: white; /* White text */
+    border: #ff3b30 !important;
+}
+
+.feedback-button:hover::after {
+    background-color: white; /* Inverse background for the arrow */
+    color: #ff3b30; /* Red arrow */
+    border: #ff3b30 !important;
+}
+
+
+
+
+
+/* For tablets and small desktops between 768px and 1024px */
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+    .feedbackbtnrow {
+        left: 75%; /* Position 40% from the left */
+    }
+}
+
+/* For mobile devices, less than 768px wide */
+@media only screen and (max-width: 767px) {
+    .feedbackbtnrow {
+        right: 75% !important; /* Position 40% from the left */
+    }
+}
+
+
+
